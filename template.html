@@ -1,0 +1,455 @@
+<title>Boussole Devises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #F5F6F2;
+    --surface: #FFFFFF;
+    --surface-2: #EEF0EA;
+    --border: #DBDFD5;
+    --text: #1B2027;
+    --text-secondary: #5B6570;
+    --text-muted: #838C93;
+    --gold: #A6691E;
+    --gold-tint: #F3E6D2;
+    --rise: #2A78D6;
+    --rise-text: #1D5FA8;
+    --fall: #E34948;
+    --fall-text: #B23230;
+    --shadow: 0 1px 2px rgba(27,32,39,.04), 0 8px 24px -12px rgba(27,32,39,.12);
+    --font-display: "Libre Franklin", "Arial Narrow", sans-serif;
+    --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #10151C;
+      --surface: #161D27;
+      --surface-2: #1D2530;
+      --border: #2A3441;
+      --text: #E7EAEE;
+      --text-secondary: #93A0AD;
+      --text-muted: #66727E;
+      --gold: #E0A857;
+      --gold-tint: #3A2E1A;
+      --rise: #3987E5;
+      --rise-text: #7CB2F0;
+      --fall: #E66767;
+      --fall-text: #F29797;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #10151C;
+    --surface: #161D27;
+    --surface-2: #1D2530;
+    --border: #2A3441;
+    --text: #E7EAEE;
+    --text-secondary: #93A0AD;
+    --text-muted: #66727E;
+    --gold: #E0A857;
+    --gold-tint: #3A2E1A;
+    --rise: #3987E5;
+    --rise-text: #7CB2F0;
+    --fall: #E66767;
+    --fall-text: #F29797;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 20px 80px; }
+
+  /* ---------- Header ---------- */
+  .top {
+    display: flex; flex-wrap: wrap; gap: 20px 32px;
+    justify-content: space-between; align-items: flex-end;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 22px; margin-bottom: 28px;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: linear-gradient(155deg, var(--gold), var(--rise) 130%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(24px, 3vw, 32px); margin: 0; letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .top-sub { color: var(--text-secondary); margin: 2px 0 0; font-size: 14.5px; max-width: 54ch; }
+  .top-meta { text-align: right; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-muted); }
+  .top-meta .cadence { color: var(--gold); font-weight: 600; }
+  .top-meta div + div { margin-top: 4px; }
+
+  section { margin-bottom: 44px; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+  h2 {
+    font-family: var(--font-display); font-weight: 700; font-size: 19px;
+    margin: 0; letter-spacing: -.005em;
+  }
+  .section-note { color: var(--text-secondary); font-size: 13.5px; margin: 0; }
+
+  /* ---------- Currency cards ---------- */
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;
+  }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .card-id { display: flex; align-items: center; gap: 10px; }
+  .flag { font-size: 20px; line-height: 1; }
+  .ccy { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin: 0; letter-spacing: .01em; }
+  .bank { margin: 1px 0 0; font-size: 12px; color: var(--text-secondary); }
+
+  .chip {
+    font-size: 11px; font-weight: 600; padding: 4px 9px; border-radius: 100px;
+    white-space: nowrap; border: 1px solid transparent;
+  }
+  .chip-rise { background: color-mix(in srgb, var(--rise) 14%, var(--surface)); color: var(--rise-text); border-color: color-mix(in srgb, var(--rise) 30%, transparent); }
+  .chip-fall { background: color-mix(in srgb, var(--fall) 14%, var(--surface)); color: var(--fall-text); border-color: color-mix(in srgb, var(--fall) 30%, transparent); }
+  .chip-neutral { background: var(--surface-2); color: var(--text-secondary); border-color: var(--border); }
+
+  .stat-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat { display: flex; flex-direction: column; gap: 4px; background: var(--surface-2); border-radius: 9px; padding: 8px 10px; }
+  .stat-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-muted); }
+  .stat-value { font-family: var(--font-mono); font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .stat-pair { display: flex; align-items: baseline; gap: 5px; font-family: var(--font-mono); font-variant-numeric: tabular-nums; flex-wrap: wrap; }
+  .stat-prev { font-size: 11.5px; color: var(--text-muted); }
+  .stat-curr { font-size: 14px; font-weight: 600; color: var(--text); }
+  .stat-arrow { font-size: 11px; font-weight: 700; }
+  .arrow-rise { color: var(--rise-text); }
+  .arrow-fall { color: var(--fall-text); }
+  .arrow-flat { color: var(--text-muted); }
+
+  .meta-line { margin: 0; font-size: 12.5px; color: var(--text-secondary); }
+  .meta-line strong { color: var(--text); font-weight: 600; }
+
+  .momentum-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+
+  .events-block { display: flex; flex-direction: column; gap: 6px; }
+  .events-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .events-list li { display: flex; flex-direction: column; gap: 1px; background: var(--gold-tint); border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent); border-radius: 8px; padding: 6px 9px; }
+  .ev-time { font-family: var(--font-mono); font-size: 10.5px; color: var(--gold); font-weight: 600; }
+  .ev-name { font-size: 12px; color: var(--text); }
+  .ev-fc { font-size: 11px; color: var(--text-secondary); }
+  .events-empty { margin: 0; font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .events-watch { margin: 0; font-size: 11.5px; color: var(--text-secondary); }
+
+  .bias-block { margin-top: 2px; }
+  .bias-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px; }
+  .bias-num { font-family: var(--font-mono); font-size: 13px; font-weight: 600; }
+  .bias-den { color: var(--text-muted); font-weight: 400; }
+  .rise-3, .rise-2, .rise-1 { color: var(--rise-text); }
+  .fall-3, .fall-2, .fall-1 { color: var(--fall-text); }
+  .neutral { color: var(--text-secondary); }
+
+  .gauge-track { position: relative; height: 8px; border-radius: 100px; background: var(--surface-2); border: 1px solid var(--border); }
+  .gauge-center { position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--text-muted); opacity: .5; }
+  .gauge-fill { position: absolute; top: 0; bottom: 0; border-radius: 100px; }
+  .bar-rise { background: var(--rise); }
+  .bar-fall { background: var(--fall); }
+  .gauge-marker { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; transform: translate(-50%, -50%); border: 2px solid var(--surface); }
+  .gauge-scale { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 9.5px; color: var(--text-muted); margin-top: 4px; }
+
+  .proba-tag {
+    font-size: 9px; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--text-muted); font-weight: 700; margin-right: 4px; font-family: var(--font-body);
+  }
+  .bias-strength { margin: 6px 0 0; font-size: 11px; color: var(--text-muted); }
+
+  .factor-block { display: flex; flex-direction: column; gap: 6px; }
+  .factor-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  @media (max-width: 460px) { .factor-grid { grid-template-columns: repeat(2, 1fr); } }
+  .factor-chip {
+    display: flex; flex-direction: column; gap: 2px; padding: 6px 8px; border-radius: 8px;
+    background: var(--surface-2); border: 1px solid var(--border);
+  }
+  .factor-label { font-size: 9.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-muted); font-weight: 600; }
+  .factor-txt { font-size: 11px; color: var(--text); line-height: 1.3; }
+  .factor-rise { border-color: color-mix(in srgb, var(--rise) 35%, transparent); background: color-mix(in srgb, var(--rise) 8%, var(--surface-2)); }
+  .factor-rise .factor-txt { color: var(--rise-text); }
+  .factor-fall { border-color: color-mix(in srgb, var(--fall) 35%, transparent); background: color-mix(in srgb, var(--fall) 8%, var(--surface-2)); }
+  .factor-fall .factor-txt { color: var(--fall-text); }
+
+  .divergence {
+    margin: 0; padding: 8px 10px; border-radius: 8px; font-size: 11.5px; line-height: 1.45;
+    background: var(--gold-tint); border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+    color: var(--text-secondary);
+  }
+
+  details.speech, details.sources { font-size: 12.5px; }
+  details summary {
+    cursor: pointer; color: var(--gold); font-weight: 600; font-size: 12px;
+    list-style: none; display: flex; align-items: center; gap: 5px;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: "▸"; font-size: 10px; transition: transform .15s ease; }
+  details[open] summary::before { transform: rotate(90deg); }
+  details p { margin: 8px 0 0; color: var(--text-secondary); }
+  details.sources ul { margin: 8px 0 0; padding-left: 16px; color: var(--text-secondary); }
+  details.sources a { color: var(--rise-text); text-decoration: none; word-break: break-all; }
+  details.sources a:hover { text-decoration: underline; }
+  details.sources li { margin-bottom: 3px; }
+
+  /* ---------- Methodology ---------- */
+  .method {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px 22px; box-shadow: var(--shadow);
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  @media (max-width: 800px) { .method { grid-template-columns: 1fr; } }
+  .method h3 { font-family: var(--font-display); font-size: 13.5px; margin: 0 0 6px; }
+  .method p { margin: 0; font-size: 13px; color: var(--text-secondary); }
+  .method-note {
+    grid-column: 1 / -1; margin: 0; padding-top: 14px; border-top: 1px dashed var(--border);
+    font-size: 13px; color: var(--text-secondary);
+  }
+  .method-note strong { color: var(--text); }
+  .disclaimer {
+    margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--border);
+    font-size: 12px; color: var(--text-muted); grid-column: 1 / -1;
+  }
+
+  /* ---------- Pairs matrix ---------- */
+  .matrix-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .search {
+    font-family: var(--font-body); font-size: 13px; padding: 8px 12px;
+    border-radius: 9px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--text); min-width: 220px;
+  }
+  .search:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .search::placeholder { color: var(--text-muted); }
+
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; min-width: 680px; }
+  thead th {
+    text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-muted); font-weight: 600; padding: 12px 14px;
+    border-bottom: 1px solid var(--border); background: var(--surface-2);
+    position: sticky; top: 0; cursor: pointer; user-select: none;
+  }
+  thead th:hover { color: var(--gold); }
+  thead th .sort-arrow { font-size: 9px; margin-left: 3px; opacity: .5; }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background .1s ease; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--surface-2); }
+  td { padding: 10px 14px; font-size: 13px; }
+  .pair-name { font-family: var(--font-mono); font-weight: 500; white-space: nowrap; padding: 0; }
+  .pair-name .slash { color: var(--text-muted); margin: 0 2px; }
+  .pair-name .flag { font-size: 13px; margin-right: 3px; }
+
+  .why-toggle {
+    display: flex; align-items: center; gap: 6px; width: 100%; padding: 10px 14px;
+    background: none; border: none; font: inherit; font-family: var(--font-mono); font-weight: 500;
+    color: var(--text); cursor: pointer; text-align: left;
+  }
+  .why-toggle:hover { color: var(--gold); }
+  .why-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+  .chevron { font-size: 9px; color: var(--text-muted); transition: transform .15s ease; display: inline-block; }
+  .why-toggle[aria-expanded="true"] .chevron { transform: rotate(90deg); color: var(--gold); }
+
+  tr.reason-row td { padding: 14px 18px 16px; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+  .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 800px) { .reason-grid { grid-template-columns: 1fr; } }
+  .reason-h { font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--gold); font-weight: 700; }
+  .reason-grid p { margin: 5px 0 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; }
+  .reason-grid strong { color: var(--text); font-weight: 600; }
+  .mtag { font-family: var(--font-mono); font-size: 11px; font-weight: 600; margin-left: 6px; white-space: nowrap; }
+  .reason-row.hide { display: none !important; }
+
+  .cell { text-align: right; white-space: nowrap; }
+  .cell-pct { font-family: var(--font-mono); font-weight: 600; font-variant-numeric: tabular-nums; margin-right: 6px; }
+  .cell-label { font-size: 11px; color: var(--text-secondary); }
+  .ev-flag { font-size: 11px; margin-left: 4px; }
+  .rise-3 .cell-pct, .rise-2 .cell-pct, .rise-1 .cell-pct { color: var(--rise-text); }
+  .fall-3 .cell-pct, .fall-2 .cell-pct, .fall-1 .cell-pct { color: var(--fall-text); }
+  td.rise-3 { background: color-mix(in srgb, var(--rise) 16%, var(--surface)); }
+  td.rise-2 { background: color-mix(in srgb, var(--rise) 10%, var(--surface)); }
+  td.rise-1 { background: color-mix(in srgb, var(--rise) 5%, var(--surface)); }
+  td.fall-3 { background: color-mix(in srgb, var(--fall) 16%, var(--surface)); }
+  td.fall-2 { background: color-mix(in srgb, var(--fall) 10%, var(--surface)); }
+  td.fall-1 { background: color-mix(in srgb, var(--fall) 5%, var(--surface)); }
+  td.neutral { background: transparent; }
+  tr.hide { display: none; }
+
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 11.5px; color: var(--text-secondary); margin-top: 10px; }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+  footer { border-top: 1px solid var(--border); padding-top: 18px; margin-top: 8px; color: var(--text-muted); font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer strong { color: var(--text-secondary); }
+</style>
+
+<div class="wrap">
+
+  <div class="top">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">🧭</div>
+      <div>
+        <h1>Boussole Devises</h1>
+        <p class="top-sub">Lecture évolutive des 8 devises majeures — taux, PIB, inflation, chômage (précédent → actuel), calendrier économique et biais directionnel sur 28 paires, réévalués en continu.</p>
+      </div>
+    </div>
+    <div class="top-meta">
+      <div>Dernière collecte&nbsp;: <strong>__GENERATED_AT__</strong> (Africa/Abidjan)</div>
+      <div class="cadence">Scan complet quotidien 07h00 + veille calendrier toutes les heures</div>
+      <div>28 paires · 8 devises · 21 sources croisées</div>
+    </div>
+  </div>
+
+  <section id="currencies">
+    <div class="section-head">
+      <h2>Devises majeures</h2>
+      <p class="section-note">Chaque indicateur affiche précédent → actuel. Le biais fondamental (échelle 0–100, 50 = neutre) est affiché en probabilité avec un sens — ex. « Proba 85% Baisse » — et détaillé en 4 facteurs (Taux, Inflation, Chômage, PIB) sur chaque carte.</p>
+    </div>
+    <div class="grid">
+__CARDS__
+    </div>
+  </section>
+
+  <section id="methodology">
+    <div class="section-head"><h2>Méthodologie</h2></div>
+    <div class="method">
+      <div>
+        <h3>Deux signaux distincts</h3>
+        <p><strong>Biais fondamental</strong> (0–100) : posture de la banque centrale — taux, dissidences, cycle (hausse/pause/baisse). Change rarement. <strong>Momentum</strong> : direction des toutes dernières données (IPC, chômage, PIB — précédent vs actuel). Change à chaque publication, c'est le moteur du court terme. Ces deux signaux peuvent diverger (ex. biais haussier mais momentum en ralentissement) — c'est un signal à surveiller, pas une erreur ; une note l'explique alors sur la carte concernée.</p>
+      </div>
+      <div>
+        <h3>Horizons</h3>
+        <p><strong>Court terme (6h)</strong> : dominé par le momentum récent. <strong>Moyen terme (1-2j)</strong> : mix momentum + biais fondamental. <strong>Long terme (&gt;2j)</strong> : dominé par le biais fondamental / cycle monétaire.</p>
+      </div>
+      <div>
+        <h3>Humilité assumée</h3>
+        <p>Sans flux d'ordres ni prix en direct, une prévision à 6h est intrinsèquement incertaine : les probabilités court terme sont volontairement resserrées près de 50%. Un événement majeur imminent (⚡) resserre encore la confiance plutôt que de forcer une direction.</p>
+      </div>
+      <p class="method-note">Chaque score 0–100 (biais devise ou probabilité de paire) est affiché comme une probabilité explicite en pourcentage avec un sens — ex. <strong>« Proba 85% Baisse »</strong> — accompagnée d'un qualificatif de force (confiance faible / modérée / forte, ou quasi neutre) pour ne jamais donner une fausse précision. Chaque biais devise est en plus décomposé en 4 facteurs indépendants (Taux, Inflation, Chômage, PIB) visibles sur sa carte, pour qu'aucune note ne reste une boîte noire.</p>
+      <p class="disclaimer">Ce tableau de bord est une synthèse macro-économique automatisée à but informatif — il ne constitue ni un conseil en investissement ni une recommandation de trading. Les marchés des changes sont influencés par de nombreux facteurs additionnels (flux, positionnement, géopolitique, technique) non capturés ici, surtout aux horizons courts. Vérifiez toujours les sources primaires avant toute décision.</p>
+    </div>
+  </section>
+
+  <section id="pairs">
+    <div class="section-head">
+      <h2>Matrice des 28 paires</h2>
+      <div class="matrix-controls">
+        <input type="text" class="search" id="pairSearch" placeholder="Filtrer par devise (ex. EUR)" aria-label="Filtrer les paires par devise">
+      </div>
+    </div>
+    <div class="section-head" style="margin-top:-8px;">
+      <p class="section-note">Clique sur une paire pour voir le détail du calcul (pourquoi haussier/baissier, horizon par horizon).</p>
+    </div>
+    <div class="table-scroll">
+      <table id="pairsTable">
+        <thead>
+          <tr>
+            <th data-sort="pair">Paire</th>
+            <th data-sort="0">Court terme (6h) <span class="sort-arrow">↕</span></th>
+            <th data-sort="1">Moyen terme (1-2j) <span class="sort-arrow">↕</span></th>
+            <th data-sort="2">Long terme (&gt;2j) <span class="sort-arrow">↕</span></th>
+          </tr>
+        </thead>
+        <tbody>
+__ROWS__
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--rise)"></span> Biais haussier (base tend à se renforcer)</span>
+      <span><span class="swatch" style="background:var(--fall)"></span> Biais baissier (base tend à s'affaiblir)</span>
+      <span><span class="swatch" style="background:var(--surface-2); border:1px solid var(--border)"></span> Neutre</span>
+      <span>⚡ Événement majeur dans la fenêtre — confiance réduite volontairement</span>
+    </div>
+  </section>
+
+  <footer>
+    <div>Sources croisées&nbsp;: Reuters, Bloomberg, CNBC, MarketWatch, Financial Times, Investing.com, ForexFactory, DailyFX, FXStreet, TradingEconomics, Yahoo Finance, Barron's, TradingView, Finviz, OANDA, Saxo Bank, IG, et les sites officiels Fed / BCE / BoE / BoJ / SNB / BoC / RBA / RBNZ + calendriers économiques.</div>
+    <div>Prochaine mise à jour automatique&nbsp;: dans l'heure (veille calendrier), scan complet demain 07h00.</div>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  var tbody = document.querySelector('#pairsTable tbody');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#pairsTable tbody tr.pair-row'));
+
+  function reasonFor(row) {
+    return document.querySelector('tr.reason-row[data-for="' + row.dataset.pair + '"]');
+  }
+
+  // --- filtre par devise ---
+  var search = document.getElementById('pairSearch');
+  search.addEventListener('input', function() {
+    var q = search.value.trim().toUpperCase();
+    rows.forEach(function(r) {
+      var match = !q || r.dataset.base.includes(q) || r.dataset.quote.includes(q) || r.dataset.pair.includes(q);
+      r.classList.toggle('hide', !match);
+      var rr = reasonFor(r);
+      if (rr) rr.classList.toggle('hide', !match);
+    });
+  });
+
+  // --- tri par colonne ---
+  var headers = document.querySelectorAll('#pairsTable th[data-sort]');
+  var sortState = {};
+  headers.forEach(function(th) {
+    th.addEventListener('click', function() {
+      var key = th.dataset.sort;
+      var dir = sortState[key] === 'asc' ? 'desc' : 'asc';
+      sortState = {}; sortState[key] = dir;
+      var sorted = rows.slice().sort(function(a, b) {
+        var va, vb;
+        if (key === 'pair') {
+          va = a.dataset.pair; vb = b.dataset.pair;
+          return dir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+        }
+        // tri sur le score brut 0-100 (data-prob), pas sur le texte affiché
+        // (qui combine désormais pourcentage-confiance + direction, ex. "67% Baisse")
+        va = parseFloat(a.querySelectorAll('.cell')[parseInt(key,10)].dataset.prob);
+        vb = parseFloat(b.querySelectorAll('.cell')[parseInt(key,10)].dataset.prob);
+        return dir === 'asc' ? va - vb : vb - va;
+      });
+      sorted.forEach(function(r) {
+        tbody.appendChild(r);
+        var rr = reasonFor(r);
+        if (rr) tbody.appendChild(rr);
+      });
+    });
+  });
+
+  // --- "pourquoi" : ouvre/ferme la ligne d'explication ---
+  tbody.addEventListener('click', function(e) {
+    var btn = e.target.closest('.why-toggle');
+    if (!btn) return;
+    var row = btn.closest('tr.pair-row');
+    var rr = reasonFor(row);
+    if (!rr) return;
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    rr.hidden = open;
+  });
+})();
+</script>
