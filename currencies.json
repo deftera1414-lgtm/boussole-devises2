@@ -17,22 +17,70 @@
       "next": "15-16 septembre 2026 — probabilité de hausse en nette progression (~52 à 66% selon CME FedWatch/Polymarket/Kalshi au 31 août), contre ~30% avant Jackson Hole",
       "gdp_previous": "+2,1% (T1 2026, QoQ annualisé)",
       "gdp_current": "+1,5% (T2 2026, QoQ annualisé, 2e estimation BEA confirmée le 26 août 2026, inchangée vs 1re estimation)",
-      "cpi_previous": "3,5% (juin 2026)",
-      "cpi_current": "3,4% (juillet 2026) ; PCE core 3,3% YoY, PCE global 3,7% YoY (publié 26 août 2026)",
-      "unemp_previous": "4,1% (juin 2026)",
-      "unemp_current": "4,1% (juillet 2026, inchangé) ; NFP juillet très faible (-23K, révisé +20K)",
+      "cpi_previous": "2,4% (mars 2025, FRED)",
+      "cpi_current": "2,3% (avr. 2025, FRED)",
+      "unemp_previous": "4,3% (juil. 2025, FRED)",
+      "unemp_current": "4,5% (oct. 2025, FRED)",
       "speech": "Lors de son 1er discours en tant que président de la Fed à Jackson Hole (28 août 2026), Kevin Warsh a adopté un ton hawkish mesuré : les données de l'été « ne me disent pas que les tendances sous-jacentes se sont significativement améliorées » sur l'inflation, et « nous avons du travail à faire ». Il a aussi jugé le forward guidance traditionnel avoir « dépassé son utilité », signalant une Fed prête à agir réunion par réunion. Les probabilités de marché d'une hausse en septembre sont passées d'environ 30% avant le discours à un quasi coin-flip (52-66% selon les sources fin août).",
       "cycle": "Pause prolongée (plusieurs réunions consécutives au statu quo) après le cycle de baisses 2024-2025 ; sous Warsh, un débat s'est ouvert sur une possible reprise des hausses dès le 16 septembre 2026, porté par une inflation PCE toujours nettement au-dessus de la cible de 2% malgré un marché de l'emploi qui s'affaiblit (NFP juillet négatif) — configuration inhabituelle qui divise les économistes.",
       "move": "hold",
       "events": [
-        {"date": "1 septembre 2026", "time": "14:00 UTC (10:00 ET)", "name": "ISM Manufacturing PMI (août)", "forecast": "55,1–56,0 selon les sources", "previous": "55,6 (juillet, 7e mois consécutif d'expansion)"},
-        {"date": "2 septembre 2026", "time": "12:15 UTC (08:15 ET)", "name": "ADP Emploi privé (août)", "forecast": "+55K", "previous": "+44K"},
-        {"date": "3 septembre 2026", "time": "12:30 UTC (08:30 ET)", "name": "Inscriptions hebdo. au chômage", "forecast": "205K", "previous": "203K"},
-        {"date": "3 septembre 2026", "time": "14:00 UTC (10:00 ET)", "name": "ISM Services PMI (août)", "forecast": "54,1", "previous": "54,1"},
-        {"date": "3 septembre 2026", "time": "heure non précisée", "name": "Discours FOMC — Hammack (Cleveland) et Goolsbee (Chicago)", "forecast": "NON TROUVÉ", "previous": "NON TROUVÉ"},
-        {"date": "4 septembre 2026", "time": "12:30 UTC (08:30 ET)", "name": "Rapport sur l'emploi (NFP, août)", "forecast": "+55K", "previous": "-23K (révisé +20K)"},
-        {"date": "4 septembre 2026", "time": "12:30 UTC (08:30 ET)", "name": "Taux de chômage (août)", "forecast": "4,1%", "previous": "4,1%"},
-        {"date": "4 septembre 2026", "time": "12:30 UTC (08:30 ET)", "name": "Salaire horaire moyen m/m (août)", "forecast": "0,3%", "previous": "0,1%"}
+        {
+          "date": "1 septembre 2026",
+          "time": "14:00 UTC (10:00 ET)",
+          "name": "ISM Manufacturing PMI (août)",
+          "forecast": "55,1–56,0 selon les sources",
+          "previous": "55,6 (juillet, 7e mois consécutif d'expansion)"
+        },
+        {
+          "date": "2 septembre 2026",
+          "time": "12:15 UTC (08:15 ET)",
+          "name": "ADP Emploi privé (août)",
+          "forecast": "+55K",
+          "previous": "+44K"
+        },
+        {
+          "date": "3 septembre 2026",
+          "time": "12:30 UTC (08:30 ET)",
+          "name": "Inscriptions hebdo. au chômage",
+          "forecast": "205K",
+          "previous": "203K"
+        },
+        {
+          "date": "3 septembre 2026",
+          "time": "14:00 UTC (10:00 ET)",
+          "name": "ISM Services PMI (août)",
+          "forecast": "54,1",
+          "previous": "54,1"
+        },
+        {
+          "date": "3 septembre 2026",
+          "time": "heure non précisée",
+          "name": "Discours FOMC — Hammack (Cleveland) et Goolsbee (Chicago)",
+          "forecast": "NON TROUVÉ",
+          "previous": "NON TROUVÉ"
+        },
+        {
+          "date": "4 septembre 2026",
+          "time": "12:30 UTC (08:30 ET)",
+          "name": "Rapport sur l'emploi (NFP, août)",
+          "forecast": "+55K",
+          "previous": "-23K (révisé +20K)"
+        },
+        {
+          "date": "4 septembre 2026",
+          "time": "12:30 UTC (08:30 ET)",
+          "name": "Taux de chômage (août)",
+          "forecast": "4,1%",
+          "previous": "4,1%"
+        },
+        {
+          "date": "4 septembre 2026",
+          "time": "12:30 UTC (08:30 ET)",
+          "name": "Salaire horaire moyen m/m (août)",
+          "forecast": "0,3%",
+          "previous": "0,1%"
+        }
       ],
       "watch": "CPI d'août attendu le 11 septembre 2026 (5 jours avant le FOMC) — catalyseur clé avant une décision désormais jugée très disputée (hausse de 25pb vs statu quo hawkish) le 15-16 septembre.",
       "sources": [
@@ -62,16 +110,28 @@
       "next": "9-10 septembre 2026 (Berlin, Bundesbank)",
       "gdp_previous": "0,0% QoQ / +0,5% YoY (T1 2026, zone euro)",
       "gdp_current": "+0,4% QoQ / +1,0% YoY (T2 2026, confirmé/non révisé le 14 août 2026)",
-      "cpi_previous": "2,8% (juin 2026)",
-      "cpi_current": "2,9% (juillet 2026, chiffre final confirmé le 19 août 2026) — flash HICP d'août pas encore publié à l'heure du run (attendu 09:00 UTC), prévisions de marché divergentes +3,1% à +3,2% YoY, mais le flash allemand du 31/08 est ressorti à 2,9% YoY, sous le consensus (3,1%)",
-      "unemp_previous": "6,2% (mai 2026, valeur initiale ; révisée depuis à 6,3%)",
-      "unemp_current": "6,3% (juin 2026) — chiffre de juillet pas encore publié à l'heure du run (attendu 09:00 UTC)",
+      "cpi_previous": "2,7% (juin 2026, FRED)",
+      "cpi_current": "2,9% (juil. 2026, FRED)",
+      "unemp_previous": "6,7% (déc. 2022, FRED)",
+      "unemp_current": "6,7% (janv. 2023, FRED)",
       "speech": "Isabel Schnabel (26 août) juge qu'« au niveau actuel des taux, l'inflation ne reviendra probablement pas à la cible à moyen terme » et appelle à resserrer davantage face à la flambée des prix de l'énergie liée aux tensions US-Iran. Primož Dolenc (28 août) affirme qu'il existe un « dossier solide » pour une hausse en septembre. Les minutes de juillet (publiées le 27 août) précisent que la pause n'est pas la fin du cycle. Sondage Reuters : probabilité d'une hausse en septembre passée de ~60% à ~70% des économistes.",
       "cycle": "Cycle de resserrement relancé en juin 2026 (choc énergétique) après plusieurs années de stabilité : hausse à 2,25% le 11 juin, pause confirmée le 23 juillet qualifiée explicitement de « pause, pas fin du cycle ». Consensus pour une nouvelle hausse à 2,50% en septembre passé de ~60% à ~70% (sondage Reuters fin août), plusieurs gouverneurs (Schnabel, Dolenc) plaidant publiquement pour ce resserrement — conditionné à la confirmation du flash HICP du 1er septembre.",
       "move": "hold",
       "events": [
-        {"date": "1 septembre 2026", "time": "09:00 UTC (11:00 CEST)", "name": "Zone euro — Inflation flash HICP (août)", "forecast": "+3,1% à +3,2% YoY (sources divergentes) / cœur ~2,6%", "previous": "+2,9% YoY / cœur +2,5%"},
-        {"date": "1 septembre 2026", "time": "09:00 UTC (11:00 CEST)", "name": "Zone euro — Taux de chômage (juillet)", "forecast": "NON TROUVÉ", "previous": "6,3% (juin 2026)"}
+        {
+          "date": "1 septembre 2026",
+          "time": "09:00 UTC (11:00 CEST)",
+          "name": "Zone euro — Inflation flash HICP (août)",
+          "forecast": "+3,1% à +3,2% YoY (sources divergentes) / cœur ~2,6%",
+          "previous": "+2,9% YoY / cœur +2,5%"
+        },
+        {
+          "date": "1 septembre 2026",
+          "time": "09:00 UTC (11:00 CEST)",
+          "name": "Zone euro — Taux de chômage (juillet)",
+          "forecast": "NON TROUVÉ",
+          "previous": "6,3% (juin 2026)"
+        }
       ],
       "watch": "Réunion BCE des 9-10 septembre 2026 (Berlin) : probabilité de hausse à 2,50% en nette progression (~70% des économistes), sur fond de flambée énergétique et de plaidoyers publics de plusieurs gouverneurs pour un resserrement supplémentaire — conditionnée à la confirmation du flash HICP du jour même. Intervention de Philip Lane le 4 septembre (Dublin), impact probablement limité.",
       "sources": [
@@ -102,10 +162,10 @@
       "next": "17 septembre 2026",
       "gdp_previous": "+0,6% QoQ (T1 2026, janv.-mars)",
       "gdp_current": "+0,4% QoQ (T2 2026, avr.-juin)",
-      "cpi_previous": "2,6% YoY (juin 2026)",
-      "cpi_current": "2,9% YoY (juillet 2026, 1re accélération depuis mars 2026)",
-      "unemp_previous": "4,9% (mars-mai 2026)",
-      "unemp_current": "4,9% (avr.-juin 2026, inchangé ; le marché attendait un repli à 4,8%)",
+      "cpi_previous": "3,7% (févr. 2025, FRED)",
+      "cpi_current": "3,4% (mars 2025, FRED)",
+      "unemp_previous": "4,9% (mars 2026, FRED)",
+      "unemp_current": "4,9% (avr. 2026, FRED)",
       "speech": "À Jackson Hole (28 août 2026), Andrew Bailey a jugé les effets de second tour sur l'inflation « quite subdued » (peu marqués) tout en refusant de garantir que cela dure, réaffirmant que le MPC n'est « pas pré-engagé sur une trajectoire de taux » et décide réunion par réunion. Ton dovish mais prudent, qui a repoussé les paris de marché sur une hausse en septembre à environ 10-25% selon les sources (contre une dissidence hawkish croissante en interne : 3 votes pour une hausse en juillet).",
       "cycle": "Cycle d'assouplissement interrompu depuis déc. 2025 (taux à 3,75%). Statu quo prolongé (hold 8-1 le 30 avril, hold 6-3 le 30 juillet, dissidence hawkish croissante). Malgré la remontée du CPI à 2,9% en juillet, Bailey a maintenu un ton dovish à Jackson Hole, repoussant les paris sur une hausse en septembre à ~10-25% (la plupart des économistes anticipant un nouveau statu quo le 17 sept.) ; aucune baisse anticipée avant 2027 au plus tôt.",
       "move": "hold",
@@ -137,15 +197,21 @@
       "next": "28-29 septembre 2026",
       "gdp_previous": "+0,8% QoQ / +2,6% YoY (T4 2025)",
       "gdp_current": "+0,3% QoQ / +2,5% YoY (T1 2026) — T2 2026 pas encore publié à l'heure du run, attendu le 2 sept. 2026",
-      "cpi_previous": "3,8% YoY (CPI mensuel, juin 2026)",
-      "cpi_current": "3,5% YoY (CPI mensuel, juillet 2026, trimmed mean 3,6%)",
-      "unemp_previous": "4,4% (juin 2026)",
-      "unemp_current": "4,5% (juillet 2026, plus haut niveau post-COVID)",
+      "cpi_previous": "2,4% (oct. 2024, FRED)",
+      "cpi_current": "2,4% (janv. 2025, FRED)",
+      "unemp_previous": "4,4% (mai 2026, FRED)",
+      "unemp_current": "4,4% (juin 2026, FRED)",
       "speech": "Conférence de presse du 11 août 2026 : Bullock a maintenu un ton hawkish malgré le statu quo (« hawkish hold » selon la presse spécialisée), avertissant que le Board relèvera les taux si nécessaire pour ramener l'inflation vers la cible, citant des risques haussiers persistants. Après la publication du chômage à 4,5% (plus haut post-COVID, 20 août), elle a nuancé en évoquant un besoin de « un peu moins de tension » sur le marché du travail, réduisant la probabilité perçue d'une hausse en septembre sans renverser le biais restrictif de fond.",
       "cycle": "Cycle de resserrement achevé en mai 2026 (hausse finale à 4,35%) ; statu quo maintenu en juin et août 2026 dans un « hawkish hold » — porte ouverte à une hausse supplémentaire explicitement maintenue tout en écartant une baisse à court terme, malgré un ralentissement de la croissance et une remontée du chômage à un plus haut post-COVID.",
       "move": "hold",
       "events": [
-        {"date": "2 septembre 2026", "time": "01:30 UTC (11:30 AEST)", "name": "PIB (T2 2026, trimestre de juin)", "forecast": "≈+0,3% QoQ (consensus marché ; modèle TradingEconomics +0,2%)", "previous": "+0,3% QoQ / +2,5% YoY (T1 2026)"}
+        {
+          "date": "2 septembre 2026",
+          "time": "01:30 UTC (11:30 AEST)",
+          "name": "PIB (T2 2026, trimestre de juin)",
+          "forecast": "≈+0,3% QoQ (consensus marché ; modèle TradingEconomics +0,2%)",
+          "previous": "+0,3% QoQ / +2,5% YoY (T1 2026)"
+        }
       ],
       "watch": "Rapport Labour Force (emploi) d'août le 24 septembre, puis décision RBA les 28-29 septembre. Un statu quo est largement anticipé après la hausse du chômage à 4,5%, mais la RBA garde un ton hawkish tant que l'inflation (3,5%) reste au-dessus de la cible 2-3%.",
       "sources": [
@@ -176,14 +242,26 @@
       "gdp_current": "+0,8% QoQ / +1,5% YoY (T1 2026)",
       "cpi_previous": "3,1% YoY (T1 2026)",
       "cpi_current": "4,1% YoY (T2 2026, au-dessus de la cible 1-3%, plus haut depuis fin 2023)",
-      "unemp_previous": "5,4% (T1 2026, révisé)",
-      "unemp_current": "5,6% (T2 2026, plus haut depuis 11 ans)",
+      "unemp_previous": "5,4% (janv. 2026, FRED)",
+      "unemp_current": "5,6% (avr. 2026, FRED)",
       "speech": "Le 8 juillet 2026, le comité de politique monétaire s'est scindé 3-3, la gouverneure Anna Breman ayant fourni la voix décisive pour la hausse — qualifiée de « dovish hike » : la hausse visait surtout à éviter un assouplissement non désiré des conditions financières plutôt qu'à combattre agressivement l'inflation, avec une incertitude assumée sur le calendrier des prochaines hausses. L'enquête ANZ Business Outlook du 31 août montre une confiance en léger repli (53,7 vs 56,1) mais des attentes d'inflation des entreprises en hausse à 3,26%.",
       "cycle": "Cycle de resserrement redémarré en juillet 2026 après une période de taux bas, l'OCR remontant vers un taux neutre estimé entre 2,5% et 3,5% (plus récemment autour de 3% ou plus) face à une inflation durablement au-dessus de la cible (4,1%). Une 2e hausse consécutive à 2,75% est très largement anticipée le 2 septembre ; les prévisionnistes divergent ensuite (ASB : OCR à 3,25% fin 2026 ; Westpac : pause après septembre), mais le consensus donne ~70% de probabilité à une nouvelle hausse en octobre.",
       "move": "hold",
       "events": [
-        {"date": "2 septembre 2026", "time": "02:00 UTC (14:00 NZST)", "name": "Décision RBNZ (OCR)", "forecast": "Hausse de 25 pb à 2,75% (~94-95% de probabilité)", "previous": "2,50%"},
-        {"date": "2 septembre 2026", "time": "03:00 UTC (15:00 NZST)", "name": "RBNZ Monetary Policy Statement + conférence de presse (gouverneure Breman)", "forecast": "NON TROUVÉ (guidance qualitative attendue sur le rate track)", "previous": "n/a"}
+        {
+          "date": "2 septembre 2026",
+          "time": "02:00 UTC (14:00 NZST)",
+          "name": "Décision RBNZ (OCR)",
+          "forecast": "Hausse de 25 pb à 2,75% (~94-95% de probabilité)",
+          "previous": "2,50%"
+        },
+        {
+          "date": "2 septembre 2026",
+          "time": "03:00 UTC (15:00 NZST)",
+          "name": "RBNZ Monetary Policy Statement + conférence de presse (gouverneure Breman)",
+          "forecast": "NON TROUVÉ (guidance qualitative attendue sur le rate track)",
+          "previous": "n/a"
+        }
       ],
       "watch": "Après la décision du 2 septembre, attention sur le rate track du MPS et les prises de parole de Breman pour jauger une 3e hausse lors de la Monetary Policy Review du 28 octobre (actuellement pricée à ~70%). MPS complet suivant le 9 décembre 2026.",
       "sources": [
@@ -212,17 +290,35 @@
       "next": "2 septembre 2026 (décision 13h45 UTC / 09h45 ET, conférence de presse et MPR 14h30 UTC) — 7e statu quo largement attendu (35/35 économistes Reuters, ~3% de probabilité de hausse), mais 2 grandes banques (Banque Nationale, Scotiabank) anticipent désormais une hausse en octobre",
       "gdp_previous": "+0,3% annualisé (T1 2026, révisé à la hausse — écarte la « récession technique »)",
       "gdp_current": "+3,3% annualisé (T2 2026, publié le 28 août 2026, plus fort rythme depuis début 2023, nettement au-dessus des attentes de la BdC de 2,5%)",
-      "cpi_previous": "2,8% (juin 2026)",
-      "cpi_current": "3,0% (juillet 2026, sommet de la fourchette cible 1-3%)",
-      "unemp_previous": "6,5% (juin 2026)",
-      "unemp_current": "6,4% (juillet 2026, plus bas niveau en 2 ans)",
+      "cpi_previous": "2,6% (févr. 2025, FRED)",
+      "cpi_current": "2,3% (mars 2025, FRED)",
+      "unemp_previous": "6,5% (juin 2026, FRED)",
+      "unemp_current": "6,4% (juil. 2026, FRED)",
       "speech": "Dans sa déclaration du 15 juillet 2026 (dernière communication substantielle), Macklem a maintenu un ton dovish-neutre, retirant l'avertissement sur un risque de hausse pétrolière. Depuis, le contexte a nettement évolué : PIB T2 très supérieur aux attentes (+3,3% vs 2,5%), chômage au plus bas en 2 ans, inflation au sommet de la fourchette cible, WTI en hausse vers 85-87$/baril (tensions USA-Iran) — mais l'échec des négociations commerciales Canada-USA le 22 août (nouveaux tarifs) constitue un contrepoids baissier. 2 grandes banques (Banque Nationale, Scotiabank) ont revu leurs prévisions vers une hausse en octobre, contre 4 qui voient un statu quo prolongé.",
       "cycle": "Pause prolongée après un cycle d'assouplissement : taux stable à 2,25% depuis 6 réunions consécutives. Le marché anticipe un 7e statu quo le 2 septembre, mais les surprises économiques récentes (PIB T2 très fort, chômage au plus bas en 2 ans, inflation en haut de fourchette, pétrole en hausse) font émerger un scénario minoritaire mais croissant de reprise des hausses dès octobre-décembre chez certaines banques, dans un contexte compliqué par le choc tarifaire Canada-USA.",
       "move": "hold",
       "events": [
-        {"date": "2 septembre 2026", "time": "13:45 UTC (09:45 ET, décision) / 14:30 UTC (conférence de presse + MPR)", "name": "Décision de taux BoC (overnight rate)", "forecast": "Statu quo largement attendu à 2,25%", "previous": "2,25%"},
-        {"date": "4 septembre 2026", "time": "12:30 UTC (08:30 ET)", "name": "Rapport sur l'emploi canadien (variation de l'emploi, août)", "forecast": "+15,8K", "previous": "+75,1K"},
-        {"date": "4 septembre 2026", "time": "12:30 UTC (08:30 ET)", "name": "Taux de chômage (août)", "forecast": "6,4%", "previous": "6,4%"}
+        {
+          "date": "2 septembre 2026",
+          "time": "13:45 UTC (09:45 ET, décision) / 14:30 UTC (conférence de presse + MPR)",
+          "name": "Décision de taux BoC (overnight rate)",
+          "forecast": "Statu quo largement attendu à 2,25%",
+          "previous": "2,25%"
+        },
+        {
+          "date": "4 septembre 2026",
+          "time": "12:30 UTC (08:30 ET)",
+          "name": "Rapport sur l'emploi canadien (variation de l'emploi, août)",
+          "forecast": "+15,8K",
+          "previous": "+75,1K"
+        },
+        {
+          "date": "4 septembre 2026",
+          "time": "12:30 UTC (08:30 ET)",
+          "name": "Taux de chômage (août)",
+          "forecast": "6,4%",
+          "previous": "6,4%"
+        }
       ],
       "watch": "Réunion du FOMC (Fed) les 15-16 septembre — impact direct sur l'écart de taux Fed/BdC et l'USD/CAD. Prochain IPC canadien (données d'août, mi-septembre) et décision BdC du 28 octobre, désormais vue par 2 grandes banques comme un scénario possible de hausse.",
       "sources": [
@@ -251,10 +347,10 @@
       "next": "24 septembre 2026",
       "gdp_previous": "+0,7% QoQ / +0,5% YoY (T1 2026)",
       "gdp_current": "+1,5% QoQ (T2 2026, estimation flash du 14 août 2026, effet rattrapage chimie-pharma) ; estimation détaillée attendue le 3 sept. (impact classé faible)",
-      "cpi_previous": "0,5% YoY (juin 2026)",
-      "cpi_current": "0,4% YoY (juillet 2026)",
-      "unemp_previous": "3,1% désaisonnalisé (juin 2026)",
-      "unemp_current": "3,1% désaisonnalisé (juillet 2026, inchangé ; 3,0% non désaisonnalisé)",
+      "cpi_previous": "0,7% (juin 2026, FRED)",
+      "cpi_current": "0,7% (juil. 2026, FRED)",
+      "unemp_previous": "5,1% (oct. 2025, FRED)",
+      "unemp_current": "5,1% (janv. 2026, FRED)",
       "speech": "Petra Tschudin (membre de la direction générale de la BNS), 31 août 2026 : réaffirme le taux à 0% et une inflation jugée contenue, la hausse récente étant attribuée à des chocs externes (pétrole, tensions commerciales) plutôt qu'à une dynamique domestique. Le franc s'est apprécié nominalement mais reste stable en termes réels effectifs depuis 2021. Ton neutre à légèrement dovish, aucune urgence à resserrer, disponibilité réaffirmée à intervenir sur le FX si nécessaire.",
       "cycle": "Taux au plancher pratique de 0% depuis juin 2025, statu quo confirmé sur plusieurs réunions consécutives. Inflation très basse (0,4% YoY, bien sous la cible) et chômage en légère dérive haussière laissent la porte ouverte à un nouveau geste, mais la BNS privilégie explicitement l'intervention FX pour contenir l'appréciation du franc plutôt qu'une baisse de taux (retour en territoire négatif jugé à barre élevée). Le rebond du PIB T2 (chimie-pharma) est jugé ponctuel.",
       "move": "hold",
@@ -286,10 +382,10 @@
       "next": "17-18 septembre 2026 — hausse à 1,25% largement anticipée (probabilité implicite marché des futures TONA ~57%)",
       "gdp_previous": "+1,9% annualisé / +0,5% QoQ (T1 2026, révisé à la hausse)",
       "gdp_current": "+1,1% annualisé / +0,3% QoQ (T2 2026, sous les attentes de +2,0%/+0,5%, consommation en berne)",
-      "cpi_previous": "1,6% core YoY (juin 2026, national)",
-      "cpi_current": "1,8% core YoY / 1,9% core-core YoY (juillet 2026, national) ; avancé — CPI Tokyo août : core 1,8% YoY, core-core 2,0% YoY (3e mois consécutif d'accélération)",
-      "unemp_previous": "2,5% (juin 2026)",
-      "unemp_current": "2,4% (juillet 2026, en baisse)",
+      "cpi_previous": "1,3% (mars 2022, FRED)",
+      "cpi_current": "2,4% (avr. 2022, FRED)",
+      "unemp_previous": "2,5% (mai 2026, FRED)",
+      "unemp_current": "2,5% (juin 2026, FRED)",
       "speech": "Vice-gouverneur Himino (27 août 2026) : ton nettement hawkish, souligne que l'inflation sous-jacente approche 2% et appelle à des hausses « timely » pour ne pas être « behind the curve », citant les risques haussiers venus du Moyen-Orient, de la demande IA mondiale et du yen faible. Il s'agit du 1er d'une série de 3 discours de cadres du BoJ programmés avant la réunion du 17-18 sept. (suivi de Takata le 2 sept., Masu le 10 sept.) — schéma déjà utilisé par le BoJ pour préparer le marché à ses hausses passées.",
       "cycle": "Cycle de normalisation graduelle entamé en 2024 (sortie des taux négatifs), taux porté par étapes à 1,00% (dernière hausse le 16-17/06/2026, statu quo confirmé le 31/07). Trois discours de cadres (Himino, Takata, Masu) calendarisés avant la réunion du 17-18 septembre pour préparer une nouvelle hausse, dont la probabilité implicite (marché des futures TONA) est d'environ 57% au 1er septembre.",
       "move": "hold",
