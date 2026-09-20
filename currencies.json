@@ -1,6 +1,6 @@
 {
-  "generated_at": "19 septembre 2026, 20h32 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-19T20:32:15+00:00",
+  "generated_at": "20 septembre 2026, 19h18 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-20T19:18:11+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -116,7 +116,7 @@
       "rate_previous": "4,00%",
       "rate_current": "3,75%",
       "rate_change_date": "Baisse de 25 pb le 11 décembre 2025 — statu quo depuis, dont le maintien du 17 septembre 2026 voté 6-3, les trois dissidents réclamant une hausse à 4,00%",
-      "next": "5 novembre 2026 — Décision BoE (Bank Rate) + Monetary Policy Report",
+      "next": "5 novembre 2026 — Décision BoE (Bank Rate) + rapport",
       "gdp_previous": "+0,6% QoQ (T1 2026)",
       "gdp_current": "+0,4% QoQ (T2 2026)",
       "cpi_previous": "2,9% (juillet 2026)",
@@ -165,7 +165,7 @@
       "rate_previous": "1,00%",
       "rate_current": "1,25%",
       "rate_change_date": "Hausse de 25 pb le 18 septembre 2026, votée 7-2 (dissidents Asada et Sato), effective le 24 septembre — plus haut niveau depuis 1995",
-      "next": "30 octobre 2026 — Décision BoJ (call rate) + Outlook Report",
+      "next": "30 octobre 2026 — Décision BoJ + Outlook Report",
       "gdp_previous": "+1,8% (T1 2026, annualisé)",
       "gdp_current": "+1,4% (T2 2026, annualisé, 2e estimation du 7 septembre, révisée en hausse depuis +1,1%)",
       "cpi_previous": "1,8% (juillet 2026, IPC core national)",
@@ -207,7 +207,16 @@
       "speech": "Martin Schlegel a maintenu le 11 septembre un ton neutre, sans le moindre signal de resserrement : l'inflation a augmenté ces derniers mois mais reste, selon lui, dans la zone de stabilité des prix. Il reconnaît que le taux de change du franc constitue un défi pour l'économie suisse, tout en rappelant que le franc réel est stable depuis 2020. La BNS réaffirme sa disponibilité à intervenir sur le marché des changes plutôt qu'à manier le taux directeur.",
       "cycle": "Taux au plancher de 0,00% depuis juin 2025, avec une BNS qui privilégie explicitement l'intervention de change à toute modification du taux. L'inflation a doublé en un mois (0,4% à 0,8%) et le PIB a bondi de 1,5% au T2, ce qui éloigne le scénario d'un retour en territoire négatif sans pour autant justifier un resserrement : la barre reste haute dans les deux sens.",
       "move": "hold",
-      "events": [],
+      "events": [
+        {
+          "date": "24 septembre 2026",
+          "date_iso": "2026-09-24",
+          "time": "07:30 UTC",
+          "name": "Décision BNS (examen trimestriel)",
+          "forecast": "voir consensus de marché",
+          "previous": "0,00%"
+        }
+      ],
       "watch": "Examen trimestriel de la BNS le 24 septembre à 07h30 UTC, conférence de presse à 08h00 : maintien à 0,00% largement attendu, l'enjeu portant davantage sur le discours relatif au franc et aux dépôts à vue que sur la décision elle-même.",
       "sources": [
         "https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions",
@@ -229,7 +238,7 @@
       "rate_previous": "2,50%",
       "rate_current": "2,25%",
       "rate_change_date": "Baisse de 25 pb le 29 octobre 2025 — statu quo depuis, dont le maintien du 2 septembre 2026 (7e consécutif)",
-      "next": "28 octobre 2026 — Décision BdC (taux directeur) + RPM",
+      "next": "28 octobre 2026 — Décision BdC + rapport",
       "gdp_previous": "+0,3% (T1 2026, QoQ annualisé)",
       "gdp_current": "+3,3% (T2 2026, QoQ annualisé, publié le 28 août, légèrement sous le consensus de 3,4%)",
       "cpi_previous": "3,0% (juillet 2026)",
@@ -302,7 +311,7 @@
       "rate_previous": "2,50%",
       "rate_current": "2,75%",
       "rate_change_date": "Hausse de 25 pb le 2 septembre 2026, deuxième du cycle après celle du 8 juillet (2,25% → 2,50% → 2,75%)",
-      "next": "28 octobre 2026 — Décision RBNZ (OCR) — Monetary Policy Review",
+      "next": "28 octobre 2026 — Décision RBNZ (OCR)",
       "gdp_previous": "+0,9% QoQ (T1 2026, révisé en hausse)",
       "gdp_current": "+0,2% QoQ (T2 2026, publié le 17 septembre, au-dessus du consensus de +0,1% ; PIB par habitant +0,1%)",
       "cpi_previous": "3,1% (T1 2026)",
