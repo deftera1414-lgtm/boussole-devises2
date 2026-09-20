@@ -72,18 +72,63 @@ jobs:
           # Dates de reunion publiees a l'avance par chaque banque centrale.
           # A prolonger une fois par an. (date ISO, libelle, heure UTC)
           CB = {
-            "USD":[("2026-10-28","Décision FOMC (Fed)","18:00"),("2026-12-09","Décision FOMC (Fed) + projections","19:00")],
-            "EUR":[("2026-10-29","Décision BCE (taux de dépôt)","12:15"),("2026-12-17","Décision BCE + projections","13:15")],
-            "GBP":[("2026-11-05","Décision BoE (Bank Rate) + rapport","12:00"),("2026-12-17","Décision BoE (Bank Rate)","12:00")],
-            "JPY":[("2026-10-30","Décision BoJ + Outlook Report","03:00"),("2026-12-18","Décision BoJ (call rate)","03:00")],
-            "CHF":[("2026-09-24","Décision BNS (examen trimestriel)","07:30"),("2026-12-17","Décision BNS (examen trimestriel)","07:30")],
-            "CAD":[("2026-10-28","Décision BdC + rapport","13:45"),("2026-12-09","Décision BdC (taux directeur)","14:45")],
-            "AUD":[("2026-09-29","Décision RBA (cash rate)","04:30"),("2026-11-03","Décision RBA + SoMP","03:30"),("2026-12-08","Décision RBA (cash rate)","03:30")],
-            "NZD":[("2026-10-28","Décision RBNZ (OCR)","01:00"),("2026-12-09","Décision RBNZ (OCR) + MPS","01:00")],
+            "USD":[("2026-10-28","Décision FOMC (Fed)","18:00"),("2026-12-09","Décision FOMC (Fed) + projections","19:00"),
+                   ("2027-01-27","Décision FOMC (Fed)","19:00"),("2027-03-17","Décision FOMC + projections","18:00"),
+                   ("2027-04-28","Décision FOMC (Fed)","18:00"),("2027-06-09","Décision FOMC + projections","18:00"),
+                   ("2027-07-28","Décision FOMC (Fed)","18:00"),("2027-09-15","Décision FOMC + projections","18:00"),
+                   ("2027-10-27","Décision FOMC (Fed)","18:00"),("2027-12-08","Décision FOMC + projections","19:00")],
+            "EUR":[("2026-10-29","Décision BCE (taux de dépôt)","12:15"),("2026-12-17","Décision BCE + projections","13:15"),
+                   ("2027-02-04","Décision BCE (taux de dépôt)","13:15"),("2027-03-18","Décision BCE + projections","13:15"),
+                   ("2027-04-29","Décision BCE (taux de dépôt)","12:15"),("2027-06-10","Décision BCE + projections","12:15"),
+                   ("2027-07-22","Décision BCE (taux de dépôt)","12:15"),("2027-09-09","Décision BCE + projections","12:15"),
+                   ("2027-10-28","Décision BCE (taux de dépôt)","12:15"),("2027-12-16","Décision BCE + projections","13:15")],
+            "GBP":[("2026-11-05","Décision BoE (Bank Rate) + rapport","12:00"),("2026-12-17","Décision BoE (Bank Rate)","12:00"),
+                   ("2027-02-04","Décision BoE (Bank Rate) + rapport","12:00"),("2027-03-18","Décision BoE (Bank Rate)","12:00"),
+                   ("2027-04-29","Décision BoE (Bank Rate) + rapport","11:00"),("2027-06-17","Décision BoE (Bank Rate)","11:00"),
+                   ("2027-07-29","Décision BoE (Bank Rate) + rapport","11:00"),("2027-09-16","Décision BoE (Bank Rate)","11:00"),
+                   ("2027-11-04","Décision BoE (Bank Rate) + rapport","12:00"),("2027-12-16","Décision BoE (Bank Rate)","12:00")],
+            "JPY":[("2026-10-30","Décision BoJ + Outlook Report","03:00"),("2026-12-18","Décision BoJ (call rate)","03:00"),
+                   ("2027-01-22","Décision BoJ + Outlook Report","03:00"),("2027-03-18","Décision BoJ (call rate)","03:00"),
+                   ("2027-04-28","Décision BoJ + Outlook Report","03:00"),("2027-06-11","Décision BoJ (call rate)","03:00"),
+                   ("2027-07-22","Décision BoJ + Outlook Report","03:00"),("2027-09-22","Décision BoJ (call rate)","03:00"),
+                   ("2027-10-29","Décision BoJ + Outlook Report","03:00"),("2027-12-17","Décision BoJ (call rate)","03:00")],
+            "CHF":[("2026-09-24","Décision BNS (examen trimestriel)","07:30"),("2026-12-17","Décision BNS (examen trimestriel)","07:30"),
+                   ("2027-03-18","Décision BNS (examen trimestriel)","08:30"),("2027-06-24","Décision BNS (examen trimestriel)","07:30"),
+                   ("2027-09-23","Décision BNS (examen trimestriel)","07:30"),("2027-12-16","Décision BNS (examen trimestriel)","08:30")],
+            "CAD":[("2026-10-28","Décision BdC + rapport","13:45"),("2026-12-09","Décision BdC (taux directeur)","14:45"),
+                   ("2027-01-27","Décision BdC + rapport","14:45"),("2027-03-03","Décision BdC (taux directeur)","14:45"),
+                   ("2027-04-28","Décision BdC + rapport","13:45"),("2027-06-02","Décision BdC (taux directeur)","13:45"),
+                   ("2027-07-21","Décision BdC + rapport","13:45"),("2027-09-08","Décision BdC (taux directeur)","13:45"),
+                   ("2027-10-27","Décision BdC + rapport","13:45"),("2027-12-08","Décision BdC (taux directeur)","14:45")],
+            "AUD":[("2026-09-29","Décision RBA (cash rate)","04:30"),("2026-11-03","Décision RBA + SoMP","03:30"),
+                   ("2026-12-08","Décision RBA (cash rate)","03:30"),
+                   ("2027-02-09","Décision RBA + SoMP","03:30"),("2027-03-23","Décision RBA (cash rate)","03:30"),
+                   ("2027-05-04","Décision RBA + SoMP","04:30"),("2027-06-22","Décision RBA (cash rate)","04:30"),
+                   ("2027-08-10","Décision RBA + SoMP","04:30"),("2027-09-28","Décision RBA (cash rate)","04:30"),
+                   ("2027-11-02","Décision RBA + SoMP","03:30"),("2027-12-14","Décision RBA (cash rate)","03:30")],
+            "NZD":[("2026-10-28","Décision RBNZ (OCR)","01:00"),("2026-12-09","Décision RBNZ (OCR) + MPS","01:00"),
+                   ("2027-02-10","Décision RBNZ (OCR)","01:00"),("2027-03-17","Décision RBNZ (OCR) + MPS","01:00"),
+                   ("2027-05-05","Décision RBNZ (OCR)","02:00"),("2027-06-16","Décision RBNZ (OCR) + MPS","02:00"),
+                   ("2027-08-04","Décision RBNZ (OCR)","02:00"),("2027-09-15","Décision RBNZ (OCR) + MPS","02:00"),
+                   ("2027-10-27","Décision RBNZ (OCR)","01:00"),("2027-12-08","Décision RBNZ (OCR) + MPS","01:00")],
           }
 
           CHANGES = []
           def log(m): print(m, flush=True)
+
+          # Un fichier calendrier.json depose a la racine du depot remplace le
+          # calendrier ci-dessus. C'est la voie simple pour prolonger 2028 sans
+          # toucher au workflow : meme format {devise: [[date, libelle, heure]]}.
+          try:
+              _ext = json.load(open("calendrier.json", encoding="utf-8"))
+              if isinstance(_ext, dict) and _ext:
+                  CB = {k: [tuple(x) for x in v] for k, v in _ext.items() if isinstance(v, list)}
+                  log("Calendrier externe calendrier.json charge.")
+          except FileNotFoundError:
+              pass
+          except Exception as _e:
+              log("calendrier.json illisible (" + str(_e) + ") — calendrier interne conserve.")
+
           def note(code, txt):
               log("      " + txt); CHANGES.append(code + " — " + txt)
 
