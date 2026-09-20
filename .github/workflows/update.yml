@@ -1,50 +1,671 @@
-name: Boussole Devises — mise à jour horaire
+name: Boussole Devises — mise à jour automatique
+
+# TOUT LE MOTEUR EST DANS CE FICHIER.
+# Il n'y a plus de update_data.py ni de refresh_ai.py à installer : le code
+# s'exécute directement ici. Les seuls fichiers dont il a besoin dans le dépôt
+# sont currencies.json (les données), template.html et pipeline.py (le rendu),
+# qui sont déjà en place et qu'il ne modifie pas.
 
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "0 6 * * *"      # passage complet quotidien, avec relecture des postures
+    - cron: "15 */4 * * *"   # passages légers : calendrier, badges, horodatage
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: boussole-devises-update
+  group: boussole-devises
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Rafraîchir les chiffres (IPC, chômage) via FRED
+      # ------------------------------------------------------------------
+      # 1. Rafraîchissement déterministe : calendrier, chiffres FRED,
+      #    momentum, badges, horodatage. Ne demande aucune clé payante.
+      # ------------------------------------------------------------------
+      - name: Rafraichir les donnees
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python3 update_data.py
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, re, sys, time, datetime as dt
+          import urllib.request, urllib.parse, urllib.error
+
+          KEY = os.environ.get("FRED_API_KEY", "").strip()
+          FRED = "https://api.stlouisfed.org/fred"
+          ORDER = ["EUR","GBP","AUD","NZD","USD","CAD","CHF","JPY"]
+          WINDOW = 4          # fenetre d'evenements affichee, en jours
+          HEARTBEAT = 20      # heures sans changement avant de reecrire l'horodatage
+
+          M_FR = {1:"janvier",2:"fevrier",3:"mars",4:"avril",5:"mai",6:"juin",
+                  7:"juillet",8:"aout",9:"septembre",10:"octobre",11:"novembre",12:"decembre"}
+          M_DISPLAY = {1:"janvier",2:"février",3:"mars",4:"avril",5:"mai",6:"juin",
+                       7:"juillet",8:"août",9:"septembre",10:"octobre",11:"novembre",12:"décembre"}
+          M_PARSE = {"janv":1,"janvier":1,"fevr":2,"févr":2,"fevrier":2,"février":2,"mars":3,
+                     "avr":4,"avril":4,"mai":5,"juin":6,"juil":7,"juillet":7,"aout":8,"août":8,
+                     "sept":9,"septembre":9,"oct":10,"octobre":10,"nov":11,"novembre":11,
+                     "dec":12,"déc":12,"decembre":12,"décembre":12}
+
+          HINT = {"USD":"United States","EUR":"Euro Area","GBP":"United Kingdom","JPY":"Japan",
+                  "CHF":"Switzerland","CAD":"Canada","AUD":"Australia","NZD":"New Zealand"}
+
+          # Series FRED verifiees, essayees en premier. Une recherche filtree
+          # sert de repli si l'une d'elles cesse d'etre alimentee.
+          KNOWN = {
+            "cpi": {"USD":"CPIAUCSL","EUR":"CP0000EZ19M086NEST","GBP":"GBRCPIALLMINMEI",
+                    "JPY":"JPNCPIALLMINMEI","CHF":"CHECPIALLMINMEI","CAD":"CANCPIALLMINMEI",
+                    "AUD":"AUSCPIALLQINMEI","NZD":"NZLCPIALLQINMEI"},
+            "unemp": {"USD":"UNRATE","EUR":"LRHUTTTTEZM156S","GBP":"LRHUTTTTGBM156S",
+                      "JPY":"LRUN64TTJPM156S","CHF":"LRHUTTTTCHM156S","CAD":"LRUNTTTTCAM156S",
+                      "AUD":"LRHUTTTTAUM156S","NZD":"LRHUTTTTNZM156S"},
+          }
+
+          # Dates de reunion publiees a l'avance par chaque banque centrale.
+          # A prolonger une fois par an. (date ISO, libelle, heure UTC)
+          CB = {
+            "USD":[("2026-10-28","Décision FOMC (Fed)","18:00"),("2026-12-09","Décision FOMC (Fed) + projections","19:00")],
+            "EUR":[("2026-10-29","Décision BCE (taux de dépôt)","12:15"),("2026-12-17","Décision BCE + projections","13:15")],
+            "GBP":[("2026-11-05","Décision BoE (Bank Rate) + rapport","12:00"),("2026-12-17","Décision BoE (Bank Rate)","12:00")],
+            "JPY":[("2026-10-30","Décision BoJ + Outlook Report","03:00"),("2026-12-18","Décision BoJ (call rate)","03:00")],
+            "CHF":[("2026-09-24","Décision BNS (examen trimestriel)","07:30"),("2026-12-17","Décision BNS (examen trimestriel)","07:30")],
+            "CAD":[("2026-10-28","Décision BdC + rapport","13:45"),("2026-12-09","Décision BdC (taux directeur)","14:45")],
+            "AUD":[("2026-09-29","Décision RBA (cash rate)","04:30"),("2026-11-03","Décision RBA + SoMP","03:30"),("2026-12-08","Décision RBA (cash rate)","03:30")],
+            "NZD":[("2026-10-28","Décision RBNZ (OCR)","01:00"),("2026-12-09","Décision RBNZ (OCR) + MPS","01:00")],
+          }
+
+          CHANGES = []
+          def log(m): print(m, flush=True)
+          def note(code, txt):
+              log("      " + txt); CHANGES.append(code + " — " + txt)
+
+          now = dt.datetime.now(dt.timezone.utc)
+          def frdate(d): return ("1er" if d.day==1 else str(d.day)) + " " + M_DISPLAY[d.month] + " " + str(d.year)
+
+          # ---------- lecture de dates ----------
+          def ev_date(ev):
+              iso = str(ev.get("date_iso","")).strip()
+              if iso:
+                  try: return dt.date.fromisoformat(iso)
+                  except ValueError: pass
+              t = str(ev.get("date","")).strip().lower()
+              m = re.search(r"(\d{1,2})(?:\s*(?:er)?)?(?:\s*[-–/]\s*(\d{1,2}))?\s*([a-zéèêûôàç]+)\.?\s*(\d{4})", t)
+              if not m: return None
+              d1, d2, mo, yr = m.groups()
+              month = M_PARSE.get(mo.rstrip("."))
+              if month is None:
+                  for k,v in M_PARSE.items():
+                      if mo.startswith(k): month = v; break
+              if month is None: return None
+              try: return dt.date(int(yr), month, int(d2 or d1))
+              except ValueError: return None
+
+          def ev_dt(ev):
+              d = ev_date(ev)
+              if d is None: return None
+              m = re.search(r"(\d{1,2})\s*[:h]\s*(\d{2})", str(ev.get("time","")))
+              h, mi = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
+              if not (0<=h<=23 and 0<=mi<=59): h, mi = 12, 0
+              return dt.datetime(d.year, d.month, d.day, h, mi, tzinfo=dt.timezone.utc)
+
+          Q_RE = re.compile(r"\bT([1-4])\s*(\d{4})", re.I)
+          MO_RE = re.compile(r"\b([a-zéèêûôàç]{3,10})\.?\s+(\d{4})", re.I)
+          def period(txt):
+              """(annee, mois) de la periode citee dans un champ texte."""
+              if not txt: return None
+              t = str(txt)
+              m = Q_RE.search(t)
+              if m: return (int(m.group(2)), int(m.group(1))*3)
+              for m in MO_RE.finditer(t):
+                  k = m.group(1).lower().rstrip(".")
+                  mo = M_PARSE.get(k)
+                  if mo is None:
+                      for kk,v in M_PARSE.items():
+                          if k.startswith(kk): mo = v; break
+                  if mo is not None: return (int(m.group(2)), mo)
+              return None
+
+          # ---------- FRED ----------
+          def fred(path, **p):
+              p["api_key"] = KEY; p["file_type"] = "json"
+              url = FRED + "/" + path + "?" + urllib.parse.urlencode(p)
+              rq = urllib.request.Request(url, headers={"User-Agent":"boussole/3"})
+              with urllib.request.urlopen(rq, timeout=25) as r: return json.load(r)
+
+          def fresh(sid, months=8):
+              """Une serie encore alimentee ? Protege contre les series
+              discontinuees, qui renverraient de vieilles valeurs presentees
+              comme actuelles — la panne exacte constatee en production."""
+              try: data = fred("series", series_id=sid)
+              except Exception: return False
+              arr = data.get("seriess") or []
+              if not arr: return False
+              try: end = dt.date.fromisoformat(arr[0].get("observation_end",""))
+              except ValueError: return False
+              return (now.date() - end).days <= months*31
+
+          def search(text, hint, freqs):
+              try:
+                  data = fred("series/search", search_text=text, order_by="search_rank",
+                              sort_order="desc", limit=60)
+              except Exception: return None
+              cands = []
+              for s in data.get("seriess", []):
+                  ti = s.get("title","")
+                  if "DISCONTINUED" in ti.upper(): continue
+                  if hint.lower() not in ti.lower(): continue
+                  if freqs and s.get("frequency_short") not in freqs: continue
+                  cands.append((s.get("observation_end","0"), s))
+              if not cands: return None
+              cands.sort(key=lambda x: x[0], reverse=True)
+              return cands[0][1]["id"]
+
+          def last_two(sid, units):
+              try:
+                  data = fred("series/observations", series_id=sid, units=units,
+                              sort_order="desc", limit=8)
+              except Exception: return None, None
+              obs = [o for o in data.get("observations",[]) if o.get("value") not in (".","",None)]
+              if len(obs) < 2: return None, None
+              return obs[1], obs[0]
+
+          def fmt(v, iso):
+              txt = ("%.1f" % float(v)).replace(".", ",")
+              try:
+                  y, mo, _ = iso.split("-")
+                  per = M_DISPLAY[int(mo)] + " " + y
+              except Exception: per = iso
+              return txt + "% (" + per + ", FRED)"
+
+          def refresh(code, c, kind, pk, ck, units, lo, hi, label):
+              terms, freqs = {
+                "cpi": (["consumer price index all items","harmonized index of consumer prices"], ("M","Q")),
+                "unemp": (["harmonized unemployment rate","unemployment rate"], ("M","Q")),
+              }[kind]
+              sid = KNOWN[kind].get(code)
+              if not (sid and fresh(sid)):
+                  sid = None
+                  for t in terms:
+                      sid = search(t + " " + HINT[code], HINT[code], freqs)
+                      if sid: break
+              if not sid:
+                  log("      " + label + " : aucune serie fiable, valeur conservee"); return
+              prev, curr = last_two(sid, units)
+              if not prev or not curr:
+                  log("      " + label + " : observations insuffisantes, conserve"); return
+              try:
+                  if not (lo <= float(prev["value"]) <= hi and lo <= float(curr["value"]) <= hi):
+                      log("      " + label + " : hors bornes plausibles, conserve"); return
+              except (TypeError, ValueError):
+                  return
+              # Garde-fou d'anteriorite : ne jamais remplacer une donnee par une
+              # plus ancienne. C'est ce qui manquait et qui a laisse ecrire des
+              # chiffres de 2025 par-dessus des chiffres de 2026.
+              try: fp = (int(curr["date"][:4]), int(curr["date"][5:7]))
+              except Exception: fp = None
+              ep = period(c.get(ck,""))
+              if fp is None or (ep is not None and fp <= ep):
+                  log("      " + label + " : FRED pas plus recent que l'existant, conserve"); return
+              np_, nc = fmt(prev["value"], prev["date"]), fmt(curr["value"], curr["date"])
+              if c.get(ck) == nc and c.get(pk) == np_:
+                  log("      " + label + " : inchange"); return
+              note(code, label + " : " + nc + " (auparavant " + str(c.get(ck)) + ")")
+              c[pk], c[ck] = np_, nc
+
+          # ---------- momentum ----------
+          NPCT = re.compile(r"[+-]?\d+(?:[.,]\d+)?\s*%")
+          NUM = re.compile(r"[+-]?\d+(?:[.,]\d+)?")
+          def pnum(s):
+              s = str(s).replace("−","-")
+              m = NPCT.search(s) or NUM.search(s)
+              if not m: return None
+              try: return float(m.group().rstrip("% \t").replace(",","."))
+              except ValueError: return None
+
+          def clamp(v, lo, hi): return max(lo, min(hi, v))
+
+          def momentum(c):
+              """Inflation qui accelere, chomage qui baisse et PIB qui accelere
+              poussent vers le resserrement. Coefficients calibres pour que le
+              seuil d'affichage (+-4) marque un mouvement reellement notable."""
+              s, seen = 0.0, False
+              a, b = pnum(c.get("cpi_previous")), pnum(c.get("cpi_current"))
+              if a is not None and b is not None: s += clamp((b-a)*6.0, -5, 5); seen = True
+              a, b = pnum(c.get("unemp_previous")), pnum(c.get("unemp_current"))
+              if a is not None and b is not None: s += clamp((a-b)*8.0, -4, 4); seen = True
+              a, b = pnum(c.get("gdp_previous")), pnum(c.get("gdp_current"))
+              if a is not None and b is not None: s += clamp((b-a)*2.5, -4, 4); seen = True
+              return int(clamp(round(s), -10, 10)) if seen else None
+
+          # ---------- evenements ----------
+          def purge(code, c):
+              evs = c.get("events") or []
+              if not isinstance(evs, list): c["events"] = []; return
+              keep, drop = [], []
+              for e in evs:
+                  if not isinstance(e, dict): continue
+                  d = ev_date(e)
+                  if d is None: keep.append(e); continue
+                  if re.search(r"\d{1,2}\s*[:h]\s*\d{2}", str(e.get("time",""))):
+                      w = ev_dt(e)
+                      dead = w is not None and w < now - dt.timedelta(hours=2)
+                  else:
+                      dead = d < now.date()
+                  (drop if dead else keep).append(e if not dead else e.get("name","?"))
+              if drop:
+                  note(code, str(len(drop)) + " evenement(s) passe(s) retire(s)")
+                  c["events"] = keep
+
+          def mtg_dt(d, hhmm):
+              try: h, mi = [int(x) for x in str(hhmm).split(":")]
+              except Exception: h, mi = 12, 0
+              return dt.datetime(d.year, d.month, d.day, h, mi, tzinfo=dt.timezone.utc)
+
+          def calendar(code, c):
+              nxt = None
+              for iso, label, hhmm in CB.get(code, []):
+                  try: d = dt.date.fromisoformat(iso)
+                  except ValueError: continue
+                  if mtg_dt(d, hhmm) >= now - dt.timedelta(hours=2):
+                      nxt = (d, label, hhmm); break
+              if nxt is None: return
+              d, label, hhmm = nxt
+              want = frdate(d) + " — " + label
+              if c.get("next") != want:
+                  note(code, "prochaine reunion : " + want); c["next"] = want
+              ahead = (d - now.date()).days
+              if 0 <= ahead <= WINDOW:
+                  evs = c.get("events") or []
+                  iso = d.isoformat()
+                  if not any(isinstance(e,dict) and (e.get("date_iso")==iso or
+                             label[:18].lower() in str(e.get("name","")).lower()) for e in evs):
+                      evs.append({"date": frdate(d), "date_iso": iso,
+                                  "time": (hhmm + " UTC") if hhmm else "heure non précisée",
+                                  "name": label, "forecast": "voir consensus de marché",
+                                  "previous": c.get("rate_current","NON TROUVÉ")})
+                      c["events"] = evs
+                      note(code, "reunion inscrite au calendrier : " + label)
+
+          def flags(code, c):
+              a = b = False
+              for e in c.get("events") or []:
+                  if not isinstance(e, dict): continue
+                  w = ev_dt(e)
+                  if w is None: continue
+                  h = (w - now).total_seconds()/3600.0
+                  if 0 <= h <= 6: a = True
+                  if 0 <= h <= 48: b = True
+              for k, v, lab in (("event_6h",a,"sous 6 h"), ("event_1_2d",b,"sous 48 h")):
+                  if bool(c.get(k)) != v:
+                      note(code, "evenement " + lab + (" — badge active" if v else " — badge retire"))
+                      c[k] = v
+
+          # ---------- execution ----------
+          log("=== Boussole Devises — " + frdate(now.date()) + " a " + now.strftime("%H:%M") + " UTC ===")
+          try:
+              src = json.load(open("currencies.json", encoding="utf-8"))
+              cur = src["currencies"]
+          except Exception as e:
+              log("ERREUR : currencies.json illisible (" + str(e) + ")"); sys.exit(1)
+
+          before = json.dumps(cur, sort_keys=True, ensure_ascii=False)
+          if not KEY:
+              log("FRED_API_KEY absente — chiffres non rafraichis (le reste fonctionne).")
+
+          for code in ORDER:
+              if code not in cur: continue
+              log("-- " + code)
+              c = cur[code]
+              purge(code, c)
+              calendar(code, c)
+              if KEY:
+                  refresh(code, c, "unemp", "unemp_previous", "unemp_current", "lin", 0, 30, "chomage")
+                  time.sleep(0.6)
+                  refresh(code, c, "cpi", "cpi_previous", "cpi_current", "pc1", -5, 30, "inflation")
+                  time.sleep(0.6)
+              m = momentum(c)
+              if m is not None and c.get("momentum") != m:
+                  note(code, "momentum recalcule : " + str(c.get("momentum")) + " -> " + ("%+d" % m))
+                  c["momentum"] = m
+              flags(code, c)
+
+          changed = json.dumps(cur, sort_keys=True, ensure_ascii=False) != before
+
+          stale = True
+          prev_iso = src.get("generated_at_iso","")
+          if prev_iso:
+              try: stale = (now - dt.datetime.fromisoformat(prev_iso)) >= dt.timedelta(hours=HEARTBEAT)
+              except ValueError: stale = True
+
+          # Journal : ce qui rend le travail du robot observable.
+          if CHANGES:
+              try: entries = json.load(open("changelog.json", encoding="utf-8")).get("entries", [])
+              except Exception: entries = []
+              if not isinstance(entries, list): entries = []
+              day = now.date().isoformat()
+              cellule = next((e for e in entries if isinstance(e,dict) and e.get("date")==day), None)
+              if cellule is None:
+                  cellule = {"date": day, "items": []}; entries.insert(0, cellule)
+              seen = set(cellule.get("items", []))
+              for ch in CHANGES:
+                  if ch not in seen: cellule.setdefault("items", []).append(ch); seen.add(ch)
+              lim = (now.date() - dt.timedelta(days=14)).isoformat()
+              entries = [e for e in entries if isinstance(e,dict) and e.get("date","") >= lim]
+              entries.sort(key=lambda e: e.get("date",""), reverse=True)
+              json.dump({"entries": entries}, open("changelog.json","w",encoding="utf-8"),
+                        ensure_ascii=False, indent=2)
+
+          if not changed and not stale:
+              log("\nRien de neuf, horodatage recent — fichier inchange."); sys.exit(0)
+
+          src["generated_at"] = frdate(now.date()) + ", " + now.strftime("%Hh%M") + " UTC (mise à jour automatique)"
+          src["generated_at_iso"] = now.replace(microsecond=0).isoformat()
+          json.dump(src, open("currencies.json","w",encoding="utf-8"), ensure_ascii=False, indent=2)
+          log("\ncurrencies.json ecrit — " + str(len(CHANGES)) + " changement(s).")
+          PYEOF
+
+      # ------------------------------------------------------------------
+      # 2. Relecture des postures (taux, biais, ton, discours, cycle).
+      #    Uniquement au passage quotidien de 06h00 et en manuel.
+      #    Sans ANTHROPIC_API_KEY, l'etape se termine sans rien modifier.
+      # ------------------------------------------------------------------
+      - name: Relire les postures des banques centrales
+        if: github.event.schedule == '0 6 * * *' || github.event_name == 'workflow_dispatch'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BOUSSOLE_MODEL: ${{ vars.BOUSSOLE_MODEL }}
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, re, sys, datetime as dt
+          import urllib.request, urllib.error
+
+          KEY = os.environ.get("ANTHROPIC_API_KEY","").strip()
+          MODEL = (os.environ.get("BOUSSOLE_MODEL","") or "claude-sonnet-4-5").strip()
+          if not KEY:
+              print("ANTHROPIC_API_KEY absente — relecture sautee."); sys.exit(0)
+
+          ORDER = ["EUR","GBP","AUD","NZD","USD","CAD","CHF","JPY"]
+          BANKS = {"USD":"Réserve fédérale","EUR":"BCE","GBP":"Bank of England","JPY":"Bank of Japan",
+                   "CHF":"Banque nationale suisse","CAD":"Banque du Canada",
+                   "AUD":"Reserve Bank of Australia","NZD":"Reserve Bank of New Zealand"}
+          TILTS = {"hawkish","neutral","dovish"}; MOVES = {"hike","cut","hold"}
+          TEXTF = {"speech","cycle","rate_previous","rate_current","rate_change_date"}
+          OK = TEXTF | {"bias","long_adj","tilt","move"}
+          M = {1:"janvier",2:"février",3:"mars",4:"avril",5:"mai",6:"juin",7:"juillet",
+               8:"août",9:"septembre",10:"octobre",11:"novembre",12:"décembre"}
+
+          today = dt.datetime.now(dt.timezone.utc).date()
+          jour = ("1er" if today.day==1 else str(today.day)) + " " + M[today.month] + " " + str(today.year)
+          print("=== Relecture des postures — " + jour + " (" + MODEL + ") ===")
+
+          src = json.load(open("currencies.json", encoding="utf-8"))
+          cur = src["currencies"]
+
+          etat = "\n".join(
+            c + " (" + BANKS[c] + ") : taux " + str(cur.get(c,{}).get("rate_current","?"))
+            + " ; biais " + str(cur.get(c,{}).get("bias","?")) + "/100"
+            + " ; ton " + str(cur.get(c,{}).get("tilt","?"))
+            + " ; dernier mouvement " + str(cur.get(c,{}).get("move","?"))
+            + " ; prochaine reunion " + str(cur.get(c,{}).get("next","?"))
+            + " ; dernier changement note : " + str(cur.get(c,{}).get("rate_change_date","?"))[:130]
+            for c in ORDER if c in cur)
+
+          prompt = ("Nous sommes le " + jour + ". Tu mets a jour un tableau de bord Forex suivant "
+            "les huit grandes banques centrales.\n\nEtat actuellement enregistre :\n\n" + etat +
+            "\n\nRecherche sur le web ce qui a change depuis, pour chaque devise : decision de "
+            "politique monetaire intervenue, discours marquant d'un gouverneur, changement net "
+            "d'anticipation de marche.\n\n"
+            "Renvoie UNIQUEMENT un objet JSON, sans texte autour, sans bloc de code :\n"
+            '{"USD": {"rate_previous":"...","rate_current":"...","rate_change_date":"...",'
+            '"bias":78,"long_adj":8,"tilt":"hawkish","move":"hike","speech":"...","cycle":"...",'
+            '"_raison":"une phrase"}}\n\n'
+            "Regles :\n"
+            "1. N'inclus une devise QUE si quelque chose a reellement change. Un JSON vide {} est "
+            "une reponse valable et attendue la plupart des jours.\n"
+            "2. Dans une devise incluse, ne mets que les champs modifies, jamais d'autres champs.\n"
+            "3. bias : entier 0-100. 0 = tres accommodant donc devise faible, 50 = neutre, "
+            "100 = tres ferme donc devise forte. Ne le bouge que si la POSTURE a evolue, jamais "
+            "pour suivre une variation de cours.\n"
+            "4. long_adj : entier -10 a +10, nettete du cycle (hausse franche +8, plancher -5, incertain 0).\n"
+            "5. tilt vaut exactement hawkish, neutral ou dovish. move vaut exactement hike, cut ou "
+            "hold et decrit la DERNIERE decision prise.\n"
+            "6. speech : 2 a 4 phrases en francais resumant la communication la plus recente du "
+            "dirigeant. cycle : 2 a 3 phrases en francais sur l'etat du cycle monetaire.\n"
+            "7. Ecriture francaise des nombres : virgule decimale, pourcentage colle, ex. \"3,75%-4,00%\".\n"
+            "8. N'invente jamais. Si une recherche serieuse ne confirme pas un changement, n'inclus "
+            "pas la devise. Mieux vaut ne rien ecrire qu'ecrire une information non verifiee.")
+
+          payload = {"model": MODEL, "max_tokens": 8000,
+                     "tools": [{"type":"web_search_20250305","name":"web_search","max_uses":10}],
+                     "messages": [{"role":"user","content":prompt}]}
+          rq = urllib.request.Request("https://api.anthropic.com/v1/messages",
+                data=json.dumps(payload).encode("utf-8"),
+                headers={"x-api-key":KEY,"anthropic-version":"2023-06-01","content-type":"application/json"})
+          try:
+              with urllib.request.urlopen(rq, timeout=300) as r: resp = json.load(r)
+          except urllib.error.HTTPError as e:
+              print("Appel refuse (" + str(e.code) + ") : " + e.read().decode("utf-8","replace")[:400])
+              sys.exit(0)
+          except Exception as e:
+              print("Appel impossible : " + str(e)); sys.exit(0)
+
+          u = resp.get("usage",{})
+          print("Jetons : " + str(u.get("input_tokens","?")) + " entree, " + str(u.get("output_tokens","?")) + " sortie")
+
+          txt = "\n".join(b.get("text","") for b in resp.get("content",[])
+                          if isinstance(b,dict) and b.get("type")=="text").strip()
+          txt = re.sub(r"^```(?:json)?\s*|\s*```$", "", txt, flags=re.MULTILINE).strip()
+          i, j = txt.find("{"), txt.rfind("}")
+          if i == -1 or j <= i:
+              print("Aucun JSON exploitable. Debut : " + txt[:200]); sys.exit(0)
+          try: prop = json.loads(txt[i:j+1])
+          except Exception as e:
+              print("JSON illisible (" + str(e) + ") — rien modifie."); sys.exit(0)
+          if not isinstance(prop, dict) or not prop:
+              print("Aucun changement de posture detecte aujourd'hui."); sys.exit(0)
+
+          def valid(code, f, v, act):
+              """Chaque regle protege contre une facon precise dont une reponse
+              plausible mais fautive degraderait le tableau."""
+              if f == "bias":
+                  if not isinstance(v,int) or not 0 <= v <= 100: return None
+                  p = act.get("bias")
+                  if isinstance(p,int) and abs(v-p) > 30:
+                      print("  [" + code + "] bias " + str(p) + " -> " + str(v) + " rejete : ecart trop brutal")
+                      return None
+                  return v
+              if f == "long_adj": return v if isinstance(v,int) and -10 <= v <= 10 else None
+              if f == "tilt": return v if v in TILTS else None
+              if f == "move": return v if v in MOVES else None
+              if f in TEXTF:
+                  if not isinstance(v,str): return None
+                  s = v.strip()
+                  if f in ("speech","cycle"): return s if 40 <= len(s) <= 1800 else None
+                  return s if 1 <= len(s) <= 400 else None
+              return None
+
+          changes, n = [], 0
+          for code, fields in prop.items():
+              if code not in cur or not isinstance(fields, dict):
+                  print("  [" + str(code) + "] ignore"); continue
+              kept = []
+              for f, v in fields.items():
+                  if f not in OK: continue
+                  cleaned = valid(code, f, v, cur[code])
+                  if cleaned is None:
+                      if f in OK: print("  [" + code + "] " + f + " rejete")
+                      continue
+                  if cur[code].get(f) == cleaned: continue
+                  cur[code][f] = cleaned; kept.append(f)
+              if kept:
+                  n += 1
+                  why = str(fields.get("_raison","")).strip() or ("champs : " + ", ".join(kept))
+                  print("  [" + code + "] " + str(len(kept)) + " champ(s) : " + ", ".join(kept))
+                  print("           " + why)
+                  changes.append(code + " — " + why)
+
+          if not n:
+              print("Rien de validé — fichier inchange."); sys.exit(0)
+
+          src["currencies"] = cur
+          src["generated_at_iso"] = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
+          json.dump(src, open("currencies.json","w",encoding="utf-8"), ensure_ascii=False, indent=2)
+
+          try: entries = json.load(open("changelog.json", encoding="utf-8")).get("entries", [])
+          except Exception: entries = []
+          if not isinstance(entries, list): entries = []
+          day = today.isoformat()
+          cellule = next((e for e in entries if isinstance(e,dict) and e.get("date")==day), None)
+          if cellule is None: cellule = {"date": day, "items": []}; entries.insert(0, cellule)
+          seen = set(cellule.get("items", []))
+          for ch in changes:
+              if ch not in seen: cellule.setdefault("items", []).append(ch); seen.add(ch)
+          lim = (today - dt.timedelta(days=14)).isoformat()
+          entries = [e for e in entries if isinstance(e,dict) and e.get("date","") >= lim]
+          entries.sort(key=lambda e: e.get("date",""), reverse=True)
+          json.dump({"entries": entries}, open("changelog.json","w",encoding="utf-8"),
+                    ensure_ascii=False, indent=2)
+          print("\n" + str(n) + " devise(s) mise(s) a jour.")
+          PYEOF
 
       - name: Reconstruire le dashboard
         run: python3 pipeline.py
 
-      - name: Préparer la publication GitHub Pages
+      # ------------------------------------------------------------------
+      # 3. Injection du journal dans la page produite. Se fait ici plutot
+      #    que dans template.html pour qu'aucun autre fichier du depot
+      #    n'ait besoin d'etre modifie.
+      # ------------------------------------------------------------------
+      - name: Inserer le journal des mises a jour
         run: |
-          mkdir -p docs
-          cp dashboard.html docs/index.html
+          python3 - <<'PYEOF'
+          import json, html, re, datetime as dt
 
-      - name: Commit et push si quelque chose a changé
+          try:
+              entries = json.load(open("changelog.json", encoding="utf-8")).get("entries", [])
+          except Exception: entries = []
+          entries = [e for e in entries if isinstance(e,dict) and e.get("items")][:8]
+
+          today = dt.date.today()
+          M = {1:"janv.",2:"févr.",3:"mars",4:"avr.",5:"mai",6:"juin",7:"juil.",
+               8:"août",9:"sept.",10:"oct.",11:"nov.",12:"déc."}
+          def lab(iso):
+              try: d = dt.date.fromisoformat(iso)
+              except Exception: return str(iso)
+              n = (today - d).days
+              if n == 0: return "aujourd'hui"
+              if n == 1: return "hier"
+              return str(d.day) + " " + M[d.month] + " " + str(d.year)
+          def esc(s): return html.escape(str(s), quote=True)
+
+          CSS = """<style>
+          .cl{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+            box-shadow:var(--shadow);margin:14px 0 22px;overflow:hidden}
+          .cl>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;
+            align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--font-display);
+            font-size:.82rem;color:var(--text)}
+          .cl>summary::-webkit-details-marker{display:none}
+          .cl>summary::before{content:"\\25B8";color:var(--gold);transition:transform .15s}
+          .cl[open]>summary::before{transform:rotate(90deg)}
+          .cl-dot{width:8px;height:8px;border-radius:50%;background:var(--rise);flex:none}
+          .cl-dot.old{background:var(--fall)}
+          .cl-note{color:var(--text-muted);font-weight:400;font-size:.76rem;margin-left:auto;
+            font-family:var(--font-body)}
+          .cl-body{border-top:1px solid var(--border);padding:4px 0 6px}
+          .cl-day{padding:10px 16px;border-bottom:1px solid var(--border)}
+          .cl-day:last-child{border-bottom:none}
+          .cl-date{font-family:var(--font-mono);font-size:.72rem;color:var(--gold);
+            text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+          .cl-day ul{margin:0;padding-left:18px}
+          .cl-day li{font-size:.8rem;color:var(--text-secondary);line-height:1.55;margin:2px 0}
+          .cl-day li b{color:var(--text);font-weight:600}
+          .cl-empty{padding:12px 16px;font-size:.8rem;color:var(--text-muted)}
+          </style>"""
+
+          if not entries:
+              block = ('<details class="cl"><summary><span class="cl-dot"></span>'
+                       'Journal des mises à jour<span class="cl-note">en attente du premier passage'
+                       '</span></summary><div class="cl-body"><p class="cl-empty">Aucun changement '
+                       'enregistré pour l\'instant.</p></div></details>')
+          else:
+              last = entries[0].get("date","")
+              try: age = (today - dt.date.fromisoformat(last)).days
+              except Exception: age = 99
+              dot = " old" if age > 2 else ""
+              note = ("dernier changement " + lab(last)) if age <= 2 else \
+                     ("aucun changement depuis " + str(age) + " jours — à vérifier")
+              total = sum(len(e.get("items",[])) for e in entries)
+              days = []
+              for e in entries:
+                  lis = []
+                  for it in e.get("items", [])[:12]:
+                      t = str(it)
+                      if len(t) > 6 and t[:3].isupper() and t[3:6] == " — ":
+                          lis.append("<li><b>" + esc(t[:3]) + "</b>" + esc(t[3:]) + "</li>")
+                      else:
+                          lis.append("<li>" + esc(t) + "</li>")
+                  days.append('<div class="cl-day"><div class="cl-date">' + esc(lab(e.get("date",""))) +
+                              "</div><ul>" + "".join(lis) + "</ul></div>")
+              block = ('<details class="cl" open><summary><span class="cl-dot' + dot + '"></span>'
+                       'Journal des mises à jour<span class="cl-note">' + esc(note) + " · " +
+                       str(total) + ' entrée(s)</span></summary><div class="cl-body">' +
+                       "".join(days) + "</div></details>")
+
+          h = open("dashboard.html", encoding="utf-8").read()
+          if "class=\"cl\"" in h:
+              print("Journal deja present."); raise SystemExit(0)
+          h = h.replace("</head>", CSS + "</head>", 1) if "</head>" in h else CSS + h
+          # On insere juste apres le bloc d'en-tete, quel que soit son contenu.
+          m = re.search(r'(<div class="top-meta">.*?</div>\s*</div>)', h, re.S)
+          if m:
+              h = h[:m.end()] + block + h[m.end():]
+          else:
+              m2 = re.search(r'(<div class="wrap">)', h)
+              h = (h[:m2.end()] + block + h[m2.end():]) if m2 else h.replace("<body>", "<body>" + block, 1)
+          open("dashboard.html","w",encoding="utf-8").write(h)
+          print("Journal insere.")
+          PYEOF
+
+      # Garde-fou : une page abimee ne doit jamais remplacer une page correcte.
+      - name: Verifier la page
         run: |
+          taille=$(wc -c < dashboard.html)
+          if [ ! -s dashboard.html ] || [ "$taille" -lt 50000 ]; then
+            echo "::error::dashboard.html invalide ($taille octets) — publication annulee."
+            exit 1
+          fi
+          if grep -q "__CARDS__\|__ROWS__\|__GENERATED_AT__" dashboard.html; then
+            echo "::error::marqueurs de gabarit non remplaces — publication annulee."
+            exit 1
+          fi
+          echo "Page validee : $taille octets."
+
+      - name: Publier
+        run: |
+          mkdir -p docs && cp dashboard.html docs/index.html
           git config user.name "boussole-devises-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add currencies.json data.json docs/index.html
+          git add -A
           if git diff --cached --quiet; then
-            echo "Rien à committer."
+            echo "Rien de neuf a publier."
           else
-            git commit -m "Mise à jour automatique $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git diff --cached --name-only
+            git commit -m "Mise a jour automatique — $(date -u +'%d/%m/%Y %H:%M UTC')"
             git push
+            echo "Publie."
           fi
+
+      - name: Resume
+        if: always()
+        run: |
+          h=$(python3 -c "import json; print(json.load(open('currencies.json'))['generated_at'])" 2>/dev/null || echo "illisible")
+          c=$(python3 -c "import json,datetime; e=json.load(open('changelog.json'))['entries']; j=datetime.date.today().isoformat(); t=next((x for x in e if x.get('date')==j),None); print('\n'.join('- '+i for i in t['items']) if t and t.get('items') else '- Aucun changement aujourd hui.')" 2>/dev/null || echo "- Journal indisponible.")
+          { echo "### Boussole Devises"; echo ""; echo "**Horodatage :** $h"; echo ""; echo "#### Changements du jour"; echo "$c"; } >> "$GITHUB_STEP_SUMMARY"
