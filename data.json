@@ -7,7 +7,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Federal Reserve",
       "chief": "Kevin Warsh",
       "rate_previous": "3,50%–3,75%",
@@ -616,7 +616,7 @@
       "medium": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 46,
@@ -692,7 +692,7 @@
       "medium": {
         "prob": 48,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 38,
@@ -785,9 +785,9 @@
         "event": false
       },
       "medium": {
-        "prob": 56,
-        "label": "Haussier faible",
-        "event": false
+        "prob": 54,
+        "label": "Neutre",
+        "event": true
       },
       "long": {
         "prob": 79,
@@ -806,7 +806,7 @@
       "medium": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 56,
@@ -871,5 +871,5 @@
       }
     }
   ],
-  "generated_at": "21 septembre 2026, 11h29 UTC (mise à jour automatique)"
+  "generated_at": "21 septembre 2026, 15h04 UTC (mise à jour automatique)"
 }
