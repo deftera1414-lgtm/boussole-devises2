@@ -237,7 +237,7 @@
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Bank of Canada (BoC)",
       "chief": "Tiff Macklem",
@@ -421,7 +421,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 52,
@@ -535,7 +535,7 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -628,9 +628,9 @@
       "base": "AUD",
       "quote": "CAD",
       "short": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -706,7 +706,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -761,9 +761,9 @@
       "base": "USD",
       "quote": "CAD",
       "short": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 52,
@@ -820,7 +820,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 53,
@@ -839,7 +839,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -871,5 +871,5 @@
       }
     }
   ],
-  "generated_at": "21 septembre 2026, 08h55 UTC (mise à jour automatique)"
+  "generated_at": "21 septembre 2026, 11h29 UTC (mise à jour automatique)"
 }

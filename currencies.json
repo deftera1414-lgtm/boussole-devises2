@@ -1,6 +1,6 @@
 {
-  "generated_at": "21 septembre 2026, 08h55 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-21T08:55:44+00:00",
+  "generated_at": "21 septembre 2026, 11h29 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-21T11:29:44+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -239,7 +239,7 @@
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Bank of Canada (BoC)",
       "chief": "Tiff Macklem",
