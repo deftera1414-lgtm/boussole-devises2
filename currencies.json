@@ -1,6 +1,6 @@
 {
-  "generated_at": "21 septembre 2026, 15h04 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-21T15:04:20+00:00",
+  "generated_at": "21 septembre 2026, 20h24 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-21T20:24:13+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -239,8 +239,8 @@
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Bank of Canada (BoC)",
       "chief": "Tiff Macklem",
       "rate_previous": "2,50%",
@@ -256,16 +256,7 @@
       "speech": "En maintenant le taux le 2 septembre, Tiff Macklem a livré un message neutre assorti d'une inquiétude sur l'inflation. Il constate que l'économie a redémarré après avoir calé, PIB du T2 à 3,3% à l'appui, mais avertit que plus les prix du pétrole et les marges de raffinage resteront élevés, plus le risque de contagion aux prix énergétiques augmentera. Il conserve toute latitude, se disant prêt à ajuster la politique monétaire selon les besoins, dans un contexte compliqué par les nouvelles mesures commerciales américaines.",
       "cycle": "Pause prolongée à 2,25% depuis octobre 2025, sept réunions d'affilée. La Banque se trouve devant une configuration inconfortable : croissance vigoureuse au T2 et inflation au plafond de la fourchette cible plaideraient pour un resserrement, mais le choc tarifaire américain et un marché de l'emploi qui se retourne en août justifient l'attentisme.",
       "move": "hold",
-      "events": [
-        {
-          "date": "21 septembre 2026",
-          "date_iso": "2026-09-21",
-          "time": "15:20 UTC (11:20 ET)",
-          "name": "Discours de Tiff Macklem (Halifax Partnership) — évolution de la conjoncture, point presse à 16:30 UTC",
-          "forecast": "pas de valeur chiffrée (discours)",
-          "previous": "n/a"
-        }
-      ],
+      "events": [],
       "watch": "IPC de septembre mi-octobre et rapport sur l'emploi du 9 octobre, avant une décision du 28 octobre où le marché reste partagé entre nouveau statu quo et début de resserrement.",
       "sources": [
         "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
