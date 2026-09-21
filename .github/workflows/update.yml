@@ -44,7 +44,12 @@ jobs:
           FRED = "https://api.stlouisfed.org/fred"
           ORDER = ["EUR","GBP","AUD","NZD","USD","CAD","CHF","JPY"]
           WINDOW = 4          # fenetre d'evenements affichee, en jours
-          HEARTBEAT = 20      # heures sans changement avant de reecrire l'horodatage
+          # Battement de coeur : on reecrit l'horodatage des que le JOUR CIVIL
+          # a change. Un seuil en heures ne suffit pas — un dernier changement
+          # en soiree laisse tous les passages du lendemain matin sous le seuil,
+          # et la date affichee reste bloquee sur la veille (panne constatee le
+          # 21 septembre : dernier ecrit a 19h18, passage de 06h00 a 10h42 d'ecart,
+          # donc sous les 20 h, donc rien reecrit).
 
           M_FR = {1:"janvier",2:"fevrier",3:"mars",4:"avril",5:"mai",6:"juin",
                   7:"juillet",8:"aout",9:"septembre",10:"octobre",11:"novembre",12:"decembre"}
@@ -387,7 +392,7 @@ jobs:
           stale = True
           prev_iso = src.get("generated_at_iso","")
           if prev_iso:
-              try: stale = (now - dt.datetime.fromisoformat(prev_iso)) >= dt.timedelta(hours=HEARTBEAT)
+              try: stale = dt.datetime.fromisoformat(prev_iso).date() < now.date()
               except ValueError: stale = True
 
           # Journal : ce qui rend le travail du robot observable.
