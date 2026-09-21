@@ -1,6 +1,6 @@
 {
-  "generated_at": "20 septembre 2026, 19h18 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-20T19:18:11+00:00",
+  "generated_at": "21 septembre 2026, 08h55 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-21T08:55:44+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -60,7 +60,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
       "rate_previous": "Taux de dépôt 2,25%",
@@ -118,7 +118,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
       "rate_previous": "4,00%",

@@ -58,7 +58,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
       "rate_previous": "Taux de dépôt 2,25%",
@@ -116,7 +116,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
       "rate_previous": "4,00%",
@@ -350,7 +350,7 @@
       "medium": {
         "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 58,
@@ -367,9 +367,9 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 49,
@@ -386,9 +386,9 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 56,
@@ -407,7 +407,7 @@
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 45,
@@ -443,9 +443,9 @@
         "event": false
       },
       "medium": {
-        "prob": 56,
-        "label": "Haussier faible",
-        "event": false
+        "prob": 54,
+        "label": "Neutre",
+        "event": true
       },
       "long": {
         "prob": 74,
@@ -464,7 +464,7 @@
       "medium": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 50,
@@ -481,9 +481,9 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 42,
@@ -500,9 +500,9 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 49,
@@ -519,9 +519,9 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 38,
@@ -557,9 +557,9 @@
         "event": false
       },
       "medium": {
-        "prob": 54,
+        "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 66,
@@ -578,7 +578,7 @@
       "medium": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 43,
@@ -871,5 +871,5 @@
       }
     }
   ],
-  "generated_at": "20 septembre 2026, 19h18 UTC (mise à jour automatique)"
+  "generated_at": "21 septembre 2026, 08h55 UTC (mise à jour automatique)"
 }
