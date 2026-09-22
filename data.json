@@ -197,7 +197,7 @@
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Banque nationale suisse (BNS)",
       "chief": "Martin Schlegel",
       "rate_previous": "0,25%",
@@ -643,9 +643,9 @@
         "event": false
       },
       "medium": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 75,
@@ -719,9 +719,9 @@
         "event": false
       },
       "medium": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 68,
@@ -814,9 +814,9 @@
         "event": false
       },
       "medium": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 64,
@@ -852,9 +852,9 @@
         "event": false
       },
       "medium": {
-        "prob": 45,
+        "prob": 47,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 26,
@@ -862,5 +862,5 @@
       }
     }
   ],
-  "generated_at": "22 septembre 2026, 04h47 UTC (mise à jour automatique)"
+  "generated_at": "22 septembre 2026, 10h37 UTC (mise à jour automatique)"
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at": "22 septembre 2026, 04h47 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-22T04:47:46+00:00",
+  "generated_at": "22 septembre 2026, 10h37 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-22T10:37:00+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -199,7 +199,7 @@
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Banque nationale suisse (BNS)",
       "chief": "Martin Schlegel",
       "rate_previous": "0,25%",
