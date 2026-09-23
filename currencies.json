@@ -1,6 +1,6 @@
 {
-  "generated_at": "23 septembre 2026, 13h36 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-23T13:36:08+00:00",
+  "generated_at": "23 septembre 2026, 19h39 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-23T19:39:08+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -8,8 +8,8 @@
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Federal Reserve",
       "chief": "Kevin Warsh",
       "rate_previous": "3,50%–3,75%",
@@ -25,24 +25,7 @@
       "speech": "En annonçant la hausse du 16 septembre, Kevin Warsh a tenu un discours nettement ferme : « l'inflation est trop élevée, et l'est depuis trop longtemps », jugeant que la tendance sous-jacente ne s'est pas améliorée de façon significative. Il a présenté le geste comme le retrait d'« une dose d'accommodation » — la politique restant donc, à ses yeux, encore accommodante. Il refuse tout guidage explicite (« je ne fais pas dans le forward guidance »). Le dot plot montre 16 des 19 membres anticipant au moins une hausse supplémentaire en 2026, dont 4 qui en voient deux.",
       "cycle": "Bascule en cycle de resserrement le 16 septembre 2026 après neuf mois de pause : la Fed sort de la séquence de baisses 2024-2025 et relève son taux pour la première fois depuis 2023, sur un vote unanime. L'inflation bloquée à 3,4% et un choc énergétique persistant l'emportent sur un marché de l'emploi qui ralentit sans se retourner. Le dot plot pointe vers au moins une hausse de plus d'ici la fin de l'année.",
       "move": "hike",
-      "events": [
-        {
-          "date": "23 septembre 2026",
-          "date_iso": "2026-09-23",
-          "time": "13:45 UTC (09:45 ET)",
-          "name": "PMI flash S&P Global manufacturier (sept.)",
-          "forecast": "53,6",
-          "previous": "53,9"
-        },
-        {
-          "date": "23 septembre 2026",
-          "date_iso": "2026-09-23",
-          "time": "13:45 UTC (09:45 ET)",
-          "name": "PMI flash S&P Global services (sept.)",
-          "forecast": "56,0",
-          "previous": "56,5"
-        }
-      ],
+      "events": [],
       "watch": "Troisième estimation du PIB du T2 le 30 septembre, puis l'IPC de septembre mi-octobre — deux jalons avant le FOMC du 28 octobre, où le dot plot laisse entrevoir une hausse supplémentaire.",
       "sources": [
         "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
