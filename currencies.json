@@ -1,6 +1,6 @@
 {
-  "generated_at": "23 septembre 2026, 04h39 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-23T04:39:47+00:00",
+  "generated_at": "23 septembre 2026, 10h29 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-23T10:29:46+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -8,7 +8,7 @@
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Federal Reserve",
       "chief": "Kevin Warsh",
@@ -59,7 +59,7 @@
       "momentum": 3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
+      "event_6h": false,
       "event_1_2d": true,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
@@ -77,22 +77,6 @@
       "cycle": "Resserrement relancé en juin 2026 après le choc énergétique, avec une deuxième hausse le 10 septembre portant le taux de dépôt à 2,50%. La BCE assume un cycle actif tout en refusant de s'engager sur la suite : l'inflation remontée à 3,2% est attribuée à l'offre plutôt qu'à la demande, ce qui justifie la fermeté sans promettre d'automatisme.",
       "move": "hike",
       "events": [
-        {
-          "date": "23 septembre 2026",
-          "date_iso": "2026-09-23",
-          "time": "08:00 UTC (10:00 CEST)",
-          "name": "PMI flash zone euro (sept.)",
-          "forecast": "manuf. 52,9 / services 51,7",
-          "previous": "manuf. 52,7 / services 51,6 / composite 52,0"
-        },
-        {
-          "date": "23 septembre 2026",
-          "date_iso": "2026-09-23",
-          "time": "07:30 UTC (09:30 CEST)",
-          "name": "PMI flash Allemagne (sept.)",
-          "forecast": "manuf. 54,5 / services 50,0",
-          "previous": "manuf. 54,3 / services 49,7 / composite 51,8"
-        },
         {
           "date": "24 septembre 2026",
           "date_iso": "2026-09-24",
@@ -117,8 +101,8 @@
       "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
       "rate_previous": "4,00%",
