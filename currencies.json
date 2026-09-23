@@ -1,6 +1,6 @@
 {
-  "generated_at": "23 septembre 2026, 10h29 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-23T10:29:46+00:00",
+  "generated_at": "23 septembre 2026, 13h36 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-23T13:36:08+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -118,24 +118,7 @@
       "speech": "Andrew Bailey a maintenu le 17 septembre une ligne prudente, à contre-courant du camp ferme au sein de son propre comité. Il se dit très attentif à l'impact des prix de l'énergie, mais juge la transmission aux prix restée jusqu'ici « assez contenue ». Il a explicitement repoussé les anticipations de marché les plus agressives, déclarant que le comité n'avait pas discuté de relever les taux à quatre reprises. Il conditionne toute baisse future à une désescalade au Moyen-Orient et à un reflux des prix énergétiques.",
       "cycle": "Statu quo prolongé à 3,75% depuis décembre 2025, mais la tension interne s'accentue : trois membres sur neuf votaient déjà pour une hausse le 17 septembre. L'inflation remontée à 3,1%, que le MPC voit dépasser 4% début 2027, pousse le comité vers le resserrement pendant que le gouverneur freine. Aucune baisse n'est envisagée avant une détente énergétique durable.",
       "move": "hold",
-      "events": [
-        {
-          "date": "23 septembre 2026",
-          "date_iso": "2026-09-23",
-          "time": "08:30 UTC (09:30 BST)",
-          "name": "PMI flash S&P Global / CIPS manufacturier (sept.)",
-          "forecast": "52,7",
-          "previous": "51,7"
-        },
-        {
-          "date": "23 septembre 2026",
-          "date_iso": "2026-09-23",
-          "time": "08:30 UTC (09:30 BST)",
-          "name": "PMI flash S&P Global / CIPS services (sept.)",
-          "forecast": "52,1",
-          "previous": "52,5"
-        }
-      ],
+      "events": [],
       "watch": "Rapport ONS sur le marché du travail le 20 octobre, puis IPC de septembre le 21 octobre — les deux publications qui décideront du vote du 5 novembre, où la dissidence actuelle 6-3 laisse une hausse ouverte.",
       "sources": [
         "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
