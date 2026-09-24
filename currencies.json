@@ -1,6 +1,6 @@
 {
-  "generated_at": "24 septembre 2026, 04h41 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-24T04:41:18+00:00",
+  "generated_at": "24 septembre 2026, 10h46 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-24T10:46:32+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -42,8 +42,8 @@
       "momentum": 3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
       "rate_previous": "Taux de dépôt 2,25%",
@@ -59,16 +59,7 @@
       "speech": "Christine Lagarde a qualifié la hausse du 10 septembre d'évidence (« no brainer ») tout en refusant tout pré-engagement : le Conseil n'a pas débattu de la trajectoire future et reste en approche réunion par réunion. Elle décrit l'inflation actuelle comme « principalement un choc d'offre » lié à l'énergie et au Moyen-Orient, et ne voit un retour à la cible que vers fin 2027. Isabel Schnabel, l'aile la plus ferme du Conseil, plaide pour aller plus loin. Les marchés ont malgré la prudence de Lagarde relevé leurs paris sur de nouvelles hausses.",
       "cycle": "Resserrement relancé en juin 2026 après le choc énergétique, avec une deuxième hausse le 10 septembre portant le taux de dépôt à 2,50%. La BCE assume un cycle actif tout en refusant de s'engager sur la suite : l'inflation remontée à 3,2% est attribuée à l'offre plutôt qu'à la demande, ce qui justifie la fermeté sans promettre d'automatisme.",
       "move": "hike",
-      "events": [
-        {
-          "date": "24 septembre 2026",
-          "date_iso": "2026-09-24",
-          "time": "08:00 UTC (10:00 CEST)",
-          "name": "Ifo — climat des affaires Allemagne (sept.)",
-          "forecast": "89,2",
-          "previous": "88,8"
-        }
-      ],
+      "events": [],
       "watch": "Intervention de Philip Lane le 23 septembre à Genève, puis l'IPCH flash de septembre le 1er octobre — dernier grand jalon avant la réunion du 29 octobre.",
       "sources": [
         "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910.en.html",
@@ -148,14 +139,14 @@
       "momentum": 5,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Banque nationale suisse (BNS)",
       "chief": "Martin Schlegel",
       "rate_previous": "0,25%",
       "rate_current": "0,00%",
       "rate_change_date": "Baisse à 0,00% le 19 juin 2025 — inchangé depuis, dont les maintiens de septembre et décembre 2025, mars 2026 et 18 juin 2026",
-      "next": "24 septembre 2026 — Décision BNS (examen trimestriel)",
+      "next": "17 décembre 2026 — Décision BNS (examen trimestriel)",
       "gdp_previous": "+0,5% QoQ (T1 2026)",
       "gdp_current": "+1,5% QoQ (T2 2026, publié le 3 septembre, plus forte croissance depuis le T3 2021, tirée par la chimie-pharma)",
       "cpi_previous": "0,4% (juillet 2026)",
@@ -165,16 +156,7 @@
       "speech": "Martin Schlegel a maintenu le 11 septembre un ton neutre, sans le moindre signal de resserrement : l'inflation a augmenté ces derniers mois mais reste, selon lui, dans la zone de stabilité des prix. Il reconnaît que le taux de change du franc constitue un défi pour l'économie suisse, tout en rappelant que le franc réel est stable depuis 2020. La BNS réaffirme sa disponibilité à intervenir sur le marché des changes plutôt qu'à manier le taux directeur.",
       "cycle": "Taux au plancher de 0,00% depuis juin 2025, avec une BNS qui privilégie explicitement l'intervention de change à toute modification du taux. L'inflation a doublé en un mois (0,4% à 0,8%) et le PIB a bondi de 1,5% au T2, ce qui éloigne le scénario d'un retour en territoire négatif sans pour autant justifier un resserrement : la barre reste haute dans les deux sens.",
       "move": "hold",
-      "events": [
-        {
-          "date": "24 septembre 2026",
-          "date_iso": "2026-09-24",
-          "time": "07:30 UTC",
-          "name": "Décision BNS (examen trimestriel)",
-          "forecast": "voir consensus de marché",
-          "previous": "0,00%"
-        }
-      ],
+      "events": [],
       "watch": "Examen trimestriel de la BNS le 24 septembre à 07h30 UTC, conférence de presse à 08h00 : maintien à 0,00% largement attendu, l'enjeu portant davantage sur le discours relatif au franc et aux dépôts à vue que sur la décision elle-même.",
       "sources": [
         "https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions",
