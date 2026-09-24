@@ -1,6 +1,6 @@
 {
-  "generated_at": "23 septembre 2026, 19h39 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-23T19:39:08+00:00",
+  "generated_at": "24 septembre 2026, 04h41 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-24T04:41:18+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -42,7 +42,7 @@
       "momentum": 3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
@@ -148,7 +148,7 @@
       "momentum": 5,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Banque nationale suisse (BNS)",
       "chief": "Martin Schlegel",
