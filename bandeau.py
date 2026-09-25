@@ -68,7 +68,7 @@ CSS = """<style>
 /* --- la semaine --- */
 .hw-grille{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
   border-bottom:1px solid var(--border)}
-.hw-j{border-right:1px solid var(--border);padding:9px 8px 11px;min-height:96px}
+.hw-j{border-right:1px solid var(--border);padding:9px 8px 11px;min-height:74px}
 .hw-j:last-child{border-right:none}
 .hw-j.passe{opacity:.72}
 .hw-j.auj{background:var(--gold-tint)}
@@ -78,7 +78,7 @@ CSS = """<style>
 .hw-j.auj .hw-jt{color:var(--gold);font-weight:700}
 .hw-jt b{color:var(--text-secondary);font-size:.78rem;font-weight:700}
 .hw-j.auj .hw-jt b{color:var(--gold)}
-.hw-ev{border-left:2px solid var(--border);padding:3px 0 3px 7px;margin-bottom:7px}
+.hw-ev{border-left:2px solid var(--border);padding:2px 0 2px 7px;margin-bottom:5px}
 .hw-ev.pos{border-left-color:var(--rise)}
 .hw-ev.neg{border-left-color:var(--fall)}
 .hw-ev.bc{border-left-color:var(--gold)}
@@ -88,7 +88,8 @@ CSS = """<style>
 .hw-t{font-size:.74rem;color:var(--text-secondary);line-height:1.35;margin-top:1px}
 .hw-chiffres{font-family:var(--font-mono);font-size:.66rem;color:var(--text-muted);margin-top:2px}
 .hw-chiffres b{color:var(--text-secondary);font-weight:600}
-.hw-rien{font-size:.72rem;color:var(--text-muted);padding-top:4px}
+.hw-rien{font-size:.72rem;color:var(--text-muted);padding-top:2px}
+.hw-plus{font-size:.68rem;color:var(--text-muted);padding-left:9px}
 
 /* --- les devises --- */
 .hw-scroll{overflow-x:auto}
@@ -233,7 +234,11 @@ for j in jours:
              " <b>" + esc(j.get("num", "")) + "</b> " + esc(j.get("mois", "")) + "</div>")
     if not j.get("nb"):
         p.append('<div class="hw-rien">—</div>')
-    for e in j.get("evenements", []):
+    # Un jour charge ne doit pas etirer toute la semaine : au-dela de quatre
+    # echeances, on compte le reste.
+    liste = j.get("evenements", [])
+    trop = len(liste) - 4
+    for e in (liste[:4] if trop > 0 else liste):
         a = e.get("attendu")
         ecls, _ = fleche(a)
         bord = "bc" if e.get("source") == "banque centrale" else (ecls if ecls != "neu" else "")
@@ -249,13 +254,19 @@ for j in jours:
                  '<span class="hw-cc">' + FLAGS.get(e.get("code"), "") + " " + esc(e.get("code")) +
                  '</span><span class="hw-h">' + esc(e.get("heure", "")) + "</span></div>"
                  '<div class="hw-t">' + esc(court(e.get("titre"), 44)) + "</div>" + chif + "</div>")
+    if trop > 0:
+        p.append('<div class="hw-plus">+ ' + str(trop) + " autre" + ("s" if trop > 1 else "") + "</div>")
     p.append("</div>")
 p.append("</div>")
 
 # ---------- les huit devises ----------
+# Huit tirets a la suite ne disent rien : tant qu'aucun chiffre officiel n'est
+# paru, la colonne s'efface et le pied de tableau l'explique en une ligne.
+des_parutions = any(d.get("parutions") for d in devises)
 p.append('<div class="hw-scroll"><table class="hw-tab"><thead><tr>'
-         "<th>Devise</th><th>Taux directeur</th><th>Orientation</th>"
-         "<th>Cette semaine</th><th>Déjà paru</th><th>Prochaine échéance</th>"
+         "<th>Devise</th><th>Taux directeur</th><th>Orientation</th><th>Cette semaine</th>" +
+         ("<th>Déjà paru</th>" if des_parutions else "") +
+         "<th>Prochaine échéance</th>"
          '<th><span class="sr">Délai</span></th></tr></thead><tbody>')
 for d in devises:
     ton = str(d.get("ton") or "")
@@ -295,9 +306,9 @@ for d in devises:
         '<td class="hw-taux">' + esc(court(d.get("taux"), 22)) + "</td>"
         '<td><span class="hw-ton ' + esc(ton) + '">' + esc(ton or "—") + "</span></td>"
         '<td class="hw-sig ' + scls + '"><span class="f">' + sfl + "</span>" + esc(sem_txt) +
-        ("<small>" + esc(sem_sous) + "</small>" if sem_sous else "") + "</td>"
-        '<td class="hw-sig ' + ecls + '"><span class="f">' + efl + "</span>" + eff_txt +
-        ("<small>" + eff_sous + "</small>" if eff_sous else "") + "</td>"
+        ("<small>" + esc(sem_sous) + "</small>" if sem_sous else "") + "</td>" +
+        ('<td class="hw-sig ' + ecls + '"><span class="f">' + efl + "</span>" + eff_txt +
+         ("<small>" + eff_sous + "</small>" if eff_sous else "") + "</td>" if des_parutions else "") +
         '<td class="hw-next">' + esc(court(d.get("prochain"), 42)) +
         "<small>" + esc(d.get("prochain_txt", "")) +
         ('<span class="hw-cdm">' + cd + "</span>" if cd else "") + "</small></td>"
@@ -308,7 +319,10 @@ p.append('<div class="hw-foot">Seuls les événements classés « fort impact »
          "« Cette semaine » compare le consensus à la valeur précédente et indique vers "
          "quoi penchent les échéances restantes. « Déjà paru » ne retient que des chiffres "
          "effectivement publiés, et leur effet s’estompe sur " + str(H.get("memoire_jours", 7)) +
-         " jours. Les délais se calculent en direct dans votre navigateur.</div>")
+         " jours. Les délais se calculent en direct dans votre navigateur." +
+         ("" if des_parutions else " Aucun chiffre officiel n’est paru depuis " +
+          str(H.get("memoire_jours", 7)) + " jours : la colonne correspondante "
+          "reparaîtra dès la prochaine publication.") + "</div>")
 p.append("</section>")
 BLOC = "".join(p)
 
