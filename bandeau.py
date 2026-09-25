@@ -157,7 +157,7 @@ if not H.get("flux_ok", True):
                  "passage. Les réunions de banques centrales ci-dessous restent à jour ; "
                  "les publications statistiques seront complétées au prochain passage.</div>")
 
-parts.append('<div class="hi-now"><div class="hi-lab">Dans les ' + str(seuil) + " heures</div>")
+parts.append('<div class="hi-now"><div class="hi-lab">\u00c0 l\u2019instant et dans les ' + str(seuil) + " heures</div>")
 if imm:
     parts.extend(ligne_ev(e) for e in imm)
 else:
