@@ -9,7 +9,7 @@ name: Boussole Devises — mise à jour automatique
 on:
   schedule:
     - cron: "0 6 * * *"      # passage complet quotidien, avec relecture des postures
-    - cron: "15 */4 * * *"   # passages légers : calendrier, badges, horodatage
+    - cron: "40 * * * *"     # veille horaire : echeances a fort impact, calendrier, badges
   workflow_dispatch: {}
 
 permissions:
@@ -44,12 +44,11 @@ jobs:
           FRED = "https://api.stlouisfed.org/fred"
           ORDER = ["EUR","GBP","AUD","NZD","USD","CAD","CHF","JPY"]
           WINDOW = 4          # fenetre d'evenements affichee, en jours
-          # Battement de coeur : on reecrit l'horodatage des que le JOUR CIVIL
-          # a change. Un seuil en heures ne suffit pas — un dernier changement
-          # en soiree laisse tous les passages du lendemain matin sous le seuil,
-          # et la date affichee reste bloquee sur la veille (panne constatee le
-          # 21 septembre : dernier ecrit a 19h18, passage de 06h00 a 10h42 d'ecart,
-          # donc sous les 20 h, donc rien reecrit).
+          # Horodatage : reecrit a chaque passage depuis le passage a l'heure.
+          # Le bandeau « a tres fort impact » porte deja son propre « verifie a
+          # HHhMM » ; deux horloges qui se contredisent sur la meme page sont
+          # pires qu'une seule. (Auparavant un seuil en heures gelait la date
+          # toute une matinee — panne constatee le 21 septembre.)
 
           M_FR = {1:"janvier",2:"fevrier",3:"mars",4:"avril",5:"mai",6:"juin",
                   7:"juillet",8:"aout",9:"septembre",10:"octobre",11:"novembre",12:"decembre"}
@@ -389,11 +388,7 @@ jobs:
 
           changed = json.dumps(cur, sort_keys=True, ensure_ascii=False) != before
 
-          stale = True
-          prev_iso = src.get("generated_at_iso","")
-          if prev_iso:
-              try: stale = dt.datetime.fromisoformat(prev_iso).date() < now.date()
-              except ValueError: stale = True
+          stale = True   # voir la note sur l'horodatage en tete de fichier
 
           # Journal : ce qui rend le travail du robot observable.
           if CHANGES:
@@ -586,6 +581,15 @@ jobs:
           print("\n" + str(n) + " devise(s) mise(s) a jour.")
           PYEOF
 
+      # ------------------------------------------------------------------
+      # 3. Echeances a tres fort impact : decisions de taux, inflation,
+      #    emploi, PIB, PMI, discours de gouverneurs. Calendrier public,
+      #    aucune cle requise. Si le flux ne repond pas, on retombe sur le
+      #    calendrier des banques centrales et la page reste complete.
+      # ------------------------------------------------------------------
+      - name: Relever les echeances a fort impact
+        run: python3 collecte.py
+
       - name: Reconstruire le dashboard
         run: python3 pipeline.py
 
@@ -683,6 +687,9 @@ jobs:
           open("dashboard.html","w",encoding="utf-8").write(h)
           print("Journal insere.")
           PYEOF
+
+      - name: Inserer le bandeau a tres fort impact
+        run: python3 bandeau.py
 
       # Garde-fou : une page abimee ne doit jamais remplacer une page correcte.
       - name: Verifier la page
