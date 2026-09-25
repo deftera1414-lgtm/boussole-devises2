@@ -1,4 +1,5 @@
 <style>
+/* ---------- bandeau de la semaine ---------- */
 .hw{flex:1 0 100%;width:100%;background:var(--surface);border:1px solid var(--border);
   border-radius:12px;box-shadow:var(--shadow);margin:18px 0 4px;overflow:hidden;
   border-top:3px solid var(--gold)}
@@ -16,105 +17,73 @@
 .hw-when b{color:var(--gold);font-weight:600}
 .hw-note{padding:9px 18px;font-size:.76rem;color:var(--text-secondary);background:var(--surface-2);
   border-bottom:1px solid var(--border)}
-
-/* --- ce qui vient de paraitre --- */
 .hw-faits{padding:11px 18px;border-bottom:1px solid var(--border);display:flex;
-  gap:8px 18px;flex-wrap:wrap;align-items:baseline}
+  gap:7px 16px;flex-wrap:wrap;align-items:baseline}
 .hw-faits .lab{font-family:var(--font-mono);font-size:.63rem;letter-spacing:.09em;
   text-transform:uppercase;color:var(--text-muted);flex:none}
 .hw-fait{font-size:.81rem;color:var(--text-secondary)}
 .hw-fait b{color:var(--text);font-weight:600}
 .hw-fait .v{font-family:var(--font-mono);font-size:.78rem}
-
-/* --- la semaine --- */
-.hw-grille{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
-  border-bottom:1px solid var(--border)}
-.hw-j{border-right:1px solid var(--border);padding:9px 8px 11px;min-height:74px}
+.hw-grille{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.hw-j{border-right:1px solid var(--border);padding:9px 9px 11px;min-height:72px}
 .hw-j:last-child{border-right:none}
-.hw-j.passe{opacity:.72}
+.hw-j.passe{opacity:.74}
 .hw-j.auj{background:var(--gold-tint)}
-.hw-j.vide{background:transparent}
 .hw-jt{font-family:var(--font-mono);font-size:.63rem;letter-spacing:.06em;text-transform:uppercase;
   color:var(--text-muted);margin-bottom:7px;display:flex;align-items:baseline;gap:5px}
 .hw-j.auj .hw-jt{color:var(--gold);font-weight:700}
 .hw-jt b{color:var(--text-secondary);font-size:.78rem;font-weight:700}
 .hw-j.auj .hw-jt b{color:var(--gold)}
-.hw-ev{border-left:2px solid var(--border);padding:2px 0 2px 7px;margin-bottom:5px}
+.hw-ev{border-left:2px solid var(--border);padding:2px 0 2px 7px;margin-bottom:6px}
 .hw-ev.pos{border-left-color:var(--rise)}
 .hw-ev.neg{border-left-color:var(--fall)}
 .hw-ev.bc{border-left-color:var(--gold)}
-.hw-e1{display:flex;gap:5px;align-items:baseline;flex-wrap:wrap}
-.hw-cc{font-family:var(--font-mono);font-size:.68rem;font-weight:700;color:var(--text)}
-.hw-h{font-family:var(--font-mono);font-size:.63rem;color:var(--text-muted)}
+.hw-e1{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}
 .hw-t{font-size:.74rem;color:var(--text-secondary);line-height:1.35;margin-top:1px}
 .hw-chiffres{font-family:var(--font-mono);font-size:.66rem;color:var(--text-muted);margin-top:2px}
 .hw-chiffres b{color:var(--text-secondary);font-weight:600}
-.hw-rien{font-size:.72rem;color:var(--text-muted);padding-top:2px}
+.hw-rien{font-size:.72rem;color:var(--text-muted)}
 .hw-plus{font-size:.68rem;color:var(--text-muted);padding-left:9px}
+.hw-foot{padding:10px 18px 12px;font-size:.69rem;color:var(--text-muted);line-height:1.5;
+  border-top:1px solid var(--border)}
 
-/* --- les devises --- */
-.hw-scroll{overflow-x:auto}
-.hw-tab{width:100%;border-collapse:collapse;font-size:.79rem;min-width:620px}
-.hw-tab th{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--text-muted);text-align:left;font-weight:500;padding:10px 12px;
-  border-bottom:1px solid var(--border);white-space:nowrap}
-.hw-tab td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text-secondary);
-  vertical-align:middle}
-.hw-tab tr:last-child td{border-bottom:none}
-.hw-dev{font-family:var(--font-mono);font-weight:700;color:var(--text);white-space:nowrap}
-.hw-taux{font-family:var(--font-mono);color:var(--text);font-weight:600;white-space:nowrap}
-.hw-ton{font-size:.71rem;padding:2px 8px;border-radius:999px;border:1px solid var(--border);
-  white-space:nowrap;color:var(--text-secondary)}
-.hw-ton.resserrement{color:var(--fall-text);border-color:var(--fall)}
-.hw-ton.assouplissement{color:var(--rise-text);border-color:var(--rise)}
-.hw-sig{white-space:nowrap;font-size:.76rem}
-.hw-sig .f{font-family:var(--font-mono);font-weight:700}
-.hw-sig .f:not(:empty){margin-right:4px}
-.hw-sig.pos .f{color:var(--rise-text)}
-.hw-sig.neg .f{color:var(--fall-text)}
-.hw-sig.neu .f{color:var(--text-muted)}
-.hw-sig small{display:block;color:var(--text-muted);font-size:.68rem;white-space:normal;
-  line-height:1.35;margin-top:1px}
-.hw-next{color:var(--text);font-weight:500}
-.hw-next small{display:block;color:var(--text-muted);font-weight:400;font-family:var(--font-mono);
-  font-size:.67rem;margin-top:2px}
-.hw-cd{font-family:var(--font-mono);font-size:.72rem;font-weight:700;white-space:nowrap;
-  padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--text-secondary);
+/* ---------- code devise, en remplacement des drapeaux ---------- */
+.code{font-family:var(--font-mono);font-size:.66rem;font-weight:700;letter-spacing:.04em;
+  padding:1px 5px;border-radius:4px;background:var(--surface-2);border:1px solid var(--border);
+  color:var(--text);white-space:nowrap}
+.hw-h{font-family:var(--font-mono);font-size:.63rem;color:var(--text-muted)}
+
+/* ---------- pastille de semaine sur chaque carte ---------- */
+.cw{border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  background:var(--surface-2);padding:8px 0;margin:2px 0 4px}
+.cw-l{display:flex;gap:10px;align-items:baseline;padding:3px 16px}
+.cw-k{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--text-muted);flex:0 0 84px}
+.cw-v{font-size:.78rem;color:var(--text-secondary);flex:1 1 auto;line-height:1.4}
+.cw-v b{color:var(--text);font-weight:600}
+.cw-v .s{color:var(--text-muted)}
+.cw-f{font-family:var(--font-mono);font-weight:700;margin-right:3px}
+.cw-f.pos{color:var(--rise-text)}
+.cw-f.neg{color:var(--fall-text)}
+
+/* ---------- delai, partout ---------- */
+.cd{font-family:var(--font-mono);font-size:.71rem;font-weight:700;white-space:nowrap;
+  padding:1px 7px;border-radius:999px;background:var(--surface);color:var(--text-secondary);
   border:1px solid var(--border)}
-.hw-cd.soon{color:var(--gold);border-color:var(--gold)}
-.hw-cd.hot{color:#fff;background:var(--fall);border-color:var(--fall)}
-.hw-cd.past{opacity:.5}
-.hw-cdm{display:none}
-.hw-foot{padding:9px 18px 12px;font-size:.69rem;color:var(--text-muted);line-height:1.5}
-.hw .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.cd.soon{color:var(--gold);border-color:var(--gold)}
+.cd.hot{color:#fff;background:var(--fall);border-color:var(--fall)}
+.cd.past{opacity:.5}
 
 @media (max-width:900px){
   .hw-grille{grid-template-columns:repeat(3,minmax(0,1fr))}
   .hw-j{border-bottom:1px solid var(--border);min-height:0}
-  .hw-j.vide{display:none}
-}
-@media (max-width:860px){
-  /* tablette : on sacrifie l'orientation, lisible sur la carte de la devise */
-  .hw-tab th:nth-child(3),.hw-tab td:nth-child(3){display:none}
 }
 @media (max-width:620px){
   .hw-grille{grid-template-columns:1fr}
   .hw-j{border-right:none}
   .hw-when{margin-left:0;flex:1 0 100%}
-  /* Sur telephone : la devise, ce qui vient de paraitre, et la prochaine
-     echeance. Taux et orientation restent lisibles sur les cartes en dessous. */
-  .hw-tab{min-width:0}
-  .hw-tab th:nth-child(2),.hw-tab td:nth-child(2),
-  .hw-tab th:nth-child(3),.hw-tab td:nth-child(3),
-  .hw-tab th:nth-child(4),.hw-tab td:nth-child(4){display:none}
-  .hw-tab th,.hw-tab td{padding:9px 6px}
-  .hw-sig{white-space:normal}
-  .hw-sig small{display:none}
-  .hw-next small{font-size:.63rem}
-  .hw-cd{padding:1px 6px;font-size:.66rem}
-  /* le delai rejoint la cellule plutot que d'occuper une colonne */
-  .hw-cdm{display:inline-block;margin-left:6px}
-  .hw-tab th:nth-child(7),.hw-tab td:nth-child(7){display:none}
+  .cw-l{flex-wrap:wrap;gap:2px 10px}
+  .cw-k{flex:1 0 100%}
 }
 </style><style>
 .cl{background:var(--surface);border:1px solid var(--border);border-radius:10px;
@@ -455,10 +424,10 @@
       </div>
     </div>
     <div class="top-meta">
-      <div>Dernière collecte&nbsp;: <strong>25 septembre 2026, 22h46 UTC (mise à jour automatique)</strong> (Africa/Abidjan)</div>
-      <div class="cadence">Mise à jour automatique · scan complet 06h00 UTC + veille à fort impact chaque heure</div>
+      <div>Dernière collecte&nbsp;: <strong>25 septembre 2026, 22h56 UTC (mise à jour automatique)</strong> (Africa/Abidjan)</div>
+      <div class="cadence">Mise à jour automatique · plusieurs passages par jour · délais recalculés en direct</div>
       <div>28 paires · 8 devises · 21 sources croisées</div>
-    </div><section class="hw" aria-label="Semaine du 21 au 27 septembre 2026"><div class="hw-head"><span class="hw-dot" aria-hidden="true"></span><h2>Semaine du 21 au 27 septembre 2026</h2><span class="hw-when">vérifié à <b>25 septembre 2026, 22h47 UTC</b> · chaque heure</span></div><div class="hw-grille"><div class="hw-j passe vide"><div class="hw-jt">lun <b>21</b> sept.</div><div class="hw-rien">—</div></div><div class="hw-j passe"><div class="hw-jt">mar <b>22</b> sept.</div><div class="hw-ev "><div class="hw-e1"><span class="hw-cc">🇦🇺 AUD</span><span class="hw-h">03h10</span></div><div class="hw-t">Gouverneure RBA Bullock — discours</div></div></div><div class="hw-j passe vide"><div class="hw-jt">mer <b>23</b> sept.</div><div class="hw-rien">—</div></div><div class="hw-j passe"><div class="hw-jt">jeu <b>24</b> sept.</div><div class="hw-ev pos"><div class="hw-e1"><span class="hw-cc">🇦🇺 AUD</span><span class="hw-h">01h30</span></div><div class="hw-t">Variation de l&#x27;emploi</div><div class="hw-chiffres"><b>21.5K</b> ← -15.8K</div></div><div class="hw-ev "><div class="hw-e1"><span class="hw-cc">🇦🇺 AUD</span><span class="hw-h">01h30</span></div><div class="hw-t">Taux de chômage</div><div class="hw-chiffres"><b>4.5%</b> ← 4.5%</div></div><div class="hw-ev "><div class="hw-e1"><span class="hw-cc">🇨🇭 CHF</span><span class="hw-h">07h30</span></div><div class="hw-t">Décision de politique monétaire BNS</div></div><div class="hw-ev "><div class="hw-e1"><span class="hw-cc">🇨🇭 CHF</span><span class="hw-h">07h30</span></div><div class="hw-t">Taux directeur BNS</div><div class="hw-chiffres"><b>0.00%</b> ← 0.00%</div></div><div class="hw-plus">+ 1 autre</div></div><div class="hw-j auj"><div class="hw-jt">ven <b>25</b> sept.</div><div class="hw-ev "><div class="hw-e1"><span class="hw-cc">🇬🇧 GBP</span><span class="hw-h">09h15</span></div><div class="hw-t">Gouverneur BoE Bailey — discours</div></div></div><div class="hw-j vide"><div class="hw-jt">sam <b>26</b> sept.</div><div class="hw-rien">—</div></div><div class="hw-j vide"><div class="hw-jt">dim <b>27</b> sept.</div><div class="hw-rien">—</div></div></div><div class="hw-scroll"><table class="hw-tab"><thead><tr><th>Devise</th><th>Taux directeur</th><th>Orientation</th><th>Cette semaine</th><th>Prochaine échéance</th><th><span class="sr">Délai</span></th></tr></thead><tbody><tr><td class="hw-dev">🇪🇺 EUR</td><td class="hw-taux">Taux de dépôt 2,50%</td><td><span class="hw-ton resserrement">resserrement</span></td><td class="hw-sig neu"><span class="f"></span>—<small>semaine calme</small></td><td class="hw-next">Décision BCE (taux de dépôt)<small>29 octobre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-10-29T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-10-29T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇬🇧 GBP</td><td class="hw-taux">3,75%</td><td><span class="hw-ton resserrement">resserrement</span></td><td class="hw-sig neu"><span class="f"></span>1 échéance passée<small>discours</small></td><td class="hw-next">Décision BoE (Bank Rate) + rapport<small>5 novembre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-11-05T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-11-05T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇦🇺 AUD</td><td class="hw-taux">4,35%</td><td><span class="hw-ton resserrement">resserrement</span></td><td class="hw-sig neu"><span class="f"></span>3 échéances passées<small>discours, emploi, chômage</small></td><td class="hw-next">Décision RBA (cash rate)<small>29 septembre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-09-29T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-09-29T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇳🇿 NZD</td><td class="hw-taux">2,75%</td><td><span class="hw-ton neutre">neutre</span></td><td class="hw-sig neu"><span class="f"></span>—<small>semaine calme</small></td><td class="hw-next">Décision RBNZ (OCR)<small>28 octobre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇺🇸 USD</td><td class="hw-taux">3,75%–4,00%</td><td><span class="hw-ton resserrement">resserrement</span></td><td class="hw-sig neu"><span class="f"></span>—<small>semaine calme</small></td><td class="hw-next">Décision FOMC (Fed)<small>28 octobre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇨🇦 CAD</td><td class="hw-taux">2,25%</td><td><span class="hw-ton neutre">neutre</span></td><td class="hw-sig neu"><span class="f"></span>—<small>semaine calme</small></td><td class="hw-next">Décision BdC + rapport<small>28 octobre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇨🇭 CHF</td><td class="hw-taux">0,00%</td><td><span class="hw-ton neutre">neutre</span></td><td class="hw-sig neu"><span class="f"></span>3 échéances passées<small>taux directeur, discours</small></td><td class="hw-next">Décision BNS (examen trimestriel)<small>17 décembre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-12-17T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-12-17T12:00:00+00:00">—</span></td></tr><tr><td class="hw-dev">🇯🇵 JPY</td><td class="hw-taux">1,25%</td><td><span class="hw-ton resserrement">resserrement</span></td><td class="hw-sig neu"><span class="f"></span>—<small>semaine calme</small></td><td class="hw-next">Décision BoJ + Outlook Report<small>30 octobre<span class="hw-cdm"><span class="hw-cd" data-iso="2026-10-30T12:00:00+00:00">—</span></span></small></td><td><span class="hw-cd" data-iso="2026-10-30T12:00:00+00:00">—</span></td></tr></tbody></table></div><div class="hw-foot">Seuls les événements classés « fort impact » figurent ici. « Cette semaine » compare le consensus à la valeur précédente et indique vers quoi penchent les échéances restantes. « Déjà paru » ne retient que des chiffres effectivement publiés, et leur effet s’estompe sur 7 jours. Les délais se calculent en direct dans votre navigateur. Aucun chiffre officiel n’est paru depuis 7 jours : la colonne correspondante reparaîtra dès la prochaine publication.</div></section><details class="cl" open><summary><span class="cl-dot"></span>Journal des mises à jour<span class="cl-note">dernier changement aujourd&#x27;hui · 34 entrée(s)</span></summary><div class="cl-body"><div class="cl-day"><div class="cl-date">aujourd&#x27;hui</div><ul><li><b>AUD</b> — reunion inscrite au calendrier : Décision RBA (cash rate)</li></ul></div><div class="cl-day"><div class="cl-date">hier</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>CHF</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>EUR</b> — evenement sous 48 h — badge retire</li><li><b>CHF</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CHF</b> — prochaine reunion : 17 décembre 2026 — Décision BNS (examen trimestriel)</li><li><b>CHF</b> — evenement sous 6 h — badge retire</li><li><b>CHF</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">23 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 48 h — badge retire</li><li><b>USD</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — evenement sous 6 h — badge retire</li><li><b>USD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">22 sept. 2026</div><ul><li><b>CHF</b> — evenement sous 48 h — badge active</li></ul></div><div class="cl-day"><div class="cl-date">21 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 48 h — badge active</li><li><b>GBP</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — evenement sous 6 h — badge active</li><li><b>USD</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CAD</b> — evenement sous 6 h — badge retire</li><li><b>CAD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">20 sept. 2026</div><ul><li><b>GBP</b> — prochaine reunion : 5 novembre 2026 — Décision BoE (Bank Rate) + rapport</li><li><b>NZD</b> — prochaine reunion : 28 octobre 2026 — Décision RBNZ (OCR)</li><li><b>CAD</b> — prochaine reunion : 28 octobre 2026 — Décision BdC + rapport</li><li><b>CHF</b> — reunion inscrite au calendrier : Décision BNS (examen trimestriel)</li><li><b>JPY</b> — prochaine reunion : 30 octobre 2026 — Décision BoJ + Outlook Report</li></ul></div></div></details>
+    </div><section class="hw" aria-label="Semaine du 21 au 27 septembre 2026"><div class="hw-head"><span class="hw-dot" aria-hidden="true"></span><h2>Semaine du 21 au 27 septembre 2026</h2><span class="hw-when">vérifié à <b>25 septembre 2026, 22h57 UTC</b></span></div><div class="hw-grille"><div class="hw-j passe"><div class="hw-jt">lun <b>21</b> sept.</div><div class="hw-rien">—</div></div><div class="hw-j passe"><div class="hw-jt">mar <b>22</b> sept.</div><div class="hw-ev "><div class="hw-e1"><span class="code">AUD</span><span class="hw-h">03h10</span></div><div class="hw-t">Gouverneure RBA Bullock — discours</div></div></div><div class="hw-j passe"><div class="hw-jt">mer <b>23</b> sept.</div><div class="hw-rien">—</div></div><div class="hw-j passe"><div class="hw-jt">jeu <b>24</b> sept.</div><div class="hw-ev pos"><div class="hw-e1"><span class="code">AUD</span><span class="hw-h">01h30</span></div><div class="hw-t">Variation de l&#x27;emploi</div><div class="hw-chiffres"><b>21.5K</b> ← -15.8K</div></div><div class="hw-ev "><div class="hw-e1"><span class="code">AUD</span><span class="hw-h">01h30</span></div><div class="hw-t">Taux de chômage</div><div class="hw-chiffres"><b>4.5%</b> ← 4.5%</div></div><div class="hw-ev "><div class="hw-e1"><span class="code">CHF</span><span class="hw-h">07h30</span></div><div class="hw-t">Décision de politique monétaire BNS</div></div><div class="hw-ev "><div class="hw-e1"><span class="code">CHF</span><span class="hw-h">07h30</span></div><div class="hw-t">Taux directeur BNS</div><div class="hw-chiffres"><b>0.00%</b> ← 0.00%</div></div><div class="hw-ev "><div class="hw-e1"><span class="code">CHF</span><span class="hw-h">08h00</span></div><div class="hw-t">Conférence de presse BNS</div></div></div><div class="hw-j auj"><div class="hw-jt">ven <b>25</b> sept.</div><div class="hw-ev "><div class="hw-e1"><span class="code">GBP</span><span class="hw-h">09h15</span></div><div class="hw-t">Gouverneur BoE Bailey — discours</div></div></div><div class="hw-j"><div class="hw-jt">sam <b>26</b> sept.</div><div class="hw-rien">—</div></div><div class="hw-j"><div class="hw-jt">dim <b>27</b> sept.</div><div class="hw-rien">—</div></div></div><div class="hw-foot">Seules les échéances classées « fort impact » figurent ici : décisions de taux, inflation, emploi, PIB, PMI, discours de gouverneurs. Les chiffres sous chaque intitulé se lisent <b>consensus ← valeur précédente</b>. Le détail par devise est sur sa carte ci-dessous. Le robot passe plusieurs fois par jour, aux heures que l’hébergeur lui accorde ; les délais, eux, se recalculent en direct dans votre navigateur et restent donc justes à la minute.</div></section><details class="cl" open><summary><span class="cl-dot"></span>Journal des mises à jour<span class="cl-note">dernier changement aujourd&#x27;hui · 34 entrée(s)</span></summary><div class="cl-body"><div class="cl-day"><div class="cl-date">aujourd&#x27;hui</div><ul><li><b>AUD</b> — reunion inscrite au calendrier : Décision RBA (cash rate)</li></ul></div><div class="cl-day"><div class="cl-date">hier</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>CHF</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>EUR</b> — evenement sous 48 h — badge retire</li><li><b>CHF</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CHF</b> — prochaine reunion : 17 décembre 2026 — Décision BNS (examen trimestriel)</li><li><b>CHF</b> — evenement sous 6 h — badge retire</li><li><b>CHF</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">23 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 48 h — badge retire</li><li><b>USD</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — evenement sous 6 h — badge retire</li><li><b>USD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">22 sept. 2026</div><ul><li><b>CHF</b> — evenement sous 48 h — badge active</li></ul></div><div class="cl-day"><div class="cl-date">21 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 48 h — badge active</li><li><b>GBP</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — evenement sous 6 h — badge active</li><li><b>USD</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CAD</b> — evenement sous 6 h — badge retire</li><li><b>CAD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">20 sept. 2026</div><ul><li><b>GBP</b> — prochaine reunion : 5 novembre 2026 — Décision BoE (Bank Rate) + rapport</li><li><b>NZD</b> — prochaine reunion : 28 octobre 2026 — Décision RBNZ (OCR)</li><li><b>CAD</b> — prochaine reunion : 28 octobre 2026 — Décision BdC + rapport</li><li><b>CHF</b> — reunion inscrite au calendrier : Décision BNS (examen trimestriel)</li><li><b>JPY</b> — prochaine reunion : 30 octobre 2026 — Décision BoJ + Outlook Report</li></ul></div></div></details>
   </div>
 
   <section id="currencies">
@@ -471,14 +440,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇪🇺</span>
           <div>
             <h3 class="ccy">EUR</h3>
             <p class="bank">Banque centrale européenne (BCE) &middot; Christine Lagarde</p>
           </div>
         </div>
         <span class="chip chip-rise">Hausse</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><span class="s">aucune échéance à fort impact</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision BCE (taux de dépôt)</b> <span class="s">· 29 octobre</span> <span class="cd" data-iso="2026-10-29T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -520,7 +488,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Hausse de 25 pb décidée le 10 septembre 2026, effective le 16 septembre (MRO à 2,65%, facilité de prêt marginal à 2,90%)</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 29 octobre 2026 — Décision BCE (taux de dépôt)</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Resserrement relancé en juin 2026 après le choc énergétique, avec une deuxième hausse le 10 septembre portant le taux de dépôt à 2,50%. La BCE assume un cycle actif tout en refusant de s&#x27;engager sur la suite : l&#x27;inflation remontée à 3,2% est attribuée à l&#x27;offre plutôt qu&#x27;à la demande, ce qui justifie la fermeté sans promettre d&#x27;automatisme.</p>
 
       <div class="bias-block">
@@ -551,10 +518,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : Intervention de Philip Lane le 23 septembre à Genève, puis l&#x27;IPCH flash de septembre le 1er octobre — dernier grand jalon avant la réunion du 29 octobre.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Intervention de Philip Lane le 23 septembre à Genève, puis l&#x27;IPCH flash de septembre le 1er octobre — dernier grand jalon avant la réunion du 29 octobre.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>Christine Lagarde a qualifié la hausse du 10 septembre d&#x27;évidence (« no brainer ») tout en refusant tout pré-engagement : le Conseil n&#x27;a pas débattu de la trajectoire future et reste en approche réunion par réunion. Elle décrit l&#x27;inflation actuelle comme « principalement un choc d&#x27;offre » lié à l&#x27;énergie et au Moyen-Orient, et ne voit un retour à la cible que vers fin 2027. Isabel Schnabel, l&#x27;aile la plus ferme du Conseil, plaide pour aller plus loin. Les marchés ont malgré la prudence de Lagarde relevé leurs paris sur de nouvelles hausses.</p></details>
       <details class="sources"><summary>Sources (5)</summary><ul><li><a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910.en.html" target="_blank" rel="noopener">www.ecb.europa.eu/press/pr/date/2026/html/ecb.…</a></li>
@@ -567,14 +531,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇬🇧</span>
           <div>
             <h3 class="ccy">GBP</h3>
             <p class="bank">Bank of England (BoE) &middot; Andrew Bailey</p>
           </div>
         </div>
         <span class="chip chip-neutral">Statu quo</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><b>1 échéance passée</b> <span class="s">· discours</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision BoE (Bank Rate) + rapport</b> <span class="s">· 5 novembre</span> <span class="cd" data-iso="2026-11-05T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -616,7 +579,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Baisse de 25 pb le 11 décembre 2025 — statu quo depuis, dont le maintien du 17 septembre 2026 voté 6-3, les trois dissidents réclamant une hausse à 4,00%</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 5 novembre 2026 — Décision BoE (Bank Rate) + rapport</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Statu quo prolongé à 3,75% depuis décembre 2025, mais la tension interne s&#x27;accentue : trois membres sur neuf votaient déjà pour une hausse le 17 septembre. L&#x27;inflation remontée à 3,1%, que le MPC voit dépasser 4% début 2027, pousse le comité vers le resserrement pendant que le gouverneur freine. Aucune baisse n&#x27;est envisagée avant une détente énergétique durable.</p>
 
       <div class="bias-block">
@@ -647,10 +609,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : Rapport ONS sur le marché du travail le 20 octobre, puis IPC de septembre le 21 octobre — les deux publications qui décideront du vote du 5 novembre, où la dissidence actuelle 6-3 laisse une hausse ouverte.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Rapport ONS sur le marché du travail le 20 octobre, puis IPC de septembre le 21 octobre — les deux publications qui décideront du vote du 5 novembre, où la dissidence actuelle 6-3 laisse une hausse ouverte.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>Andrew Bailey a maintenu le 17 septembre une ligne prudente, à contre-courant du camp ferme au sein de son propre comité. Il se dit très attentif à l&#x27;impact des prix de l&#x27;énergie, mais juge la transmission aux prix restée jusqu&#x27;ici « assez contenue ». Il a explicitement repoussé les anticipations de marché les plus agressives, déclarant que le comité n&#x27;avait pas discuté de relever les taux à quatre reprises. Il conditionne toute baisse future à une désescalade au Moyen-Orient et à un reflux des prix énergétiques.</p></details>
       <details class="sources"><summary>Sources (4)</summary><ul><li><a href="https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026" target="_blank" rel="noopener">www.bankofengland.co.uk/monetary-policy-summar…</a></li>
@@ -662,14 +621,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇦🇺</span>
           <div>
             <h3 class="ccy">AUD</h3>
             <p class="bank">Reserve Bank of Australia (RBA) &middot; Michele Bullock</p>
           </div>
         </div>
         <span class="chip chip-neutral">Statu quo</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><b>3 échéances passées</b> <span class="s">· discours, emploi, chômage</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision RBA (cash rate)</b> <span class="s">· 29 septembre</span> <span class="cd" data-iso="2026-09-29T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -711,7 +669,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Hausse de 25 pb les 4-5 mai 2026 (3e hausse de l&#x27;année) — statu quo confirmé en juin puis le 11 août 2026</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 29 septembre 2026 — Décision RBA (cash rate)</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Trois hausses en 2026 ont porté le taux à 4,35% en mai, suivi de quatre mois de statu quo à ton ferme. La réunion du 29 septembre est le vrai rendez-vous : le marché y attribue 76 à 80% de probabilité à une hausse vers 4,60%, ce qui serait le plus haut niveau depuis quinze ans, l&#x27;inflation au-dessus de la bande cible 2-3% l&#x27;emportant sur un chômage qui remonte.</p>
 
       <div class="bias-block">
@@ -742,10 +699,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <ul class="events-list"><li><span class="ev-time">29 septembre 2026 · 04:30 UTC</span><span class="ev-name">Décision RBA (cash rate)</span><span class="ev-fc">prév. voir consensus de marché · préc. 4,35%</span></li></ul><p class="events-watch">À surveiller ensuite : Rapport Labour Force d&#x27;août le 24 septembre à 01h30 UTC (impact élevé, chômage attendu stable à 4,5%), puis IPC d&#x27;août le 30 septembre — deux publications encadrant la décision du 29 septembre, où une hausse à 4,60% est majoritairement anticipée.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Rapport Labour Force d&#x27;août le 24 septembre à 01h30 UTC (impact élevé, chômage attendu stable à 4,5%), puis IPC d&#x27;août le 30 septembre — deux publications encadrant la décision du 29 septembre, où une hausse à 4,60% est majoritairement anticipée.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>Devant le Parlement le 18 septembre, Michele Bullock a durci le ton : les risques haussiers signalés en août se matérialisent désormais, entre le conflit au Moyen-Orient, le boom de l&#x27;intelligence artificielle et des conditions météorologiques extrêmes qui poussent l&#x27;énergie, l&#x27;agricole et la technologie. Avec une inflation autour de 3,5%, au-dessus de la cible, elle indique que le Board évaluera fin septembre si le resserrement déjà délivré suffira. Elle nuance en citant le ralentissement de la demande intérieure et la détente progressive du marché du travail.</p></details>
       <details class="sources"><summary>Sources (4)</summary><ul><li><a href="https://www.rba.gov.au/media-releases/2025/mr-25-02.html" target="_blank" rel="noopener">www.rba.gov.au/media-releases/2025/mr-25-02.ht…</a></li>
@@ -757,14 +711,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇳🇿</span>
           <div>
             <h3 class="ccy">NZD</h3>
             <p class="bank">Reserve Bank of New Zealand (RBNZ) &middot; Anna Breman</p>
           </div>
         </div>
         <span class="chip chip-rise">Hausse</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><span class="s">aucune échéance à fort impact</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision RBNZ (OCR)</b> <span class="s">· 28 octobre</span> <span class="cd" data-iso="2026-10-28T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -806,7 +759,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Hausse de 25 pb le 2 septembre 2026, deuxième du cycle après celle du 8 juillet (2,25% → 2,50% → 2,75%)</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 28 octobre 2026 — Décision RBNZ (OCR)</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Resserrement relancé en juillet 2026, avec une deuxième hausse le 2 septembre portant l&#x27;OCR à 2,75%, en route vers un neutre estimé autour de 3%. L&#x27;inflation à 4,1% justifie le mouvement, mais un chômage au plus haut depuis onze ans et une croissance quasi nulle au T2 poussent la gouverneure à préparer les esprits à une pause dès octobre.</p>
 
       <div class="bias-block">
@@ -837,10 +789,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : Semaine calme côté publications. Prochain jalon majeur : l&#x27;IPC du T3 en octobre, juste avant la Monetary Policy Review du 28 octobre, où la gouverneure a déjà laissé entendre qu&#x27;une pause était probable.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Semaine calme côté publications. Prochain jalon majeur : l&#x27;IPC du T3 en octobre, juste avant la Monetary Policy Review du 28 octobre, où la gouverneure a déjà laissé entendre qu&#x27;une pause était probable.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>Anna Breman a accompagné la hausse du 2 septembre d&#x27;un message ferme mais prudent : l&#x27;OCR remonte vers un taux neutre, la politique restant encore accommodante, et le comité n&#x27;est engagé sur aucune trajectoire prédéfinie. La projection officielle situe l&#x27;OCR à 2,81% en décembre 2026 puis 3,12% en septembre 2027. Dès le lendemain, devant la commission des finances, elle a nettement adouci le propos en estimant que la banque peut probablement prendre le temps d&#x27;évaluer les effets déjà produits — un signal de pause pour octobre qui a fait reculer le NZD.</p></details>
       <details class="sources"><summary>Sources (4)</summary><ul><li><a href="https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions" target="_blank" rel="noopener">www.rbnz.govt.nz/monetary-policy/monetary-poli…</a></li>
@@ -852,14 +801,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇺🇸</span>
           <div>
             <h3 class="ccy">USD</h3>
             <p class="bank">Federal Reserve &middot; Kevin Warsh</p>
           </div>
         </div>
         <span class="chip chip-rise">Hausse</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><span class="s">aucune échéance à fort impact</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision FOMC (Fed)</b> <span class="s">· 28 octobre</span> <span class="cd" data-iso="2026-10-28T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -901,7 +849,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Hausse de 25 pb le 16 septembre 2026, votée à l&#x27;unanimité (12-0) — première hausse depuis 2023, fin de la pause entamée en décembre 2025</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 28 octobre 2026 — Décision FOMC (Fed)</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Bascule en cycle de resserrement le 16 septembre 2026 après neuf mois de pause : la Fed sort de la séquence de baisses 2024-2025 et relève son taux pour la première fois depuis 2023, sur un vote unanime. L&#x27;inflation bloquée à 3,4% et un choc énergétique persistant l&#x27;emportent sur un marché de l&#x27;emploi qui ralentit sans se retourner. Le dot plot pointe vers au moins une hausse de plus d&#x27;ici la fin de l&#x27;année.</p>
 
       <div class="bias-block">
@@ -932,10 +879,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : Troisième estimation du PIB du T2 le 30 septembre, puis l&#x27;IPC de septembre mi-octobre — deux jalons avant le FOMC du 28 octobre, où le dot plot laisse entrevoir une hausse supplémentaire.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Troisième estimation du PIB du T2 le 30 septembre, puis l&#x27;IPC de septembre mi-octobre — deux jalons avant le FOMC du 28 octobre, où le dot plot laisse entrevoir une hausse supplémentaire.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>En annonçant la hausse du 16 septembre, Kevin Warsh a tenu un discours nettement ferme : « l&#x27;inflation est trop élevée, et l&#x27;est depuis trop longtemps », jugeant que la tendance sous-jacente ne s&#x27;est pas améliorée de façon significative. Il a présenté le geste comme le retrait d&#x27;« une dose d&#x27;accommodation » — la politique restant donc, à ses yeux, encore accommodante. Il refuse tout guidage explicite (« je ne fais pas dans le forward guidance »). Le dot plot montre 16 des 19 membres anticipant au moins une hausse supplémentaire en 2026, dont 4 qui en voient deux.</p></details>
       <details class="sources"><summary>Sources (6)</summary><ul><li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" target="_blank" rel="noopener">www.federalreserve.gov/newsevents/pressrelease…</a></li>
@@ -949,14 +893,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇨🇦</span>
           <div>
             <h3 class="ccy">CAD</h3>
             <p class="bank">Bank of Canada (BoC) &middot; Tiff Macklem</p>
           </div>
         </div>
         <span class="chip chip-neutral">Statu quo</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><span class="s">aucune échéance à fort impact</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision BdC + rapport</b> <span class="s">· 28 octobre</span> <span class="cd" data-iso="2026-10-28T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -998,7 +941,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Baisse de 25 pb le 29 octobre 2025 — statu quo depuis, dont le maintien du 2 septembre 2026 (7e consécutif)</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 28 octobre 2026 — Décision BdC + rapport</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Pause prolongée à 2,25% depuis octobre 2025, sept réunions d&#x27;affilée. La Banque se trouve devant une configuration inconfortable : croissance vigoureuse au T2 et inflation au plafond de la fourchette cible plaideraient pour un resserrement, mais le choc tarifaire américain et un marché de l&#x27;emploi qui se retourne en août justifient l&#x27;attentisme.</p>
 
       <div class="bias-block">
@@ -1029,10 +971,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : IPC de septembre mi-octobre et rapport sur l&#x27;emploi du 9 octobre, avant une décision du 28 octobre où le marché reste partagé entre nouveau statu quo et début de resserrement.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">IPC de septembre mi-octobre et rapport sur l&#x27;emploi du 9 octobre, avant une décision du 28 octobre où le marché reste partagé entre nouveau statu quo et début de resserrement.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>En maintenant le taux le 2 septembre, Tiff Macklem a livré un message neutre assorti d&#x27;une inquiétude sur l&#x27;inflation. Il constate que l&#x27;économie a redémarré après avoir calé, PIB du T2 à 3,3% à l&#x27;appui, mais avertit que plus les prix du pétrole et les marges de raffinage resteront élevés, plus le risque de contagion aux prix énergétiques augmentera. Il conserve toute latitude, se disant prêt à ajuster la politique monétaire selon les besoins, dans un contexte compliqué par les nouvelles mesures commerciales américaines.</p></details>
       <details class="sources"><summary>Sources (4)</summary><ul><li><a href="https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/" target="_blank" rel="noopener">www.bankofcanada.ca/2026/09/fad-press-release-…</a></li>
@@ -1044,14 +983,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇨🇭</span>
           <div>
             <h3 class="ccy">CHF</h3>
             <p class="bank">Banque nationale suisse (BNS) &middot; Martin Schlegel</p>
           </div>
         </div>
         <span class="chip chip-neutral">Statu quo</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><b>3 échéances passées</b> <span class="s">· taux directeur, discours</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision BNS (examen trimestriel)</b> <span class="s">· 17 décembre</span> <span class="cd" data-iso="2026-12-17T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -1093,7 +1031,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Baisse à 0,00% le 19 juin 2025 — inchangé depuis, dont les maintiens de septembre et décembre 2025, mars 2026 et 18 juin 2026</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 17 décembre 2026 — Décision BNS (examen trimestriel)</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Taux au plancher de 0,00% depuis juin 2025, avec une BNS qui privilégie explicitement l&#x27;intervention de change à toute modification du taux. L&#x27;inflation a doublé en un mois (0,4% à 0,8%) et le PIB a bondi de 1,5% au T2, ce qui éloigne le scénario d&#x27;un retour en territoire négatif sans pour autant justifier un resserrement : la barre reste haute dans les deux sens.</p>
 
       <div class="bias-block">
@@ -1124,10 +1061,7 @@
       </div>
       <p class='divergence'>⚠ Signal de divergence : le biais fondamental reste baissier (posture de la banque centrale, change rarement) alors que les toutes dernières données accélèrent (momentum, change à chaque publication). Ce n'est pas une incohérence — deux horizons différents — mais une accélération qui se confirme peut annoncer un futur ajustement du biais.</p>
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : Examen trimestriel de la BNS le 24 septembre à 07h30 UTC, conférence de presse à 08h00 : maintien à 0,00% largement attendu, l&#x27;enjeu portant davantage sur le discours relatif au franc et aux dépôts à vue que sur la décision elle-même.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Examen trimestriel de la BNS le 24 septembre à 07h30 UTC, conférence de presse à 08h00 : maintien à 0,00% largement attendu, l&#x27;enjeu portant davantage sur le discours relatif au franc et aux dépôts à vue que sur la décision elle-même.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>Martin Schlegel a maintenu le 11 septembre un ton neutre, sans le moindre signal de resserrement : l&#x27;inflation a augmenté ces derniers mois mais reste, selon lui, dans la zone de stabilité des prix. Il reconnaît que le taux de change du franc constitue un défi pour l&#x27;économie suisse, tout en rappelant que le franc réel est stable depuis 2020. La BNS réaffirme sa disponibilité à intervenir sur le marché des changes plutôt qu&#x27;à manier le taux directeur.</p></details>
       <details class="sources"><summary>Sources (4)</summary><ul><li><a href="https://www.snb.ch/en/the-snb/mandates-goals/monetary-policy/decisions" target="_blank" rel="noopener">www.snb.ch/en/the-snb/mandates-goals/monetary-…</a></li>
@@ -1139,14 +1073,13 @@
     <article class="card">
       <header class="card-head">
         <div class="card-id">
-          <span class="flag" aria-hidden="true">🇯🇵</span>
           <div>
             <h3 class="ccy">JPY</h3>
             <p class="bank">Bank of Japan (BoJ) &middot; Kazuo Ueda</p>
           </div>
         </div>
         <span class="chip chip-rise">Hausse</span>
-      </header>
+      </header><div class="cw"><div class="cw-l"><span class="cw-k">Cette semaine</span><span class="cw-v"><span class="s">aucune échéance à fort impact</span></span></div><div class="cw-l"><span class="cw-k">Prochaine</span><span class="cw-v"><b>Décision BoJ + Outlook Report</b> <span class="s">· 30 octobre</span> <span class="cd" data-iso="2026-10-30T12:00:00+00:00">—</span></span></div></div>
 
       <div class="stat-row">
         
@@ -1188,7 +1121,6 @@
       </div>
 
       <p class="meta-line"><strong>Dernier mouvement de taux&nbsp;:</strong> Hausse de 25 pb le 18 septembre 2026, votée 7-2 (dissidents Asada et Sato), effective le 24 septembre — plus haut niveau depuis 1995</p>
-      <p class="meta-line"><strong>Prochaine réunion&nbsp;:</strong> 30 octobre 2026 — Décision BoJ + Outlook Report</p>
       <p class="meta-line"><strong>Cycle&nbsp;:</strong> Normalisation graduelle engagée depuis la sortie des taux négatifs en 2024, portée le 18 septembre à 1,25%, au plus haut depuis trente ans. La tension du moment est que cette hausse intervient alors que l&#x27;IPC core reste sous 2% pour le huitième mois consécutif : la BoJ agit sur l&#x27;inflation anticipée plutôt que constatée, ce qui explique un comité divisé et un gouverneur réticent à promettre la suite.</p>
 
       <div class="bias-block">
@@ -1219,10 +1151,7 @@
       </div>
       
 
-      <div class="events-block">
-        <span class="stat-label">Prochains événements (4 jours)</span>
-        <p class="events-empty">Calme — aucun événement à impact élevé dans les 4 prochains jours.</p><p class="events-watch">À surveiller ensuite : Semaine calme : la Bourse de Tokyo est fermée les 21, 22 et 23 septembre (Silver Week). Le PMI flash Jibun Bank du 23 septembre est classé impact moyen. Prochain vrai jalon : l&#x27;IPC de Tokyo de septembre fin septembre, puis la réunion du 30 octobre avec Outlook Report.</p>
-      </div>
+      <div class="events-block"><span class="stat-label">À surveiller</span><p class="events-watch">Semaine calme : la Bourse de Tokyo est fermée les 21, 22 et 23 septembre (Silver Week). Le PMI flash Jibun Bank du 23 septembre est classé impact moyen. Prochain vrai jalon : l&#x27;IPC de Tokyo de septembre fin septembre, puis la réunion du 30 octobre avec Outlook Report.</p></div>
 
       <details class="speech"><summary>Dernier discours / déclaration</summary><p>Le communiqué du 18 septembre reste ferme : la BoJ dit vouloir continuer à relever son taux directeur et insiste sur le risque que l&#x27;inflation dépasse durablement la cible de 2%. Mais Kazuo Ueda a déçu en conférence de presse, refusant de s&#x27;engager (« cela dépend de l&#x27;évolution des prix, plusieurs scénarios sont possibles ») et précisant que la politique monétaire n&#x27;est pas pilotée pour contrôler le change. Combiné à un vote divisé 7-2, ce ton en retrait a fait reculer le yen malgré la hausse.</p></details>
       <details class="sources"><summary>Sources (4)</summary><ul><li><a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf" target="_blank" rel="noopener">www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918…</a></li>
@@ -1279,7 +1208,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/GBP">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇬🇧</span>GBP
+            EUR<span class="slash">/</span>GBP
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1300,7 +1229,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/AUD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇦🇺</span>AUD
+            EUR<span class="slash">/</span>AUD
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1321,7 +1250,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/NZD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇳🇿</span>NZD
+            EUR<span class="slash">/</span>NZD
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1342,7 +1271,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/USD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇺🇸</span>USD
+            EUR<span class="slash">/</span>USD
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1363,7 +1292,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/CAD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇦</span>CAD
+            EUR<span class="slash">/</span>CAD
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1384,7 +1313,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/CHF">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇭</span>CHF
+            EUR<span class="slash">/</span>CHF
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1405,7 +1334,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de EUR/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇪🇺</span>EUR<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            EUR<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1426,7 +1355,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de GBP/AUD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇬🇧</span>GBP<span class="slash">/</span><span class="flag" aria-hidden="true">🇦🇺</span>AUD
+            GBP<span class="slash">/</span>AUD
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1447,7 +1376,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de GBP/NZD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇬🇧</span>GBP<span class="slash">/</span><span class="flag" aria-hidden="true">🇳🇿</span>NZD
+            GBP<span class="slash">/</span>NZD
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1468,7 +1397,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de GBP/USD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇬🇧</span>GBP<span class="slash">/</span><span class="flag" aria-hidden="true">🇺🇸</span>USD
+            GBP<span class="slash">/</span>USD
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1489,7 +1418,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de GBP/CAD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇬🇧</span>GBP<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇦</span>CAD
+            GBP<span class="slash">/</span>CAD
           </button>
         </td>
         <td class="cell neutral" data-prob="49"><span class="cell-pct">51% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1510,7 +1439,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de GBP/CHF">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇬🇧</span>GBP<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇭</span>CHF
+            GBP<span class="slash">/</span>CHF
           </button>
         </td>
         <td class="cell neutral" data-prob="49"><span class="cell-pct">51% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1531,7 +1460,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de GBP/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇬🇧</span>GBP<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            GBP<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1552,7 +1481,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de AUD/NZD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇦🇺</span>AUD<span class="slash">/</span><span class="flag" aria-hidden="true">🇳🇿</span>NZD
+            AUD<span class="slash">/</span>NZD
           </button>
         </td>
         <td class="cell neutral" data-prob="49"><span class="cell-pct">51% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1573,7 +1502,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de AUD/USD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇦🇺</span>AUD<span class="slash">/</span><span class="flag" aria-hidden="true">🇺🇸</span>USD
+            AUD<span class="slash">/</span>USD
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1594,7 +1523,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de AUD/CAD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇦🇺</span>AUD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇦</span>CAD
+            AUD<span class="slash">/</span>CAD
           </button>
         </td>
         <td class="cell neutral" data-prob="48"><span class="cell-pct">52% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1615,7 +1544,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de AUD/CHF">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇦🇺</span>AUD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇭</span>CHF
+            AUD<span class="slash">/</span>CHF
           </button>
         </td>
         <td class="cell neutral" data-prob="48"><span class="cell-pct">52% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1636,7 +1565,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de AUD/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇦🇺</span>AUD<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            AUD<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1657,7 +1586,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de NZD/USD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇳🇿</span>NZD<span class="slash">/</span><span class="flag" aria-hidden="true">🇺🇸</span>USD
+            NZD<span class="slash">/</span>USD
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1678,7 +1607,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de NZD/CAD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇳🇿</span>NZD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇦</span>CAD
+            NZD<span class="slash">/</span>CAD
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1699,7 +1628,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de NZD/CHF">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇳🇿</span>NZD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇭</span>CHF
+            NZD<span class="slash">/</span>CHF
           </button>
         </td>
         <td class="cell neutral" data-prob="49"><span class="cell-pct">51% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1720,7 +1649,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de NZD/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇳🇿</span>NZD<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            NZD<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1741,7 +1670,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de USD/CAD">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇺🇸</span>USD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇦</span>CAD
+            USD<span class="slash">/</span>CAD
           </button>
         </td>
         <td class="cell neutral" data-prob="48"><span class="cell-pct">52% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1762,7 +1691,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de USD/CHF">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇺🇸</span>USD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇭</span>CHF
+            USD<span class="slash">/</span>CHF
           </button>
         </td>
         <td class="cell neutral" data-prob="48"><span class="cell-pct">52% Baisse</span><span class="cell-label">quasi neutre</span></td>
@@ -1783,7 +1712,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de USD/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇺🇸</span>USD<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            USD<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1804,7 +1733,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de CAD/CHF">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇨🇦</span>CAD<span class="slash">/</span><span class="flag" aria-hidden="true">🇨🇭</span>CHF
+            CAD<span class="slash">/</span>CHF
           </button>
         </td>
         <td class="cell neutral" data-prob="50"><span class="cell-pct">50/50 Neutre</span><span class="cell-label">quasi neutre</span></td>
@@ -1825,7 +1754,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de CAD/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇨🇦</span>CAD<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            CAD<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="51"><span class="cell-pct">51% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1846,7 +1775,7 @@
         <td class="pair-name">
           <button class="why-toggle" type="button" aria-expanded="false" aria-label="Voir le pourquoi de CHF/JPY">
             <span class="chevron">▸</span>
-            <span class="flag" aria-hidden="true">🇨🇭</span>CHF<span class="slash">/</span><span class="flag" aria-hidden="true">🇯🇵</span>JPY
+            CHF<span class="slash">/</span>JPY
           </button>
         </td>
         <td class="cell neutral" data-prob="52"><span class="cell-pct">52% Hausse</span><span class="cell-label">quasi neutre</span></td>
@@ -1875,7 +1804,7 @@
 
   <footer>
     <div>Sources croisées&nbsp;: Reuters, Bloomberg, CNBC, MarketWatch, Financial Times, Investing.com, ForexFactory, DailyFX, FXStreet, TradingEconomics, Yahoo Finance, Barron's, TradingView, Finviz, OANDA, Saxo Bank, IG, et les sites officiels Fed / BCE / BoE / BoJ / SNB / BoC / RBA / RBNZ + calendriers économiques.</div>
-    <div>Prochaine mise à jour automatique&nbsp;: dans l’heure (veille des échéances à fort impact), scan complet demain à 06h00 UTC.</div>
+    <div>Prochaine mise à jour automatique&nbsp;: au prochain passage du robot ; les délais affichés, eux, sont recalculés en direct.</div>
   </footer>
 
 </div>
@@ -1955,13 +1884,13 @@
     return p ? "il y a " + t : "dans " + t;
   }
   function tick(){
-    var n = Date.now(), l = document.querySelectorAll(".hw [data-iso]");
+    var n = Date.now(), l = document.querySelectorAll("[data-iso]");
     for (var i = 0; i < l.length; i++){
       var el = l[i], t = Date.parse(el.getAttribute("data-iso"));
       if (isNaN(t)) continue;
       var s = Math.round((t - n) / 1000);
       el.textContent = fmt(s);
-      el.className = "hw-cd" + (s < 0 ? " past" : s < 3600 ? " hot" : s < 86400 ? " soon" : "");
+      el.className = "cd" + (s < 0 ? " past" : s < 3600 ? " hot" : s < 86400 ? " soon" : "");
       el.title = new Date(t).toLocaleString();
     }
   }
