@@ -1,0 +1,157 @@
+{
+  "verifie_iso": "2026-09-25T10:24:00+00:00",
+  "verifie": "25 septembre 2026, 10h24 UTC",
+  "flux_ok": true,
+  "horizon_jours": 10,
+  "seuil_imminent_h": 36,
+  "imminents": [
+    {
+      "code": "GBP",
+      "titre": "Gouverneur BoE Bailey — discours",
+      "iso": "2026-09-25T09:15:00+00:00",
+      "consensus": "",
+      "precedent": "",
+      "source": "calendrier"
+    }
+  ],
+  "agenda": [
+    {
+      "code": "GBP",
+      "titre": "Gouverneur BoE Bailey — discours",
+      "iso": "2026-09-25T09:15:00+00:00",
+      "consensus": "",
+      "precedent": "",
+      "source": "calendrier"
+    },
+    {
+      "code": "AUD",
+      "titre": "Décision RBA (cash rate)",
+      "iso": "2026-09-29T12:00:00+00:00",
+      "consensus": "",
+      "precedent": "4,35%",
+      "source": "banque centrale"
+    }
+  ],
+  "devises": [
+    {
+      "code": "EUR",
+      "banque": "Banque centrale européenne (BCE)",
+      "taux": "Taux de dépôt 2,50%",
+      "ton": "resserrement",
+      "biais": 70,
+      "momentum": 3,
+      "inflation": "3,2% · août 2026",
+      "inflation_detail": "3,2% (août 2026, IPCH global, chiffre final du 17 septembre) ; sous-jacent en repli à 2,4%, énergie +14,3% sur un an",
+      "chomage": "6,4% · juillet 2026",
+      "chomage_detail": "6,4% (juillet 2026, stable)",
+      "prochain": "Décision BCE (taux de dépôt)",
+      "prochain_iso": "2026-10-29T12:00:00+00:00",
+      "prochain_txt": "29 octobre 2026"
+    },
+    {
+      "code": "GBP",
+      "banque": "Bank of England (BoE)",
+      "taux": "3,75%",
+      "ton": "resserrement",
+      "biais": 58,
+      "momentum": 1,
+      "inflation": "3,1% · août 2026",
+      "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
+      "chomage": "4,9% · juillet 2026",
+      "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
+      "prochain": "Gouverneur BoE Bailey — discours",
+      "prochain_iso": "2026-09-25T09:15:00+00:00",
+      "prochain_txt": "25 septembre 2026"
+    },
+    {
+      "code": "AUD",
+      "banque": "Reserve Bank of Australia (RBA)",
+      "taux": "4,35%",
+      "ton": "resserrement",
+      "biais": 72,
+      "momentum": -2,
+      "inflation": "3,5% · juillet 2026",
+      "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
+      "chomage": "4,5% · juillet 2026",
+      "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
+      "prochain": "Décision RBA (cash rate)",
+      "prochain_iso": "2026-09-29T12:00:00+00:00",
+      "prochain_txt": "29 septembre 2026"
+    },
+    {
+      "code": "NZD",
+      "banque": "Reserve Bank of New Zealand (RBNZ)",
+      "taux": "2,75%",
+      "ton": "neutre",
+      "biais": 60,
+      "momentum": 2,
+      "inflation": "4,1% · T2 2026",
+      "inflation_detail": "4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)",
+      "chomage": "5,6% · T2 2026",
+      "chomage_detail": "5,6% (T2 2026, plus haut depuis onze ans)",
+      "prochain": "Décision RBNZ (OCR)",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre 2026"
+    },
+    {
+      "code": "USD",
+      "banque": "Federal Reserve",
+      "taux": "3,75%–4,00%",
+      "ton": "resserrement",
+      "biais": 78,
+      "momentum": -2,
+      "inflation": "3,4% · août 2026",
+      "inflation_detail": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
+      "chomage": "4,1% · août 2026",
+      "chomage_detail": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
+      "prochain": "Décision FOMC (Fed)",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre 2026"
+    },
+    {
+      "code": "CAD",
+      "banque": "Bank of Canada (BoC)",
+      "taux": "2,25%",
+      "ton": "neutre",
+      "biais": 55,
+      "momentum": 4,
+      "inflation": "3,0% · août 2026",
+      "inflation_detail": "3,0% (août 2026, stable, tirée par l'essence) — sommet de la fourchette cible 1-3%",
+      "chomage": "6,4% · août 2026",
+      "chomage_detail": "6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet",
+      "prochain": "Décision BdC + rapport",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre 2026"
+    },
+    {
+      "code": "CHF",
+      "banque": "Banque nationale suisse (BNS)",
+      "taux": "0,00%",
+      "ton": "neutre",
+      "biais": 32,
+      "momentum": 5,
+      "inflation": "0,8% · août 2026",
+      "inflation_detail": "0,8% (août 2026, plus forte hausse depuis août 2024) ; sous-jacent à 0,4%, première accélération de l'année",
+      "chomage": "3,0% · août 2026",
+      "chomage_detail": "3,0% (août 2026, brut ; 3,1% corrigé des variations saisonnières, stable pour le 4e mois)",
+      "prochain": "Décision BNS (examen trimestriel)",
+      "prochain_iso": "2026-12-17T12:00:00+00:00",
+      "prochain_txt": "17 décembre 2026"
+    },
+    {
+      "code": "JPY",
+      "banque": "Bank of Japan (BoJ)",
+      "taux": "1,25%",
+      "ton": "resserrement",
+      "biais": 68,
+      "momentum": -1,
+      "inflation": "1,7% · août 2026",
+      "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
+      "chomage": "2,4% · juillet 2026",
+      "chomage_detail": "2,4% (juillet 2026, plus bas depuis juillet 2025)",
+      "prochain": "Décision BoJ + Outlook Report",
+      "prochain_iso": "2026-10-30T12:00:00+00:00",
+      "prochain_txt": "30 octobre 2026"
+    }
+  ]
+}

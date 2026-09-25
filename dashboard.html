@@ -1,4 +1,78 @@
 <style>
+.hi{flex:1 0 100%;width:100%;background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;box-shadow:var(--shadow);margin:18px 0 4px;overflow:hidden;
+  border-top:3px solid var(--gold)}
+.hi-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:13px 18px 11px;
+  border-bottom:1px solid var(--border)}
+.hi-head h2{margin:0;font-family:var(--font-display);font-size:.95rem;letter-spacing:.01em;
+  color:var(--text);font-weight:700}
+.hi-pulse{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;
+  box-shadow:0 0 0 0 var(--gold);animation:hipulse 2.6s infinite}
+@keyframes hipulse{0%{box-shadow:0 0 0 0 rgba(224,168,87,.55)}
+  70%{box-shadow:0 0 0 9px rgba(224,168,87,0)}100%{box-shadow:0 0 0 0 rgba(224,168,87,0)}}
+@media (prefers-reduced-motion:reduce){.hi-pulse{animation:none}}
+.hi-when{margin-left:auto;font-family:var(--font-mono);font-size:.7rem;color:var(--text-muted);
+  text-transform:uppercase;letter-spacing:.05em}
+.hi-when b{color:var(--gold);font-weight:600}
+.hi-warn{padding:9px 18px;font-size:.76rem;color:var(--fall-text);background:var(--surface-2);
+  border-bottom:1px solid var(--border)}
+.hi-now{padding:12px 18px 14px;border-bottom:1px solid var(--border)}
+.hi-lab{font-family:var(--font-mono);font-size:.67rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--text-muted);margin-bottom:9px}
+.hi-ev{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:7px 0;
+  border-top:1px dashed var(--border)}
+.hi-ev:first-of-type{border-top:none}
+.hi-cc{font-family:var(--font-mono);font-size:.74rem;font-weight:700;color:var(--text);
+  flex:none;min-width:62px}
+.hi-ti{font-size:.83rem;color:var(--text);font-weight:600;flex:1 1 200px}
+.hi-src{font-size:.7rem;color:var(--text-muted);font-weight:400}
+.hi-num{font-family:var(--font-mono);font-size:.72rem;color:var(--text-secondary);flex:none}
+.hi-num b{color:var(--text);font-weight:600}
+.hi-cd{font-family:var(--font-mono);font-size:.73rem;font-weight:700;flex:none;
+  padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--text-secondary);
+  border:1px solid var(--border);white-space:nowrap}
+.hi-cd.soon{color:var(--gold);border-color:var(--gold)}
+.hi-cd.hot{color:#fff;background:var(--fall);border-color:var(--fall)}
+.hi-cd.past{opacity:.55}
+.hi-calme{padding:2px 0 0;font-size:.82rem;color:var(--text-secondary)}
+.hi-scroll{overflow-x:auto}
+.hi-tab{width:100%;border-collapse:collapse;font-size:.79rem;min-width:600px}
+.hi-tab th{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--text-muted);text-align:left;font-weight:500;padding:10px 12px;
+  border-bottom:1px solid var(--border);white-space:nowrap}
+.hi-tab td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text-secondary);
+  vertical-align:middle}
+.hi-tab tr:last-child td{border-bottom:none}
+.hi-dev{font-family:var(--font-mono);font-weight:700;color:var(--text);white-space:nowrap}
+.hi-taux{font-family:var(--font-mono);color:var(--text);font-weight:600;white-space:nowrap}
+.hi-chiffre{font-family:var(--font-mono);font-size:.74rem;white-space:nowrap;cursor:help}
+.hi-ton{font-size:.72rem;padding:2px 8px;border-radius:999px;border:1px solid var(--border);
+  white-space:nowrap;color:var(--text-secondary)}
+.hi-ton.resserrement{color:var(--fall-text);border-color:var(--fall)}
+.hi-ton.assouplissement{color:var(--rise-text);border-color:var(--rise)}
+.hi-next{color:var(--text);font-weight:500}
+.hi-next small{display:block;color:var(--text-muted);font-weight:400;font-family:var(--font-mono);
+  font-size:.68rem;margin-top:2px}
+.hi-ag{border-top:1px solid var(--border)}
+.hi-ag>summary{cursor:pointer;list-style:none;padding:11px 18px;font-family:var(--font-display);
+  font-size:.79rem;color:var(--text-secondary);display:flex;align-items:center;gap:9px}
+.hi-ag>summary::-webkit-details-marker{display:none}
+.hi-ag>summary::before{content:"\25B8";color:var(--gold);transition:transform .15s}
+.hi-ag[open]>summary::before{transform:rotate(90deg)}
+.hi-ag .hi-ev{padding:7px 18px}
+.hi-foot{padding:9px 18px 12px;font-size:.7rem;color:var(--text-muted);line-height:1.5}
+.hi .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:640px){
+  .hi-when{margin-left:0;flex:1 0 100%}
+  .hi-num{flex:1 0 100%}
+  /* Sur telephone on garde l'essentiel : devise, taux, prochaine echeance. */
+  .hi-tab{min-width:0}
+  .hi-tab th:nth-child(3),.hi-tab td:nth-child(3),
+  .hi-tab th:nth-child(4),.hi-tab td:nth-child(4),
+  .hi-tab th:nth-child(5),.hi-tab td:nth-child(5){display:none}
+  .hi-tab th,.hi-tab td{padding:9px 8px}
+}
+</style><style>
 .cl{background:var(--surface);border:1px solid var(--border);border-radius:10px;
   box-shadow:var(--shadow);margin:14px 0 22px;overflow:hidden}
 .cl>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;
@@ -337,10 +411,10 @@
       </div>
     </div>
     <div class="top-meta">
-      <div>Dernière collecte&nbsp;: <strong>25 septembre 2026, 04h50 UTC (mise à jour automatique)</strong> (Africa/Abidjan)</div>
-      <div class="cadence">Mise à jour automatique · scan complet 06h00 UTC + veille toutes les 4 h</div>
+      <div>Dernière collecte&nbsp;: <strong>25 septembre 2026, 10h23 UTC (mise à jour automatique)</strong> (Africa/Abidjan)</div>
+      <div class="cadence">Mise à jour automatique · scan complet 06h00 UTC + veille à fort impact chaque heure</div>
       <div>28 paires · 8 devises · 21 sources croisées</div>
-    </div><details class="cl" open><summary><span class="cl-dot"></span>Journal des mises à jour<span class="cl-note">dernier changement aujourd&#x27;hui · 34 entrée(s)</span></summary><div class="cl-body"><div class="cl-day"><div class="cl-date">aujourd&#x27;hui</div><ul><li><b>AUD</b> — reunion inscrite au calendrier : Décision RBA (cash rate)</li></ul></div><div class="cl-day"><div class="cl-date">hier</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>CHF</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>EUR</b> — evenement sous 48 h — badge retire</li><li><b>CHF</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CHF</b> — prochaine reunion : 17 décembre 2026 — Décision BNS (examen trimestriel)</li><li><b>CHF</b> — evenement sous 6 h — badge retire</li><li><b>CHF</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">23 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 48 h — badge retire</li><li><b>USD</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — evenement sous 6 h — badge retire</li><li><b>USD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">22 sept. 2026</div><ul><li><b>CHF</b> — evenement sous 48 h — badge active</li></ul></div><div class="cl-day"><div class="cl-date">21 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 48 h — badge active</li><li><b>GBP</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — evenement sous 6 h — badge active</li><li><b>USD</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CAD</b> — evenement sous 6 h — badge retire</li><li><b>CAD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">20 sept. 2026</div><ul><li><b>GBP</b> — prochaine reunion : 5 novembre 2026 — Décision BoE (Bank Rate) + rapport</li><li><b>NZD</b> — prochaine reunion : 28 octobre 2026 — Décision RBNZ (OCR)</li><li><b>CAD</b> — prochaine reunion : 28 octobre 2026 — Décision BdC + rapport</li><li><b>CHF</b> — reunion inscrite au calendrier : Décision BNS (examen trimestriel)</li><li><b>JPY</b> — prochaine reunion : 30 octobre 2026 — Décision BoJ + Outlook Report</li></ul></div></div></details>
+    </div><section class="hi" aria-label="Informations à très fort impact"><div class="hi-head"><span class="hi-pulse" aria-hidden="true"></span><h2>À très fort impact</h2><span class="hi-when">vérifié à <b>25 septembre 2026, 10h24 UTC</b> · actualisé chaque heure</span></div><div class="hi-now"><div class="hi-lab">Dans les 36 heures</div><div class="hi-ev"><span class="hi-cc">🇬🇧 GBP</span><span class="hi-ti">Gouverneur BoE Bailey — discours</span><span class="hi-cd" data-iso="2026-09-25T09:15:00+00:00">—</span></div></div><div class="hi-scroll"><table class="hi-tab"><thead><tr><th>Devise</th><th>Taux directeur</th><th>Orientation</th><th>Inflation</th><th>Chômage</th><th>Prochaine échéance à fort impact</th><th><span class="sr">Échéance</span></th></tr></thead><tbody><tr><td class="hi-dev">🇪🇺 EUR</td><td class="hi-taux">Taux de dépôt 2,50%</td><td><span class="hi-ton resserrement">resserrement</span></td><td class="hi-chiffre" title="3,2% (août 2026, IPCH global, chiffre final du 17 septembre) ; sous-jacent en repli à 2,4%, énergie +14,3% sur un an">3,2% · août 2026</td><td class="hi-chiffre" title="6,4% (juillet 2026, stable)">6,4% · juillet 2026</td><td class="hi-next">Décision BCE (taux de dépôt)<small>29 octobre 2026</small></td><td><span class="hi-cd" data-iso="2026-10-29T12:00:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇬🇧 GBP</td><td class="hi-taux">3,75%</td><td><span class="hi-ton resserrement">resserrement</span></td><td class="hi-chiffre" title="3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027">3,1% · août 2026</td><td class="hi-chiffre" title="4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)">4,9% · juillet 2026</td><td class="hi-next">Gouverneur BoE Bailey — discours<small>25 septembre 2026</small></td><td><span class="hi-cd" data-iso="2026-09-25T09:15:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇦🇺 AUD</td><td class="hi-taux">4,35%</td><td><span class="hi-ton resserrement">resserrement</span></td><td class="hi-chiffre" title="3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%">3,5% · juillet 2026</td><td class="hi-chiffre" title="4,5% (juillet 2026, plus haut niveau post-COVID)">4,5% · juillet 2026</td><td class="hi-next">Décision RBA (cash rate)<small>29 septembre 2026</small></td><td><span class="hi-cd" data-iso="2026-09-29T12:00:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇳🇿 NZD</td><td class="hi-taux">2,75%</td><td><span class="hi-ton neutre">neutre</span></td><td class="hi-chiffre" title="4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)">4,1% · T2 2026</td><td class="hi-chiffre" title="5,6% (T2 2026, plus haut depuis onze ans)">5,6% · T2 2026</td><td class="hi-next">Décision RBNZ (OCR)<small>28 octobre 2026</small></td><td><span class="hi-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇺🇸 USD</td><td class="hi-taux">3,75%–4,00%</td><td><span class="hi-ton resserrement">resserrement</span></td><td class="hi-chiffre" title="3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an">3,4% · août 2026</td><td class="hi-chiffre" title="4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K">4,1% · août 2026</td><td class="hi-next">Décision FOMC (Fed)<small>28 octobre 2026</small></td><td><span class="hi-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇨🇦 CAD</td><td class="hi-taux">2,25%</td><td><span class="hi-ton neutre">neutre</span></td><td class="hi-chiffre" title="3,0% (août 2026, stable, tirée par l&#x27;essence) — sommet de la fourchette cible 1-3%">3,0% · août 2026</td><td class="hi-chiffre" title="6,4% (août 2026, stable) ; l&#x27;emploi recule toutefois de 42K après +181K cumulés d&#x27;avril à juillet">6,4% · août 2026</td><td class="hi-next">Décision BdC + rapport<small>28 octobre 2026</small></td><td><span class="hi-cd" data-iso="2026-10-28T12:00:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇨🇭 CHF</td><td class="hi-taux">0,00%</td><td><span class="hi-ton neutre">neutre</span></td><td class="hi-chiffre" title="0,8% (août 2026, plus forte hausse depuis août 2024) ; sous-jacent à 0,4%, première accélération de l&#x27;année">0,8% · août 2026</td><td class="hi-chiffre" title="3,0% (août 2026, brut ; 3,1% corrigé des variations saisonnières, stable pour le 4e mois)">3,0% · août 2026</td><td class="hi-next">Décision BNS (examen trimestriel)<small>17 décembre 2026</small></td><td><span class="hi-cd" data-iso="2026-12-17T12:00:00+00:00">—</span></td></tr><tr><td class="hi-dev">🇯🇵 JPY</td><td class="hi-taux">1,25%</td><td><span class="hi-ton resserrement">resserrement</span></td><td class="hi-chiffre" title="1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois">1,7% · août 2026</td><td class="hi-chiffre" title="2,4% (juillet 2026, plus bas depuis juillet 2025)">2,4% · juillet 2026</td><td class="hi-next">Décision BoJ + Outlook Report<small>30 octobre 2026</small></td><td><span class="hi-cd" data-iso="2026-10-30T12:00:00+00:00">—</span></td></tr></tbody></table></div><details class="hi-ag"><summary>Agenda à fort impact — 10 prochains jours (1)</summary><div><div class="hi-ev"><span class="hi-cc">🇦🇺 AUD</span><span class="hi-ti">Décision RBA (cash rate) <span class="hi-src">(banque centrale)</span></span><span class="hi-cd" data-iso="2026-09-29T12:00:00+00:00">—</span><span class="hi-num">précédent 4,35%</span></div></div></details><div class="hi-foot">Ne figurent ici que les événements classés « fort impact » : décisions de taux, inflation, emploi, PIB, PMI et discours de gouverneurs. Compte à rebours calculé en direct dans votre navigateur ; le contenu est revérifié chaque heure.</div></section><details class="cl" open><summary><span class="cl-dot"></span>Journal des mises à jour<span class="cl-note">dernier changement aujourd&#x27;hui · 34 entrée(s)</span></summary><div class="cl-body"><div class="cl-day"><div class="cl-date">aujourd&#x27;hui</div><ul><li><b>AUD</b> — reunion inscrite au calendrier : Décision RBA (cash rate)</li></ul></div><div class="cl-day"><div class="cl-date">hier</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>CHF</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>EUR</b> — evenement sous 48 h — badge retire</li><li><b>CHF</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CHF</b> — prochaine reunion : 17 décembre 2026 — Décision BNS (examen trimestriel)</li><li><b>CHF</b> — evenement sous 6 h — badge retire</li><li><b>CHF</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">23 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — evenement sous 6 h — badge active</li><li><b>EUR</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>EUR</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 6 h — badge retire</li><li><b>GBP</b> — evenement sous 48 h — badge retire</li><li><b>USD</b> — evenement sous 6 h — badge active</li><li><b>GBP</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — 2 evenement(s) passe(s) retire(s)</li><li><b>USD</b> — evenement sous 6 h — badge retire</li><li><b>USD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">22 sept. 2026</div><ul><li><b>CHF</b> — evenement sous 48 h — badge active</li></ul></div><div class="cl-day"><div class="cl-date">21 sept. 2026</div><ul><li><b>EUR</b> — evenement sous 48 h — badge active</li><li><b>GBP</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — evenement sous 6 h — badge active</li><li><b>USD</b> — evenement sous 48 h — badge active</li><li><b>CAD</b> — 1 evenement(s) passe(s) retire(s)</li><li><b>CAD</b> — evenement sous 6 h — badge retire</li><li><b>CAD</b> — evenement sous 48 h — badge retire</li></ul></div><div class="cl-day"><div class="cl-date">20 sept. 2026</div><ul><li><b>GBP</b> — prochaine reunion : 5 novembre 2026 — Décision BoE (Bank Rate) + rapport</li><li><b>NZD</b> — prochaine reunion : 28 octobre 2026 — Décision RBNZ (OCR)</li><li><b>CAD</b> — prochaine reunion : 28 octobre 2026 — Décision BdC + rapport</li><li><b>CHF</b> — reunion inscrite au calendrier : Décision BNS (examen trimestriel)</li><li><b>JPY</b> — prochaine reunion : 30 octobre 2026 — Décision BoJ + Outlook Report</li></ul></div></div></details>
   </div>
 
   <section id="currencies">
@@ -1757,7 +1831,7 @@
 
   <footer>
     <div>Sources croisées&nbsp;: Reuters, Bloomberg, CNBC, MarketWatch, Financial Times, Investing.com, ForexFactory, DailyFX, FXStreet, TradingEconomics, Yahoo Finance, Barron's, TradingView, Finviz, OANDA, Saxo Bank, IG, et les sites officiels Fed / BCE / BoE / BoJ / SNB / BoC / RBA / RBNZ + calendriers économiques.</div>
-    <div>Prochaine mise à jour automatique&nbsp;: dans les 4 heures (veille calendrier), scan complet demain à 06h00 UTC.</div>
+    <div>Prochaine mise à jour automatique&nbsp;: dans l’heure (veille des échéances à fort impact), scan complet demain à 06h00 UTC.</div>
   </footer>
 
 </div>
@@ -1822,5 +1896,33 @@
     btn.setAttribute('aria-expanded', String(!open));
     rr.hidden = open;
   });
+})();
+</script>
+<script>
+(function(){
+  function fmt(s){
+    var p = s < 0, a = Math.abs(s);
+    var j = Math.floor(a/86400), h = Math.floor(a%86400/3600), m = Math.floor(a%3600/60);
+    var t;
+    if (j >= 2) t = j + " j";
+    else if (j === 1) t = "1 j" + (h ? " " + h + " h" : "");
+    else if (h >= 1) t = h + " h" + (m ? " " + (m < 10 ? "0" : "") + m : "");
+    else t = Math.max(m, 0) + " min";
+    return p ? "il y a " + t : "dans " + t;
+  }
+  function tick(){
+    var n = Date.now();
+    var l = document.querySelectorAll(".hi [data-iso]");
+    for (var i = 0; i < l.length; i++){
+      var el = l[i], t = Date.parse(el.getAttribute("data-iso"));
+      if (isNaN(t)) continue;
+      var s = Math.round((t - n) / 1000);
+      el.textContent = fmt(s);
+      el.className = "hi-cd" + (s < 0 ? " past" : s < 3600 ? " hot" : s < 86400 ? " soon" : "");
+      el.title = new Date(t).toLocaleString();
+    }
+  }
+  tick();
+  setInterval(tick, 30000);
 })();
 </script>
