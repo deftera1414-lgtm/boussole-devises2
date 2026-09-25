@@ -177,7 +177,7 @@ p = ['<section class="hw" aria-label="' + esc(sem.get("titre", "Semaine")) + '">
 p.append('<div class="hw-head"><span class="hw-dot" aria-hidden="true"></span>'
          "<h2>" + esc(sem.get("titre", "")) + "</h2>"
          '<span class="hw-when">vérifié à <b>' + esc(H.get("verifie", "")) +
-         "</b> · chaque heure</span></div>")
+         "</b></span></div>")
 
 if not H.get("flux_ok", True):
     p.append('<div class="hw-note">Le calendrier économique n’a pas répondu lors de ce passage. '
@@ -237,7 +237,9 @@ p.append("</div>")
 p.append('<div class="hw-foot">Seules les échéances classées « fort impact » figurent ici : '
          "décisions de taux, inflation, emploi, PIB, PMI, discours de gouverneurs. Les chiffres "
          "sous chaque intitulé se lisent <b>consensus ← valeur précédente</b>. Le détail par "
-         "devise, et ce que la semaine lui réserve, est sur sa carte ci-dessous.</div>")
+         "devise est sur sa carte ci-dessous. Le robot passe plusieurs fois par jour, aux heures "
+         "que l’hébergeur lui accorde ; les délais, eux, se recalculent en direct dans votre "
+         "navigateur et restent donc justes à la minute.</div>")
 p.append("</section>")
 BANDEAU = "".join(p)
 
@@ -360,9 +362,13 @@ h = h.replace("</body>", SCRIPT + "</body>", 1) if "</body>" in h else h + SCRIP
 
 for a, b in (
     ("scan complet 06h00 UTC + veille toutes les 4 h",
-     "scan complet 06h00 UTC + veille à fort impact chaque heure"),
+     "plusieurs passages par jour · délais recalculés en direct"),
+    ("scan complet 06h00 UTC + veille à fort impact chaque heure",
+     "plusieurs passages par jour · délais recalculés en direct"),
     ("dans les 4 heures (veille calendrier), scan complet demain à 06h00 UTC.",
-     "dans l’heure (veille des échéances à fort impact), scan complet demain à 06h00 UTC."),
+     "au prochain passage du robot ; les délais affichés, eux, sont recalculés en direct."),
+    ("dans l’heure (veille des échéances à fort impact), scan complet demain à 06h00 UTC.",
+     "au prochain passage du robot ; les délais affichés, eux, sont recalculés en direct."),
 ):
     if a in h:
         h = h.replace(a, b)
