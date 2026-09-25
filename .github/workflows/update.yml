@@ -352,10 +352,11 @@ jobs:
                   h = (w - now).total_seconds()/3600.0
                   if 0 <= h <= 6: a = True
                   if 0 <= h <= 48: b = True
+              # Les badges se deduisent des evenements. Les journaliser noyait
+              # les vrais changements sous du bruit quotidien : on les pose sans
+              # les raconter.
               for k, v, lab in (("event_6h",a,"sous 6 h"), ("event_1_2d",b,"sous 48 h")):
-                  if bool(c.get(k)) != v:
-                      note(code, "evenement " + lab + (" — badge active" if v else " — badge retire"))
-                      c[k] = v
+                  c[k] = v
 
           # ---------- execution ----------
           log("=== Boussole Devises — " + frdate(now.date()) + " a " + now.strftime("%H:%M") + " UTC ===")
