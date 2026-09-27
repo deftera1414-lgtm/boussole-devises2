@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-09-27T01:44:53+00:00",
-  "verifie": "27 septembre 2026, 01h44 UTC",
+  "verifie_iso": "2026-09-27T08:32:21+00:00",
+  "verifie": "27 septembre 2026, 08h32 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -29,17 +29,28 @@
         "evenements": [
           {
             "code": "AUD",
-            "titre": "Décision RBA (cash rate)",
+            "titre": "Taux directeur",
             "famille": "taux",
-            "iso": "2026-09-29T12:00:00+00:00",
-            "heure": "",
+            "iso": "2026-09-29T04:30:00+00:00",
+            "heure": "04h30",
+            "consensus": "4.60%",
+            "precedent": "4.35%",
+            "attendu": 1.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Communiqué de taux RBA",
+            "famille": "taux",
+            "iso": "2026-09-29T04:30:00+00:00",
+            "heure": "04h30",
             "consensus": "",
-            "precedent": "4,35%",
+            "precedent": "",
             "attendu": null,
-            "source": "banque centrale"
+            "source": "calendrier"
           }
         ],
-        "nb": 1
+        "nb": 2
       },
       {
         "iso": "2026-09-30",
@@ -48,8 +59,64 @@
         "mois": "sept.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "AUD",
+            "titre": "Inflation mensuelle",
+            "famille": "inflation",
+            "iso": "2026-09-30T01:30:00+00:00",
+            "heure": "01h30",
+            "consensus": "0.5%",
+            "precedent": "1.0%",
+            "attendu": -2.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Inflation annuelle",
+            "famille": "inflation",
+            "iso": "2026-09-30T01:30:00+00:00",
+            "heure": "01h30",
+            "consensus": "4.1%",
+            "precedent": "3.5%",
+            "attendu": 3.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Trimmed Mean Inflation mensuelle",
+            "famille": "inflation",
+            "iso": "2026-09-30T01:30:00+00:00",
+            "heure": "01h30",
+            "consensus": "0.3%",
+            "precedent": "0.5%",
+            "attendu": -1.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Indice PCE sous-jacent sur un mois",
+            "famille": "inflation",
+            "iso": "2026-09-30T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.3%",
+            "precedent": "0.2%",
+            "attendu": 0.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "PIB sur un trimestre (définitif)",
+            "famille": "croissance",
+            "iso": "2026-09-30T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "1.5%",
+            "precedent": "1.5%",
+            "attendu": 0.0,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 5
       },
       {
         "iso": "2026-10-01",
@@ -68,8 +135,42 @@
         "mois": "octo.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "USD",
+            "titre": "Salaire horaire moyen sur un mois",
+            "famille": "emploi",
+            "iso": "2026-10-02T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.3%",
+            "precedent": "0.3%",
+            "attendu": 0.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Emplois non agricoles (NFP)",
+            "famille": "emploi",
+            "iso": "2026-10-02T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "98K",
+            "precedent": "162K",
+            "attendu": -1.58,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Taux de chômage",
+            "famille": "chomage",
+            "iso": "2026-10-02T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "4.1%",
+            "precedent": "4.1%",
+            "attendu": -0.0,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 3
       },
       {
         "iso": "2026-10-03",
@@ -92,8 +193,8 @@
         "nb": 0
       }
     ],
-    "nb": 1,
-    "reste": 1,
+    "nb": 10,
+    "reste": 10,
     "prochaine": true,
     "en_attente": false
   },
@@ -153,16 +254,16 @@
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,5% · juillet 2026",
       "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
-      "semaine_nb": 1,
-      "semaine_reste": 1,
-      "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
-      "semaine_resume": "taux directeur",
+      "semaine_nb": 5,
+      "semaine_reste": 5,
+      "semaine_penchant": 0.5,
+      "semaine_mot": "favorable",
+      "semaine_resume": "taux directeur, inflation",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision RBA (cash rate)",
-      "prochain_iso": "2026-09-29T12:00:00+00:00",
+      "prochain": "Taux directeur",
+      "prochain_iso": "2026-09-29T04:30:00+00:00",
       "prochain_txt": "29 septembre"
     },
     {
@@ -197,17 +298,17 @@
       "inflation_detail": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
       "chomage": "4,1% · août 2026",
       "chomage_detail": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 5,
+      "semaine_reste": 5,
+      "semaine_penchant": -1.08,
+      "semaine_mot": "défavorable",
+      "semaine_resume": "inflation, croissance, emploi",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision FOMC (Fed)",
-      "prochain_iso": "2026-10-28T12:00:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Indice PCE sous-jacent sur un mois",
+      "prochain_iso": "2026-09-30T12:30:00+00:00",
+      "prochain_txt": "30 septembre"
     },
     {
       "code": "CAD",

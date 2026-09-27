@@ -1,6 +1,6 @@
 {
-  "generated_at": "27 septembre 2026, 01h44 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-27T01:44:33+00:00",
+  "generated_at": "27 septembre 2026, 08h31 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-27T08:31:59+00:00",
   "currencies": {
     "USD": {
       "bias": 78,
@@ -204,7 +204,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Reserve Bank of Australia (RBA)",
       "chief": "Michele Bullock",
       "rate_previous": "4,10%",
