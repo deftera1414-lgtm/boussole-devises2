@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-09-28T21:41:59+00:00",
+  "calcule_iso": "2026-09-28T21:46:45+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -13,21 +13,22 @@
   },
   "devises": {
     "EUR": {
-      "biais": 44,
-      "biais_avant": 70,
+      "biais": 48,
+      "biais_avant": 44,
       "biais_7j": null,
       "momentum": -1,
-      "long_adj": 3,
+      "long_adj": 4,
       "fondamental": 2.77,
       "technique": -1.24,
       "flux": 0.0,
-      "positionnement": -8.07,
+      "positionnement": -4.21,
       "pos_detail": {
         "net_pct": -6.37,
         "place": 16,
         "var_hebdo": -3.44,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": -4.21
       },
       "poids": {
         "fondamental": 32,
@@ -143,21 +144,22 @@
       ]
     },
     "GBP": {
-      "biais": 45,
-      "biais_avant": 58,
+      "biais": 49,
+      "biais_avant": 45,
       "biais_7j": null,
       "momentum": -1,
-      "long_adj": 2,
+      "long_adj": 4,
       "fondamental": 1.99,
       "technique": -1.24,
       "flux": 0.0,
-      "positionnement": -6.15,
+      "positionnement": -2.3,
       "pos_detail": {
         "net_pct": -33.71,
         "place": 2,
         "var_hebdo": -15.03,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": -2.3
       },
       "poids": {
         "fondamental": 32,
@@ -273,21 +275,22 @@
       ]
     },
     "AUD": {
-      "biais": 49,
-      "biais_avant": 72,
+      "biais": 53,
+      "biais_avant": 49,
       "biais_7j": null,
       "momentum": 2,
-      "long_adj": -4,
+      "long_adj": -2,
       "fondamental": 0.69,
       "technique": 1.89,
       "flux": 0.4,
-      "positionnement": -4.63,
+      "positionnement": -0.78,
       "pos_detail": {
         "net_pct": -15.27,
         "place": 45,
         "var_hebdo": -7.38,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": -0.78
       },
       "poids": {
         "fondamental": 32,
@@ -403,21 +406,22 @@
       ]
     },
     "NZD": {
-      "biais": 41,
-      "biais_avant": 60,
+      "biais": 45,
+      "biais_avant": 41,
       "biais_7j": null,
       "momentum": -7,
       "long_adj": 12,
       "fondamental": 4.3,
       "technique": -7.38,
       "flux": 0.0,
-      "positionnement": -4.67,
+      "positionnement": -0.82,
       "pos_detail": {
         "net_pct": -11.23,
         "place": 44,
         "var_hebdo": -19.01,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": -0.82
       },
       "poids": {
         "fondamental": 32,
@@ -533,21 +537,22 @@
       ]
     },
     "USD": {
-      "biais": 58,
-      "biais_avant": 78,
+      "biais": 62,
+      "biais_avant": 58,
       "biais_7j": null,
       "momentum": 5,
-      "long_adj": -5,
+      "long_adj": -3,
       "fondamental": 1.59,
       "technique": 5.47,
       "flux": -1.02,
-      "positionnement": -0.92,
+      "positionnement": 2.93,
       "pos_detail": {
         "net_pct": 22.3,
         "place": 68,
         "var_hebdo": -1.92,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": 2.93
       },
       "poids": {
         "fondamental": 32,
@@ -663,21 +668,22 @@
       ]
     },
     "CAD": {
-      "biais": 45,
-      "biais_avant": 55,
+      "biais": 49,
+      "biais_avant": 45,
       "biais_7j": null,
       "momentum": -2,
-      "long_adj": 1,
+      "long_adj": 3,
       "fondamental": 0.16,
       "technique": -1.58,
       "flux": 0.0,
-      "positionnement": -3.21,
+      "positionnement": 0.65,
       "pos_detail": {
         "net_pct": -17.1,
         "place": 57,
         "var_hebdo": -6.61,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": 0.65
       },
       "poids": {
         "fondamental": 32,
@@ -793,21 +799,22 @@
       ]
     },
     "CHF": {
-      "biais": 43,
-      "biais_avant": 32,
+      "biais": 46,
+      "biais_avant": 43,
       "biais_7j": null,
       "momentum": -4,
-      "long_adj": 6,
+      "long_adj": 7,
       "fondamental": 0.15,
       "technique": -4.38,
       "flux": 0.0,
-      "positionnement": -1.54,
+      "positionnement": 2.31,
       "pos_detail": {
         "net_pct": -20.04,
         "place": 70,
         "var_hebdo": -3.12,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": 2.31
       },
       "poids": {
         "fondamental": 32,
@@ -923,21 +930,22 @@
       ]
     },
     "JPY": {
-      "biais": 60,
-      "biais_avant": 68,
+      "biais": 63,
+      "biais_avant": 60,
       "biais_7j": null,
       "momentum": 6,
-      "long_adj": -6,
+      "long_adj": -5,
       "fondamental": 1.96,
       "technique": 6.11,
       "flux": 0.0,
-      "positionnement": -1.65,
+      "positionnement": 2.2,
       "pos_detail": {
         "net_pct": 19.01,
         "place": 70,
         "var_hebdo": -3.17,
         "rapport": "2026-09-22",
-        "semaines": 157
+        "semaines": 157,
+        "relatif": 2.2
       },
       "poids": {
         "fondamental": 32,

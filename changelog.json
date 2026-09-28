@@ -10,7 +10,21 @@
         "USD — biais 78 → 58 (-20), porté par les graphiques",
         "CAD — biais 55 → 45 (-10), porté par le positionnement des grands spéculateurs",
         "CHF — biais 32 → 43 (+11), porté par les graphiques",
-        "JPY — biais 68 → 60 (-8), porté par les graphiques"
+        "JPY — biais 68 → 60 (-8), porté par les graphiques",
+        "EUR — momentum recalcule : -1 -> +3",
+        "GBP — momentum recalcule : -1 -> +1",
+        "AUD — momentum recalcule : 2 -> -2",
+        "NZD — momentum recalcule : -7 -> +2",
+        "USD — momentum recalcule : 5 -> -2",
+        "CAD — momentum recalcule : -2 -> +4",
+        "CHF — momentum recalcule : -4 -> +5",
+        "JPY — momentum recalcule : 6 -> -1",
+        "EUR — biais 44 → 48 (+4), porté par le positionnement des grands spéculateurs",
+        "GBP — biais 45 → 49 (+4), porté par les fondamentaux",
+        "AUD — biais 49 → 53 (+4), porté par les graphiques",
+        "NZD — biais 41 → 45 (+4), porté par les graphiques",
+        "USD — biais 58 → 62 (+4), porté par les graphiques",
+        "CAD — biais 45 → 49 (+4), porté par les graphiques"
       ]
     },
     {
