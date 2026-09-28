@@ -345,6 +345,17 @@ def positionnement(codes):
                         "semaines": len(serie)}
         log("  " + code + " : net %+.1f %% de l'interet ouvert · %d %% du range 3 ans · "
             "%+.2f pt sur la semaine  ->  %+.1f" % (net, place, ecart, scores[code]))
+
+    # Comme pour le fondamental, ce qui compte en change est l'ecart entre
+    # devises. Le marche a terme est structurellement vendeur de presque toutes
+    # les devises contre dollar : cette pente commune fait plonger huit scores
+    # a la fois sans rien dire sur laquelle preferer. On la retire.
+    if len(scores) >= 4:
+        m = moyenne(list(scores.values()))
+        for code in scores:
+            scores[code] = borne(scores[code] - m, -10, 10)
+            detail[code]["relatif"] = round(scores[code], 2)
+        log("  moyenne du panier %+.1f, retiree a chacun : il reste l'ecart entre devises." % m)
     return scores, detail
 
 
