@@ -1,10 +1,15 @@
 name: Boussole Devises — mise à jour automatique
 
-# TOUT LE MOTEUR EST DANS CE FICHIER.
-# Il n'y a plus de update_data.py ni de refresh_ai.py à installer : le code
-# s'exécute directement ici. Les seuls fichiers dont il a besoin dans le dépôt
-# sont currencies.json (les données), template.html et pipeline.py (le rendu),
-# qui sont déjà en place et qu'il ne modifie pas.
+# L'ORCHESTRATION EST DANS CE FICHIER.
+# Il n'y a plus de update_data.py ni de refresh_ai.py à installer : le
+# rafraîchissement des données s'exécute directement ici. Quatre scripts du
+# dépôt complètent la chaîne, dans cet ordre :
+#   collecte.py  — les échéances à fort impact de la semaine (highlights.json)
+#   marche.py    — les scores vivants : cours FRED, positionnement CFTC,
+#                  fondamentaux, flux ; réécrit bias/momentum/long_adj
+#   pipeline.py  — le rendu des 8 cartes et des 28 paires (template.html)
+#   bandeau.py   — le bandeau de la semaine et les pastilles sur les cartes
+# Les données de départ sont dans currencies.json.
 
 on:
   schedule:
@@ -590,6 +595,24 @@ jobs:
       # ------------------------------------------------------------------
       - name: Relever les echeances a fort impact
         run: python3 collecte.py
+
+      # ------------------------------------------------------------------
+      # 3 bis. Moteur de marche. Le pourcentage affiche venait jusqu'ici d'un
+      #    champ ecrit a la main : il ne bougeait pas. Cette etape le
+      #    recalcule a partir de quatre sources — les cours quotidiens de la
+      #    Fed (H.10), les ecarts de taux reels, le positionnement des grands
+      #    speculateurs publie par la CFTC, et l'effet des publications de la
+      #    semaine — puis reecrit bias / momentum / long_adj dans
+      #    currencies.json. pipeline.py fabrique les huit cartes ET les
+      #    vingt-huit paires a partir de ces trois nombres : les rendre
+      #    vivants suffit a faire bouger toute la page.
+      #    Sans cle FRED, ou si une source ne repond pas, le script sort sans
+      #    rien ecrire : la page reste celle du passage precedent.
+      # ------------------------------------------------------------------
+      - name: Calculer les scores de marche
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python3 marche.py
 
       - name: Reconstruire le dashboard
         run: python3 pipeline.py
