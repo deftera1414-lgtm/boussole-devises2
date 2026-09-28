@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-09-28T14:25:45+00:00",
-  "verifie": "28 septembre 2026, 14h25 UTC",
+  "verifie_iso": "2026-09-28T20:45:41+00:00",
+  "verifie": "28 septembre 2026, 20h45 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -153,9 +153,9 @@
             "famille": "emploi",
             "iso": "2026-10-02T12:30:00+00:00",
             "heure": "12h30",
-            "consensus": "98K",
+            "consensus": "90K",
             "precedent": "162K",
-            "attendu": -1.58,
+            "attendu": -1.78,
             "source": "calendrier"
           },
           {
@@ -300,7 +300,7 @@
       "chomage_detail": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
       "semaine_nb": 5,
       "semaine_reste": 5,
-      "semaine_penchant": -1.08,
+      "semaine_penchant": -1.28,
       "semaine_mot": "défavorable",
       "semaine_resume": "inflation, croissance, emploi",
       "parutions": [],
