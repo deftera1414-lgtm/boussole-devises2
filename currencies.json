@@ -1,11 +1,11 @@
 {
-  "generated_at": "28 septembre 2026, 20h45 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-28T20:45:16+00:00",
+  "generated_at": "28 septembre 2026, 21h41 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-28T21:41:35+00:00",
   "currencies": {
     "USD": {
-      "bias": 78,
-      "long_adj": 8,
-      "momentum": -2,
+      "bias": 58,
+      "long_adj": -5,
+      "momentum": 5,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -37,9 +37,9 @@
       ]
     },
     "EUR": {
-      "bias": 70,
-      "long_adj": 6,
-      "momentum": 3,
+      "bias": 44,
+      "long_adj": 3,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -70,9 +70,9 @@
       ]
     },
     "GBP": {
-      "bias": 58,
-      "long_adj": 3,
-      "momentum": 1,
+      "bias": 45,
+      "long_adj": 2,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -102,9 +102,9 @@
       ]
     },
     "JPY": {
-      "bias": 68,
-      "long_adj": 7,
-      "momentum": -1,
+      "bias": 60,
+      "long_adj": -6,
+      "momentum": 6,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -134,9 +134,9 @@
       ]
     },
     "CHF": {
-      "bias": 32,
-      "long_adj": -4,
-      "momentum": 5,
+      "bias": 43,
+      "long_adj": 6,
+      "momentum": -4,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -166,9 +166,9 @@
       ]
     },
     "CAD": {
-      "bias": 55,
-      "long_adj": 2,
-      "momentum": 4,
+      "bias": 45,
+      "long_adj": 1,
+      "momentum": -2,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -198,9 +198,9 @@
       ]
     },
     "AUD": {
-      "bias": 72,
-      "long_adj": 6,
-      "momentum": -2,
+      "bias": 49,
+      "long_adj": -4,
+      "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
@@ -239,9 +239,9 @@
       ]
     },
     "NZD": {
-      "bias": 60,
-      "long_adj": 3,
-      "momentum": 2,
+      "bias": 41,
+      "long_adj": 12,
+      "momentum": -7,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,

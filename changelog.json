@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "date": "2026-09-28",
+      "items": [
+        "EUR — biais 70 → 44 (-26), porté par le positionnement des grands spéculateurs",
+        "GBP — biais 58 → 45 (-13), porté par le positionnement des grands spéculateurs",
+        "AUD — biais 72 → 49 (-23), porté par le positionnement des grands spéculateurs",
+        "NZD — biais 60 → 41 (-19), porté par les graphiques",
+        "USD — biais 78 → 58 (-20), porté par les graphiques",
+        "CAD — biais 55 → 45 (-10), porté par le positionnement des grands spéculateurs",
+        "CHF — biais 32 → 43 (+11), porté par les graphiques",
+        "JPY — biais 68 → 60 (-8), porté par les graphiques"
+      ]
+    },
+    {
       "date": "2026-09-25",
       "items": [
         "AUD — reunion inscrite au calendrier : Décision RBA (cash rate)"
