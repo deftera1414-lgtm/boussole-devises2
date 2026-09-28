@@ -426,11 +426,11 @@ def card_html(code, cur):
 
       <div class="bias-block">
         <div class="bias-head">
-          <span class="stat-label">Biais fondamental (cycle banque centrale)</span>
+          <span class="stat-label">Biais composite &mdash; fondamental, graphiques, spéculateurs, actualité</span>
           <span class="bias-num {b_cls}"><span class="proba-tag">Proba</span> {pct}<span class="bias-den">{unit}</span> {dirword}</span>
         </div>
-        {gauge_html(c["bias"], aria_label=f"Biais fondamental : {pct}% {direction}, {force}")}
-        <p class="bias-strength">{force} &middot; échelle 0–100 ci-dessus (50 = neutre)</p>
+        {gauge_html(c["bias"], aria_label=f"Biais composite : {pct}% {direction}, {force}")}
+        <p class="bias-strength">{force} &middot; échelle 0–100 ci-dessus (50 = neutre) &middot; le détail des quatre composantes est sur la ligne «&nbsp;Composition&nbsp;» en haut de carte</p>
       </div>
 
       <div class="factor-block">

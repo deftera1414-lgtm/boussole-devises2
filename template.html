@@ -324,7 +324,7 @@
   <section id="currencies">
     <div class="section-head">
       <h2>Devises majeures</h2>
-      <p class="section-note">Chaque indicateur affiche précédent → actuel. Le biais fondamental (échelle 0–100, 50 = neutre) est affiché en probabilité avec un sens — ex. « Proba 85% Baisse » — et détaillé en 4 facteurs (Taux, Inflation, Chômage, PIB) sur chaque carte.</p>
+      <p class="section-note">Chaque indicateur affiche précédent → actuel. Le biais (échelle 0–100, 50 = neutre) est affiché en probabilité avec un sens — ex. « Proba 85% Baisse ». Il est recalculé à chaque passage du robot à partir de quatre sources : les fondamentaux (32&nbsp;%), les graphiques (32&nbsp;%), le positionnement des grands spéculateurs publié par la CFTC (22&nbsp;%) et l'actualité économique de la semaine (14&nbsp;%). Le détail est sur la ligne « Composition » de chaque carte.</p>
     </div>
     <div class="grid">
 __CARDS__
@@ -340,7 +340,7 @@ __CARDS__
       </div>
       <div>
         <h3>Horizons</h3>
-        <p><strong>Court terme (6h)</strong> : dominé par le momentum récent. <strong>Moyen terme (1-2j)</strong> : mix momentum + biais fondamental. <strong>Long terme (&gt;2j)</strong> : dominé par le biais fondamental / cycle monétaire.</p>
+        <p><strong>Court terme (6h)</strong> : dominé par le momentum des cours. <strong>Moyen terme (1-2j)</strong> : mix momentum + biais composite. <strong>Long terme (&gt;2j)</strong> : dominé par les deux composantes lentes, les fondamentaux et le positionnement des spéculateurs — c'est l'écart entre ces deux lectures qui fait l'ajustement long terme.</p>
       </div>
       <div>
         <h3>Humilité assumée</h3>

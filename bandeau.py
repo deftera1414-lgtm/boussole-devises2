@@ -14,13 +14,20 @@ toute la page. Windows ne possede pas ces caracteres et les rend sous forme de
 deux lettres — « EU EUR », « GB GBP » — ce qui est du bruit pur. Le code a trois
 lettres suffit et s'affiche partout.
 """
-import json, html, re
+import json, html, re, datetime as dt
 
 try:
     H = json.load(open("highlights.json", encoding="utf-8"))
 except Exception as e:
     print("highlights.json illisible (" + str(e) + ") — bandeau non insere.")
     raise SystemExit(0)
+
+# Les scores de marche sont facultatifs : sans eux la page reste correcte, elle
+# est seulement moins bavarde sur l'origine du biais.
+try:
+    MA = (json.load(open("marche.json", encoding="utf-8")) or {}).get("devises") or {}
+except Exception:
+    MA = {}
 
 
 def esc(s):
@@ -110,6 +117,15 @@ CSS = """<style>
 .cw-f{font-family:var(--font-mono);font-weight:700;margin-right:3px}
 .cw-f.pos{color:var(--rise-text)}
 .cw-f.neg{color:var(--fall-text)}
+.cw-courbe{vertical-align:middle;margin-right:8px}
+.cw-courbe path{fill:none;stroke-width:1.6;vector-effect:non-scaling-stroke}
+.cw-num{font-family:var(--font-mono);font-size:.74rem}
+.cw-part{display:inline-block;margin-right:9px;font-family:var(--font-mono);font-size:.72rem}
+.cw-part i{font-style:normal;color:var(--text-muted)}
+.cw-part b{font-weight:700}
+.cw-part.pos b{color:var(--rise-text)}
+.cw-part.neg b{color:var(--fall-text)}
+.cw-part.neu b{color:var(--text-secondary)}
 
 /* ---------- delai, partout ---------- */
 .cd{font-family:var(--font-mono);font-size:.71rem;font-weight:700;white-space:nowrap;
@@ -159,6 +175,90 @@ SCRIPT = """<script>
   setInterval(tick, 30000);
 })();
 </script>"""
+
+def courbe_svg(pts, hausse):
+    """Petite courbe de force, en SVG inline : aucune dependance, aucun script."""
+    if not pts or len(pts) < 8:
+        return ""
+    n = len(pts)
+    d = " ".join(("M" if i == 0 else "L") + str(round(i * 108.0 / (n - 1), 1)) + "," +
+                 str(round(20.0 - v * 0.18, 1)) for i, v in enumerate(pts))
+    couleur = "var(--rise)" if hausse else "var(--fall)"
+    return ('<svg class="cw-courbe" width="110" height="22" viewBox="0 0 110 22" '
+            'aria-hidden="true"><path d="' + d + '" stroke="' + couleur + '"/></svg>')
+
+
+def signe(v, suffixe="%"):
+    if v is None:
+        return "—"
+    if abs(v) < 0.005:                       # evite le « -0,00 % »
+        return "0,00" + suffixe
+    return ("+" if v > 0 else "−") + ("%.2f" % abs(v)).replace(".", ",") + suffixe
+
+
+def part(nom, v):
+    cls = "pos" if v >= 0.3 else ("neg" if v <= -0.3 else "neu")
+    return ('<span class="cw-part ' + cls + '"><i>' + nom + '</i> <b>' +
+            ("+" if v >= 0 else "") + ("%.1f" % v).replace(".", ",") + "</b></span>")
+
+
+MOIS = ("janv.", "févr.", "mars", "avril", "mai", "juin", "juil.", "août",
+        "sept.", "oct.", "nov.", "déc.")
+
+
+def date_courte(iso):
+    try:
+        d = dt.date.fromisoformat(str(iso)[:10])
+    except (TypeError, ValueError):
+        return ""
+    return str(d.day) + " " + MOIS[d.month - 1]
+
+
+def tenue(place):
+    """Ou en est le positionnement dans son historique de trois ans, en mots."""
+    if place >= 90:
+        return "au plus haut depuis 3 ans — positions encombrées"
+    if place >= 70:
+        return "haut de fourchette"
+    if place > 30:
+        return "milieu de fourchette"
+    if place > 10:
+        return "bas de fourchette"
+    return "au plus bas depuis 3 ans — positions encombrées"
+
+
+def speculateurs(pd):
+    """Ce que font les grands spéculateurs, en une ligne lisible.
+
+    Le net rapporté à l'intérêt ouvert dit de quel côté ils sont ; la place
+    dans la fourchette de trois ans dit si c'est déjà tendu ; la variation
+    hebdomadaire dit dans quel sens ils bougent en ce moment.
+    """
+    net, place = pd.get("net_pct"), pd.get("place")
+    var = pd.get("var_hebdo")
+    if net is None or place is None:
+        return ""
+    cls, fl = fleche(net, 1.0)
+    sens = "nets acheteurs" if net >= 1.0 else ("nets vendeurs" if net <= -1.0 else "quasi neutres")
+    v = (('<span class="cw-f ' + cls + '">' + fl + "</span>" if fl else "")
+         + "<b>" + sens + "</b> "
+         + '<span class="cw-num">' + ("+" if net > 0 else "")
+         + ("%.1f" % net).replace(".", ",") + " %</span>"
+         + ' <span class="s">· ' + tenue(place) + "</span>")
+    if var is not None:
+        c2, _ = fleche(var, 0.3)
+        # « -0,0 » n'existe pas : en deca d'un dixieme de point, on le dit.
+        if abs(var) < 0.05:
+            v += ' <span class="s">· sans changement cette semaine</span>'
+        else:
+            v += (' <span class="s">· </span><span class="cw-part ' + c2 + '"><b>'
+                  + ("+" if var > 0 else "−") + ("%.1f" % abs(var)).replace(".", ",")
+                  + "</b> <i>pt/sem.</i></span>")
+    j = date_courte(pd.get("rapport"))
+    if j:
+        v += ' <span class="s">· relevé du ' + j + "</span>"
+    return v
+
 
 sem = H.get("semaine") or {}
 jours = sem.get("jours") or []
@@ -280,6 +380,37 @@ for d in devises:
             "<b>" + esc(pu.get("libelle")) + " " + esc(pu.get("variation")) + "</b>" + \
             ' <span class="s">· ' + esc(pu.get("valeur")) + " · " + esc(pu.get("date_txt")) + "</span>"
         lignes.append(ligne("Déjà paru", v))
+
+    m = MA.get(code) or {}
+    if m:
+        var = m.get("var") or {}
+        det = m.get("detail") or {}
+        mois = var.get("j21")
+        v = courbe_svg(m.get("courbe") or [], (mois or 0) >= 0)
+        v += ('<span class="cw-num">1 sem. ' + signe(var.get("j5")) + " · 1 mois "
+              + signe(mois)
+              + (" · RSI " + str(int(round(det["rsi"]))) if det.get("rsi") is not None else "")
+              + "</span>")
+        lignes.append(ligne("Force 90 j", v))
+
+        pd = m.get("pos_detail") or {}
+        if pd:
+            t = speculateurs(pd)
+            if t:
+                lignes.append(ligne("Spéculateurs", t))
+
+        v = part("fond.", m.get("fondamental", 0.0)) + part("tech.", m.get("technique", 0.0))
+        if m.get("positionnement") is not None:
+            v += part("spéc.", m["positionnement"])
+        v += part("flux", m.get("flux", 0.0))
+        b7 = m.get("biais_7j")
+        if isinstance(b7, (int, float)) and b7 != m.get("biais"):
+            ec = m["biais"] - b7
+            v += ('<span class="s">→ biais ' + str(m["biais"]) + " (" +
+                  ("+" if ec > 0 else "") + str(ec) + " en 7 j)</span>")
+        else:
+            v += '<span class="s">→ biais ' + str(m.get("biais", "—")) + "</span>"
+        lignes.append(ligne("Composition", v))
 
     if d.get("prochain"):
         v = "<b>" + esc(court(d.get("prochain"), 48)) + "</b>"
