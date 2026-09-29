@@ -386,9 +386,12 @@ jobs:
                   time.sleep(0.6)
                   refresh(code, c, "cpi", "cpi_previous", "cpi_current", "pc1", -5, 30, "inflation")
                   time.sleep(0.6)
+              # Valeur de repli : marche.py, qui passe apres, recalcule le
+              # momentum sur les cours reels et ecrase celle-ci. On la pose donc
+              # sans la raconter — la journaliser remplirait le journal de huit
+              # lignes aussitot fausses a chaque passage.
               m = momentum(c)
-              if m is not None and c.get("momentum") != m:
-                  note(code, "momentum recalcule : " + str(c.get("momentum")) + " -> " + ("%+d" % m))
+              if m is not None:
                   c["momentum"] = m
               flags(code, c)
 
