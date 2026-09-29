@@ -36,7 +36,7 @@
     },
     "EUR": {
       "bias": 44,
-      "long_adj": 0,
+      "long_adj": -1,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -295,7 +295,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "29 septembre 2026, 19h36 UTC (mise à jour automatique)"
+  "generated_at": "29 septembre 2026, 23h10 UTC (mise à jour automatique)"
 }
