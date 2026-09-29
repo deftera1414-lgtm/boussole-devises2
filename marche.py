@@ -5,12 +5,15 @@ Ce script le recalcule a chaque passage a partir de quatre sources distinctes,
 et ecrit le resultat dans currencies.json, d'ou pipeline.py le reprend pour les
 huit cartes ET les vingt-huit paires.
 
-  FONDAMENTAL    (38 %) — sept moteurs, chacun ramene a la moyenne du panier :
-      niveau du taux reel, impulsion de politique (la banque resserre-t-elle
-      plus vite que l'inflation ne monte ?), ecart d'inflation a la cible et
-      sens du mouvement, ton et dernier geste de la banque centrale corriges
-      par les chiffres, croissance et emploi ramenes a la meme unite, termes
-      de l'echange (brut WTI), regime de risque (VIX).
+  FONDAMENTAL    (38 %) — huit moteurs, chacun ramene a la moyenne du panier :
+      portage reel (taux directeur moins inflation, rapporte a la volatilite),
+      impulsion de politique (la banque resserre-t-elle plus vite que
+      l'inflation ne monte ?), ecart d'inflation a la cible et sens du
+      mouvement, ton et dernier geste de la banque centrale corriges par les
+      chiffres, croissance et emploi ramenes a la meme unite, anticipations de
+      taux americains (2 ans sur un mois), termes de l'echange (brut WTI),
+      regime de risque (VIX et prime de credit). Le nombre de moteurs qui
+      s'accordent sert de mesure de confiance.
   TECHNIQUE      (26 %) — indice de force de la devise contre les sept autres,
       construit sur les cours quotidiens : position contre moyennes mobiles
       50 et 200 jours, variation sur un mois, RSI, place dans le range annuel.
@@ -282,25 +285,33 @@ PETROLE = {"CAD": 1.0, "AUD": 0.5, "USD": 0.15, "GBP": -0.1,
 REFUGE = {"JPY": 1.0, "CHF": 0.9, "USD": 0.6, "EUR": -0.1,
           "GBP": -0.4, "CAD": -0.4, "AUD": -0.9, "NZD": -1.0}
 
-# Les sept moteurs et leur poids dans le score fondamental.
+# Le taux a deux ans americain est la boussole des taux mondiaux : quand il se
+# reevalue, le dollar bouge contre tout le reste. Aucune serie equivalente n'est
+# disponible quotidiennement et gratuitement pour les sept autres pays, alors on
+# lit ce moteur pour ce qu'il est : le dollar contre le panier.
+TAUX_US = {"USD": 1.0, "EUR": -1 / 7.0, "GBP": -1 / 7.0, "JPY": -1 / 7.0,
+           "CHF": -1 / 7.0, "CAD": -1 / 7.0, "AUD": -1 / 7.0, "NZD": -1 / 7.0}
+
+# Les huit moteurs et leur poids dans le score fondamental.
 MOTEURS = [
-    ("taux_reel", "le taux réel", 24),
-    ("impulsion", "l'impulsion de politique", 20),
-    ("inflation", "l'écart d'inflation à la cible", 15),
-    ("ton", "le ton et le geste de la banque centrale", 15),
-    ("croissance", "la croissance et l'emploi", 12),
-    ("commerce", "les termes de l'échange", 8),
+    ("taux_reel", "le portage réel", 22),
+    ("impulsion", "l'impulsion de politique", 18),
+    ("inflation", "l'écart d'inflation à la cible", 14),
+    ("ton", "le ton et le geste de la banque centrale", 14),
+    ("croissance", "la croissance et l'emploi", 11),
+    ("taux_us", "les anticipations de taux américains", 8),
+    ("commerce", "les termes de l'échange", 7),
     ("risque", "le régime de risque", 6),
 ]
 
 
-def fondamental(cur, petrole=None, tension=None):
-    """Sept moteurs explicites, chacun ramene a la moyenne du panier : en
+def fondamental(cur, petrole=None, tension=None, vols=None, reprise=None):
+    """Huit moteurs explicites, chacun ramene a la moyenne du panier : en
     change, ce qui deplace un cours est l'ecart entre deux economies, pas la
     valeur absolue d'un taux. Chaque moteur est borne separement pour qu'aucun
     ne puisse emporter le total a lui seul.
 
-    Retourne (scores -10..+10, taux reels, detail par moteur).
+    Retourne (scores -10..+10, taux reels, detail par moteur et accord).
     """
     lu = {}
     for code in NOS:
@@ -315,14 +326,21 @@ def fondamental(cur, petrole=None, tension=None):
             "ton": str(c.get("tilt", "")).lower(), "geste": str(c.get("move", "")).lower(),
         }
 
-    # 1. taux reel : taux directeur moins inflation, en ecarts-types du panier
+    # 1. portage reel : taux directeur moins inflation, rapporte au risque.
+    #    Un taux reel de 2 % sur une devise deux fois plus volatile ne vaut pas
+    #    deux fois mieux qu'un taux reel de 1 % sur une devise calme : c'est le
+    #    rapport entre les deux que regardent les gerants.
     reels = {k: (v["taux"] - v["ipc"]) for k, v in lu.items()
              if v["taux"] is not None and v["ipc"] is not None}
+    port = {}
+    for k, v in reels.items():
+        sd = (vols or {}).get(k)
+        port[k] = v / max(sd / 8.0, 0.5) if sd else v   # 8 % : volatilite usuelle
     s1 = {}
-    if len(reels) >= 4:
-        m, sd = moyenne(list(reels.values())), ecart_type(list(reels.values()))
+    if len(port) >= 4:
+        m, sd = moyenne(list(port.values())), ecart_type(list(port.values()))
         sd = max(sd or 1.0, 0.25)
-        s1 = {k: borne((v - m) / sd * 3.0, -6, 6) for k, v in reels.items()}
+        s1 = {k: borne((v - m) / sd * 3.0, -6, 6) for k, v in port.items()}
 
     # 2. impulsion : la banque resserre-t-elle plus vite que l'inflation ne monte ?
     imp = {}
@@ -373,20 +391,26 @@ def fondamental(cur, petrole=None, tension=None):
     if len(cro) >= 3:
         s5 = {k: borne(x, -5, 5) for k, x in centrer(cro).items()}
 
-    # 6. termes de l'echange : le brut sur trois mois
+    # 6. anticipations de taux americains : le 2 ans sur un mois, en points de base
     s6 = {}
+    if reprise is not None:
+        s6 = {k: borne(x, -5, 5) for k, x in
+              centrer({k: reprise / 25.0 * 3.0 * c for k, c in TAUX_US.items()}).items()}
+
+    # 7. termes de l'echange : le brut sur trois mois
+    s7 = {}
     if petrole is not None:
-        s6 = {k: borne(x, -4, 4) for k, x in
+        s7 = {k: borne(x, -4, 4) for k, x in
               centrer({k: petrole / 12.0 * c for k, c in PETROLE.items()}).items()}
 
-    # 7. regime de risque : le VIX par rapport a sa propre annee
-    s7 = {}
+    # 8. regime de risque : volatilite des actions et prime de credit
+    s8 = {}
     if tension is not None:
-        s7 = {k: borne(x, -4, 4) for k, x in
+        s8 = {k: borne(x, -4, 4) for k, x in
               centrer({k: tension * c * 1.6 for k, c in REFUGE.items()}).items()}
 
     table = {"taux_reel": s1, "impulsion": s2, "inflation": s3, "ton": s4,
-             "croissance": s5, "commerce": s6, "risque": s7}
+             "croissance": s5, "taux_us": s6, "commerce": s7, "risque": s8}
     brut, detail = {}, {}
     for code in NOS:
         parts = {cle: table[cle].get(code) for cle, _, _ in MOTEURS}
@@ -394,9 +418,17 @@ def fondamental(cur, petrole=None, tension=None):
         if not poids:
             continue
         tot = float(sum(poids.values()))
-        brut[code] = borne(sum(poids[k] / tot * parts[k] for k in poids) * 3.0, -10, 10)
+        apport = {k: poids[k] / tot * parts[k] * 3.0 for k in poids}
+        total = borne(sum(apport.values()), -10, 10)
+        brut[code] = total
+        # Combien de moteurs tirent dans le sens du total ? C'est la seule
+        # mesure honnete de confiance : un score de +4 sur lequel six moteurs
+        # sur huit s'accordent ne vaut pas un +4 arrache par un seul.
+        vus = [v for v in apport.values() if abs(v) >= 0.05]
+        accord = sum(1 for v in vus if (v > 0) == (total >= 0))
         detail[code] = {k: round(v, 2) for k, v in parts.items() if v is not None}
-        detail[code]["apport"] = {k: round(poids[k] / tot * parts[k] * 3.0, 2) for k in poids}
+        detail[code]["apport"] = {k: round(v, 2) for k, v in apport.items()}
+        detail[code]["accord"] = [accord, len(vus)]
     return brut, reels, detail
 
 
@@ -614,24 +646,56 @@ def serie_macro(sid, mot):
     return [obs[d] for d in sorted(obs)]
 
 
-petrole = tension = None
+def cote_z(s, nom):
+    """Ou en est la derniere valeur par rapport a sa propre annee."""
+    if not s:
+        return None
+    fen = s[-252:]
+    sd = ecart_type(fen)
+    if not sd or sd <= 0:
+        return None
+    z = borne((s[-1] - moyenne(fen)) / sd, -2.5, 2.5)
+    log("    " + nom + " %.2f, soit %+.2f ecart-type de son annee" % (s[-1], z))
+    return z
+
+
+petrole = tension = reprise = None
 log("  Contexte macro :")
 s = serie_macro("DCOILWTICO", "West Texas")
 if s and len(s) > 63 and s[-64]:
     petrole = (s[-1] / s[-64] - 1.0) * 100.0
     log("    brut WTI %.2f $, %+.1f %% sur trois mois" % (s[-1], petrole))
-s = serie_macro("VIXCLS", "Volatility")
-if s:
-    fen = s[-252:]
-    sd = ecart_type(fen)
-    if sd and sd > 0:
-        tension = borne((s[-1] - moyenne(fen)) / sd, -2.5, 2.5)
-        log("    VIX %.1f, soit %+.2f ecart-type de son annee" % (s[-1], tension))
-if petrole is None and tension is None:
-    log("    indisponible — les deux moteurs correspondants sont neutralises.")
 
-# 4. scores
-fond, reels, fond_detail = fondamental(cur, petrole, tension)
+# Deux mesures independantes du meme regime : la volatilite des actions et la
+# prime exigee sur le credit risque. Les moyenner rend le signal moins fragile
+# qu'un VIX seul, qui peut bouger pour des raisons techniques.
+zs = [z for z in (cote_z(serie_macro("VIXCLS", "Volatility"), "VIX"),
+                  cote_z(serie_macro("BAMLH0A0HYM2", "High Yield"), "prime de credit"))
+      if z is not None]
+if zs:
+    tension = moyenne(zs)
+    log("    regime de risque : %+.2f (%d mesure%s)" % (tension, len(zs), "s" if len(zs) > 1 else ""))
+
+s = serie_macro("DGS2", "2-Year")
+if s and len(s) > 21:
+    reprise = (s[-1] - s[-22]) * 100.0          # en points de base
+    log("    taux 2 ans americain %.2f %%, %+.0f pb sur un mois" % (s[-1], reprise))
+
+if petrole is None and tension is None and reprise is None:
+    log("    indisponible — les moteurs correspondants sont neutralises.")
+
+# 4. volatilite realisee de chaque devise, pour rapporter le portage au risque
+vols = {}
+for c in panier:
+    v = volatilite(force[c])
+    if v and v > 0:
+        vols[c] = v
+if vols:
+    log("  Volatilite annualisee : " + ", ".join("%s %.1f %%" % (k, vols[k])
+                                                 for k in sorted(vols)))
+
+# 5. scores
+fond, reels, fond_detail = fondamental(cur, petrole, tension, vols, reprise)
 
 # Flux : ce qui est deja paru compte plein tarif, ce qui est encore attendu
 # d'ici dimanche compte a moitie — c'est une anticipation, pas un fait.
@@ -747,7 +811,8 @@ json.dump({
     "source_pos": "CFTC — Commitments of Traders, non-commerciaux, futures seuls",
     "rapport_cot": max((d["rapport"] for d in pos_detail.values()), default=None),
     "macro": {"petrole_3m": round(petrole, 1) if petrole is not None else None,
-              "tension": round(tension, 2) if tension is not None else None},
+              "tension": round(tension, 2) if tension is not None else None,
+              "taux_us_1m": round(reprise) if reprise is not None else None},
     "moteurs": [{"cle": c, "nom": n, "poids": p} for c, n, p in MOTEURS],
     "poids": {k: round(v * 100) for k, v in POIDS.items()},
     "devises": sortie,

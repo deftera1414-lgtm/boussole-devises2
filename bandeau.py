@@ -228,10 +228,10 @@ def tenue(place):
 
 
 NOM_MOTEUR = {
-    "taux_reel": "le taux réel", "impulsion": "l'impulsion de politique",
+    "taux_reel": "le portage réel", "impulsion": "l'impulsion de politique",
     "inflation": "l'écart d'inflation à la cible", "ton": "le ton de la banque centrale",
-    "croissance": "la croissance et l'emploi", "commerce": "les termes de l'échange",
-    "risque": "le régime de risque",
+    "croissance": "la croissance et l'emploi", "taux_us": "les taux américains",
+    "commerce": "les termes de l'échange", "risque": "le régime de risque",
 }
 
 
@@ -268,7 +268,13 @@ def fondation(m):
     if freine:
         v += ' <span class="s">· freiné par ' + dit(freine[0]) + "</span>"
     if not porte and not freine:
-        v += ' <span class="s">· aucun moteur dominant, les sept se compensent</span>'
+        v += ' <span class="s">· aucun moteur dominant, ils se compensent</span>'
+    a = d.get("accord")
+    if isinstance(a, list) and len(a) == 2 and a[1]:
+        cls2 = "pos" if a[0] * 2 >= a[1] * 1.5 else ("neg" if a[0] * 2 <= a[1] else "neu")
+        v += (' <span class="s">· </span><span class="cw-part ' + cls2 + '"><b>'
+              + str(a[0]) + " moteurs sur " + str(a[1])
+              + '</b> <i>d\'accord</i></span>')
     return v
 
 
