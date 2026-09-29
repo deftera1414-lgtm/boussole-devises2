@@ -5,10 +5,13 @@ Ce script le recalcule a chaque passage a partir de quatre sources distinctes,
 et ecrit le resultat dans currencies.json, d'ou pipeline.py le reprend pour les
 huit cartes ET les vingt-huit paires.
 
-  FONDAMENTAL    (32 %) — taux reel (taux directeur moins inflation) compare aux
-      sept autres devises, orientation de la banque centrale, tendance du
-      chomage et du PIB. Bouge quand les chiffres bougent.
-  TECHNIQUE      (32 %) — indice de force de la devise contre les sept autres,
+  FONDAMENTAL    (38 %) — sept moteurs, chacun ramene a la moyenne du panier :
+      niveau du taux reel, impulsion de politique (la banque resserre-t-elle
+      plus vite que l'inflation ne monte ?), ecart d'inflation a la cible et
+      sens du mouvement, ton et dernier geste de la banque centrale corriges
+      par les chiffres, croissance et emploi ramenes a la meme unite, termes
+      de l'echange (brut WTI), regime de risque (VIX).
+  TECHNIQUE      (26 %) — indice de force de la devise contre les sept autres,
       construit sur les cours quotidiens : position contre moyennes mobiles
       50 et 200 jours, variation sur un mois, RSI, place dans le range annuel.
       Bouge tous les jours ouvres.
@@ -65,7 +68,7 @@ SEMAINES = 157       # trois ans de rapports hebdomadaires
 
 # Poids de reference. Une composante absente voit son poids reparti sur les
 # autres au prorata (voir melanger()).
-POIDS = {"fondamental": 0.32, "technique": 0.32, "positionnement": 0.22, "flux": 0.14}
+POIDS = {"fondamental": 0.38, "technique": 0.26, "positionnement": 0.22, "flux": 0.14}
 
 now = dt.datetime.now(dt.timezone.utc)
 def log(m): print(m, flush=True)
@@ -211,53 +214,190 @@ def technique(serie):
 # --------------------------------------------------------------------------
 # Score fondamental
 # --------------------------------------------------------------------------
-NB = re.compile(r"[-+]?\d+(?:[.,]\d+)?")
+# Les chiffres sont ranges dans des phrases : « 3,4% (aout 2026, stable) ;
+# coeur en repli a 2,4% ». Lire « le premier nombre » ou « la moyenne des deux
+# premiers » ramenait l'annee (2026) ou un rang (« 2e estimation ») et donnait
+# une inflation de 1014,7 % : tout le score fondamental en dependait.
+# On lit donc le premier POURCENTAGE, et lui seul.
+PCT = re.compile(r"([-+]?\d+(?:[.,]\d+)?)\s*%")
+PLAGE = re.compile(r"([-+]?\d+(?:[.,]\d+)?)\s*%?\s*[–—-]\s*([-+]?\d+(?:[.,]\d+)?)\s*%")
+NU = re.compile(r"[-+]?\d+(?:[.,]\d+)?")
+
+
+def dec(s):
+    return float(str(s).replace(",", "."))
 
 
 def nombre(txt):
-    """Moyenne des nombres trouves : « 3,75%–4,00% » -> 3.875."""
-    v = []
-    for m in NB.finditer(str(txt or "").replace("−", "-")):
-        try:
-            v.append(float(m.group().replace(",", ".")))
-        except ValueError:
-            pass
-    return moyenne(v[:2]) if v else None
+    """Le premier pourcentage du texte. Une fourchette accolee au premier
+    chiffre (« 3,75%-4,00% ») est moyennee ; tout nombre plus loin dans la
+    phrase est du commentaire et n'est pas lu."""
+    t = str(txt or "").replace("−", "-")
+    m = PCT.search(t)
+    if m:
+        p = PLAGE.match(t, m.start())
+        return (dec(p.group(1)) + dec(p.group(2))) / 2.0 if p else dec(m.group(1))
+    for m in NU.finditer(t):                     # repli : aucun pourcentage
+        v = dec(m.group())
+        if not (1900 <= v <= 2100):              # ce n'est pas une annee
+            return v
+    return None
+
+
+def annualise(txt):
+    """Les PIB ne sont pas donnes dans la meme unite selon les pays : +3,3 %
+    annualise vaut +0,8 % trimestriel. Sans ce reperage, le Canada et les
+    Etats-Unis ecrasaient l'Europe."""
+    return "annualis" in str(txt or "").lower()
+
+
+def ecart_type(xs):
+    if len(xs) < 2:
+        return None
+    m = moyenne(xs)
+    return math.sqrt(sum((x - m) ** 2 for x in xs) / (len(xs) - 1))
+
+
+def centrer(d, defaut=0.0):
+    """Ramene un dictionnaire de valeurs a sa moyenne. En change, seul l'ecart
+    entre devises a un sens : un mouvement commun aux huit ne dit rien."""
+    vals = [v for v in d.values() if v is not None]
+    if len(vals) < 3:
+        return {k: defaut for k in d}
+    m = moyenne(vals)
+    return {k: (v - m if v is not None else defaut) for k, v in d.items()}
 
 
 TILT = {"hawkish": 3.0, "neutral": 0.0, "dovish": -3.0}
+GESTE = {"hike": 1.5, "cut": -1.5, "hold": 0.0}
+
+# Effet d'une hausse du brut sur chaque devise. Le Canada exporte du brut, le
+# Japon importe la quasi-totalite de son energie ; entre les deux, l'Australie
+# vend du gaz et du charbon, la zone euro et la Suisse achetent tout.
+PETROLE = {"CAD": 1.0, "AUD": 0.5, "USD": 0.15, "GBP": -0.1,
+           "NZD": -0.2, "CHF": -0.4, "EUR": -0.5, "JPY": -0.9}
+
+# Comportement en regime de tension. Dollar, yen et franc sont recherches quand
+# le risque monte ; dollars australien et neo-zelandais sont vendus les premiers.
+REFUGE = {"JPY": 1.0, "CHF": 0.9, "USD": 0.6, "EUR": -0.1,
+          "GBP": -0.4, "CAD": -0.4, "AUD": -0.9, "NZD": -1.0}
+
+# Les sept moteurs et leur poids dans le score fondamental.
+MOTEURS = [
+    ("taux_reel", "le taux réel", 24),
+    ("impulsion", "l'impulsion de politique", 20),
+    ("inflation", "l'écart d'inflation à la cible", 15),
+    ("ton", "le ton et le geste de la banque centrale", 15),
+    ("croissance", "la croissance et l'emploi", 12),
+    ("commerce", "les termes de l'échange", 8),
+    ("risque", "le régime de risque", 6),
+]
 
 
-def fondamental(cur):
-    """Score -10..+10 par devise, comparatif : ce qui compte en change, c'est
-    l'ecart entre deux devises, pas la valeur absolue d'un taux."""
-    reels, brut = {}, {}
+def fondamental(cur, petrole=None, tension=None):
+    """Sept moteurs explicites, chacun ramene a la moyenne du panier : en
+    change, ce qui deplace un cours est l'ecart entre deux economies, pas la
+    valeur absolue d'un taux. Chaque moteur est borne separement pour qu'aucun
+    ne puisse emporter le total a lui seul.
+
+    Retourne (scores -10..+10, taux reels, detail par moteur).
+    """
+    lu = {}
     for code in NOS:
         c = cur.get(code) or {}
-        taux, infl = nombre(c.get("rate_current")), nombre(c.get("cpi_current"))
-        if taux is not None and infl is not None:
-            reels[code] = taux - infl
+        lu[code] = {
+            "taux": nombre(c.get("rate_current")), "taux0": nombre(c.get("rate_previous")),
+            "ipc": nombre(c.get("cpi_current")), "ipc0": nombre(c.get("cpi_previous")),
+            "cible": c.get("cpi_target"), "chom": nombre(c.get("unemp_current")),
+            "chom0": nombre(c.get("unemp_previous")), "pib": nombre(c.get("gdp_current")),
+            "pib0": nombre(c.get("gdp_previous")),
+            "ann": annualise(c.get("gdp_current")) and annualise(c.get("gdp_previous")),
+            "ton": str(c.get("tilt", "")).lower(), "geste": str(c.get("move", "")).lower(),
+        }
+
+    # 1. taux reel : taux directeur moins inflation, en ecarts-types du panier
+    reels = {k: (v["taux"] - v["ipc"]) for k, v in lu.items()
+             if v["taux"] is not None and v["ipc"] is not None}
+    s1 = {}
     if len(reels) >= 4:
-        m = moyenne(list(reels.values()))
-        ec = [abs(x - m) for x in reels.values()]
-        disp = max(moyenne(ec) or 1.0, 0.3)
-    else:
-        m, disp = 0.0, 1.0
+        m, sd = moyenne(list(reels.values())), ecart_type(list(reels.values()))
+        sd = max(sd or 1.0, 0.25)
+        s1 = {k: borne((v - m) / sd * 3.0, -6, 6) for k, v in reels.items()}
 
+    # 2. impulsion : la banque resserre-t-elle plus vite que l'inflation ne monte ?
+    imp = {}
+    for k, v in lu.items():
+        if None in (v["taux"], v["taux0"], v["ipc"], v["ipc0"]):
+            continue
+        imp[k] = (v["taux"] - v["taux0"]) - (v["ipc"] - v["ipc0"])
+    s2 = {k: borne(x * 4.0, -6, 6) for k, x in centrer(imp).items()} if len(imp) >= 3 else {}
+
+    # 3. inflation : distance a la cible, et sens du mouvement
+    pres, s3 = {}, {}
+    for k, v in lu.items():
+        if v["ipc"] is None or v["cible"] is None:
+            continue
+        d = (v["ipc"] - v["ipc0"]) if v["ipc0"] is not None else 0.0
+        pres[k] = 0.7 * (v["ipc"] - float(v["cible"])) + 1.5 * d
+    if len(pres) >= 3:
+        s3 = {k: borne(x * 2.0, -6, 6) for k, x in centrer(pres).items()}
+
+    # 4. ton : les mots, corriges par les chiffres, plus le dernier geste.
+    #    Centre lui aussi : quand sept banques sur huit parlent de fermete,
+    #    la fermete ne distingue plus personne.
+    s4 = {}
+    for k, v in lu.items():
+        if v["ton"] not in TILT and v["geste"] not in GESTE:
+            continue                  # rien de renseigne : le moteur se retire
+        t = TILT.get(v["ton"], 0.0)
+        p = pres.get(k)
+        # Un discours de fermete que l'inflation ne justifie pas ne tient pas.
+        if p is not None and t and ((t > 0 and p < -0.3) or (t < 0 and p > 0.3)):
+            t *= 0.4
+        s4[k] = t + GESTE.get(v["geste"], 0.0)
+    s4 = {k: borne(x, -6, 6) for k, x in centrer(s4).items()} if len(s4) >= 3 else {}
+
+    # 5. croissance et emploi, ramenes a la meme unite
+    cro, s5 = {}, {}
+    for k, v in lu.items():
+        x, n = 0.0, 0
+        if v["pib"] is not None and v["pib0"] is not None:
+            d = v["pib"] - v["pib0"]
+            x += 2.0 * (d / 4.0 if v["ann"] else d)      # annualise -> trimestriel
+            n += 1
+        if v["chom"] is not None and v["chom0"] is not None:
+            x += 3.0 * (v["chom0"] - v["chom"])          # chomage qui baisse : favorable
+            n += 1
+        if n:
+            cro[k] = x
+    if len(cro) >= 3:
+        s5 = {k: borne(x, -5, 5) for k, x in centrer(cro).items()}
+
+    # 6. termes de l'echange : le brut sur trois mois
+    s6 = {}
+    if petrole is not None:
+        s6 = {k: borne(x, -4, 4) for k, x in
+              centrer({k: petrole / 12.0 * c for k, c in PETROLE.items()}).items()}
+
+    # 7. regime de risque : le VIX par rapport a sa propre annee
+    s7 = {}
+    if tension is not None:
+        s7 = {k: borne(x, -4, 4) for k, x in
+              centrer({k: tension * c * 1.6 for k, c in REFUGE.items()}).items()}
+
+    table = {"taux_reel": s1, "impulsion": s2, "inflation": s3, "ton": s4,
+             "croissance": s5, "commerce": s6, "risque": s7}
+    brut, detail = {}, {}
     for code in NOS:
-        c = cur.get(code) or {}
-        s = 0.0
-        if code in reels:
-            s += borne((reels[code] - m) / disp * 3.2, -6, 6)
-        s += TILT.get(str(c.get("tilt", "")).lower(), 0.0)
-        a, b = nombre(c.get("unemp_previous")), nombre(c.get("unemp_current"))
-        if a is not None and b is not None:
-            s += borne((a - b) * 4.0, -2, 2)          # chomage qui baisse : favorable
-        a, b = nombre(c.get("gdp_previous")), nombre(c.get("gdp_current"))
-        if a is not None and b is not None:
-            s += borne((b - a) * 2.0, -2, 2)
-        brut[code] = borne(s, -10, 10)
-    return brut, reels
+        parts = {cle: table[cle].get(code) for cle, _, _ in MOTEURS}
+        poids = {cle: p for cle, _, p in MOTEURS if parts.get(cle) is not None}
+        if not poids:
+            continue
+        tot = float(sum(poids.values()))
+        brut[code] = borne(sum(poids[k] / tot * parts[k] for k in poids) * 3.0, -10, 10)
+        detail[code] = {k: round(v, 2) for k, v in parts.items() if v is not None}
+        detail[code]["apport"] = {k: round(poids[k] / tot * parts[k] * 3.0, 2) for k in poids}
+    return brut, reels, detail
 
 
 # --------------------------------------------------------------------------
@@ -463,8 +603,35 @@ for c in panier:                                   # base 100 au depart
     b = force[c][0]
     force[c] = [x / b * 100.0 for x in force[c]]
 
-# 3. scores
-fond, reels = fondamental(cur)
+# 3. contexte macro : brut et tension, deux series quotidiennes de plus
+def serie_macro(sid, mot):
+    if not serie_valide(sid, mot):
+        return None
+    obs = observations(sid)
+    if len(obs) < 120:
+        log("    " + sid + " : trop peu d'observations (" + str(len(obs)) + ")")
+        return None
+    return [obs[d] for d in sorted(obs)]
+
+
+petrole = tension = None
+log("  Contexte macro :")
+s = serie_macro("DCOILWTICO", "West Texas")
+if s and len(s) > 63 and s[-64]:
+    petrole = (s[-1] / s[-64] - 1.0) * 100.0
+    log("    brut WTI %.2f $, %+.1f %% sur trois mois" % (s[-1], petrole))
+s = serie_macro("VIXCLS", "Volatility")
+if s:
+    fen = s[-252:]
+    sd = ecart_type(fen)
+    if sd and sd > 0:
+        tension = borne((s[-1] - moyenne(fen)) / sd, -2.5, 2.5)
+        log("    VIX %.1f, soit %+.2f ecart-type de son annee" % (s[-1], tension))
+if petrole is None and tension is None:
+    log("    indisponible — les deux moteurs correspondants sont neutralises.")
+
+# 4. scores
+fond, reels, fond_detail = fondamental(cur, petrole, tension)
 
 # Flux : ce qui est deja paru compte plein tarif, ce qui est encore attendu
 # d'ici dimanche compte a moitie — c'est une anticipation, pas un fait.
@@ -552,6 +719,7 @@ for code in NOS:
         "fondamental": round(f, 2), "technique": round(t, 2), "flux": round(x, 2),
         "positionnement": round(p, 2) if p is not None else None,
         "pos_detail": pos_detail.get(code),
+        "fond_detail": fond_detail.get(code),
         "poids": {k: round(v * 100) for k, v in util.items()},
         "taux_reel": round(reels[code], 2) if code in reels else None,
         "var": {"j1": variation(serie, 1), "j5": variation(serie, 5),
@@ -578,6 +746,9 @@ json.dump({
     "source": "Reserve federale (H.10) via FRED",
     "source_pos": "CFTC — Commitments of Traders, non-commerciaux, futures seuls",
     "rapport_cot": max((d["rapport"] for d in pos_detail.values()), default=None),
+    "macro": {"petrole_3m": round(petrole, 1) if petrole is not None else None,
+              "tension": round(tension, 2) if tension is not None else None},
+    "moteurs": [{"cle": c, "nom": n, "poids": p} for c, n, p in MOTEURS],
     "poids": {k: round(v * 100) for k, v in POIDS.items()},
     "devises": sortie,
 }, open("marche.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

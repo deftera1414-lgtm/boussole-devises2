@@ -227,6 +227,51 @@ def tenue(place):
     return "au plus bas depuis 3 ans — positions encombrées"
 
 
+NOM_MOTEUR = {
+    "taux_reel": "le taux réel", "impulsion": "l'impulsion de politique",
+    "inflation": "l'écart d'inflation à la cible", "ton": "le ton de la banque centrale",
+    "croissance": "la croissance et l'emploi", "commerce": "les termes de l'échange",
+    "risque": "le régime de risque",
+}
+
+
+def liste_fr(xs):
+    if len(xs) < 2:
+        return xs[0] if xs else ""
+    return ", ".join(xs[:-1]) + " et " + xs[-1]
+
+
+def fondation(m):
+    """Ce qui porte et ce qui freine la direction fondamentale, en toutes
+    lettres. C'est la reponse a « pourquoi ce chiffre ? » : on nomme les deux
+    moteurs qui poussent le plus et celui qui retient le plus, chiffres."""
+    d = m.get("fond_detail") or {}
+    ap = d.get("apport") or {}
+    if not ap:
+        return ""
+    f = m.get("fondamental")
+    cls, fl = fleche(f, 0.5)
+    v = (('<span class="cw-f ' + cls + '">' + fl + "</span>" if fl else "")
+         + "<b>" + ("+" if (f or 0) >= 0 else "−")
+         + ("%.1f" % abs(f or 0)).replace(".", ",") + "</b>")
+
+    def dit(cle):
+        return (NOM_MOTEUR.get(cle, cle) + ' <span class="cw-num">'
+                + ("+" if ap[cle] >= 0 else "−") + ("%.1f" % abs(ap[cle])).replace(".", ",")
+                + "</span>")
+
+    ordre = sorted(ap, key=lambda k: ap[k], reverse=True)
+    porte = [c for c in ordre if ap[c] >= 0.25][:2]
+    freine = [c for c in reversed(ordre) if ap[c] <= -0.25][:1]
+    if porte:
+        v += ' <span class="s">· porté par ' + liste_fr([dit(c) for c in porte]) + "</span>"
+    if freine:
+        v += ' <span class="s">· freiné par ' + dit(freine[0]) + "</span>"
+    if not porte and not freine:
+        v += ' <span class="s">· aucun moteur dominant, les sept se compensent</span>'
+    return v
+
+
 def speculateurs(pd):
     """Ce que font les grands spéculateurs, en une ligne lisible.
 
@@ -392,6 +437,10 @@ for d in devises:
               + (" · RSI " + str(int(round(det["rsi"]))) if det.get("rsi") is not None else "")
               + "</span>")
         lignes.append(ligne("Force 90 j", v))
+
+        t = fondation(m)
+        if t:
+            lignes.append(ligne("Fondamental", t))
 
         pd = m.get("pos_detail") or {}
         if pd:
