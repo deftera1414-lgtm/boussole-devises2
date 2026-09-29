@@ -1,6 +1,6 @@
 {
-  "generated_at": "29 septembre 2026, 01h13 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-29T01:13:27+00:00",
+  "generated_at": "29 septembre 2026, 07h28 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-29T07:28:25+00:00",
   "currencies": {
     "USD": {
       "bias": 62,
@@ -203,14 +203,14 @@
       "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Reserve Bank of Australia (RBA)",
       "chief": "Michele Bullock",
       "rate_previous": "4,10%",
       "rate_current": "4,35%",
       "rate_change_date": "Hausse de 25 pb les 4-5 mai 2026 (3e hausse de l'année) — statu quo confirmé en juin puis le 11 août 2026",
-      "next": "29 septembre 2026 — Décision RBA (cash rate)",
+      "next": "3 novembre 2026 — Décision RBA + SoMP",
       "gdp_previous": "+0,3% QoQ / +2,5% YoY (T1 2026)",
       "gdp_current": "+0,4% QoQ / +2,1% YoY (T2 2026, publié le 2 septembre, au-dessus des attentes mais croissance qualifiée de modérée)",
       "cpi_previous": "3,8% (juin 2026, IPC mensuel)",
@@ -220,16 +220,7 @@
       "speech": "Devant le Parlement le 18 septembre, Michele Bullock a durci le ton : les risques haussiers signalés en août se matérialisent désormais, entre le conflit au Moyen-Orient, le boom de l'intelligence artificielle et des conditions météorologiques extrêmes qui poussent l'énergie, l'agricole et la technologie. Avec une inflation autour de 3,5%, au-dessus de la cible, elle indique que le Board évaluera fin septembre si le resserrement déjà délivré suffira. Elle nuance en citant le ralentissement de la demande intérieure et la détente progressive du marché du travail.",
       "cycle": "Trois hausses en 2026 ont porté le taux à 4,35% en mai, suivi de quatre mois de statu quo à ton ferme. La réunion du 29 septembre est le vrai rendez-vous : le marché y attribue 76 à 80% de probabilité à une hausse vers 4,60%, ce qui serait le plus haut niveau depuis quinze ans, l'inflation au-dessus de la bande cible 2-3% l'emportant sur un chômage qui remonte.",
       "move": "hold",
-      "events": [
-        {
-          "date": "29 septembre 2026",
-          "date_iso": "2026-09-29",
-          "time": "04:30 UTC",
-          "name": "Décision RBA (cash rate)",
-          "forecast": "voir consensus de marché",
-          "previous": "4,35%"
-        }
-      ],
+      "events": [],
       "watch": "Rapport Labour Force d'août le 24 septembre à 01h30 UTC (impact élevé, chômage attendu stable à 4,5%), puis IPC d'août le 30 septembre — deux publications encadrant la décision du 29 septembre, où une hausse à 4,60% est majoritairement anticipée.",
       "sources": [
         "https://www.rba.gov.au/media-releases/2025/mr-25-02.html",

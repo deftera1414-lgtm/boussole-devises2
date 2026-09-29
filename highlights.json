@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-09-29T01:13:59+00:00",
-  "verifie": "29 septembre 2026, 01h13 UTC",
+  "verifie_iso": "2026-09-29T07:28:44+00:00",
+  "verifie": "29 septembre 2026, 07h28 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -194,7 +194,7 @@
       }
     ],
     "nb": 10,
-    "reste": 10,
+    "reste": 8,
     "prochaine": false,
     "en_attente": false
   },
@@ -255,16 +255,16 @@
       "chomage": "4,5% · juillet 2026",
       "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
       "semaine_nb": 5,
-      "semaine_reste": 5,
-      "semaine_penchant": 0.5,
-      "semaine_mot": "favorable",
+      "semaine_reste": 3,
+      "semaine_penchant": -0.5,
+      "semaine_mot": "défavorable",
       "semaine_resume": "taux directeur, inflation",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Taux directeur",
-      "prochain_iso": "2026-09-29T04:30:00+00:00",
-      "prochain_txt": "29 septembre"
+      "prochain": "Inflation mensuelle",
+      "prochain_iso": "2026-09-30T01:30:00+00:00",
+      "prochain_txt": "30 septembre"
     },
     {
       "code": "NZD",
