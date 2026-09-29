@@ -201,7 +201,7 @@
       "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Reserve Bank of Australia (RBA)",
       "chief": "Michele Bullock",
@@ -296,7 +296,7 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -410,7 +410,7 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -524,7 +524,7 @@
       "short": {
         "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 52,
@@ -543,7 +543,7 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -562,7 +562,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -579,9 +579,9 @@
       "base": "AUD",
       "quote": "CHF",
       "short": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 52,
@@ -600,7 +600,7 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 48,
@@ -803,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "28 septembre 2026, 21h46 UTC (mise à jour automatique)"
+  "generated_at": "29 septembre 2026, 01h13 UTC (mise à jour automatique)"
 }
