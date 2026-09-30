@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-09-30T08:35:57+00:00",
+  "calcule_iso": "2026-09-30T08:58:57+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -362,7 +362,7 @@
     },
     "GBP": {
       "biais": 48,
-      "biais_avant": 47,
+      "biais_avant": 48,
       "biais_7j": null,
       "momentum": 1,
       "long_adj": 0,
@@ -525,7 +525,7 @@
     },
     "AUD": {
       "biais": 56,
-      "biais_avant": 55,
+      "biais_avant": 56,
       "biais_7j": null,
       "momentum": -1,
       "long_adj": 0,
@@ -688,7 +688,7 @@
     },
     "NZD": {
       "biais": 39,
-      "biais_avant": 36,
+      "biais_avant": 39,
       "biais_7j": null,
       "momentum": 1,
       "long_adj": 1,
@@ -851,7 +851,7 @@
     },
     "USD": {
       "biais": 63,
-      "biais_avant": 65,
+      "biais_avant": 63,
       "biais_7j": null,
       "momentum": -2,
       "long_adj": 2,
@@ -1344,7 +1344,7 @@
     },
     "JPY": {
       "biais": 59,
-      "biais_avant": 62,
+      "biais_avant": 59,
       "biais_7j": null,
       "momentum": -1,
       "long_adj": -1,
