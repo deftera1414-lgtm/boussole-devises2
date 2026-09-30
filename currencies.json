@@ -1,11 +1,11 @@
 {
-  "generated_at": "30 septembre 2026, 08h17 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-30T08:17:03+00:00",
+  "generated_at": "30 septembre 2026, 08h35 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-30T08:35:34+00:00",
   "currencies": {
     "USD": {
-      "bias": 65,
-      "long_adj": 0,
-      "momentum": 5,
+      "bias": 63,
+      "long_adj": 2,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -38,8 +38,8 @@
     },
     "EUR": {
       "bias": 44,
-      "long_adj": -1,
-      "momentum": -1,
+      "long_adj": -2,
+      "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -70,9 +70,9 @@
       ]
     },
     "GBP": {
-      "bias": 47,
-      "long_adj": 1,
-      "momentum": -1,
+      "bias": 48,
+      "long_adj": 0,
+      "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -102,9 +102,9 @@
       ]
     },
     "JPY": {
-      "bias": 62,
-      "long_adj": -4,
-      "momentum": 6,
+      "bias": 59,
+      "long_adj": -1,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -136,7 +136,7 @@
     "CHF": {
       "bias": 40,
       "long_adj": 0,
-      "momentum": -4,
+      "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -168,7 +168,7 @@
     "CAD": {
       "bias": 46,
       "long_adj": 0,
-      "momentum": -2,
+      "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -198,9 +198,9 @@
       ]
     },
     "AUD": {
-      "bias": 55,
-      "long_adj": 1,
-      "momentum": 2,
+      "bias": 56,
+      "long_adj": 0,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
@@ -230,9 +230,9 @@
       ]
     },
     "NZD": {
-      "bias": 36,
-      "long_adj": 4,
-      "momentum": -7,
+      "bias": 39,
+      "long_adj": 1,
+      "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,

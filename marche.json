@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-09-30T08:17:24+00:00",
+  "calcule_iso": "2026-09-30T08:35:57+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -58,56 +58,92 @@
     }
   ],
   "poids": {
-    "fondamental": 38,
-    "technique": 26,
+    "fondamental": 54,
+    "technique": 10,
     "positionnement": 22,
     "flux": 14
+  },
+  "etude_longue": {
+    "periode": "1999-2026",
+    "seances": 6955,
+    "5j": {
+      "1999-2014": -0.01,
+      "2015-2026": -0.043,
+      "n": 10704
+    },
+    "21j": {
+      "1999-2014": 0.018,
+      "2015-2026": -0.059,
+      "n": 2544
+    },
+    "adaptatif_5j": {
+      "2002-2014": -0.023,
+      "2015-2026": 0.026
+    },
+    "adaptatif_21j": {
+      "2002-2014": -0.059,
+      "2015-2026": 0.007
+    },
+    "conclusion": "tendance legerement porteuse avant 2015, franchement contraire depuis ; un signe adaptatif rattrape le regime avec retard et ne fait pas mieux"
   },
   "convictions": [
     {
       "paire": "USD/NZD",
-      "ecart": 29,
+      "ecart": 24,
       "soutien": 0.75,
-      "attendu_5j": 0.18,
+      "attendu_5j": 0.12,
       "sigma_5j": 1.1,
-      "rapport": 0.17,
-      "score": 21.8
+      "rapport": 0.11,
+      "score": 10.8,
+      "echeance": {
+        "code": "USD",
+        "heures": 4,
+        "quoi": "Indice PCE sous-jacent sur un mois"
+      }
     },
     {
       "paire": "USD/CHF",
-      "ecart": 25,
+      "ecart": 23,
       "soutien": 0.75,
-      "attendu_5j": 0.13,
+      "attendu_5j": 0.08,
       "sigma_5j": 0.86,
-      "rapport": 0.15,
-      "score": 18.8
+      "rapport": 0.1,
+      "score": 10.3,
+      "echeance": {
+        "code": "USD",
+        "heures": 4,
+        "quoi": "Indice PCE sous-jacent sur un mois"
+      }
     },
     {
       "paire": "JPY/NZD",
-      "ecart": 26,
+      "ecart": 20,
       "soutien": 0.5,
-      "attendu_5j": 0.23,
+      "attendu_5j": 0.18,
       "sigma_5j": 1.53,
-      "rapport": 0.15,
-      "score": 13.0
-    },
-    {
-      "paire": "USD/CAD",
-      "ecart": 19,
-      "soutien": 0.62,
-      "attendu_5j": 0.1,
-      "sigma_5j": 0.53,
-      "rapport": 0.2,
-      "score": 11.9
+      "rapport": 0.12,
+      "score": 10.0,
+      "echeance": null
     },
     {
       "paire": "JPY/CHF",
-      "ecart": 22,
+      "ecart": 19,
       "soutien": 0.5,
-      "attendu_5j": 0.18,
+      "attendu_5j": 0.14,
       "sigma_5j": 1.23,
-      "rapport": 0.15,
-      "score": 11.0
+      "rapport": 0.12,
+      "score": 9.5,
+      "echeance": null
+    },
+    {
+      "paire": "AUD/NZD",
+      "ecart": 17,
+      "soutien": 0.5,
+      "attendu_5j": 0.1,
+      "sigma_5j": 0.71,
+      "rapport": 0.14,
+      "score": 8.5,
+      "echeance": null
     }
   ],
   "grappes": [
@@ -165,8 +201,8 @@
       "biais": 44,
       "biais_avant": 44,
       "biais_7j": null,
-      "momentum": -1,
-      "long_adj": -1,
+      "momentum": 2,
+      "long_adj": -2,
       "fondamental": -0.51,
       "technique": -1.24,
       "flux": 0.0,
@@ -206,8 +242,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -325,11 +361,11 @@
       }
     },
     "GBP": {
-      "biais": 47,
-      "biais_avant": 49,
+      "biais": 48,
+      "biais_avant": 47,
       "biais_7j": null,
-      "momentum": -1,
-      "long_adj": 1,
+      "momentum": 1,
+      "long_adj": 0,
       "fondamental": 0.34,
       "technique": -1.24,
       "flux": 0.0,
@@ -369,8 +405,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -480,7 +516,7 @@
         35.5,
         35.4
       ],
-      "attendu_5j": -0.011,
+      "attendu_5j": -0.007,
       "sigma_5j": 0.35,
       "jumelle": {
         "code": "JPY",
@@ -488,11 +524,11 @@
       }
     },
     "AUD": {
-      "biais": 55,
-      "biais_avant": 58,
+      "biais": 56,
+      "biais_avant": 55,
       "biais_7j": null,
-      "momentum": 2,
-      "long_adj": 1,
+      "momentum": -1,
+      "long_adj": 0,
       "fondamental": 2.44,
       "technique": 1.89,
       "flux": 0.0,
@@ -532,8 +568,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -643,7 +679,7 @@
         73.7,
         73.3
       ],
-      "attendu_5j": 0.022,
+      "attendu_5j": 0.026,
       "sigma_5j": 0.44,
       "jumelle": {
         "code": "JPY",
@@ -651,11 +687,11 @@
       }
     },
     "NZD": {
-      "biais": 36,
-      "biais_avant": 35,
+      "biais": 39,
+      "biais_avant": 36,
       "biais_7j": null,
-      "momentum": -7,
-      "long_adj": 4,
+      "momentum": 1,
+      "long_adj": 1,
       "fondamental": -3.07,
       "technique": -7.38,
       "flux": 0.0,
@@ -695,8 +731,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -806,7 +842,7 @@
         3.4,
         0.0
       ],
-      "attendu_5j": -0.096,
+      "attendu_5j": -0.075,
       "sigma_5j": 0.68,
       "jumelle": {
         "code": "USD",
@@ -814,11 +850,11 @@
       }
     },
     "USD": {
-      "biais": 65,
-      "biais_avant": 66,
+      "biais": 63,
+      "biais_avant": 65,
       "biais_7j": null,
-      "momentum": 5,
-      "long_adj": 0,
+      "momentum": -2,
+      "long_adj": 2,
       "fondamental": 3.62,
       "technique": 5.47,
       "flux": -1.02,
@@ -858,8 +894,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -969,7 +1005,11 @@
         86.9,
         78.4
       ],
-      "attendu_5j": 0.086,
+      "echeance": {
+        "heures": 4,
+        "quoi": "Indice PCE sous-jacent sur un mois"
+      },
+      "attendu_5j": 0.044,
       "sigma_5j": 0.57,
       "jumelle": {
         "code": "NZD",
@@ -978,9 +1018,9 @@
     },
     "CAD": {
       "biais": 46,
-      "biais_avant": 45,
+      "biais_avant": 46,
       "biais_7j": null,
-      "momentum": -2,
+      "momentum": 3,
       "long_adj": 0,
       "fondamental": -1.48,
       "technique": -1.58,
@@ -1021,8 +1061,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -1143,7 +1183,7 @@
       "biais": 40,
       "biais_avant": 40,
       "biais_7j": null,
-      "momentum": -4,
+      "momentum": 4,
       "long_adj": 0,
       "fondamental": -4.25,
       "technique": -4.38,
@@ -1184,8 +1224,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -1303,11 +1343,11 @@
       }
     },
     "JPY": {
-      "biais": 62,
-      "biais_avant": 58,
+      "biais": 59,
+      "biais_avant": 62,
       "biais_7j": null,
-      "momentum": 6,
-      "long_adj": -4,
+      "momentum": -1,
+      "long_adj": -1,
       "fondamental": 1.6,
       "technique": 6.11,
       "flux": 0.0,
@@ -1347,8 +1387,8 @@
         ]
       },
       "poids": {
-        "fondamental": 38,
-        "technique": 26,
+        "fondamental": 54,
+        "technique": 10,
         "positionnement": 22,
         "flux": 14
       },
@@ -1458,7 +1498,7 @@
         70.7,
         89.5
       ],
-      "attendu_5j": 0.138,
+      "attendu_5j": 0.104,
       "sigma_5j": 1.15,
       "jumelle": {
         "code": "EUR",
