@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-09-30T11:37:26+00:00",
-  "verifie": "30 septembre 2026, 11h37 UTC",
+  "verifie_iso": "2026-09-30T16:04:09+00:00",
+  "verifie": "30 septembre 2026, 16h04 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -194,7 +194,7 @@
       }
     ],
     "nb": 10,
-    "reste": 5,
+    "reste": 3,
     "prochaine": false,
     "en_attente": false
   },
@@ -299,16 +299,16 @@
       "chomage": "4,1% · août 2026",
       "chomage_detail": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
       "semaine_nb": 5,
-      "semaine_reste": 5,
-      "semaine_penchant": -1.28,
-      "semaine_mot": "défavorable",
+      "semaine_reste": 3,
+      "semaine_penchant": -1.78,
+      "semaine_mot": "nettement défavorable",
       "semaine_resume": "inflation, croissance, emploi",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Indice PCE sous-jacent sur un mois",
-      "prochain_iso": "2026-09-30T12:30:00+00:00",
-      "prochain_txt": "30 septembre"
+      "prochain": "Salaire horaire moyen sur un mois",
+      "prochain_iso": "2026-10-02T12:30:00+00:00",
+      "prochain_txt": "2 octobre"
     },
     {
       "code": "CAD",
