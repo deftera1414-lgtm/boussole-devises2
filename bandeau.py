@@ -25,9 +25,10 @@ except Exception as e:
 # Les scores de marche sont facultatifs : sans eux la page reste correcte, elle
 # est seulement moins bavarde sur l'origine du biais.
 try:
-    MA = (json.load(open("marche.json", encoding="utf-8")) or {}).get("devises") or {}
+    MJ = json.load(open("marche.json", encoding="utf-8")) or {}
 except Exception:
-    MA = {}
+    MJ = {}
+MA = MJ.get("devises") or {}
 
 
 def esc(s):
@@ -126,6 +127,30 @@ CSS = """<style>
 .cw-part.pos b{color:var(--rise-text)}
 .cw-part.neg b{color:var(--fall-text)}
 .cw-part.neu b{color:var(--text-secondary)}
+
+/* ---------- ce que le modele vaut ---------- */
+.cv{flex:1 0 100%;width:100%;background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;box-shadow:var(--shadow);margin:4px 0 14px;overflow:hidden}
+.cv-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:12px 18px 10px;
+  border-bottom:1px solid var(--border)}
+.cv-head h2{margin:0;font-family:var(--font-display);font-size:.92rem;color:var(--text);
+  font-weight:700}
+.cv-when{margin-left:auto;font-family:var(--font-mono);font-size:.66rem;color:var(--text-muted);
+  text-transform:uppercase;letter-spacing:.05em}
+.cv-corps{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.cv-col{padding:12px 18px 14px;min-width:0}
+.cv-col + .cv-col{border-left:1px solid var(--border)}
+@media (max-width:820px){.cv-corps{grid-template-columns:1fr}
+  .cv-col + .cv-col{border-left:0;border-top:1px solid var(--border)}}
+.cv-t{display:block;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--text-muted);margin:2px 0 6px}
+.cv-l + .cv-t{margin-top:12px}
+.cv-l{font-size:.78rem;color:var(--text-secondary);line-height:1.5;padding:2px 0}
+.cv-l b{color:var(--text);font-weight:600}
+.cv-l .s{color:var(--text-muted)}
+.cv-n{font-family:var(--font-mono);font-size:.74rem;color:var(--text)}
+.cv-note{font-size:.7rem;color:var(--text-muted);line-height:1.5;margin-top:8px;
+  padding-top:8px;border-top:1px dashed var(--border)}
 
 /* ---------- delai, partout ---------- */
 .cd{font-family:var(--font-mono);font-size:.71rem;font-weight:700;white-space:nowrap;
@@ -394,6 +419,119 @@ p.append('<div class="hw-foot">Seules les échéances classées « fort impact �
 p.append("</section>")
 BANDEAU = "".join(p)
 
+
+# ==========================================================================
+# 1 bis. Ce que le modele vaut : convictions, mesure, redondance
+# ==========================================================================
+def pourcent(v, dec=2):
+    if v is None:
+        return "—"
+    return (("+" if v > 0 else ("−" if v < 0 else ""))
+            + (("%." + str(dec) + "f") % abs(v)).replace(".", ",") + " %")
+
+
+def ic_mot(ic):
+    """Un coefficient d'information se lit sur une echelle serree : en change,
+    0,05 est deja un bon signal et 0,10 est rare."""
+    if ic is None:
+        return "neu", "non mesuré"
+    if ic >= 0.05:
+        return "pos", "bon"
+    if ic >= 0.02:
+        return "pos", "exploitable"
+    if ic > -0.02:
+        return "neu", "sans contenu"
+    return "neg", "à contre-emploi"
+
+
+def bloc_valeur():
+    conv = MJ.get("convictions") or []
+    mes = MJ.get("mesure") or {}
+    grap = MJ.get("grappes") or []
+    if not conv and not mes:
+        return ""
+
+    g = ['<section class="cv"><div class="cv-head"><h2>Ce que le modèle vaut</h2>'
+         '<span class="cv-when">mesuré sur ' + str(MJ.get("seances", "—")) +
+         ' séances de cours</span></div><div class="cv-corps">']
+
+    g.append('<div class="cv-col"><span class="cv-t">Meilleures convictions</span>')
+    if conv:
+        for c in conv[:3]:
+            g.append('<div class="cv-l"><b>' + esc(c.get("paire")) + "</b> "
+                     '<span class="cv-n">écart ' + str(c.get("ecart")) + " pts</span>"
+                     ' <span class="s">· ' + str(round((c.get("soutien") or 0) * 100)) +
+                     " % des moteurs d'accord · </span>"
+                     '<span class="cv-n">' + pourcent(c.get("attendu_5j")) + "</span>"
+                     ' <span class="s">attendu sur 5 j, pour ' +
+                     (("%.2f" % (c.get("sigma_5j") or 0)).replace(".", ",")) +
+                     " % d'écart-type</span></div>")
+    else:
+        g.append('<div class="cv-l"><span class="s">indisponible</span></div>')
+    if grap:
+        def lien(x):
+            r = x.get("correlation") or 0.0
+            return (esc(x.get("a")) + " et " + esc(x.get("b")) + ' <span class="cv-n">' +
+                    ("%.2f" % r).replace(".", ",") + "</span>" +
+                    ('<span class="s"> (inverse)</span>' if r < 0 else ""))
+        g.append('<span class="cv-t">Devises liées</span><div class="cv-l">' +
+                 ' <span class="s">·</span> '.join(lien(x) for x in grap) + "</div>")
+    if conv:
+        g.append('<div class="cv-note">'
+                 "La conviction est l'écart de biais pondéré par l'accord des moteurs des "
+                 "deux côtés. Le mouvement attendu est volontairement modeste : en change, "
+                 "même un très bon signal ne revendique qu'une fraction de l'écart-type, et "
+                 "le voir écrit évite de confondre une direction avec une promesse. Deux "
+                 "devises fortement liées, dans un sens ou dans l'autre, ne font qu'un seul "
+                 "pari.</div>")
+    g.append("</div>")
+
+    g.append('<div class="cv-col"><span class="cv-t">Ce que valent les signaux</span>')
+    lignes = []
+    for cle, nom, horizons in (("technique", "Graphiques", ("5j", "21j")),
+                               ("positionnement", "Spéculateurs", ("1sem", "4sem"))):
+        bloc = mes.get(cle) or {}
+        for h in horizons:
+            r = bloc.get(h)
+            if not r:
+                continue
+            cls, mot = ic_mot(r.get("ic"))
+            mot_h = {"5j": "5 jours", "21j": "21 jours",
+                     "1sem": "une semaine", "4sem": "quatre semaines"}.get(h, h)
+            lignes.append('<div class="cv-l">' + nom + ' <span class="s">à ' + mot_h + ' · </span>'
+                          '<span class="cw-part ' + cls + '"><b>IC ' +
+                          (("%.2f" % r["ic"]).replace(".", ",") if r.get("ic") is not None else "—") +
+                          "</b> <i>" + mot + "</i></span>"
+                          '<span class="s">' + str(r.get("reussite")) + " % de réussite sur " +
+                          str(r.get("n")) + " observations</span></div>")
+    b = (mes.get("biais_publie") or {}).get("5j")
+    if b:
+        cls, mot = ic_mot(b.get("ic"))
+        lignes.append('<div class="cv-l">Biais publié <span class="s">à 5 jours · </span>'
+                      '<span class="cw-part ' + cls + '"><b>IC ' +
+                      ("%.2f" % b["ic"]).replace(".", ",") + "</b> <i>" + mot + "</i></span>"
+                      '<span class="s">' + str(b.get("reussite")) + " % de réussite sur " +
+                      str(b.get("n")) + " observations</span></div>")
+    elif mes.get("memoire_jours") is not None:
+        lignes.append('<div class="cv-l">Biais publié <span class="s">· ' +
+                      str(mes["memoire_jours"]) + " jour(s) d'historique hors échantillon, "
+                      "pas encore mesurable — il se construit passage après passage.</span></div>")
+    g.extend(lignes or ['<div class="cv-l"><span class="s">mesure indisponible</span></div>'])
+    g.append('<div class="cv-note">'
+             "Le coefficient d'information est la corrélation de rang entre le score annoncé "
+             "et le mouvement qui a suivi. En change, 0,02 est exploitable et 0,05 est bon : "
+             "les marchés ne laissent pas beaucoup plus. Ces mesures rejouent le passé sans "
+             "jamais lire une donnée future, et elles ne servent pas à régler les poids du "
+             "modèle — se noter sur sa propre copie ferait de beaux chiffres et de mauvaises "
+             "prévisions. Les fondamentaux, eux, ne sont pas reconstituables : leur seule "
+             "mesure honnête est le suivi du biais publié.</div>")
+    g.append("</div></div></section>")
+    return "".join(g)
+
+
+VALEUR = bloc_valeur()
+
+
 # ==========================================================================
 # 2. Une pastille par carte de devise
 # ==========================================================================
@@ -465,6 +603,14 @@ for d in devises:
                   ("+" if ec > 0 else "") + str(ec) + " en 7 j)</span>")
         else:
             v += '<span class="s">→ biais ' + str(m.get("biais", "—")) + "</span>"
+        att, sig = m.get("attendu_5j"), m.get("sigma_5j")
+        if att is not None and sig:
+            # Une direction sans amplitude n'engage a rien. On donne les deux,
+            # et l'ecart-type a cote pour que la modestie du signal se voie.
+            v += ('<span class="s">· </span><span class="cw-num">'
+                  + ("+" if att >= 0 else "−") + ("%.2f" % abs(att)).replace(".", ",")
+                  + " %</span><span class=\"s\"> attendu sur 5 j, écart-type "
+                  + ("%.2f" % sig).replace(".", ",") + " %</span>")
         lignes.append(ligne("Composition", v))
 
     if d.get("prochain"):
@@ -506,12 +652,13 @@ if 'class="hw"' in h:
 
 h = h.replace("</head>", CSS + "</head>", 1) if "</head>" in h else CSS + h
 
+TETE = BANDEAU + VALEUR
 m = re.search(r'(<div class="top-meta">.*?</div>\s*</div>)', h, re.S)
 if m:
-    h = h[:m.end()] + BANDEAU + h[m.end():]
+    h = h[:m.end()] + TETE + h[m.end():]
 else:
     m2 = re.search(r'(<div class="wrap">)', h)
-    h = (h[:m2.end()] + BANDEAU + h[m2.end():]) if m2 else h.replace("<body>", "<body>" + BANDEAU, 1)
+    h = (h[:m2.end()] + TETE + h[m2.end():]) if m2 else h.replace("<body>", "<body>" + TETE, 1)
 
 h, poses = poser_pastilles(h)
 

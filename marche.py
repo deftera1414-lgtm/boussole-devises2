@@ -122,6 +122,33 @@ def serie_valide(sid, mot):
     return True
 
 
+def serie_mensuelle(sid, mot, retard_max=110):
+    """Meme controle, pour une serie mensuelle. La BIS publie ses taux de
+    change effectifs reels avec deux mois de decalage : c'est sans importance
+    pour un signal de valorisation, qui se mesure en annees."""
+    try:
+        m = (fred("series", series_id=sid).get("seriess") or [None])[0]
+    except Exception as e:
+        log("    " + sid + " : metadonnees illisibles (" + str(e)[:70] + ")")
+        return False
+    if not m or "DISCONTINUED" in m.get("title", "").upper():
+        return False
+    if m.get("frequency_short") != "M":
+        log("    " + sid + " : frequence " + str(m.get("frequency_short")) + ", attendu mensuelle")
+        return False
+    if mot.lower() not in m.get("title", "").lower():
+        log("    " + sid + " : titre inattendu (" + m.get("title", "")[:60] + ")")
+        return False
+    try:
+        fin = dt.date.fromisoformat(m.get("observation_end", ""))
+    except ValueError:
+        return False
+    if (now.date() - fin).days > retard_max:
+        log("    " + sid + " : derniere observation il y a " + str((now.date() - fin).days) + " jours")
+        return False
+    return True
+
+
 def observations(sid):
     try:
         d = fred("series/observations", series_id=sid, sort_order="desc", limit=JOURS)
@@ -292,20 +319,28 @@ REFUGE = {"JPY": 1.0, "CHF": 0.9, "USD": 0.6, "EUR": -0.1,
 TAUX_US = {"USD": 1.0, "EUR": -1 / 7.0, "GBP": -1 / 7.0, "JPY": -1 / 7.0,
            "CHF": -1 / 7.0, "CAD": -1 / 7.0, "AUD": -1 / 7.0, "NZD": -1 / 7.0}
 
-# Les huit moteurs et leur poids dans le score fondamental.
+# Taux de change effectifs reels de la BIS, mensuels : la mesure de reference
+# pour savoir si une devise est chere ou bon marche par rapport a son histoire.
+# C'est le troisieme pilier classique du change, avec le portage et le momentum.
+REER = {"USD": "RBUSBIS", "EUR": "RBXMBIS", "GBP": "RBGBBIS", "JPY": "RBJPBIS",
+        "CHF": "RBCHBIS", "CAD": "RBCABIS", "AUD": "RBAUBIS", "NZD": "RBNZBIS"}
+REER_FENETRE = 120        # dix ans de moyenne de reference
+
+# Les neuf moteurs et leur poids dans le score fondamental.
 MOTEURS = [
-    ("taux_reel", "le portage réel", 22),
-    ("impulsion", "l'impulsion de politique", 18),
-    ("inflation", "l'écart d'inflation à la cible", 14),
-    ("ton", "le ton et le geste de la banque centrale", 14),
-    ("croissance", "la croissance et l'emploi", 11),
+    ("taux_reel", "le portage réel", 20),
+    ("impulsion", "l'impulsion de politique", 16),
+    ("valeur", "la valorisation de long terme", 12),
+    ("inflation", "l'écart d'inflation à la cible", 12),
+    ("ton", "le ton et le geste de la banque centrale", 12),
+    ("croissance", "la croissance et l'emploi", 10),
     ("taux_us", "les anticipations de taux américains", 8),
-    ("commerce", "les termes de l'échange", 7),
-    ("risque", "le régime de risque", 6),
+    ("commerce", "les termes de l'échange", 6),
+    ("risque", "le régime de risque", 4),
 ]
 
 
-def fondamental(cur, petrole=None, tension=None, vols=None, reprise=None):
+def fondamental(cur, petrole=None, tension=None, vols=None, reprise=None, cherte=None):
     """Huit moteurs explicites, chacun ramene a la moyenne du panier : en
     change, ce qui deplace un cours est l'ecart entre deux economies, pas la
     valeur absolue d'un taux. Chaque moteur est borne separement pour qu'aucun
@@ -391,26 +426,34 @@ def fondamental(cur, petrole=None, tension=None, vols=None, reprise=None):
     if len(cro) >= 3:
         s5 = {k: borne(x, -5, 5) for k, x in centrer(cro).items()}
 
-    # 6. anticipations de taux americains : le 2 ans sur un mois, en points de base
+    # 6. valorisation : ecart du taux de change effectif reel a sa moyenne de
+    #    dix ans. Une devise chere finit par revenir ; c'est lent, mais c'est
+    #    la seule ancre de long terme qui existe en change.
+    s9 = {}
+    if cherte:
+        s9 = {k: borne(x, -6, 6) for k, x in
+              centrer({k: -v / 10.0 * 3.0 for k, v in cherte.items()}).items()}
+
+    # 7. anticipations de taux americains : le 2 ans sur un mois, en points de base
     s6 = {}
     if reprise is not None:
         s6 = {k: borne(x, -5, 5) for k, x in
               centrer({k: reprise / 25.0 * 3.0 * c for k, c in TAUX_US.items()}).items()}
 
-    # 7. termes de l'echange : le brut sur trois mois
+    # 8. termes de l'echange : le brut sur trois mois
     s7 = {}
     if petrole is not None:
         s7 = {k: borne(x, -4, 4) for k, x in
               centrer({k: petrole / 12.0 * c for k, c in PETROLE.items()}).items()}
 
-    # 8. regime de risque : volatilite des actions et prime de credit
+    # 9. regime de risque : volatilite des actions et prime de credit
     s8 = {}
     if tension is not None:
         s8 = {k: borne(x, -4, 4) for k, x in
               centrer({k: tension * c * 1.6 for k, c in REFUGE.items()}).items()}
 
-    table = {"taux_reel": s1, "impulsion": s2, "inflation": s3, "ton": s4,
-             "croissance": s5, "taux_us": s6, "commerce": s7, "risque": s8}
+    table = {"taux_reel": s1, "impulsion": s2, "valeur": s9, "inflation": s3,
+             "ton": s4, "croissance": s5, "taux_us": s6, "commerce": s7, "risque": s8}
     brut, detail = {}, {}
     for code in NOS:
         parts = {cle: table[cle].get(code) for cle, _, _ in MOTEURS}
@@ -478,7 +521,7 @@ def positionnement(codes):
     """Score -10..+10 par devise, en deux lectures complementaires : ou en est
     le positionnement dans son historique de trois ans (60 %), et dans quel
     sens il a bouge d'une semaine sur l'autre (40 %)."""
-    scores, detail = {}, {}
+    scores, detail, brutes = {}, {}, {}
     for code in codes:
         sid, nom = CONTRATS.get(code, (None, None))
         if not sid:
@@ -488,6 +531,7 @@ def positionnement(codes):
         except Exception as e:
             log("    " + code + " : positionnement indisponible (" + str(e)[:70] + ")")
             continue
+        brutes[code] = serie
         if len(serie) < 26:
             log("    " + code + " : historique trop court (" + str(len(serie)) + " rapports)")
             continue
@@ -528,7 +572,150 @@ def positionnement(codes):
             scores[code] = borne(scores[code] - m, -10, 10)
             detail[code]["relatif"] = round(scores[code], 2)
         log("  moyenne du panier %+.1f, retiree a chacun : il reste l'ecart entre devises." % m)
-    return scores, detail
+    return scores, detail, brutes
+
+
+# --------------------------------------------------------------------------
+# Mesure : le modele a-t-il raison ?
+# --------------------------------------------------------------------------
+def rang(xs):
+    """Rangs moyens, ex aequo compris — pour une correlation de Spearman."""
+    ordre = sorted(range(len(xs)), key=lambda i: xs[i])
+    r = [0.0] * len(xs)
+    i = 0
+    while i < len(ordre):
+        j = i
+        while j + 1 < len(ordre) and xs[ordre[j + 1]] == xs[ordre[i]]:
+            j += 1
+        moy = (i + j) / 2.0 + 1.0
+        for k in range(i, j + 1):
+            r[ordre[k]] = moy
+        i = j + 1
+    return r
+
+
+def correlation(a, b):
+    if len(a) < 3 or len(a) != len(b):
+        return None
+    ma, mb = moyenne(a), moyenne(b)
+    num = sum((x - ma) * (y - mb) for x, y in zip(a, b))
+    da = math.sqrt(sum((x - ma) ** 2 for x in a))
+    db = math.sqrt(sum((y - mb) ** 2 for y in b))
+    return num / (da * db) if da > 0 and db > 0 else None
+
+
+def spearman(a, b):
+    return correlation(rang(a), rang(b))
+
+
+def note(paires, seuil=1.0):
+    """Coefficient d'information et taux de reussite d'un signal.
+
+    Le coefficient d'information est la correlation de rang entre le score
+    annonce et le rendement qui a suivi : c'est la mesure que tout gerant
+    quantitatif exige avant d'accorder un poids a un signal. Au-dela de 0,03
+    il est considere comme exploitable, au-dela de 0,05 comme bon.
+    Le taux de reussite ne compte que les signaux assez nets pour etre suivis.
+    """
+    if len(paires) < 12:
+        return None
+    s = [p[0] for p in paires]
+    r = [p[1] for p in paires]
+    nets = [p for p in paires if abs(p[0]) >= seuil]
+    juste = sum(1 for x, y in nets if (x > 0) == (y > 0))
+    ic = spearman(s, r)
+    return {"ic": round(ic, 3) if ic is not None else None,
+            "n": len(paires),
+            "reussite": round(100.0 * juste / len(nets)) if nets else None,
+            "n_nets": len(nets)}
+
+
+def eprouver_technique(force, dates, horizons=(5, 21)):
+    """Rejoue le score technique dans le passe et le confronte au rendement
+    qui a suivi. Aucune donnee future n'entre dans le calcul du score : a la
+    date t, seul force[:t+1] est lu. Les fenetres ne se chevauchent pas."""
+    out = {}
+    for h in horizons:
+        paires = []
+        for c, serie in force.items():
+            t = 260
+            while t + h < len(serie):
+                sc, _ = technique(serie[:t + 1])
+                if sc is not None and serie[t]:
+                    paires.append((sc, (serie[t + h] / serie[t] - 1.0) * 100.0))
+                t += h
+        r = note(paires)
+        if r:
+            out[str(h) + "j"] = r
+    return out
+
+
+def eprouver_positionnement(cots, force, dates, semaines=(1, 4)):
+    """Meme exercice pour le positionnement des speculateurs. Le rapport de la
+    CFTC arrete les positions le mardi et parait le vendredi : on ne mesure le
+    rendement qu'a partir du vendredi suivant, jamais avant."""
+    index = {d: i for i, d in enumerate(dates)}
+
+    def apres(jour, decalage=3):
+        try:
+            d = dt.date.fromisoformat(jour) + dt.timedelta(days=decalage)
+        except ValueError:
+            return None
+        for _ in range(8):
+            if d.isoformat() in index:
+                return index[d.isoformat()]
+            d += dt.timedelta(days=1)
+        return None
+
+    out = {}
+    for sem in semaines:
+        paires = []
+        for c, serie in cots.items():
+            if c not in force or len(serie) < 40:
+                continue
+            for t in range(26, len(serie) - sem, sem):
+                vals = [v for _, v in serie[:t + 1]]
+                bas, haut = min(vals), max(vals)
+                net = vals[-1]
+                place = 50.0 if haut <= bas else (net - bas) / (haut - bas) * 100.0
+                niveau = borne((place - 50.0) / 5.0, -10, 10)
+                if place > 85.0:
+                    niveau = 7.0 - (place - 85.0) / 15.0 * 4.0
+                elif place < 15.0:
+                    niveau = -7.0 + (15.0 - place) / 15.0 * 4.0
+                sc = borne(0.60 * niveau + 0.40 * borne((net - vals[-2]) * 4.0, -10, 10), -10, 10)
+                i0 = apres(serie[t][0])
+                i1 = apres(serie[t + sem][0]) if t + sem < len(serie) else None
+                if i0 is None or i1 is None or i1 <= i0 or not force[c][i0]:
+                    continue
+                paires.append((sc, (force[c][i1] / force[c][i0] - 1.0) * 100.0))
+        r = note(paires)
+        if r:
+            out[str(sem) + "sem"] = r
+    return out
+
+
+def eprouver_biais(hist, force, dates, horizons=(5, 21)):
+    """Le seul vrai hors echantillon : les biais reellement publies, tels
+    qu'ils ont ete ecrits jour apres jour dans historique.json, confrontes a
+    ce qui s'est passe ensuite."""
+    index = {d: i for i, d in enumerate(dates)}
+    out = {}
+    for h in horizons:
+        paires = []
+        for c, lignes in (hist or {}).items():
+            if c not in force:
+                continue
+            for jour, biais in lignes:
+                i = index.get(jour)
+                if i is None or i + h >= len(force[c]) or not force[c][i]:
+                    continue
+                paires.append((float(biais) - 50.0,
+                               (force[c][i + h] / force[c][i] - 1.0) * 100.0))
+        r = note(paires, seuil=5.0)
+        if r:
+            out[str(h) + "j"] = r
+    return out
 
 
 MOTEUR = {"fondamental": "les fondamentaux", "technique": "les graphiques",
@@ -694,8 +881,26 @@ if vols:
     log("  Volatilite annualisee : " + ", ".join("%s %.1f %%" % (k, vols[k])
                                                  for k in sorted(vols)))
 
-# 5. scores
-fond, reels, fond_detail = fondamental(cur, petrole, tension, vols, reprise)
+# 5. valorisation : ecart du taux de change effectif reel a sa moyenne longue
+cherte = {}
+log("  Valorisation (taux de change effectifs reels, BIS) :")
+for code, sid in REER.items():
+    if not serie_mensuelle(sid, "Effective Exchange Rate"):
+        continue
+    obs = observations(sid)
+    if len(obs) < 60:
+        continue
+    s = [obs[d] for d in sorted(obs)]
+    ref = moyenne(s[-REER_FENETRE:])
+    if ref:
+        cherte[code] = (s[-1] / ref - 1.0) * 100.0
+if cherte:
+    log("    " + ", ".join("%s %+.1f %%" % (k, cherte[k]) for k in sorted(cherte)))
+else:
+    log("    indisponible — le moteur de valorisation est neutralise.")
+
+# 6. scores
+fond, reels, fond_detail = fondamental(cur, petrole, tension, vols, reprise, cherte)
 
 # Flux : ce qui est deja paru compte plein tarif, ce qui est encore attendu
 # d'ici dimanche compte a moitie — c'est une anticipation, pas un fait.
@@ -710,7 +915,7 @@ except Exception as e:
     log("  highlights.json illisible (" + str(e)[:60] + ") — flux neutre.")
 
 log("  Positionnement des grands speculateurs (CFTC) :")
-pos, pos_detail = positionnement(NOS)
+pos, pos_detail, cots = positionnement(NOS)
 if not pos:
     log("    aucune donnee — le poids du positionnement est reparti sur les autres composantes.")
 
@@ -802,6 +1007,117 @@ if not touchees:
     log("Aucune devise recalculee — fichiers laisses en l'etat.")
     sys.exit(0)
 
+# --------------------------------------------------------------------------
+# Ce que le chiffre vaut : amplitude, conviction, redondance, performance
+# --------------------------------------------------------------------------
+# Un biais est une direction, pas une taille. Meme un tres bon signal de change
+# n'annonce qu'une fraction d'ecart-type : on le dit, avec l'ecart-type en face,
+# pour que personne ne prenne 66 % pour une promesse.
+FRACTION = 0.45          # part d'un ecart-type qu'un biais maximal revendique
+for code, d in sortie.items():
+    v = vols.get(code)
+    if not v:
+        continue
+    sigma = v * math.sqrt(5.0 / 252.0)                    # ecart-type a cinq jours
+    d["attendu_5j"] = round((d["biais"] - 50) / 45.0 * FRACTION * sigma, 3)
+    d["sigma_5j"] = round(sigma, 2)
+
+# Deux devises qui bougent ensemble ne font qu'une position. On le signale.
+rends = {}
+for c in panier:
+    s = force[c][-91:]
+    if len(s) > 30:
+        rends[c] = [math.log(s[i] / s[i - 1]) for i in range(1, len(s)) if s[i - 1] > 0]
+for code in sortie:
+    voisins = []
+    for autre in rends:
+        if autre == code or code not in rends:
+            continue
+        r = correlation(rends[code], rends[autre])
+        if r is not None:
+            voisins.append((abs(r), autre, round(r, 2)))
+    if voisins:
+        voisins.sort(reverse=True)
+        sortie[code]["jumelle"] = {"code": voisins[0][1], "correlation": voisins[0][2]}
+
+# Les paires ou le modele est le mieux soutenu : grand ecart de biais, moteurs
+# d'accord des deux cotes, et un ecart qui depasse le bruit de la paire.
+convictions = []
+codes = [c for c in NOS if c in sortie]
+for i, a in enumerate(codes):
+    for b in codes[i + 1:]:
+        da, db = sortie[a], sortie[b]
+        ecart = da["biais"] - db["biais"]
+        haut, bas = (a, b) if ecart >= 0 else (b, a)
+        aa = (da.get("fond_detail") or {}).get("accord") or [0, 1]
+        ab = (db.get("fond_detail") or {}).get("accord") or [0, 1]
+        soutien = min(aa[0] / float(aa[1] or 1), ab[0] / float(ab[1] or 1))
+        att = (da.get("attendu_5j") or 0.0) - (db.get("attendu_5j") or 0.0)
+        va, vb = vols.get(a, 8.0), vols.get(b, 8.0)
+        rho = correlation(rends.get(a, []), rends.get(b, [])) if a in rends and b in rends else 0.0
+        vp = math.sqrt(max(va * va + vb * vb - 2.0 * (rho or 0.0) * va * vb, 1.0))
+        sigma_p = vp * math.sqrt(5.0 / 252.0)
+        convictions.append({
+            "paire": haut + "/" + bas,
+            "ecart": abs(ecart),
+            "soutien": round(soutien, 2),
+            "attendu_5j": round(abs(att), 2),
+            "sigma_5j": round(sigma_p, 2),
+            "rapport": round(abs(att) / sigma_p, 2) if sigma_p else None,
+            "score": round(abs(ecart) * soutien, 1),
+        })
+convictions.sort(key=lambda x: x["score"], reverse=True)
+convictions = convictions[:5]
+
+# Les devises qui bougent le plus ensemble : les acheter toutes les deux, c'est
+# prendre deux fois le meme risque.
+grappes = []
+for i, a in enumerate(codes):
+    for b in codes[i + 1:]:
+        if a in rends and b in rends:
+            r = correlation(rends[a], rends[b])
+            if r is not None:
+                grappes.append((abs(r), a, b, round(r, 2)))
+grappes.sort(reverse=True)
+grappes = [{"a": a, "b": b, "correlation": r} for _, a, b, r in grappes[:3]]
+if convictions:
+    log("  Meilleures convictions : " + " · ".join(
+        "%s ecart %d, %d %% de moteurs d'accord" % (c["paire"], c["ecart"], round(c["soutien"] * 100))
+        for c in convictions[:3]))
+
+# --------------------------------------------------------------------------
+# Le modele a-t-il raison ? On le mesure, on ne le decrete pas.
+# --------------------------------------------------------------------------
+log("  Mesure de performance :")
+mesure = {}
+try:
+    mesure["technique"] = eprouver_technique({c: force[c] for c in sortie}, dates)
+    for h, r in (mesure["technique"] or {}).items():
+        log("    technique a %s : IC %s, reussite %s %% sur %d observations"
+            % (h, r["ic"], r["reussite"], r["n"]))
+except Exception as e:
+    log("    technique : mesure impossible (" + str(e)[:60] + ")")
+try:
+    mesure["positionnement"] = eprouver_positionnement(cots, force, dates)
+    for h, r in (mesure["positionnement"] or {}).items():
+        log("    positionnement a %s : IC %s, reussite %s %% sur %d observations"
+            % (h, r["ic"], r["reussite"], r["n"]))
+except Exception as e:
+    log("    positionnement : mesure impossible (" + str(e)[:60] + ")")
+try:
+    mesure["biais_publie"] = eprouver_biais(hist, force, dates)
+    jours = sorted({j for l in (hist or {}).values() for j, _ in l})
+    mesure["memoire_jours"] = len(jours)
+    mesure["depuis"] = jours[0] if jours else None
+    if mesure["biais_publie"]:
+        for h, r in mesure["biais_publie"].items():
+            log("    biais publie a %s : IC %s, reussite %s %% sur %d observations"
+                % (h, r["ic"], r["reussite"], r["n"]))
+    else:
+        log("    biais publie : %d jour(s) d'historique, pas encore mesurable." % len(jours))
+except Exception as e:
+    log("    biais publie : mesure impossible (" + str(e)[:60] + ")")
+
 journal(mouvements)
 json.dump(hist, open("historique.json", "w", encoding="utf-8"), ensure_ascii=False)
 json.dump({
@@ -815,6 +1131,9 @@ json.dump({
               "taux_us_1m": round(reprise) if reprise is not None else None},
     "moteurs": [{"cle": c, "nom": n, "poids": p} for c, n, p in MOTEURS],
     "poids": {k: round(v * 100) for k, v in POIDS.items()},
+    "convictions": convictions,
+    "grappes": grappes,
+    "mesure": mesure,
     "devises": sortie,
 }, open("marche.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
