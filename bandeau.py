@@ -466,7 +466,7 @@ def bloc_valeur():
                      ' <span class="s">attendu sur 5 j, pour ' +
                      (("%.2f" % (c.get("sigma_5j") or 0)).replace(".", ",")) +
                      " % d'écart-type</span>" +
-                     (('<span class="cw-part neg"><b>' + esc(c["echeance"]["code"]) +
+                     ((' <span class="s">· </span><span class="cw-part neg"><b>' + esc(c["echeance"]["code"]) +
                        "</b> <i>" + esc(court(c["echeance"].get("quoi"), 34)) + " dans " +
                        str(c["echeance"].get("heures")) + " h, conviction amortie</i></span>")
                       if c.get("echeance") else "") + "</div>")
