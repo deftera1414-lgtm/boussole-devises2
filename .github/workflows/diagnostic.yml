@@ -77,37 +77,49 @@ jobs:
                   pass
               print(flush=True)
 
-          print("######## A. TAUX DIRECTEURS ########")
-          fred("Fed borne haute", "DFEDTARU")
-          fred("BCE taux de depot", "ECBDFR")
-          fred("BoJ (OCDE mensuel)", "IRSTCB01JPM156N")
-          fred("BoE (mensuel)", "BOERUKM")
-          montre("BCE API taux de depot", "https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?lastNObservations=3&format=csvdata", tete=300, queue=400)
-          montre("BoE IADB Bank Rate", "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Aug/2026&Dateto=now&SeriesCodes=IUDBEDR&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N", tete=300, queue=300)
-          montre("BoC Valet cible", "https://www.bankofcanada.ca/valet/observations/V39079/json?recent=3", tete=900, queue=0)
-          montre("RBA F1.1", "https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv", tete=1200, queue=600)
-          montre("RBNZ B2 xlsx", "https://www.rbnz.govt.nz/-/media/project/sites/rbnz/files/statistics/series/b/b2/hb2-daily.xlsx", tete=0, queue=0)
-          montre("SNB snboffzisa", "https://data.snb.ch/api/cube/snboffzisa/data/csv/en", tete=600, queue=500)
-          montre("SNB snbgwdzid", "https://data.snb.ch/api/cube/snbgwdzid/data/csv/en", tete=600, queue=500)
-          montre("BoJ API call", "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM01&startDate=202608&code=STRDCLUCON", tete=900, queue=300)
-          montre("BIS politique", "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.US+XM+GB+JP+CH+CA+AU+NZ?startPeriod=2026-09-15&format=csv", tete=500, queue=1500)
+          print("######## NASDAQ ########")
+          PAYS = {"United States", "Euro Zone", "Germany", "United Kingdom", "Japan", "Switzerland",
+                  "Canada", "Australia", "New Zealand"}
+          for jour in ("2026-09-24", "2026-09-29", "2026-09-30", "2026-09-17"):
+              st, ct, b = get("https://api.nasdaq.com/api/calendar/economicevents?date=" + jour,
+                              extra={"Accept": "application/json, text/plain, */*",
+                                     "Origin": "https://www.nasdaq.com", "Referer": "https://www.nasdaq.com/"})
+              print("=" * 100)
+              try:
+                  d = json.loads(b)["data"]
+                  lignes = d.get("rows") or []
+                  print("## Nasdaq " + jour + " HTTP " + str(st) + " asOf=" + str(d.get("asOf")) + " : " + str(len(lignes)) + " lignes")
+                  for x in lignes:
+                      if x.get("country") in PAYS:
+                          print("   " + " | ".join(str(x.get(k, "")).replace("&nbsp;", "").strip()
+                                                    for k in ("gmt", "country", "eventName", "actual", "consensus", "previous")))
+              except Exception as e:
+                  print("## Nasdaq " + jour + " illisible : " + str(e)[:120] + " " + b[:200].decode("utf-8", "replace"))
+              print(flush=True)
 
-          print("######## B. COURS DE CHANGE ########")
-          montre("BCE EXR", "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+JPY+GBP+CHF+CAD+AUD+NZD.EUR.SP00.A?lastNObservations=2&format=csvdata", tete=400, queue=1500)
-          montre("BCE eurofxref", "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", tete=1500, queue=0)
-
-          print("######## C. PUBLICATIONS ########")
-          montre("Eurostat HICP manr", "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_manr?geo=EA&coicop=CP00&lastTimePeriod=3", tete=1500, queue=0)
-          montre("Eurostat HICP flash ei_cphi_m", "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ei_cphi_m?geo=EA&indic=CP-HI00&unit=RT12&lastTimePeriod=3", tete=1500, queue=0)
-          montre("Eurostat chomage", "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=EA20&age=TOTAL&sex=T&s_adj=SA&unit=PC_ACT&lastTimePeriod=3", tete=1500, queue=0)
-          montre("ONS CPI D7G7", "https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7g7/mm23/data", tete=300, queue=700)
-          montre("ONS chomage MGSX", "https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms/data", tete=300, queue=700)
-          corps = json.dumps([{"vectorId": 41690973, "latestN": 13}, {"vectorId": 2062815, "latestN": 2}]).encode()
-          montre("StatCan WDS", "https://www150.statcan.gc.ca/t1/wds/rest/getDataFromVectorsAndLatestNPeriods", data=corps, extra={"Content-Type": "application/json"}, tete=2500, queue=0)
-          montre("ABS LF chomage", "https://data.api.abs.gov.au/rest/data/ABS,LF,1.0.0/M13.3.1599.20.AUS.M?startPeriod=2026-06&format=csv", tete=600, queue=600)
-          montre("ABS dataflows CPI", "https://data.api.abs.gov.au/rest/dataflow/ABS/CPI_M", tete=1500, queue=0)
-          montre("SNB IPC plkopr", "https://data.snb.ch/api/cube/plkopr/data/csv/en", tete=500, queue=500)
-          fred("Japon IPC OCDE", "JPNCPIALLMINMEI")
-          fred("Japon IPC glissement", "CPALTT01JPM659N")
-          montre("Nasdaq calendrier", "https://api.nasdaq.com/api/calendar/economicevents?date=2026-09-29", extra={"Accept": "application/json, text/plain, */*", "Origin": "https://www.nasdaq.com", "Referer": "https://www.nasdaq.com/"}, tete=2500, queue=0)
+          print("######## COMPLEMENTS ########")
+          montre("RBA F1 quotidien", "https://www.rba.gov.au/statistics/tables/csv/f1-data.csv", tete=900, queue=0)
+          st, ct, b = get("https://www.rba.gov.au/statistics/tables/csv/f1-data.csv")
+          t = [l for l in b.decode("utf-8", "replace").splitlines() if l.strip().strip(",")]
+          print("   dernieres lignes non vides RBA F1 :")
+          for l in t[-4:]:
+              print("   " + l[:160])
+          montre("Eurostat chomage EA21", "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=EA21&age=TOTAL&sex=T&s_adj=SA&unit=PC_ACT&lastTimePeriod=2", tete=600, queue=0)
+          st, ct, b = get("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ei_cphi_m?geo=EA&unit=RT12&lastTimePeriod=1")
+          try:
+              j = json.loads(b)
+              print("## ei_cphi_m indic disponibles : " + ", ".join(list(j["dimension"]["indic"]["category"]["index"])[:40]))
+              print("   valeurs : " + json.dumps(j.get("value"))[:300])
+          except Exception as e:
+              print("## ei_cphi_m illisible " + str(e)[:100])
+          st, ct, b = get("https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.NZ+AU+JP+CH?startPeriod=2026-09-01&format=csv")
+          dern = {}
+          for l in b.decode("utf-8", "replace").splitlines():
+              p = l.split(",")
+              if len(p) > 3 and p[0] == "D":
+                  import re as _re
+                  m = _re.search(r",(20\d\d-\d\d-\d\d),([-\d.]+),", l)
+                  if m:
+                      dern[p[1]] = m.group(1) + "=" + m.group(2)
+          print("## BIS derniers points : " + json.dumps(dern))
           PYEOF
