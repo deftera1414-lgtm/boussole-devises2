@@ -77,49 +77,36 @@ jobs:
                   pass
               print(flush=True)
 
-          print("######## NASDAQ ########")
+          import re, datetime as dt
+          print("######## NASDAQ : noms des publications cles, septembre 2026 ########")
           PAYS = {"United States", "Euro Zone", "Germany", "United Kingdom", "Japan", "Switzerland",
                   "Canada", "Australia", "New Zealand"}
-          for jour in ("2026-09-24", "2026-09-29", "2026-09-30", "2026-09-17"):
+          CLE = re.compile(r"CPI|HICP|Unemployment|GDP|Interest Rate Decision|Deposit Facility|Employment Change|Nonfarm|Payrolls|Rate Statement|Cash Rate|Claimant|Retail Sales|ISM|Tankan|PCE", re.I)
+          vus = {}
+          d0 = dt.date(2026, 9, 1)
+          for i in range(31):
+              jour = (d0 + dt.timedelta(days=i)).isoformat()
               st, ct, b = get("https://api.nasdaq.com/api/calendar/economicevents?date=" + jour,
                               extra={"Accept": "application/json, text/plain, */*",
                                      "Origin": "https://www.nasdaq.com", "Referer": "https://www.nasdaq.com/"})
-              print("=" * 100)
               try:
-                  d = json.loads(b)["data"]
-                  lignes = d.get("rows") or []
-                  print("## Nasdaq " + jour + " HTTP " + str(st) + " asOf=" + str(d.get("asOf")) + " : " + str(len(lignes)) + " lignes")
-                  for x in lignes:
-                      if x.get("country") in PAYS:
-                          print("   " + " | ".join(str(x.get(k, "")).replace("&nbsp;", "").strip()
-                                                    for k in ("gmt", "country", "eventName", "actual", "consensus", "previous")))
+                  lignes = json.loads(b)["data"].get("rows") or []
               except Exception as e:
-                  print("## Nasdaq " + jour + " illisible : " + str(e)[:120] + " " + b[:200].decode("utf-8", "replace"))
-              print(flush=True)
+                  print("## " + jour + " illisible " + str(st)); continue
+              for x in lignes:
+                  if x.get("country") in PAYS and CLE.search(str(x.get("eventName", ""))):
+                      print("   " + jour + " | " + " | ".join(str(x.get(k, "")).replace("&nbsp;", "").strip()
+                            for k in ("gmt", "country", "eventName", "actual", "consensus", "previous")))
+          print(flush=True)
 
-          print("######## COMPLEMENTS ########")
-          montre("RBA F1 quotidien", "https://www.rba.gov.au/statistics/tables/csv/f1-data.csv", tete=900, queue=0)
-          st, ct, b = get("https://www.rba.gov.au/statistics/tables/csv/f1-data.csv")
-          t = [l for l in b.decode("utf-8", "replace").splitlines() if l.strip().strip(",")]
-          print("   dernieres lignes non vides RBA F1 :")
-          for l in t[-4:]:
-              print("   " + l[:160])
-          montre("Eurostat chomage EA21", "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=EA21&age=TOTAL&sex=T&s_adj=SA&unit=PC_ACT&lastTimePeriod=2", tete=600, queue=0)
-          st, ct, b = get("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ei_cphi_m?geo=EA&unit=RT12&lastTimePeriod=1")
-          try:
-              j = json.loads(b)
-              print("## ei_cphi_m indic disponibles : " + ", ".join(list(j["dimension"]["indic"]["category"]["index"])[:40]))
-              print("   valeurs : " + json.dumps(j.get("value"))[:300])
-          except Exception as e:
-              print("## ei_cphi_m illisible " + str(e)[:100])
-          st, ct, b = get("https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.NZ+AU+JP+CH?startPeriod=2026-09-01&format=csv")
-          dern = {}
-          for l in b.decode("utf-8", "replace").splitlines():
-              p = l.split(",")
-              if len(p) > 3 and p[0] == "D":
-                  import re as _re
-                  m = _re.search(r",(20\d\d-\d\d-\d\d),([-\d.]+),", l)
-                  if m:
-                      dern[p[1]] = m.group(1) + "=" + m.group(2)
-          print("## BIS derniers points : " + json.dumps(dern))
+          print("######## SNB fromDate ########")
+          montre("SNB snbgwdzid fromDate", "https://data.snb.ch/api/cube/snbgwdzid/data/csv/en?fromDate=2026-09-20", tete=400, queue=300)
+          print("######## BCE EXR historique ########")
+          st, ct, b = get("https://data-api.ecb.europa.eu/service/data/EXR/D.USD+JPY+GBP+CHF+CAD+AUD+NZD.EUR.SP00.A?startPeriod=2025-02-01&format=csvdata")
+          t = b.decode("utf-8", "replace").splitlines()
+          print("## BCE EXR : HTTP " + str(st) + ", " + str(len(b)) + " octets, " + str(len(t)) + " lignes ; entete : " + (t[0][:200] if t else ""))
+          print("   " + (t[1][:160] if len(t) > 1 else ""))
+          print("   " + (t[-1][:160] if t else ""))
+          print("######## BoJ API cible ########")
+          montre("BoJ IR01", "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR01&startDate=202608&code=MADR1Z@D", tete=700, queue=300)
           PYEOF
