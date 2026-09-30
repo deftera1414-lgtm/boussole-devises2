@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-09-29T23:11:16+00:00",
-  "verifie": "29 septembre 2026, 23h11 UTC",
+  "verifie_iso": "2026-09-30T02:20:51+00:00",
+  "verifie": "30 septembre 2026, 02h20 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 28 septembre au 4 octobre 2026",
     "debut": "2026-09-28",
     "fin": "2026-10-04",
-    "aujourdhui": "2026-09-29",
+    "aujourdhui": "2026-09-30",
     "jours": [
       {
         "iso": "2026-09-28",
@@ -24,8 +24,8 @@
         "nom": "mardi",
         "num": "29",
         "mois": "sept.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "AUD",
@@ -58,7 +58,7 @@
         "num": "30",
         "mois": "sept.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "AUD",
@@ -194,7 +194,7 @@
       }
     ],
     "nb": 10,
-    "reste": 8,
+    "reste": 5,
     "prochaine": false,
     "en_attente": false
   },
@@ -255,16 +255,16 @@
       "chomage": "4,5% · juillet 2026",
       "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
       "semaine_nb": 5,
-      "semaine_reste": 3,
-      "semaine_penchant": -0.5,
-      "semaine_mot": "défavorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, inflation",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Inflation mensuelle",
-      "prochain_iso": "2026-09-30T01:30:00+00:00",
-      "prochain_txt": "30 septembre"
+      "prochain": "Décision RBA + SoMP",
+      "prochain_iso": "2026-11-03T12:00:00+00:00",
+      "prochain_txt": "3 novembre"
     },
     {
       "code": "NZD",
