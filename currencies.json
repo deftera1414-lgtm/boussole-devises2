@@ -1,10 +1,10 @@
 {
-  "generated_at": "30 septembre 2026, 02h20 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-09-30T02:20:27+00:00",
+  "generated_at": "30 septembre 2026, 08h17 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-09-30T08:17:03+00:00",
   "currencies": {
     "USD": {
-      "bias": 66,
-      "long_adj": 2,
+      "bias": 65,
+      "long_adj": 0,
       "momentum": 5,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -70,8 +70,8 @@
       ]
     },
     "GBP": {
-      "bias": 49,
-      "long_adj": 2,
+      "bias": 47,
+      "long_adj": 1,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -102,8 +102,8 @@
       ]
     },
     "JPY": {
-      "bias": 58,
-      "long_adj": -7,
+      "bias": 62,
+      "long_adj": -4,
       "momentum": 6,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -166,8 +166,8 @@
       ]
     },
     "CAD": {
-      "bias": 45,
-      "long_adj": -1,
+      "bias": 46,
+      "long_adj": 0,
       "momentum": -2,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -198,8 +198,8 @@
       ]
     },
     "AUD": {
-      "bias": 58,
-      "long_adj": 3,
+      "bias": 55,
+      "long_adj": 1,
       "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
@@ -230,7 +230,7 @@
       ]
     },
     "NZD": {
-      "bias": 35,
+      "bias": 36,
       "long_adj": 4,
       "momentum": -7,
       "tilt": "neutral",
