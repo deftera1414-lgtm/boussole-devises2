@@ -5,7 +5,7 @@ Ce script le recalcule a chaque passage a partir de quatre sources distinctes,
 et ecrit le resultat dans currencies.json, d'ou pipeline.py le reprend pour les
 huit cartes ET les vingt-huit paires.
 
-  FONDAMENTAL    (38 %) — huit moteurs, chacun ramene a la moyenne du panier :
+  FONDAMENTAL    (54 %) — huit moteurs, chacun ramene a la moyenne du panier :
       portage reel (taux directeur moins inflation, rapporte a la volatilite),
       impulsion de politique (la banque resserre-t-elle plus vite que
       l'inflation ne monte ?), ecart d'inflation a la cible et sens du
@@ -14,10 +14,11 @@ huit cartes ET les vingt-huit paires.
       taux americains (2 ans sur un mois), termes de l'echange (brut WTI),
       regime de risque (VIX et prime de credit). Le nombre de moteurs qui
       s'accordent sert de mesure de confiance.
-  TECHNIQUE      (26 %) — indice de force de la devise contre les sept autres,
+  TECHNIQUE      (10 %) — indice de force de la devise contre les sept autres,
       construit sur les cours quotidiens : position contre moyennes mobiles
       50 et 200 jours, variation sur un mois, RSI, place dans le range annuel.
-      Bouge tous les jours ouvres.
+      Bouge tous les jours ouvres. Poids de lecture seulement : sur 27 ans, la
+      tendance des cours ne predit pas le mouvement a une ou quatre semaines.
   POSITIONNEMENT (22 %) — ce que font reellement les grands speculateurs sur les
       contrats a terme de devises, d'apres le rapport hebdomadaire de la CFTC
       (Commitments of Traders) : position nette rapportee a l'interet ouvert,
@@ -71,7 +72,25 @@ SEMAINES = 157       # trois ans de rapports hebdomadaires
 
 # Poids de reference. Une composante absente voit son poids reparti sur les
 # autres au prorata (voir melanger()).
-POIDS = {"fondamental": 0.38, "technique": 0.26, "positionnement": 0.22, "flux": 0.14}
+# Poids revus apres l'etude sur vingt-sept ans (voir ETUDE_LONGUE) : la tendance
+# des cours n'a aucun pouvoir predictif stable a une et quatre semaines, elle
+# garde un poids de lecture, pas de prevision. Le poids libere va aux
+# fondamentaux, ou se trouvent les primes documentees du change : portage,
+# valeur, impulsion de politique monetaire.
+POIDS = {"fondamental": 0.54, "technique": 0.10, "positionnement": 0.22, "flux": 0.14}
+
+# Ce que dit l'histoire longue (series H.10 de la Fed, 1999-2026, 8 devises,
+# fenetres sans chevauchement). IC de rang entre le score technique et le
+# rendement qui a suivi.
+ETUDE_LONGUE = {
+    "periode": "1999-2026", "seances": 6955,
+    "5j": {"1999-2014": -0.010, "2015-2026": -0.043, "n": 10704},
+    "21j": {"1999-2014": 0.018, "2015-2026": -0.059, "n": 2544},
+    "adaptatif_5j": {"2002-2014": -0.023, "2015-2026": 0.026},
+    "adaptatif_21j": {"2002-2014": -0.059, "2015-2026": 0.007},
+    "conclusion": ("tendance legerement porteuse avant 2015, franchement contraire depuis ; "
+                   "un signe adaptatif rattrape le regime avec retard et ne fait pas mieux"),
+}
 
 now = dt.datetime.now(dt.timezone.utc)
 def log(m): print(m, flush=True)
@@ -904,7 +923,7 @@ fond, reels, fond_detail = fondamental(cur, petrole, tension, vols, reprise, che
 
 # Flux : ce qui est deja paru compte plein tarif, ce qui est encore attendu
 # d'ici dimanche compte a moitie — c'est une anticipation, pas un fait.
-flux = {}
+flux, HL = {}, {}
 try:
     HL = json.load(open("highlights.json", encoding="utf-8"))
     for d in (HL.get("devises") or []):
@@ -931,6 +950,7 @@ sortie, touchees, mouvements = {}, 0, []
 for code in NOS:
     if code not in force:
         continue
+    c0 = cur.get(code) or {}
     t, detail = technique(force[code])
     if t is None:
         log("  " + code + " : serie trop courte, laisse en l'etat")
@@ -945,7 +965,15 @@ for code in NOS:
     # total dit si le court terme s'ecarte de la tendance de fond.
     longv = (0.68 * f + 0.32 * p) if p is not None else f
     ajust = int(round(borne(4.4 * (longv - total), -12, 12)))
-    mom = int(round(borne(t, -10, 10)))
+    # Le momentum alimente les previsions de paires a 6 h et 1-2 j. Il avait ete
+    # remplace par la tendance des cours ; l'etude sur 27 ans montre qu'elle ne
+    # predit rien a ces horizons. Il redevient ce que pipeline.py a toujours
+    # suppose : l'elan des chiffres economiques (calcule a l'etape precedente
+    # sur l'inflation, le chomage et le PIB), complete par l'actualite de la
+    # semaine — les surprises macroeconomiques sont le moteur documente du
+    # change a court terme.
+    eco = c0.get("momentum") if isinstance(c0.get("momentum"), (int, float)) else 0
+    mom = int(round(borne(0.7 * eco + 0.3 * x, -10, 10)))
 
     c = cur.setdefault(code, {})
     avant = c.get("bias")
@@ -1014,12 +1042,36 @@ if not touchees:
 # n'annonce qu'une fraction d'ecart-type : on le dit, avec l'ecart-type en face,
 # pour que personne ne prenne 66 % pour une promesse.
 FRACTION = 0.45          # part d'un ecart-type qu'un biais maximal revendique
+
+# Une conviction pleine a la veille d'une decision de taux ou d'un chiffre
+# d'inflation est une faute de metier : l'echeance peut tout renverser, et le
+# modele ne sait pas ce qu'elle dira. On amortit, et on le dit.
+AMORTI = 0.6
+imminent = {}
+for e in (HL.get("devises") if isinstance(HL, dict) else None) or []:
+    try:
+        quand = dt.datetime.fromisoformat(str(e.get("prochain_iso")))
+    except (TypeError, ValueError):
+        continue
+    if quand.tzinfo is None:
+        quand = quand.replace(tzinfo=dt.timezone.utc)
+    heures = (quand - now).total_seconds() / 3600.0
+    if 0 <= heures <= 48:
+        imminent[e.get("code")] = {"heures": int(round(heures)), "quoi": e.get("prochain")}
+if imminent:
+    log("  Echeances majeures sous 48 h : " + ", ".join(
+        "%s %s dans %d h" % (k, v["quoi"], v["heures"]) for k, v in imminent.items()))
+
 for code, d in sortie.items():
     v = vols.get(code)
     if not v:
         continue
     sigma = v * math.sqrt(5.0 / 252.0)                    # ecart-type a cinq jours
-    d["attendu_5j"] = round((d["biais"] - 50) / 45.0 * FRACTION * sigma, 3)
+    att = (d["biais"] - 50) / 45.0 * FRACTION * sigma
+    if code in imminent:
+        att *= AMORTI
+        d["echeance"] = imminent[code]
+    d["attendu_5j"] = round(att, 3)
     d["sigma_5j"] = round(sigma, 2)
 
 # Deux devises qui bougent ensemble ne font qu'une position. On le signale.
@@ -1057,6 +1109,7 @@ for i, a in enumerate(codes):
         rho = correlation(rends.get(a, []), rends.get(b, [])) if a in rends and b in rends else 0.0
         vp = math.sqrt(max(va * va + vb * vb - 2.0 * (rho or 0.0) * va * vb, 1.0))
         sigma_p = vp * math.sqrt(5.0 / 252.0)
+        risque_evt = [k for k in (a, b) if k in imminent]
         convictions.append({
             "paire": haut + "/" + bas,
             "ecart": abs(ecart),
@@ -1064,7 +1117,9 @@ for i, a in enumerate(codes):
             "attendu_5j": round(abs(att), 2),
             "sigma_5j": round(sigma_p, 2),
             "rapport": round(abs(att) / sigma_p, 2) if sigma_p else None,
-            "score": round(abs(ecart) * soutien, 1),
+            "score": round(abs(ecart) * soutien * (AMORTI if risque_evt else 1.0), 1),
+            "echeance": ({"code": risque_evt[0], "heures": imminent[risque_evt[0]]["heures"],
+                          "quoi": imminent[risque_evt[0]]["quoi"]} if risque_evt else None),
         })
 convictions.sort(key=lambda x: x["score"], reverse=True)
 convictions = convictions[:5]
@@ -1131,6 +1186,7 @@ json.dump({
               "taux_us_1m": round(reprise) if reprise is not None else None},
     "moteurs": [{"cle": c, "nom": n, "poids": p} for c, n, p in MOTEURS],
     "poids": {k: round(v * 100) for k, v in POIDS.items()},
+    "etude_longue": ETUDE_LONGUE,
     "convictions": convictions,
     "grappes": grappes,
     "mesure": mesure,

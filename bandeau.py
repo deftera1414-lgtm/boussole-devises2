@@ -465,7 +465,11 @@ def bloc_valeur():
                      '<span class="cv-n">' + pourcent(c.get("attendu_5j")) + "</span>"
                      ' <span class="s">attendu sur 5 j, pour ' +
                      (("%.2f" % (c.get("sigma_5j") or 0)).replace(".", ",")) +
-                     " % d'écart-type</span></div>")
+                     " % d'écart-type</span>" +
+                     (('<span class="cw-part neg"><b>' + esc(c["echeance"]["code"]) +
+                       "</b> <i>" + esc(court(c["echeance"].get("quoi"), 34)) + " dans " +
+                       str(c["echeance"].get("heures")) + " h, conviction amortie</i></span>")
+                      if c.get("echeance") else "") + "</div>")
     else:
         g.append('<div class="cv-l"><span class="s">indisponible</span></div>')
     if grap:
@@ -504,6 +508,20 @@ def bloc_valeur():
                           "</b> <i>" + mot + "</i></span>"
                           '<span class="s">' + str(r.get("reussite")) + " % de réussite sur " +
                           str(r.get("n")) + " observations</span></div>")
+    et = MJ.get("etude_longue") or {}
+    e21 = et.get("21j") or {}
+    if e21:
+        def v2(x):
+            return ("+" if x > 0 else "−") + ("%.2f" % abs(x)).replace(".", ",")
+        lignes.append('<div class="cv-l">Graphiques <span class="s">sur ' +
+                      str(et.get("periode", "")).replace("-", "–") + ' · </span>'
+                      '<span class="cw-part neu"><b>IC ' + v2(e21.get("1999-2014", 0)) +
+                      "</b> <i>avant 2015</i></span>"
+                      '<span class="cw-part neg"><b>' + v2(e21.get("2015-2026", 0)) +
+                      "</b> <i>depuis</i></span>"
+                      '<span class="s">à un mois, sur ' + str(e21.get("n")) +
+                      " observations : aucun pouvoir prédictif stable, poids ramené à " +
+                      str((MJ.get("poids") or {}).get("technique", "—")) + " %.</span></div>")
     b = (mes.get("biais_publie") or {}).get("5j")
     if b:
         cls, mot = ic_mot(b.get("ic"))
@@ -523,8 +541,11 @@ def bloc_valeur():
              "les marchés ne laissent pas beaucoup plus. Ces mesures rejouent le passé sans "
              "jamais lire une donnée future, et elles ne servent pas à régler les poids du "
              "modèle — se noter sur sa propre copie ferait de beaux chiffres et de mauvaises "
-             "prévisions. Les fondamentaux, eux, ne sont pas reconstituables : leur seule "
-             "mesure honnête est le suivi du biais publié.</div>")
+             "prévisions. L'étude sur vingt-sept ans a pourtant servi une fois, et c'est "
+             "précisément son rôle : elle a montré que suivre la tendance des cours ne "
+             "prédisait rien, et le poids de cette composante a été réduit en conséquence. "
+             "Les fondamentaux, eux, ne sont pas reconstituables : leur seule mesure "
+             "honnête est le suivi du biais publié.</div>")
     g.append("</div></div></section>")
     return "".join(g)
 
@@ -611,6 +632,10 @@ for d in devises:
                   + ("+" if att >= 0 else "−") + ("%.2f" % abs(att)).replace(".", ",")
                   + " %</span><span class=\"s\"> attendu sur 5 j, écart-type "
                   + ("%.2f" % sig).replace(".", ",") + " %</span>")
+            ev = m.get("echeance")
+            if ev:
+                v += ('<span class="s"> · amorti : échéance majeure dans '
+                      + str(ev.get("heures")) + " h</span>")
         lignes.append(ligne("Composition", v))
 
     if d.get("prochain"):
@@ -690,6 +715,18 @@ avant_dr = len(re.findall(r"[\U0001F1E6-\U0001F1FF]{2}", h))
 h = re.sub(r"[\U0001F1E6-\U0001F1FF]{2}", "", h)
 h = re.sub(r'<span class="flag"[^>]*>\s*</span>\s*', "", h)
 h = re.sub(r'<span class="ev-flag"[^>]*>\s*</span>\s*', "", h)
+
+# Les poids annonces dans la page viennent du calcul lui-meme : une phrase ecrite
+# a la main finit toujours par mentir apres un reglage.
+PO = MJ.get("poids") or {}
+if all(k in PO for k in ("fondamental", "positionnement", "flux", "technique")):
+    h = re.sub(r"les fondamentaux \(\d+&nbsp;%\), le positionnement des grands spéculateurs "
+               r"publié par la CFTC \(\d+&nbsp;%\), l'actualité économique de la semaine "
+               r"\(\d+&nbsp;%\) et les graphiques \(\d+&nbsp;%\)",
+               "les fondamentaux (%d&nbsp;%%), le positionnement des grands spéculateurs "
+               "publié par la CFTC (%d&nbsp;%%), l'actualité économique de la semaine "
+               "(%d&nbsp;%%) et les graphiques (%d&nbsp;%%)"
+               % (PO["fondamental"], PO["positionnement"], PO["flux"], PO["technique"]), h)
 
 h = h.replace("</body>", SCRIPT + "</body>", 1) if "</body>" in h else h + SCRIPT
 
