@@ -164,7 +164,7 @@
       ]
     },
     "CAD": {
-      "bias": 46,
+      "bias": 47,
       "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -561,7 +561,7 @@
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -637,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -694,7 +694,7 @@
         "event": false
       },
       "long": {
-        "prob": 60,
+        "prob": 59,
         "label": "Haussier faible"
       }
     },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "30 septembre 2026, 16h03 UTC (mise à jour automatique)"
+  "generated_at": "30 septembre 2026, 20h58 UTC (mise à jour automatique)"
 }
