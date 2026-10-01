@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-01T15:38:32+00:00",
+  "calcule_iso": "2026-10-01T20:29:46+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -8,7 +8,7 @@
   "macro": {
     "petrole_3m": 36.3,
     "tension": 0.49,
-    "taux_us_1m": 55
+    "taux_us_1m": 54
   },
   "moteurs": [
     {
@@ -107,7 +107,7 @@
       "score": 11.2,
       "echeance": {
         "code": "USD",
-        "heures": 21,
+        "heures": 16,
         "quoi": "Salaire horaire moyen sur un mois"
       }
     },
@@ -131,7 +131,7 @@
       "score": 10.7,
       "echeance": {
         "code": "USD",
-        "heures": 21,
+        "heures": 16,
         "quoi": "Salaire horaire moyen sur un mois"
       }
     },
@@ -222,7 +222,7 @@
         "inflation": 0.92,
         "ton": 2.1,
         "croissance": 0.95,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": -1.34,
         "risque": -0.05,
         "apport": {
@@ -232,7 +232,7 @@
           "inflation": 0.33,
           "ton": 0.76,
           "croissance": 0.28,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": -0.24,
           "risque": -0.01
         },
@@ -385,7 +385,7 @@
         "inflation": 0.48,
         "ton": 0.6,
         "croissance": -0.65,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": -0.13,
         "risque": -0.28,
         "apport": {
@@ -395,7 +395,7 @@
           "inflation": 0.17,
           "ton": 0.22,
           "croissance": -0.2,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": -0.02,
           "risque": -0.03
         },
@@ -548,7 +548,7 @@
         "inflation": -1.16,
         "ton": 0.6,
         "croissance": -0.35,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": 1.68,
         "risque": -0.67,
         "apport": {
@@ -558,7 +558,7 @@
           "inflation": -0.42,
           "ton": 0.22,
           "croissance": -0.1,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": 0.3,
           "risque": -0.08
         },
@@ -692,7 +692,7 @@
       "biais_7j": null,
       "momentum": 1,
       "long_adj": 1,
-      "fondamental": -3.08,
+      "fondamental": -3.07,
       "technique": -7.38,
       "flux": 0.0,
       "positionnement": -0.82,
@@ -711,7 +711,7 @@
         "inflation": 4.27,
         "ton": -0.9,
         "croissance": -2.25,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": -0.43,
         "risque": -0.75,
         "apport": {
@@ -721,7 +721,7 @@
           "inflation": 1.54,
           "ton": -0.32,
           "croissance": -0.67,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": -0.08,
           "risque": -0.09
         },
@@ -1006,7 +1006,7 @@
         78.4
       ],
       "echeance": {
-        "heures": 21,
+        "heures": 16,
         "quoi": "Salaire horaire moyen sur un mois"
       },
       "attendu_5j": 0.044,
@@ -1022,7 +1022,7 @@
       "biais_7j": null,
       "momentum": 3,
       "long_adj": 0,
-      "fondamental": -1.32,
+      "fondamental": -1.31,
       "technique": -1.58,
       "flux": 0.0,
       "positionnement": 0.65,
@@ -1041,7 +1041,7 @@
         "inflation": -0.26,
         "ton": -2.4,
         "croissance": 1.25,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": 3.19,
         "risque": -0.28,
         "apport": {
@@ -1051,7 +1051,7 @@
           "inflation": -0.1,
           "ton": -0.86,
           "croissance": 0.37,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": 0.57,
           "risque": -0.03
         },
@@ -1204,7 +1204,7 @@
         "inflation": -2.14,
         "ton": -2.4,
         "croissance": 1.75,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": -1.04,
         "risque": 0.73,
         "apport": {
@@ -1214,7 +1214,7 @@
           "inflation": -0.77,
           "ton": -0.86,
           "croissance": 0.52,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": -0.19,
           "risque": 0.09
         },
@@ -1367,7 +1367,7 @@
         "inflation": -2.39,
         "ton": 0.3,
         "croissance": -0.15,
-        "taux_us": -0.94,
+        "taux_us": -0.93,
         "commerce": -2.55,
         "risque": 0.81,
         "apport": {
@@ -1377,7 +1377,7 @@
           "inflation": -0.86,
           "ton": 0.11,
           "croissance": -0.05,
-          "taux_us": -0.23,
+          "taux_us": -0.22,
           "commerce": -0.46,
           "risque": 0.1
         },
