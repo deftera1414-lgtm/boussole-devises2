@@ -1,11 +1,11 @@
 {
-  "generated_at": "2 octobre 2026, 13h06 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-02T13:06:47+00:00",
+  "generated_at": "2 octobre 2026, 18h40 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-02T18:40:10+00:00",
   "currencies": {
     "USD": {
-      "bias": 64,
-      "long_adj": 1,
-      "momentum": -1,
+      "bias": 63,
+      "long_adj": 2,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -20,8 +20,8 @@
       "gdp_current": "+1,5% (T2 2026, QoQ annualisé, 2e estimation BEA ; 3e estimation attendue le 30 septembre)",
       "cpi_previous": "3,4% (juillet 2026)",
       "cpi_current": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
-      "unemp_previous": "4,1% (juillet 2026)",
-      "unemp_current": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
+      "unemp_previous": "4,1% (août 2026, FRED)",
+      "unemp_current": "4,2% (septembre 2026, FRED)",
       "speech": "En annonçant la hausse du 16 septembre, Kevin Warsh a tenu un discours nettement ferme : « l'inflation est trop élevée, et l'est depuis trop longtemps », jugeant que la tendance sous-jacente ne s'est pas améliorée de façon significative. Il a présenté le geste comme le retrait d'« une dose d'accommodation » — la politique restant donc, à ses yeux, encore accommodante. Il refuse tout guidage explicite (« je ne fais pas dans le forward guidance »). Le dot plot montre 16 des 19 membres anticipant au moins une hausse supplémentaire en 2026, dont 4 qui en voient deux.",
       "cycle": "Bascule en cycle de resserrement le 16 septembre 2026 après neuf mois de pause : la Fed sort de la séquence de baisses 2024-2025 et relève son taux pour la première fois depuis 2023, sur un vote unanime. L'inflation bloquée à 3,4% et un choc énergétique persistant l'emportent sur un marché de l'emploi qui ralentit sans se retourner. Le dot plot pointe vers au moins une hausse de plus d'ici la fin de l'année.",
       "move": "hike",
@@ -134,7 +134,7 @@
       ]
     },
     "CHF": {
-      "bias": 40,
+      "bias": 41,
       "long_adj": 0,
       "momentum": 4,
       "tilt": "neutral",

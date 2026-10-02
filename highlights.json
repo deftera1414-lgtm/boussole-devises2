@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-02T13:07:25+00:00",
-  "verifie": "2 octobre 2026, 13h07 UTC",
+  "verifie_iso": "2026-10-02T18:40:30+00:00",
+  "verifie": "2 octobre 2026, 18h40 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -198,7 +198,21 @@
     "prochaine": false,
     "en_attente": false
   },
-  "faits": [],
+  "faits": [
+    {
+      "famille": "chomage",
+      "libelle": "chômage",
+      "date": "2026-10-02",
+      "date_txt": "2 octobre",
+      "valeur": "4,2% · septembre 2026",
+      "avant": "4,1% · août 2026",
+      "variation": "+0,1 pt",
+      "cran": -0.5,
+      "age": 0,
+      "poids": -0.5,
+      "code": "USD"
+    }
+  ],
   "devises": [
     {
       "code": "EUR",
@@ -293,19 +307,32 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 63,
+      "biais": 64,
       "inflation": "3,4% · août 2026",
       "inflation_detail": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
-      "chomage": "4,1% · août 2026",
-      "chomage_detail": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
+      "chomage": "4,2% · septembre 2026",
+      "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 5,
       "semaine_reste": 0,
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation, croissance, emploi",
-      "parutions": [],
-      "effet": 0,
-      "effet_mot": "sans effet net",
+      "parutions": [
+        {
+          "famille": "chomage",
+          "libelle": "chômage",
+          "date": "2026-10-02",
+          "date_txt": "2 octobre",
+          "valeur": "4,2% · septembre 2026",
+          "avant": "4,1% · août 2026",
+          "variation": "+0,1 pt",
+          "cran": -0.5,
+          "age": 0,
+          "poids": -0.5
+        }
+      ],
+      "effet": -0.5,
+      "effet_mot": "défavorable",
       "prochain": "Décision FOMC (Fed)",
       "prochain_iso": "2026-10-28T12:00:00+00:00",
       "prochain_txt": "28 octobre"
