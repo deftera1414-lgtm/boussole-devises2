@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-02T11:37:08+00:00",
+  "calcule_iso": "2026-10-02T13:07:25+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -88,6 +88,26 @@
   },
   "convictions": [
     {
+      "paire": "USD/NZD",
+      "ecart": 25,
+      "soutien": 0.78,
+      "attendu_5j": 0.15,
+      "sigma_5j": 1.1,
+      "rapport": 0.14,
+      "score": 19.4,
+      "echeance": null
+    },
+    {
+      "paire": "USD/CHF",
+      "ecart": 24,
+      "soutien": 0.78,
+      "attendu_5j": 0.12,
+      "sigma_5j": 0.86,
+      "rapport": 0.14,
+      "score": 18.7,
+      "echeance": null
+    },
+    {
       "paire": "JPY/NZD",
       "ecart": 20,
       "soutien": 0.57,
@@ -96,20 +116,6 @@
       "rapport": 0.12,
       "score": 11.4,
       "echeance": null
-    },
-    {
-      "paire": "USD/NZD",
-      "ecart": 24,
-      "soutien": 0.78,
-      "attendu_5j": 0.12,
-      "sigma_5j": 1.1,
-      "rapport": 0.11,
-      "score": 11.2,
-      "echeance": {
-        "code": "USD",
-        "heures": 1,
-        "quoi": "Salaire horaire moyen sur un mois"
-      }
     },
     {
       "paire": "JPY/CHF",
@@ -122,27 +128,13 @@
       "echeance": null
     },
     {
-      "paire": "USD/CHF",
-      "ecart": 23,
-      "soutien": 0.78,
-      "attendu_5j": 0.08,
-      "sigma_5j": 0.86,
-      "rapport": 0.1,
-      "score": 10.7,
-      "echeance": {
-        "code": "USD",
-        "heures": 1,
-        "quoi": "Salaire horaire moyen sur un mois"
-      }
-    },
-    {
-      "paire": "AUD/NZD",
+      "paire": "USD/CAD",
       "ecart": 17,
-      "soutien": 0.44,
-      "attendu_5j": 0.1,
-      "sigma_5j": 0.71,
-      "rapport": 0.14,
-      "score": 7.6,
+      "soutien": 0.62,
+      "attendu_5j": 0.09,
+      "sigma_5j": 0.53,
+      "rapport": 0.18,
+      "score": 10.6,
       "echeance": null
     }
   ],
@@ -850,14 +842,14 @@
       }
     },
     "USD": {
-      "biais": 63,
+      "biais": 64,
       "biais_avant": 63,
       "biais_7j": null,
-      "momentum": -2,
-      "long_adj": 2,
+      "momentum": -1,
+      "long_adj": 1,
       "fondamental": 3.69,
       "technique": 5.47,
-      "flux": -1.44,
+      "flux": 0.0,
       "positionnement": 2.93,
       "pos_detail": {
         "net_pct": 22.3,
@@ -1005,11 +997,7 @@
         86.9,
         78.4
       ],
-      "echeance": {
-        "heures": 1,
-        "quoi": "Salaire horaire moyen sur un mois"
-      },
-      "attendu_5j": 0.044,
+      "attendu_5j": 0.08,
       "sigma_5j": 0.57,
       "jumelle": {
         "code": "NZD",

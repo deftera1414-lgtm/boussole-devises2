@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-02T11:37:07+00:00",
-  "verifie": "2 octobre 2026, 11h37 UTC",
+  "verifie_iso": "2026-10-02T13:07:25+00:00",
+  "verifie": "2 octobre 2026, 13h07 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -194,7 +194,7 @@
       }
     ],
     "nb": 10,
-    "reste": 3,
+    "reste": 0,
     "prochaine": false,
     "en_attente": false
   },
@@ -299,16 +299,16 @@
       "chomage": "4,1% · août 2026",
       "chomage_detail": "4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K",
       "semaine_nb": 5,
-      "semaine_reste": 3,
-      "semaine_penchant": -1.8,
-      "semaine_mot": "nettement défavorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation, croissance, emploi",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Salaire horaire moyen sur un mois",
-      "prochain_iso": "2026-10-02T12:30:00+00:00",
-      "prochain_txt": "2 octobre"
+      "prochain": "Décision FOMC (Fed)",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre"
     },
     {
       "code": "CAD",
