@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-01T20:29:46+00:00",
+  "calcule_iso": "2026-10-02T00:09:42+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -107,7 +107,7 @@
       "score": 11.2,
       "echeance": {
         "code": "USD",
-        "heures": 16,
+        "heures": 12,
         "quoi": "Salaire horaire moyen sur un mois"
       }
     },
@@ -131,7 +131,7 @@
       "score": 10.7,
       "echeance": {
         "code": "USD",
-        "heures": 16,
+        "heures": 12,
         "quoi": "Salaire horaire moyen sur un mois"
       }
     },
@@ -1006,7 +1006,7 @@
         78.4
       ],
       "echeance": {
-        "heures": 16,
+        "heures": 12,
         "quoi": "Salaire horaire moyen sur un mois"
       },
       "attendu_5j": 0.044,

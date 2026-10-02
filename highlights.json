@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-01T20:29:46+00:00",
-  "verifie": "1er octobre 2026, 20h29 UTC",
+  "verifie_iso": "2026-10-02T00:09:41+00:00",
+  "verifie": "2 octobre 2026, 00h09 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 28 septembre au 4 octobre 2026",
     "debut": "2026-09-28",
     "fin": "2026-10-04",
-    "aujourdhui": "2026-10-01",
+    "aujourdhui": "2026-10-02",
     "jours": [
       {
         "iso": "2026-09-28",
@@ -123,8 +123,8 @@
         "nom": "jeudi",
         "num": "1",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -134,7 +134,7 @@
         "num": "2",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "USD",
