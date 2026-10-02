@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-02T18:40:30+00:00",
-  "verifie": "2 octobre 2026, 18h40 UTC",
+  "verifie_iso": "2026-10-02T23:13:57+00:00",
+  "verifie": "2 octobre 2026, 23h13 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -307,7 +307,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 64,
+      "biais": 63,
       "inflation": "3,4% · août 2026",
       "inflation_detail": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
       "chomage": "4,2% · septembre 2026",
@@ -364,7 +364,7 @@
       "banque": "Banque nationale suisse (BNS)",
       "taux": "0,00%",
       "ton": "neutre",
-      "biais": 40,
+      "biais": 41,
       "inflation": "0,8% · août 2026",
       "inflation_detail": "0,8% (août 2026, plus forte hausse depuis août 2024) ; sous-jacent à 0,4%, première accélération de l'année",
       "chomage": "3,0% · août 2026",
