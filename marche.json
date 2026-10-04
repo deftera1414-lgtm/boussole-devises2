@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-04T11:32:55+00:00",
+  "calcule_iso": "2026-10-04T14:58:03+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -1487,7 +1487,7 @@
         89.5
       ],
       "echeance": {
-        "heures": 43,
+        "heures": 40,
         "quoi": "Gouverneur BoJ Ueda — discours"
       },
       "attendu_5j": 0.048,
