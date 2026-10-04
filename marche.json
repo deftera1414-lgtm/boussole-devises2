@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-04T18:46:24+00:00",
+  "calcule_iso": "2026-10-04T22:30:50+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -109,12 +109,12 @@
     },
     {
       "paire": "USD/CAD",
-      "ecart": 24,
+      "ecart": 23,
       "soutien": 0.67,
-      "attendu_5j": 0.13,
+      "attendu_5j": 0.12,
       "sigma_5j": 0.53,
-      "rapport": 0.24,
-      "score": 16.0,
+      "rapport": 0.23,
+      "score": 15.3,
       "echeance": null
     },
     {
@@ -128,13 +128,13 @@
       "echeance": null
     },
     {
-      "paire": "JPY/NZD",
-      "ecart": 20,
-      "soutien": 0.57,
-      "attendu_5j": 0.17,
-      "sigma_5j": 1.53,
-      "rapport": 0.11,
-      "score": 11.4,
+      "paire": "USD/GBP",
+      "ecart": 21,
+      "soutien": 0.38,
+      "attendu_5j": 0.11,
+      "sigma_5j": 0.65,
+      "rapport": 0.18,
+      "score": 7.9,
       "echeance": null
     }
   ],
@@ -1005,14 +1005,14 @@
       }
     },
     "CAD": {
-      "biais": 44,
-      "biais_avant": 45,
+      "biais": 45,
+      "biais_avant": 44,
       "biais_7j": null,
       "momentum": 3,
-      "long_adj": -1,
+      "long_adj": -2,
       "fondamental": -1.26,
       "technique": -1.58,
-      "flux": 0.0,
+      "flux": 2.0,
       "positionnement": -2.14,
       "pos_detail": {
         "net_pct": -22.65,
@@ -1160,7 +1160,7 @@
         50.5,
         36.5
       ],
-      "attendu_5j": -0.025,
+      "attendu_5j": -0.021,
       "sigma_5j": 0.42,
       "jumelle": {
         "code": "USD",
@@ -1486,7 +1486,11 @@
         70.7,
         89.5
       ],
-      "attendu_5j": 0.081,
+      "echeance": {
+        "heures": 32,
+        "quoi": "Gouverneur BoJ Ueda — discours"
+      },
+      "attendu_5j": 0.048,
       "sigma_5j": 1.15,
       "jumelle": {
         "code": "EUR",
