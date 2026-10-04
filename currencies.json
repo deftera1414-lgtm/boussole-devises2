@@ -1,6 +1,6 @@
 {
-  "generated_at": "4 octobre 2026, 01h57 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-04T01:57:47+00:00",
+  "generated_at": "4 octobre 2026, 08h44 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-04T08:44:06+00:00",
   "currencies": {
     "USD": {
       "bias": 68,
@@ -166,8 +166,8 @@
       ]
     },
     "CAD": {
-      "bias": 44,
-      "long_adj": -1,
+      "bias": 45,
+      "long_adj": -2,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
