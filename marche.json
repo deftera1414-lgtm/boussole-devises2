@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-05T13:05:10+00:00",
+  "calcule_iso": "2026-10-05T16:22:54+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -7,7 +7,7 @@
   "rapport_cot": "2026-09-29",
   "macro": {
     "petrole_3m": 36.3,
-    "tension": 0.83,
+    "tension": 0.27,
     "taux_us_1m": 39
   },
   "moteurs": [
@@ -90,31 +90,31 @@
     {
       "paire": "USD/NZD",
       "ecart": 31,
-      "soutien": 0.78,
+      "soutien": 0.75,
       "attendu_5j": 0.19,
       "sigma_5j": 1.1,
       "rapport": 0.17,
-      "score": 24.1,
+      "score": 23.2,
       "echeance": null
     },
     {
       "paire": "USD/CHF",
       "ecart": 22,
-      "soutien": 0.78,
+      "soutien": 0.75,
       "attendu_5j": 0.12,
       "sigma_5j": 0.86,
       "rapport": 0.14,
-      "score": 17.1,
+      "score": 16.5,
       "echeance": null
     },
     {
       "paire": "USD/CAD",
-      "ecart": 23,
-      "soutien": 0.67,
+      "ecart": 22,
+      "soutien": 0.62,
       "attendu_5j": 0.12,
       "sigma_5j": 0.53,
       "rapport": 0.23,
-      "score": 15.3,
+      "score": 13.8,
       "echeance": null
     },
     {
@@ -130,11 +130,11 @@
     {
       "paire": "USD/GBP",
       "ecart": 21,
-      "soutien": 0.38,
+      "soutien": 0.43,
       "attendu_5j": 0.11,
       "sigma_5j": 0.65,
       "rapport": 0.18,
-      "score": 7.9,
+      "score": 9.0,
       "echeance": null
     }
   ],
@@ -195,7 +195,7 @@
       "biais_7j": null,
       "momentum": 2,
       "long_adj": -1,
-      "fondamental": -0.42,
+      "fondamental": -0.41,
       "technique": -1.24,
       "flux": 0.0,
       "positionnement": -3.47,
@@ -216,7 +216,7 @@
         "croissance": 0.99,
         "taux_us": -0.67,
         "commerce": -1.34,
-        "risque": -0.08,
+        "risque": -0.03,
         "apport": {
           "taux_reel": -1.18,
           "impulsion": 0.14,
@@ -226,7 +226,7 @@
           "croissance": 0.3,
           "taux_us": -0.16,
           "commerce": -0.24,
-          "risque": -0.01
+          "risque": -0.0
         },
         "accord": [
           4,
@@ -358,7 +358,7 @@
       "biais_7j": null,
       "momentum": 1,
       "long_adj": -1,
-      "fondamental": 0.43,
+      "fondamental": 0.47,
       "technique": -1.24,
       "flux": 0.0,
       "positionnement": -3.7,
@@ -379,7 +379,7 @@
         "croissance": -0.61,
         "taux_us": -0.67,
         "commerce": -0.13,
-        "risque": -0.48,
+        "risque": -0.15,
         "apport": {
           "taux_reel": 2.02,
           "impulsion": -0.62,
@@ -389,11 +389,11 @@
           "croissance": -0.18,
           "taux_us": -0.16,
           "commerce": -0.02,
-          "risque": -0.06
+          "risque": -0.02
         },
         "accord": [
           3,
-          8
+          7
         ]
       },
       "poids": {
@@ -521,7 +521,7 @@
       "biais_7j": null,
       "momentum": -1,
       "long_adj": -1,
-      "fondamental": 2.54,
+      "fondamental": 2.63,
       "technique": 1.89,
       "flux": 0.0,
       "positionnement": -3.33,
@@ -542,7 +542,7 @@
         "croissance": -0.31,
         "taux_us": -0.67,
         "commerce": 1.68,
-        "risque": -1.15,
+        "risque": -0.37,
         "apport": {
           "taux_reel": 2.5,
           "impulsion": 1.3,
@@ -552,11 +552,11 @@
           "croissance": -0.09,
           "taux_us": -0.16,
           "commerce": 0.3,
-          "risque": -0.14
+          "risque": -0.04
         },
         "accord": [
           4,
-          9
+          8
         ]
       },
       "poids": {
@@ -684,7 +684,7 @@
       "biais_7j": null,
       "momentum": 1,
       "long_adj": 0,
-      "fondamental": -3.07,
+      "fondamental": -2.96,
       "technique": -7.38,
       "flux": 0.0,
       "positionnement": -3.05,
@@ -705,7 +705,7 @@
         "croissance": -2.21,
         "taux_us": -0.67,
         "commerce": -0.43,
-        "risque": -1.29,
+        "risque": -0.41,
         "apport": {
           "taux_reel": -2.17,
           "impulsion": -1.2,
@@ -715,11 +715,11 @@
           "croissance": -0.66,
           "taux_us": -0.16,
           "commerce": -0.08,
-          "risque": -0.15
+          "risque": -0.05
         },
         "accord": [
-          7,
-          9
+          6,
+          8
         ]
       },
       "poids": {
@@ -847,7 +847,7 @@
       "biais_7j": null,
       "momentum": -2,
       "long_adj": 4,
-      "fondamental": 3.57,
+      "fondamental": 3.5,
       "technique": 5.47,
       "flux": -0.46,
       "positionnement": 8.11,
@@ -868,7 +868,7 @@
         "croissance": -0.81,
         "taux_us": 4.68,
         "commerce": 0.62,
-        "risque": 0.85,
+        "risque": 0.27,
         "apport": {
           "taux_reel": 1.59,
           "impulsion": 0.72,
@@ -878,11 +878,11 @@
           "croissance": -0.24,
           "taux_us": 1.12,
           "commerce": 0.11,
-          "risque": 0.1
+          "risque": 0.03
         },
         "accord": [
-          7,
-          9
+          6,
+          8
         ]
       },
       "poids": {
@@ -1005,12 +1005,12 @@
       }
     },
     "CAD": {
-      "biais": 45,
+      "biais": 46,
       "biais_avant": 45,
       "biais_7j": null,
       "momentum": 3,
       "long_adj": -2,
-      "fondamental": -1.26,
+      "fondamental": -1.22,
       "technique": -1.58,
       "flux": 2.0,
       "positionnement": -2.14,
@@ -1031,7 +1031,7 @@
         "croissance": 1.29,
         "taux_us": -0.67,
         "commerce": 3.19,
-        "risque": -0.48,
+        "risque": -0.15,
         "apport": {
           "taux_reel": -1.3,
           "impulsion": -0.24,
@@ -1041,11 +1041,11 @@
           "croissance": 0.39,
           "taux_us": -0.16,
           "commerce": 0.57,
-          "risque": -0.06
+          "risque": -0.02
         },
         "accord": [
-          6,
-          9
+          5,
+          8
         ]
       },
       "poids": {
@@ -1160,7 +1160,7 @@
         50.5,
         36.5
       ],
-      "attendu_5j": -0.021,
+      "attendu_5j": -0.017,
       "sigma_5j": 0.42,
       "jumelle": {
         "code": "USD",
@@ -1173,7 +1173,7 @@
       "biais_7j": null,
       "momentum": 4,
       "long_adj": 3,
-      "fondamental": -4.01,
+      "fondamental": -4.12,
       "technique": -4.38,
       "flux": 0.0,
       "positionnement": 7.6,
@@ -1194,7 +1194,7 @@
         "croissance": 1.79,
         "taux_us": -0.67,
         "commerce": -1.04,
-        "risque": 1.25,
+        "risque": 0.4,
         "apport": {
           "taux_reel": -1.42,
           "impulsion": -1.01,
@@ -1204,11 +1204,11 @@
           "croissance": 0.54,
           "taux_us": -0.16,
           "commerce": -0.19,
-          "risque": 0.15
+          "risque": 0.05
         },
         "accord": [
           7,
-          9
+          8
         ]
       },
       "poids": {
@@ -1336,7 +1336,7 @@
       "biais_7j": null,
       "momentum": -1,
       "long_adj": -2,
-      "fondamental": 1.79,
+      "fondamental": 1.68,
       "technique": 6.11,
       "flux": 0.0,
       "positionnement": -0.02,
@@ -1357,7 +1357,7 @@
         "croissance": -0.11,
         "taux_us": -0.67,
         "commerce": -2.55,
-        "risque": 1.39,
+        "risque": 0.44,
         "apport": {
           "taux_reel": -0.04,
           "impulsion": 0.91,
@@ -1367,7 +1367,7 @@
           "croissance": -0.03,
           "taux_us": -0.16,
           "commerce": -0.46,
-          "risque": 0.17
+          "risque": 0.05
         },
         "accord": [
           4,
@@ -1487,7 +1487,7 @@
         89.5
       ],
       "echeance": {
-        "heures": 17,
+        "heures": 14,
         "quoi": "Gouverneur BoJ Ueda — discours"
       },
       "attendu_5j": 0.048,

@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-05T13:05:09+00:00",
-  "verifie": "5 octobre 2026, 13h05 UTC",
+  "verifie_iso": "2026-10-05T16:22:54+00:00",
+  "verifie": "5 octobre 2026, 16h22 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -70,8 +70,20 @@
         "mois": "octo.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "GBP",
+            "titre": "Gouverneur BoE Bailey — discours",
+            "famille": "discours",
+            "iso": "2026-10-08T12:15:00+00:00",
+            "heure": "12h15",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 1
       },
       {
         "iso": "2026-10-09",
@@ -127,8 +139,8 @@
         "nb": 0
       }
     ],
-    "nb": 4,
-    "reste": 4,
+    "nb": 5,
+    "reste": 5,
     "prochaine": false,
     "en_attente": false
   },
@@ -166,17 +178,17 @@
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
+      "semaine_nb": 1,
+      "semaine_reste": 1,
       "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_mot": "sans effet net",
+      "semaine_resume": "discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision BoE (Bank Rate) + rapport",
-      "prochain_iso": "2026-11-05T12:00:00+00:00",
-      "prochain_txt": "5 novembre"
+      "prochain": "Gouverneur BoE Bailey — discours",
+      "prochain_iso": "2026-10-08T12:15:00+00:00",
+      "prochain_txt": "8 octobre"
     },
     {
       "code": "AUD",
