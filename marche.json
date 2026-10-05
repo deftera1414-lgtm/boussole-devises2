@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-04T22:30:50+00:00",
+  "calcule_iso": "2026-10-05T01:14:35+00:00",
   "seance": "2026-09-25",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -849,7 +849,7 @@
       "long_adj": 4,
       "fondamental": 3.57,
       "technique": 5.47,
-      "flux": -0.58,
+      "flux": -0.46,
       "positionnement": 8.11,
       "pos_detail": {
         "net_pct": 24.58,
@@ -1006,7 +1006,7 @@
     },
     "CAD": {
       "biais": 45,
-      "biais_avant": 44,
+      "biais_avant": 45,
       "biais_7j": null,
       "momentum": 3,
       "long_adj": -2,
@@ -1487,7 +1487,7 @@
         89.5
       ],
       "echeance": {
-        "heures": 32,
+        "heures": 29,
         "quoi": "Gouverneur BoJ Ueda — discours"
       },
       "attendu_5j": 0.048,
