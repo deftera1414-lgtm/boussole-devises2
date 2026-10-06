@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-05T22:53:55+00:00",
+  "calcule_iso": "2026-10-06T03:18:36+00:00",
   "seance": "2026-10-02",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 14.8,
       "echeance": {
         "code": "USD",
-        "heures": 43,
+        "heures": 39,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -111,7 +111,7 @@
       "score": 9.9,
       "echeance": {
         "code": "USD",
-        "heures": 43,
+        "heures": 39,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -125,7 +125,7 @@
       "score": 9.0,
       "echeance": {
         "code": "USD",
-        "heures": 43,
+        "heures": 39,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -203,7 +203,7 @@
   "devises": {
     "EUR": {
       "biais": 44,
-      "biais_avant": 45,
+      "biais_avant": 44,
       "biais_7j": 45,
       "momentum": 2,
       "long_adj": 0,
@@ -366,7 +366,7 @@
     },
     "GBP": {
       "biais": 48,
-      "biais_avant": 47,
+      "biais_avant": 48,
       "biais_7j": 47,
       "momentum": 1,
       "long_adj": -2,
@@ -529,7 +529,7 @@
     },
     "AUD": {
       "biais": 53,
-      "biais_avant": 54,
+      "biais_avant": 53,
       "biais_7j": 54,
       "momentum": -1,
       "long_adj": 0,
@@ -692,7 +692,7 @@
     },
     "NZD": {
       "biais": 36,
-      "biais_avant": 37,
+      "biais_avant": 36,
       "biais_7j": 37,
       "momentum": 1,
       "long_adj": 0,
@@ -855,13 +855,13 @@
     },
     "USD": {
       "biais": 69,
-      "biais_avant": 68,
+      "biais_avant": 69,
       "biais_7j": 68,
       "momentum": -2,
       "long_adj": 3,
       "fondamental": 3.56,
       "technique": 6.93,
-      "flux": -0.46,
+      "flux": -0.34,
       "positionnement": 8.11,
       "pos_detail": {
         "net_pct": 24.58,
@@ -1010,7 +1010,7 @@
         94.0
       ],
       "echeance": {
-        "heures": 43,
+        "heures": 39,
         "quoi": "FOMC Meeting Minutes"
       },
       "attendu_5j": 0.065,
@@ -1022,7 +1022,7 @@
     },
     "CAD": {
       "biais": 45,
-      "biais_avant": 46,
+      "biais_avant": 45,
       "biais_7j": 46,
       "momentum": 3,
       "long_adj": -2,
@@ -1185,7 +1185,7 @@
     },
     "CHF": {
       "biais": 47,
-      "biais_avant": 46,
+      "biais_avant": 47,
       "biais_7j": 46,
       "momentum": 4,
       "long_adj": 2,
@@ -1348,7 +1348,7 @@
     },
     "JPY": {
       "biais": 56,
-      "biais_avant": 57,
+      "biais_avant": 56,
       "biais_7j": 57,
       "momentum": -1,
       "long_adj": -1,
@@ -1503,7 +1503,7 @@
         93.3
       ],
       "echeance": {
-        "heures": 8,
+        "heures": 3,
         "quoi": "Gouverneur BoJ Ueda — discours"
       },
       "attendu_5j": 0.04,
