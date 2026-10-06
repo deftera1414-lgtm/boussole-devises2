@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-06T03:18:36+00:00",
+  "calcule_iso": "2026-10-06T10:45:07+00:00",
   "seance": "2026-10-02",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,9 +97,19 @@
       "score": 14.8,
       "echeance": {
         "code": "USD",
-        "heures": 39,
+        "heures": 31,
         "quoi": "FOMC Meeting Minutes"
       }
+    },
+    {
+      "paire": "JPY/NZD",
+      "ecart": 20,
+      "soutien": 0.57,
+      "attendu_5j": 0.15,
+      "sigma_5j": 1.42,
+      "rapport": 0.1,
+      "score": 11.4,
+      "echeance": null
     },
     {
       "paire": "USD/CHF",
@@ -111,7 +121,7 @@
       "score": 9.9,
       "echeance": {
         "code": "USD",
-        "heures": 39,
+        "heures": 31,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -125,7 +135,7 @@
       "score": 9.0,
       "echeance": {
         "code": "USD",
-        "heures": 39,
+        "heures": 31,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -137,16 +147,6 @@
       "sigma_5j": 0.66,
       "rapport": 0.14,
       "score": 8.5,
-      "echeance": null
-    },
-    {
-      "paire": "CHF/NZD",
-      "ecart": 11,
-      "soutien": 0.75,
-      "attendu_5j": 0.06,
-      "sigma_5j": 0.78,
-      "rapport": 0.08,
-      "score": 8.2,
       "echeance": null
     }
   ],
@@ -1010,7 +1010,7 @@
         94.0
       ],
       "echeance": {
-        "heures": 39,
+        "heures": 31,
         "quoi": "FOMC Meeting Minutes"
       },
       "attendu_5j": 0.065,
@@ -1502,11 +1502,7 @@
         100.0,
         93.3
       ],
-      "echeance": {
-        "heures": 3,
-        "quoi": "Gouverneur BoJ Ueda — discours"
-      },
-      "attendu_5j": 0.04,
+      "attendu_5j": 0.067,
       "sigma_5j": 1.12,
       "jumelle": {
         "code": "AUD",

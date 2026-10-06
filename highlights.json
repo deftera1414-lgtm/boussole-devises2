@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-06T03:18:35+00:00",
-  "verifie": "6 octobre 2026, 03h18 UTC",
+  "verifie_iso": "2026-10-06T10:45:07+00:00",
+  "verifie": "6 octobre 2026, 10h45 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -140,7 +140,7 @@
       }
     ],
     "nb": 5,
-    "reste": 5,
+    "reste": 4,
     "prochaine": false,
     "en_attente": false
   },
@@ -324,16 +324,16 @@
       "chomage": "2,4% · juillet 2026",
       "chomage_detail": "2,4% (juillet 2026, plus bas depuis juillet 2025)",
       "semaine_nb": 1,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Gouverneur BoJ Ueda — discours",
-      "prochain_iso": "2026-10-06T06:35:00+00:00",
-      "prochain_txt": "6 octobre"
+      "prochain": "Décision BoJ + Outlook Report",
+      "prochain_iso": "2026-10-30T12:00:00+00:00",
+      "prochain_txt": "30 octobre"
     }
   ]
 }
