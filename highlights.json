@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-06T21:52:53+00:00",
-  "verifie": "6 octobre 2026, 21h52 UTC",
+  "verifie_iso": "2026-10-07T01:47:27+00:00",
+  "verifie": "7 octobre 2026, 01h47 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 5 au 11 octobre 2026",
     "debut": "2026-10-05",
     "fin": "2026-10-11",
-    "aujourdhui": "2026-10-06",
+    "aujourdhui": "2026-10-07",
     "jours": [
       {
         "iso": "2026-10-05",
@@ -24,8 +24,8 @@
         "nom": "mardi",
         "num": "6",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "JPY",
@@ -47,7 +47,7 @@
         "num": "7",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "USD",
@@ -259,11 +259,11 @@
           "avant": "4,1% · août 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 4,
-          "poids": -0.21
+          "age": 5,
+          "poids": -0.14
         }
       ],
-      "effet": -0.21,
+      "effet": -0.14,
       "effet_mot": "sans effet net",
       "prochain": "FOMC Meeting Minutes",
       "prochain_iso": "2026-10-07T18:00:00+00:00",

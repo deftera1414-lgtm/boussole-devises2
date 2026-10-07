@@ -3,7 +3,7 @@
     "USD": {
       "bias": 69,
       "long_adj": 3,
-      "momentum": -2,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -328,7 +328,7 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre",
         "event": false
       },
@@ -437,7 +437,7 @@
       "base": "GBP",
       "quote": "USD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -537,7 +537,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
@@ -608,7 +608,7 @@
       "base": "NZD",
       "quote": "USD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -703,12 +703,12 @@
       "base": "USD",
       "quote": "CHF",
       "short": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "6 octobre 2026, 21h52 UTC (mise à jour automatique)"
+  "generated_at": "7 octobre 2026, 01h47 UTC (mise à jour automatique)"
 }
