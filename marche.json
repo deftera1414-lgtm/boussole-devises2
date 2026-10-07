@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-07T09:12:28+00:00",
+  "calcule_iso": "2026-10-07T12:20:55+00:00",
   "seance": "2026-10-02",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 14.8,
       "echeance": {
         "code": "USD",
-        "heures": 9,
+        "heures": 6,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -121,7 +121,7 @@
       "score": 9.9,
       "echeance": {
         "code": "USD",
-        "heures": 9,
+        "heures": 6,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -135,7 +135,7 @@
       "score": 9.0,
       "echeance": {
         "code": "USD",
-        "heures": 9,
+        "heures": 6,
         "quoi": "FOMC Meeting Minutes"
       }
     },
@@ -521,7 +521,7 @@
         60.4
       ],
       "echeance": {
-        "heures": 27,
+        "heures": 24,
         "quoi": "Gouverneur BoE Bailey — discours"
       },
       "attendu_5j": -0.005,
@@ -1014,7 +1014,7 @@
         94.0
       ],
       "echeance": {
-        "heures": 9,
+        "heures": 6,
         "quoi": "FOMC Meeting Minutes"
       },
       "attendu_5j": 0.065,
