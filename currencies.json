@@ -1,6 +1,6 @@
 {
-  "generated_at": "7 octobre 2026, 12h20 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-07T12:20:27+00:00",
+  "generated_at": "7 octobre 2026, 22h14 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-07T22:14:42+00:00",
   "currencies": {
     "USD": {
       "bias": 69,
@@ -102,7 +102,7 @@
       ]
     },
     "JPY": {
-      "bias": 56,
+      "bias": 57,
       "long_adj": -1,
       "momentum": -1,
       "tilt": "hawkish",

@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-07T12:20:55+00:00",
-  "verifie": "7 octobre 2026, 12h20 UTC",
+  "verifie_iso": "2026-10-07T22:15:09+00:00",
+  "verifie": "7 octobre 2026, 22h15 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -140,7 +140,7 @@
       }
     ],
     "nb": 5,
-    "reste": 4,
+    "reste": 3,
     "prochaine": false,
     "en_attente": false
   },
@@ -245,9 +245,9 @@
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 1,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "discours",
       "parutions": [
         {
@@ -265,9 +265,9 @@
       ],
       "effet": -0.14,
       "effet_mot": "sans effet net",
-      "prochain": "FOMC Meeting Minutes",
-      "prochain_iso": "2026-10-07T18:00:00+00:00",
-      "prochain_txt": "7 octobre"
+      "prochain": "Décision FOMC (Fed)",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre"
     },
     {
       "code": "CAD",
