@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-08T09:25:58+00:00",
-  "verifie": "8 octobre 2026, 09h25 UTC",
+  "verifie_iso": "2026-10-08T12:31:32+00:00",
+  "verifie": "8 octobre 2026, 12h31 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -140,7 +140,7 @@
       }
     ],
     "nb": 5,
-    "reste": 3,
+    "reste": 2,
     "prochaine": false,
     "en_attente": false
   },
@@ -179,16 +179,16 @@
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
       "semaine_nb": 1,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Gouverneur BoE Bailey — discours",
-      "prochain_iso": "2026-10-08T12:15:00+00:00",
-      "prochain_txt": "8 octobre"
+      "prochain": "Décision BoE (Bank Rate) + rapport",
+      "prochain_iso": "2026-11-05T12:00:00+00:00",
+      "prochain_txt": "5 novembre"
     },
     {
       "code": "AUD",
