@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-08T16:54:27+00:00",
-  "verifie": "8 octobre 2026, 16h54 UTC",
+  "verifie_iso": "2026-10-08T22:24:46+00:00",
+  "verifie": "8 octobre 2026, 22h24 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -99,7 +99,7 @@
             "famille": "emploi",
             "iso": "2026-10-09T12:30:00+00:00",
             "heure": "12h30",
-            "consensus": "6.3K",
+            "consensus": "6.1K",
             "precedent": "-41.7K",
             "attendu": 3.0,
             "source": "calendrier"
