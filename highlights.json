@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-07T22:15:09+00:00",
-  "verifie": "7 octobre 2026, 22h15 UTC",
+  "verifie_iso": "2026-10-08T02:14:54+00:00",
+  "verifie": "8 octobre 2026, 02h14 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 5 au 11 octobre 2026",
     "debut": "2026-10-05",
     "fin": "2026-10-11",
-    "aujourdhui": "2026-10-07",
+    "aujourdhui": "2026-10-08",
     "jours": [
       {
         "iso": "2026-10-05",
@@ -46,8 +46,8 @@
         "nom": "mercredi",
         "num": "7",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "USD",
@@ -69,7 +69,7 @@
         "num": "8",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "GBP",
@@ -259,11 +259,11 @@
           "avant": "4,1% · août 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 5,
-          "poids": -0.14
+          "age": 6,
+          "poids": -0.07
         }
       ],
-      "effet": -0.14,
+      "effet": -0.07,
       "effet_mot": "sans effet net",
       "prochain": "Décision FOMC (Fed)",
       "prochain_iso": "2026-10-28T12:00:00+00:00",
@@ -318,7 +318,7 @@
       "banque": "Bank of Japan (BoJ)",
       "taux": "1,25%",
       "ton": "resserrement",
-      "biais": 56,
+      "biais": 57,
       "inflation": "1,7% · août 2026",
       "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
       "chomage": "2,4% · juillet 2026",
