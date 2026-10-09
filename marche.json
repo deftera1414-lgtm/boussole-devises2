@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-09T02:32:33+00:00",
+  "calcule_iso": "2026-10-09T09:35:40+00:00",
   "seance": "2026-10-02",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -1161,7 +1161,7 @@
         34.9
       ],
       "echeance": {
-        "heures": 10,
+        "heures": 3,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": -0.011,
