@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "date": "2026-10-09",
+      "items": [
+        "USD — biais 69 → 63 (-6), porté par les fondamentaux",
+        "JPY — biais 57 → 63 (+6), porté par le positionnement des grands spéculateurs"
+      ]
+    },
+    {
       "date": "2026-10-02",
       "items": [
         "USD — chomage : 4,2% (septembre 2026, FRED) (auparavant 4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K)",
@@ -48,22 +55,6 @@
       "date": "2026-09-25",
       "items": [
         "AUD — reunion inscrite au calendrier : Décision RBA (cash rate)"
-      ]
-    },
-    {
-      "date": "2026-09-24",
-      "items": [
-        "CHF — prochaine reunion : 17 décembre 2026 — Décision BNS (examen trimestriel)"
-      ]
-    },
-    {
-      "date": "2026-09-20",
-      "items": [
-        "GBP — prochaine reunion : 5 novembre 2026 — Décision BoE (Bank Rate) + rapport",
-        "NZD — prochaine reunion : 28 octobre 2026 — Décision RBNZ (OCR)",
-        "CAD — prochaine reunion : 28 octobre 2026 — Décision BdC + rapport",
-        "CHF — reunion inscrite au calendrier : Décision BNS (examen trimestriel)",
-        "JPY — prochaine reunion : 30 octobre 2026 — Décision BoJ + Outlook Report"
       ]
     }
   ]
