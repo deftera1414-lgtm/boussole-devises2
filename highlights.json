@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-08T22:24:46+00:00",
-  "verifie": "8 octobre 2026, 22h24 UTC",
+  "verifie_iso": "2026-10-09T02:32:33+00:00",
+  "verifie": "9 octobre 2026, 02h32 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 5 au 11 octobre 2026",
     "debut": "2026-10-05",
     "fin": "2026-10-11",
-    "aujourdhui": "2026-10-08",
+    "aujourdhui": "2026-10-09",
     "jours": [
       {
         "iso": "2026-10-05",
@@ -68,8 +68,8 @@
         "nom": "jeudi",
         "num": "8",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "GBP",
@@ -91,7 +91,7 @@
         "num": "9",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "CAD",
@@ -259,11 +259,11 @@
           "avant": "4,1% · août 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 6,
-          "poids": -0.07
+          "age": 7,
+          "poids": -0.0
         }
       ],
-      "effet": -0.07,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision FOMC (Fed)",
       "prochain_iso": "2026-10-28T12:00:00+00:00",
