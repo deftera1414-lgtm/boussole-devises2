@@ -164,8 +164,8 @@
       ]
     },
     "CAD": {
-      "bias": 45,
-      "long_adj": -2,
+      "bias": 44,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -561,7 +561,7 @@
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "9 octobre 2026, 12h18 UTC (mise à jour automatique)"
+  "generated_at": "9 octobre 2026, 16h31 UTC (mise à jour automatique)"
 }

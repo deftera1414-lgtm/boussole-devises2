@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-09T12:18:55+00:00",
-  "verifie": "9 octobre 2026, 12h18 UTC",
+  "verifie_iso": "2026-10-09T16:32:03+00:00",
+  "verifie": "9 octobre 2026, 16h32 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -140,7 +140,7 @@
       }
     ],
     "nb": 5,
-    "reste": 2,
+    "reste": 0,
     "prochaine": false,
     "en_attente": false
   },
@@ -280,16 +280,16 @@
       "chomage": "6,4% · août 2026",
       "chomage_detail": "6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet",
       "semaine_nb": 2,
-      "semaine_reste": 2,
-      "semaine_penchant": 2.5,
-      "semaine_mot": "nettement favorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "emploi, chômage",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Variation de l'emploi",
-      "prochain_iso": "2026-10-09T12:30:00+00:00",
-      "prochain_txt": "9 octobre"
+      "prochain": "Décision BdC + rapport",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre"
     },
     {
       "code": "CHF",
