@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-11T02:09:07+00:00",
-  "verifie": "11 octobre 2026, 02h09 UTC",
+  "verifie_iso": "2026-10-11T09:16:36+00:00",
+  "verifie": "11 octobre 2026, 09h16 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -36,8 +36,53 @@
         "mois": "octo.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "USD",
+            "titre": "Inflation sous-jacente sur un mois",
+            "famille": "inflation",
+            "iso": "2026-10-14T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.2%",
+            "precedent": "0.3%",
+            "attendu": -0.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Inflation sous-jacente sur un an",
+            "famille": "inflation",
+            "iso": "2026-10-14T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "2.5%",
+            "precedent": "2.4%",
+            "attendu": 0.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Inflation mensuelle",
+            "famille": "inflation",
+            "iso": "2026-10-14T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.6%",
+            "precedent": "0.4%",
+            "attendu": 1.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Inflation annuelle",
+            "famille": "inflation",
+            "iso": "2026-10-14T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "3.6%",
+            "precedent": "3.4%",
+            "attendu": 1.0,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 4
       },
       {
         "iso": "2026-10-15",
@@ -46,8 +91,86 @@
         "mois": "octo.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "AUD",
+            "titre": "Variation de l'emploi",
+            "famille": "emploi",
+            "iso": "2026-10-15T00:30:00+00:00",
+            "heure": "00h30",
+            "consensus": "20.0K",
+            "precedent": "39.5K",
+            "attendu": -1.97,
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Taux de chômage",
+            "famille": "chomage",
+            "iso": "2026-10-15T00:30:00+00:00",
+            "heure": "00h30",
+            "consensus": "4.6%",
+            "precedent": "4.6%",
+            "attendu": -0.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "GBP",
+            "titre": "PIB sur un mois",
+            "famille": "croissance",
+            "iso": "2026-10-15T06:00:00+00:00",
+            "heure": "06h00",
+            "consensus": "-0.1%",
+            "precedent": "0.4%",
+            "attendu": -2.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Core Prix à la production sur un mois",
+            "famille": "inflation",
+            "iso": "2026-10-15T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.3%",
+            "precedent": "0.2%",
+            "attendu": 0.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Core Ventes au détail sur un mois",
+            "famille": "ventes",
+            "iso": "2026-10-15T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.5%",
+            "precedent": "1.4%",
+            "attendu": -2.25,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Prix à la production sur un mois",
+            "famille": "inflation",
+            "iso": "2026-10-15T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.5%",
+            "precedent": "0.4%",
+            "attendu": 0.5,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Ventes au détail sur un mois",
+            "famille": "ventes",
+            "iso": "2026-10-15T12:30:00+00:00",
+            "heure": "12h30",
+            "consensus": "0.3%",
+            "precedent": "1.2%",
+            "attendu": -2.25,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 7
       },
       {
         "iso": "2026-10-16",
@@ -56,8 +179,31 @@
         "mois": "octo.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "GBP",
+            "titre": "Gouverneur BoE Bailey — discours",
+            "famille": "discours",
+            "iso": "2026-10-16T02:00:00+00:00",
+            "heure": "02h00",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Fed Chairman Warsh — discours",
+            "famille": "discours",
+            "iso": "2026-10-16T03:30:00+00:00",
+            "heure": "03h30",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 2
       },
       {
         "iso": "2026-10-17",
@@ -80,8 +226,8 @@
         "nb": 0
       }
     ],
-    "nb": 0,
-    "reste": 0,
+    "nb": 13,
+    "reste": 13,
     "prochaine": true,
     "en_attente": false
   },
@@ -119,17 +265,17 @@
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 2,
+      "semaine_reste": 2,
+      "semaine_penchant": -2.5,
+      "semaine_mot": "nettement défavorable",
+      "semaine_resume": "croissance, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision BoE (Bank Rate) + rapport",
-      "prochain_iso": "2026-11-05T12:00:00+00:00",
-      "prochain_txt": "5 novembre"
+      "prochain": "PIB sur un mois",
+      "prochain_iso": "2026-10-15T06:00:00+00:00",
+      "prochain_txt": "15 octobre"
     },
     {
       "code": "AUD",
@@ -141,17 +287,17 @@
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,5% · juillet 2026",
       "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 2,
+      "semaine_reste": 2,
+      "semaine_penchant": -1.97,
+      "semaine_mot": "nettement défavorable",
+      "semaine_resume": "emploi, chômage",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision RBA + SoMP",
-      "prochain_iso": "2026-11-03T12:00:00+00:00",
-      "prochain_txt": "3 novembre"
+      "prochain": "Variation de l'emploi",
+      "prochain_iso": "2026-10-15T00:30:00+00:00",
+      "prochain_txt": "15 octobre"
     },
     {
       "code": "NZD",
@@ -185,17 +331,17 @@
       "inflation_detail": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 9,
+      "semaine_reste": 9,
+      "semaine_penchant": -1.5,
+      "semaine_mot": "nettement défavorable",
+      "semaine_resume": "inflation, ventes au détail, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision FOMC (Fed)",
-      "prochain_iso": "2026-10-28T12:00:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Inflation sous-jacente sur un mois",
+      "prochain_iso": "2026-10-14T12:30:00+00:00",
+      "prochain_txt": "14 octobre"
     },
     {
       "code": "CAD",

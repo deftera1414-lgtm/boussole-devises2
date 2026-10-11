@@ -1,11 +1,11 @@
 {
-  "generated_at": "11 octobre 2026, 02h08 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-11T02:08:48+00:00",
+  "generated_at": "11 octobre 2026, 09h16 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-11T09:16:14+00:00",
   "currencies": {
     "USD": {
-      "bias": 63,
-      "long_adj": 0,
-      "momentum": -1,
+      "bias": 62,
+      "long_adj": 1,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -70,9 +70,9 @@
       ]
     },
     "GBP": {
-      "bias": 51,
-      "long_adj": -1,
-      "momentum": 1,
+      "bias": 49,
+      "long_adj": 1,
+      "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -198,9 +198,9 @@
       ]
     },
     "AUD": {
-      "bias": 51,
-      "long_adj": -1,
-      "momentum": -1,
+      "bias": 50,
+      "long_adj": 0,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
