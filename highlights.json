@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-11T23:56:55+00:00",
-  "verifie": "11 octobre 2026, 23h56 UTC",
+  "verifie_iso": "2026-10-12T06:28:11+00:00",
+  "verifie": "12 octobre 2026, 06h28 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
-    "titre": "Semaine prochaine, du 12 au 18 octobre 2026",
+    "titre": "Semaine du 12 au 18 octobre 2026",
     "debut": "2026-10-12",
     "fin": "2026-10-18",
-    "aujourdhui": "2026-10-11",
+    "aujourdhui": "2026-10-12",
     "jours": [
       {
         "iso": "2026-10-12",
@@ -15,7 +15,7 @@
         "num": "12",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -228,7 +228,7 @@
     ],
     "nb": 13,
     "reste": 13,
-    "prochaine": true,
+    "prochaine": false,
     "en_attente": false
   },
   "faits": [],
