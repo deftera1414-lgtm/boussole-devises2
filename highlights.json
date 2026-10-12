@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-12T16:02:45+00:00",
-  "verifie": "12 octobre 2026, 16h02 UTC",
+  "verifie_iso": "2026-10-12T23:11:57+00:00",
+  "verifie": "12 octobre 2026, 23h11 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -98,9 +98,9 @@
             "famille": "emploi",
             "iso": "2026-10-15T00:30:00+00:00",
             "heure": "00h30",
-            "consensus": "20.0K",
+            "consensus": "19.6K",
             "precedent": "39.5K",
-            "attendu": -1.97,
+            "attendu": -2.02,
             "source": "calendrier"
           },
           {
@@ -142,9 +142,9 @@
             "famille": "ventes",
             "iso": "2026-10-15T12:30:00+00:00",
             "heure": "12h30",
-            "consensus": "0.5%",
+            "consensus": "0.6%",
             "precedent": "1.4%",
-            "attendu": -2.25,
+            "attendu": -2.0,
             "source": "calendrier"
           },
           {
@@ -153,9 +153,9 @@
             "famille": "inflation",
             "iso": "2026-10-15T12:30:00+00:00",
             "heure": "12h30",
-            "consensus": "0.5%",
+            "consensus": "0.6%",
             "precedent": "0.4%",
-            "attendu": 0.5,
+            "attendu": 1.0,
             "source": "calendrier"
           },
           {
@@ -289,7 +289,7 @@
       "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
       "semaine_nb": 2,
       "semaine_reste": 2,
-      "semaine_penchant": -1.97,
+      "semaine_penchant": -2.02,
       "semaine_mot": "nettement défavorable",
       "semaine_resume": "emploi, chômage",
       "parutions": [],
@@ -333,8 +333,8 @@
       "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 9,
       "semaine_reste": 9,
-      "semaine_penchant": -1.5,
-      "semaine_mot": "nettement défavorable",
+      "semaine_penchant": -0.75,
+      "semaine_mot": "défavorable",
       "semaine_resume": "inflation, ventes au détail, discours",
       "parutions": [],
       "effet": 0,

@@ -1,8 +1,8 @@
 {
   "currencies": {
     "USD": {
-      "bias": 62,
-      "long_adj": 1,
+      "bias": 63,
+      "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "12 octobre 2026, 16h02 UTC (mise à jour automatique)"
+  "generated_at": "12 octobre 2026, 23h11 UTC (mise à jour automatique)"
 }

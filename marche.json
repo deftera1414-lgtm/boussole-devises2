@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-12T16:02:45+00:00",
+  "calcule_iso": "2026-10-12T23:11:57+00:00",
   "seance": "2026-10-02",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -99,15 +99,15 @@
     },
     {
       "paire": "USD/NZD",
-      "ecart": 27,
+      "ecart": 28,
       "soutien": 0.75,
-      "attendu_5j": 0.12,
+      "attendu_5j": 0.13,
       "sigma_5j": 0.99,
       "rapport": 0.13,
-      "score": 12.2,
+      "score": 12.6,
       "echeance": {
         "code": "USD",
-        "heures": 44,
+        "heures": 37,
         "quoi": "Inflation sous-jacente sur un mois"
       }
     },
@@ -527,7 +527,7 @@
       "long_adj": 0,
       "fondamental": 2.52,
       "technique": -0.01,
-      "flux": -1.58,
+      "flux": -1.62,
       "positionnement": -4.98,
       "pos_detail": {
         "net_pct": -29.99,
@@ -846,14 +846,14 @@
       }
     },
     "USD": {
-      "biais": 62,
+      "biais": 63,
       "biais_avant": 62,
       "biais_7j": 68,
       "momentum": -2,
-      "long_adj": 1,
+      "long_adj": 0,
       "fondamental": 3.27,
       "technique": 6.93,
-      "flux": -1.2,
+      "flux": -0.6,
       "positionnement": 2.35,
       "pos_detail": {
         "net_pct": 23.51,
@@ -1002,10 +1002,10 @@
         94.0
       ],
       "echeance": {
-        "heures": 44,
+        "heures": 37,
         "quoi": "Inflation sous-jacente sur un mois"
       },
-      "attendu_5j": 0.041,
+      "attendu_5j": 0.045,
       "sigma_5j": 0.57,
       "jumelle": {
         "code": "NZD",
