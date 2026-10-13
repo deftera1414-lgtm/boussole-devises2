@@ -1,7 +1,7 @@
 {
   "currencies": {
     "USD": {
-      "bias": 63,
+      "bias": 62,
       "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
@@ -68,8 +68,8 @@
       ]
     },
     "GBP": {
-      "bias": 49,
-      "long_adj": 1,
+      "bias": 50,
+      "long_adj": 0,
       "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -100,8 +100,8 @@
       ]
     },
     "JPY": {
-      "bias": 63,
-      "long_adj": 2,
+      "bias": 61,
+      "long_adj": 3,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -196,7 +196,7 @@
       ]
     },
     "AUD": {
-      "bias": 50,
+      "bias": 51,
       "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
@@ -228,8 +228,8 @@
       ]
     },
     "NZD": {
-      "bias": 35,
-      "long_adj": -1,
+      "bias": 36,
+      "long_adj": -2,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -271,7 +271,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -295,7 +295,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -333,7 +333,7 @@
         "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -385,7 +385,7 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -561,7 +561,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -580,7 +580,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -599,7 +599,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -651,7 +651,7 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -675,8 +675,8 @@
         "event": false
       },
       "long": {
-        "prob": 34,
-        "label": "Baissier modéré"
+        "prob": 35,
+        "label": "Baissier faible"
       }
     },
     {
@@ -694,7 +694,7 @@
         "event": false
       },
       "long": {
-        "prob": 59,
+        "prob": 58,
         "label": "Haussier faible"
       }
     },
@@ -713,7 +713,7 @@
         "event": false
       },
       "long": {
-        "prob": 58,
+        "prob": 57,
         "label": "Haussier faible"
       }
     },
@@ -784,7 +784,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "13 octobre 2026, 19h30 UTC (mise à jour automatique)"
+  "generated_at": "13 octobre 2026, 23h24 UTC (mise à jour automatique)"
 }
