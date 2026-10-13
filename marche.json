@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-13T03:49:24+00:00",
+  "calcule_iso": "2026-10-13T12:07:54+00:00",
   "seance": "2026-10-02",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -107,7 +107,7 @@
       "score": 12.6,
       "echeance": {
         "code": "USD",
-        "heures": 33,
+        "heures": 24,
         "quoi": "Inflation sous-jacente sur un mois"
       }
     },
@@ -512,7 +512,11 @@
         55.1,
         60.4
       ],
-      "attendu_5j": -0.004,
+      "echeance": {
+        "heures": 42,
+        "quoi": "PIB sur un mois"
+      },
+      "attendu_5j": -0.003,
       "sigma_5j": 0.42,
       "jumelle": {
         "code": "JPY",
@@ -676,7 +680,7 @@
         50.1
       ],
       "echeance": {
-        "heures": 45,
+        "heures": 36,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": 0.0,
@@ -1006,7 +1010,7 @@
         94.0
       ],
       "echeance": {
-        "heures": 33,
+        "heures": 24,
         "quoi": "Inflation sous-jacente sur un mois"
       },
       "attendu_5j": 0.045,
