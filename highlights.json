@@ -1,21 +1,21 @@
 {
-  "verifie_iso": "2026-10-12T23:11:57+00:00",
-  "verifie": "12 octobre 2026, 23h11 UTC",
+  "verifie_iso": "2026-10-13T03:49:24+00:00",
+  "verifie": "13 octobre 2026, 03h49 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 12 au 18 octobre 2026",
     "debut": "2026-10-12",
     "fin": "2026-10-18",
-    "aujourdhui": "2026-10-12",
+    "aujourdhui": "2026-10-13",
     "jours": [
       {
         "iso": "2026-10-12",
         "nom": "lundi",
         "num": "12",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -25,7 +25,7 @@
         "num": "13",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -326,7 +326,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 62,
+      "biais": 63,
       "inflation": "3,4% · août 2026",
       "inflation_detail": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
       "chomage": "4,2% · septembre 2026",
