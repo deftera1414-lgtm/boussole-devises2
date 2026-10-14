@@ -1,11 +1,11 @@
 {
-  "generated_at": "14 octobre 2026, 10h52 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-14T10:52:35+00:00",
+  "generated_at": "14 octobre 2026, 13h59 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-14T13:59:32+00:00",
   "currencies": {
     "USD": {
-      "bias": 62,
+      "bias": 63,
       "long_adj": 0,
-      "momentum": -2,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -18,8 +18,8 @@
       "next": "28 octobre 2026 — Décision FOMC (Fed)",
       "gdp_previous": "+2,1% (T1 2026, QoQ annualisé)",
       "gdp_current": "+1,5% (T2 2026, QoQ annualisé, 2e estimation BEA ; 3e estimation attendue le 30 septembre)",
-      "cpi_previous": "3,4% (juillet 2026)",
-      "cpi_current": "3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an",
+      "cpi_previous": "3,4% (août 2026, FRED)",
+      "cpi_current": "3,7% (septembre 2026, FRED)",
       "unemp_previous": "4,1% (août 2026, FRED)",
       "unemp_current": "4,2% (septembre 2026, FRED)",
       "speech": "En annonçant la hausse du 16 septembre, Kevin Warsh a tenu un discours nettement ferme : « l'inflation est trop élevée, et l'est depuis trop longtemps », jugeant que la tendance sous-jacente ne s'est pas améliorée de façon significative. Il a présenté le geste comme le retrait d'« une dose d'accommodation » — la politique restant donc, à ses yeux, encore accommodante. Il refuse tout guidage explicite (« je ne fais pas dans le forward guidance »). Le dot plot montre 16 des 19 membres anticipant au moins une hausse supplémentaire en 2026, dont 4 qui en voient deux.",
@@ -71,7 +71,7 @@
     },
     "GBP": {
       "bias": 50,
-      "long_adj": 0,
+      "long_adj": 1,
       "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -102,7 +102,7 @@
       ]
     },
     "JPY": {
-      "bias": 61,
+      "bias": 62,
       "long_adj": 3,
       "momentum": -1,
       "tilt": "hawkish",
@@ -134,7 +134,7 @@
       ]
     },
     "CHF": {
-      "bias": 47,
+      "bias": 46,
       "long_adj": 1,
       "momentum": 4,
       "tilt": "neutral",
@@ -198,7 +198,7 @@
       ]
     },
     "AUD": {
-      "bias": 51,
+      "bias": 52,
       "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
@@ -230,7 +230,7 @@
       ]
     },
     "NZD": {
-      "bias": 36,
+      "bias": 35,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "neutral",
