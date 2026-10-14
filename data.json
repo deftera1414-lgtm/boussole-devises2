@@ -100,7 +100,7 @@
       ]
     },
     "JPY": {
-      "bias": 61,
+      "bias": 62,
       "long_adj": 3,
       "momentum": -1,
       "tilt": "hawkish",
@@ -196,7 +196,7 @@
       ]
     },
     "AUD": {
-      "bias": 51,
+      "bias": 52,
       "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
@@ -290,7 +290,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 44,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -523,7 +523,7 @@
         "event": false
       },
       "long": {
-        "prob": 58,
+        "prob": 59,
         "label": "Haussier faible"
       }
     },
@@ -561,7 +561,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -575,7 +575,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -675,8 +675,8 @@
         "event": false
       },
       "long": {
-        "prob": 35,
-        "label": "Baissier faible"
+        "prob": 34,
+        "label": "Baissier modéré"
       }
     },
     {
@@ -784,7 +784,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "14 octobre 2026, 18h51 UTC (mise à jour automatique)"
+  "generated_at": "14 octobre 2026, 22h35 UTC (mise à jour automatique)"
 }
