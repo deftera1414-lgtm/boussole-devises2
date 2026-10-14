@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "date": "2026-10-14",
+      "items": [
+        "JPY — biais 61 → 56 (-5), porté par le positionnement des grands spéculateurs"
+      ]
+    },
+    {
       "date": "2026-10-09",
       "items": [
         "USD — biais 69 → 63 (-6), porté par les fondamentaux",
@@ -19,42 +25,6 @@
       "date": "2026-09-30",
       "items": [
         "JPY — biais 58 → 62 (+4), porté par les graphiques"
-      ]
-    },
-    {
-      "date": "2026-09-29",
-      "items": [
-        "AUD — 1 evenement(s) passe(s) retire(s)",
-        "AUD — prochaine reunion : 3 novembre 2026 — Décision RBA + SoMP",
-        "AUD — biais 53 → 59 (+6), porté par les fondamentaux",
-        "NZD — biais 45 → 35 (-10), porté par les graphiques",
-        "CHF — biais 46 → 39 (-7), porté par les fondamentaux",
-        "JPY — biais 63 → 57 (-6), porté par les graphiques"
-      ]
-    },
-    {
-      "date": "2026-09-28",
-      "items": [
-        "EUR — biais 70 → 44 (-26), porté par le positionnement des grands spéculateurs",
-        "GBP — biais 58 → 45 (-13), porté par le positionnement des grands spéculateurs",
-        "AUD — biais 72 → 49 (-23), porté par le positionnement des grands spéculateurs",
-        "NZD — biais 60 → 41 (-19), porté par les graphiques",
-        "USD — biais 78 → 58 (-20), porté par les graphiques",
-        "CAD — biais 55 → 45 (-10), porté par le positionnement des grands spéculateurs",
-        "CHF — biais 32 → 43 (+11), porté par les graphiques",
-        "JPY — biais 68 → 60 (-8), porté par les graphiques",
-        "EUR — biais 44 → 48 (+4), porté par le positionnement des grands spéculateurs",
-        "GBP — biais 45 → 49 (+4), porté par les fondamentaux",
-        "AUD — biais 49 → 53 (+4), porté par les graphiques",
-        "NZD — biais 41 → 45 (+4), porté par les graphiques",
-        "USD — biais 58 → 62 (+4), porté par les graphiques",
-        "CAD — biais 45 → 49 (+4), porté par les graphiques"
-      ]
-    },
-    {
-      "date": "2026-09-25",
-      "items": [
-        "AUD — reunion inscrite au calendrier : Décision RBA (cash rate)"
       ]
     }
   ]
