@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-13T23:25:06+00:00",
+  "calcule_iso": "2026-10-14T02:08:35+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -107,7 +107,7 @@
       "score": 11.7,
       "echeance": {
         "code": "USD",
-        "heures": 13,
+        "heures": 10,
         "quoi": "Inflation sous-jacente sur un mois"
       }
     },
@@ -365,7 +365,7 @@
     },
     "GBP": {
       "biais": 50,
-      "biais_avant": 49,
+      "biais_avant": 50,
       "biais_7j": 49,
       "momentum": 0,
       "long_adj": 0,
@@ -520,7 +520,7 @@
         59.0
       ],
       "echeance": {
-        "heures": 31,
+        "heures": 28,
         "quoi": "PIB sur un mois"
       },
       "attendu_5j": 0.0,
@@ -532,7 +532,7 @@
     },
     "AUD": {
       "biais": 51,
-      "biais_avant": 50,
+      "biais_avant": 51,
       "biais_7j": 50,
       "momentum": -2,
       "long_adj": 0,
@@ -687,7 +687,7 @@
         70.8
       ],
       "echeance": {
-        "heures": 25,
+        "heures": 22,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": 0.003,
@@ -699,7 +699,7 @@
     },
     "NZD": {
       "biais": 36,
-      "biais_avant": 35,
+      "biais_avant": 36,
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": -2,
@@ -862,7 +862,7 @@
     },
     "USD": {
       "biais": 62,
-      "biais_avant": 63,
+      "biais_avant": 62,
       "biais_7j": 63,
       "momentum": -2,
       "long_adj": 0,
@@ -1017,7 +1017,7 @@
         95.7
       ],
       "echeance": {
-        "heures": 13,
+        "heures": 10,
         "quoi": "Inflation sous-jacente sur un mois"
       },
       "attendu_5j": 0.034,
@@ -1355,7 +1355,7 @@
     },
     "JPY": {
       "biais": 61,
-      "biais_avant": 63,
+      "biais_avant": 61,
       "biais_7j": 63,
       "momentum": -1,
       "long_adj": 3,
