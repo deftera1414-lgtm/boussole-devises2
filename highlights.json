@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-15T12:03:19+00:00",
-  "verifie": "15 octobre 2026, 12h03 UTC",
+  "verifie_iso": "2026-10-15T17:19:29+00:00",
+  "verifie": "15 octobre 2026, 17h19 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -227,7 +227,7 @@
       }
     ],
     "nb": 13,
-    "reste": 6,
+    "reste": 2,
     "prochaine": false,
     "en_attente": false
   },
@@ -346,9 +346,9 @@
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 9,
-      "semaine_reste": 5,
-      "semaine_penchant": -2.75,
-      "semaine_mot": "nettement défavorable",
+      "semaine_reste": 1,
+      "semaine_penchant": 0,
+      "semaine_mot": "sans effet net",
       "semaine_resume": "inflation, ventes au détail, discours",
       "parutions": [
         {
@@ -366,9 +366,9 @@
       ],
       "effet": 1.29,
       "effet_mot": "favorable",
-      "prochain": "Core Prix à la production sur un mois",
-      "prochain_iso": "2026-10-15T12:30:00+00:00",
-      "prochain_txt": "15 octobre"
+      "prochain": "Fed Chairman Warsh — discours",
+      "prochain_iso": "2026-10-16T03:30:00+00:00",
+      "prochain_txt": "16 octobre"
     },
     {
       "code": "CAD",

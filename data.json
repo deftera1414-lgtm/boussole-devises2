@@ -1,9 +1,9 @@
 {
   "currencies": {
     "USD": {
-      "bias": 61,
-      "long_adj": -1,
-      "momentum": -1,
+      "bias": 62,
+      "long_adj": -2,
+      "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -196,7 +196,7 @@
       ]
     },
     "AUD": {
-      "bias": 53,
+      "bias": 52,
       "long_adj": -1,
       "momentum": -1,
       "tilt": "hawkish",
@@ -323,12 +323,12 @@
       "base": "EUR",
       "quote": "USD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
@@ -523,7 +523,7 @@
         "event": false
       },
       "long": {
-        "prob": 59,
+        "prob": 58,
         "label": "Haussier faible"
       }
     },
@@ -537,7 +537,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -556,12 +556,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -599,7 +599,7 @@
         "event": false
       },
       "long": {
-        "prob": 44,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -708,7 +708,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "15 octobre 2026, 12h02 UTC (mise à jour automatique)"
+  "generated_at": "15 octobre 2026, 17h19 UTC (mise à jour automatique)"
 }
