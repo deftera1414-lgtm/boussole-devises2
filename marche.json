@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-14T22:35:36+00:00",
+  "calcule_iso": "2026-10-15T00:49:17+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -107,7 +107,7 @@
       "score": 11.7,
       "echeance": {
         "code": "USD",
-        "heures": 14,
+        "heures": 12,
         "quoi": "Core Prix à la production sur un mois"
       }
     },
@@ -520,7 +520,7 @@
         59.0
       ],
       "echeance": {
-        "heures": 7,
+        "heures": 5,
         "quoi": "PIB sur un mois"
       },
       "attendu_5j": 0.0,
@@ -531,14 +531,14 @@
       }
     },
     "AUD": {
-      "biais": 52,
-      "biais_avant": 51,
+      "biais": 53,
+      "biais_avant": 52,
       "biais_7j": 50,
-      "momentum": -2,
-      "long_adj": 0,
+      "momentum": -1,
+      "long_adj": -1,
       "fondamental": 2.81,
       "technique": 1.57,
-      "flux": -1.62,
+      "flux": 0.0,
       "positionnement": -4.98,
       "pos_detail": {
         "net_pct": -29.99,
@@ -686,11 +686,7 @@
         58.0,
         70.8
       ],
-      "echeance": {
-        "heures": 2,
-        "quoi": "Variation de l'emploi"
-      },
-      "attendu_5j": 0.006,
+      "attendu_5j": 0.015,
       "sigma_5j": 0.52,
       "jumelle": {
         "code": "JPY",
@@ -868,7 +864,7 @@
       "long_adj": -1,
       "fondamental": 2.23,
       "technique": 7.21,
-      "flux": 0.2,
+      "flux": -0.14,
       "positionnement": 2.35,
       "pos_detail": {
         "net_pct": 23.51,
@@ -1017,7 +1013,7 @@
         95.7
       ],
       "echeance": {
-        "heures": 14,
+        "heures": 12,
         "quoi": "Core Prix à la production sur un mois"
       },
       "attendu_5j": 0.031,
@@ -1355,7 +1351,7 @@
     },
     "JPY": {
       "biais": 62,
-      "biais_avant": 61,
+      "biais_avant": 62,
       "biais_7j": 63,
       "momentum": -1,
       "long_adj": 3,

@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-14T22:35:36+00:00",
-  "verifie": "14 octobre 2026, 22h35 UTC",
+  "verifie_iso": "2026-10-15T00:49:17+00:00",
+  "verifie": "15 octobre 2026, 00h49 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 12 au 18 octobre 2026",
     "debut": "2026-10-12",
     "fin": "2026-10-18",
-    "aujourdhui": "2026-10-14",
+    "aujourdhui": "2026-10-15",
     "jours": [
       {
         "iso": "2026-10-12",
@@ -34,8 +34,8 @@
         "nom": "mercredi",
         "num": "14",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "USD",
@@ -90,7 +90,7 @@
         "num": "15",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "AUD",
@@ -227,7 +227,7 @@
       }
     ],
     "nb": 13,
-    "reste": 9,
+    "reste": 7,
     "prochaine": false,
     "en_attente": false
   },
@@ -241,8 +241,8 @@
       "avant": "3,4% · août 2026",
       "variation": "+0,3 pt",
       "cran": 1.5,
-      "age": 0,
-      "poids": 1.5,
+      "age": 1,
+      "poids": 1.29,
       "code": "USD"
     }
   ],
@@ -296,22 +296,22 @@
       "banque": "Reserve Bank of Australia (RBA)",
       "taux": "4,35%",
       "ton": "resserrement",
-      "biais": 51,
+      "biais": 52,
       "inflation": "3,5% · juillet 2026",
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,5% · juillet 2026",
       "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
       "semaine_nb": 2,
-      "semaine_reste": 2,
-      "semaine_penchant": -2.02,
-      "semaine_mot": "nettement défavorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "emploi, chômage",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Variation de l'emploi",
-      "prochain_iso": "2026-10-15T00:30:00+00:00",
-      "prochain_txt": "15 octobre"
+      "prochain": "Décision RBA + SoMP",
+      "prochain_iso": "2026-11-03T12:00:00+00:00",
+      "prochain_txt": "3 novembre"
     },
     {
       "code": "NZD",
@@ -360,12 +360,12 @@
           "avant": "3,4% · août 2026",
           "variation": "+0,3 pt",
           "cran": 1.5,
-          "age": 0,
-          "poids": 1.5
+          "age": 1,
+          "poids": 1.29
         }
       ],
-      "effet": 1.5,
-      "effet_mot": "nettement favorable",
+      "effet": 1.29,
+      "effet_mot": "favorable",
       "prochain": "Core Prix à la production sur un mois",
       "prochain_iso": "2026-10-15T12:30:00+00:00",
       "prochain_txt": "15 octobre"
@@ -419,7 +419,7 @@
       "banque": "Bank of Japan (BoJ)",
       "taux": "1,25%",
       "ton": "resserrement",
-      "biais": 61,
+      "biais": 62,
       "inflation": "1,7% · août 2026",
       "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
       "chomage": "2,4% · juillet 2026",
