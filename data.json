@@ -68,7 +68,7 @@
       ]
     },
     "GBP": {
-      "bias": 51,
+      "bias": 52,
       "long_adj": -1,
       "momentum": 1,
       "tilt": "hawkish",
@@ -100,9 +100,9 @@
       ]
     },
     "JPY": {
-      "bias": 62,
-      "long_adj": 3,
-      "momentum": -1,
+      "bias": 60,
+      "long_adj": 4,
+      "momentum": -3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -117,8 +117,8 @@
       "gdp_current": "+1,4% (T2 2026, annualisé, 2e estimation du 7 septembre, révisée en hausse depuis +1,1%)",
       "cpi_previous": "1,8% (juillet 2026, IPC core national)",
       "cpi_current": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
-      "unemp_previous": "2,5% (juin 2026)",
-      "unemp_current": "2,4% (juillet 2026, plus bas depuis juillet 2025)",
+      "unemp_previous": "2,4% (juillet 2026, FRED)",
+      "unemp_current": "2,6% (août 2026, FRED)",
       "speech": "Le communiqué du 18 septembre reste ferme : la BoJ dit vouloir continuer à relever son taux directeur et insiste sur le risque que l'inflation dépasse durablement la cible de 2%. Mais Kazuo Ueda a déçu en conférence de presse, refusant de s'engager (« cela dépend de l'évolution des prix, plusieurs scénarios sont possibles ») et précisant que la politique monétaire n'est pas pilotée pour contrôler le change. Combiné à un vote divisé 7-2, ce ton en retrait a fait reculer le yen malgré la hausse.",
       "cycle": "Normalisation graduelle engagée depuis la sortie des taux négatifs en 2024, portée le 18 septembre à 1,25%, au plus haut depuis trente ans. La tension du moment est que cette hausse intervient alors que l'IPC core reste sous 2% pour le huitième mois consécutif : la BoJ agit sur l'inflation anticipée plutôt que constatée, ce qui explique un comité divisé et un gouverneur réticent à promettre la suite.",
       "move": "hike",
@@ -133,7 +133,7 @@
     },
     "CHF": {
       "bias": 47,
-      "long_adj": 1,
+      "long_adj": 2,
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -198,7 +198,7 @@
     "AUD": {
       "bias": 52,
       "long_adj": -1,
-      "momentum": -1,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
@@ -213,8 +213,8 @@
       "gdp_current": "+0,4% QoQ / +2,1% YoY (T2 2026, publié le 2 septembre, au-dessus des attentes mais croissance qualifiée de modérée)",
       "cpi_previous": "3,8% (juin 2026, IPC mensuel)",
       "cpi_current": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
-      "unemp_previous": "4,4% (juin 2026)",
-      "unemp_current": "4,5% (juillet 2026, plus haut niveau post-COVID)",
+      "unemp_previous": "4,5% (juillet 2026, FRED)",
+      "unemp_current": "4,6% (août 2026, FRED)",
       "speech": "Devant le Parlement le 18 septembre, Michele Bullock a durci le ton : les risques haussiers signalés en août se matérialisent désormais, entre le conflit au Moyen-Orient, le boom de l'intelligence artificielle et des conditions météorologiques extrêmes qui poussent l'énergie, l'agricole et la technologie. Avec une inflation autour de 3,5%, au-dessus de la cible, elle indique que le Board évaluera fin septembre si le resserrement déjà délivré suffira. Elle nuance en citant le ralentissement de la demande intérieure et la détente progressive du marché du travail.",
       "cycle": "Trois hausses en 2026 ont porté le taux à 4,35% en mai, suivi de quatre mois de statu quo à ton ferme. La réunion du 29 septembre est le vrai rendez-vous : le marché y attribue 76 à 80% de probabilité à une hausse vers 4,60%, ce qui serait le plus haut niveau depuis quinze ans, l'inflation au-dessus de la bande cible 2-3% l'emportant sur un chômage qui remonte.",
       "move": "hold",
@@ -276,7 +276,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -399,12 +399,12 @@
       "base": "GBP",
       "quote": "AUD",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -442,12 +442,12 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -494,7 +494,7 @@
       "base": "GBP",
       "quote": "JPY",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -513,7 +513,7 @@
       "base": "AUD",
       "quote": "NZD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -570,7 +570,7 @@
       "base": "AUD",
       "quote": "CHF",
       "short": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -580,7 +580,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -594,12 +594,12 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -656,7 +656,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -665,18 +665,18 @@
       "base": "NZD",
       "quote": "JPY",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 34,
-        "label": "Baissier modéré"
+        "prob": 35,
+        "label": "Baissier faible"
       }
     },
     {
@@ -722,12 +722,12 @@
       "base": "USD",
       "quote": "JPY",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -760,12 +760,12 @@
       "base": "CAD",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -779,12 +779,12 @@
       "base": "CHF",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "15 octobre 2026, 20h31 UTC (mise à jour automatique)"
+  "generated_at": "15 octobre 2026, 23h15 UTC (mise à jour automatique)"
 }

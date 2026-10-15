@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-15T20:31:43+00:00",
-  "verifie": "15 octobre 2026, 20h31 UTC",
+  "verifie_iso": "2026-10-15T23:15:40+00:00",
+  "verifie": "15 octobre 2026, 23h15 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -244,6 +244,32 @@
       "age": 1,
       "poids": 1.29,
       "code": "USD"
+    },
+    {
+      "famille": "chomage",
+      "libelle": "chômage",
+      "date": "2026-10-15",
+      "date_txt": "15 octobre",
+      "valeur": "2,6% · août 2026",
+      "avant": "2,4% · juillet 2026",
+      "variation": "+0,2 pt",
+      "cran": -1.0,
+      "age": 0,
+      "poids": -1.0,
+      "code": "JPY"
+    },
+    {
+      "famille": "chomage",
+      "libelle": "chômage",
+      "date": "2026-10-15",
+      "date_txt": "15 octobre",
+      "valeur": "4,6% · août 2026",
+      "avant": "4,5% · juillet 2026",
+      "variation": "+0,1 pt",
+      "cran": -0.5,
+      "age": 0,
+      "poids": -0.5,
+      "code": "AUD"
     }
   ],
   "devises": [
@@ -274,7 +300,7 @@
       "banque": "Bank of England (BoE)",
       "taux": "3,75%",
       "ton": "resserrement",
-      "biais": 52,
+      "biais": 51,
       "inflation": "3,1% · août 2026",
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
@@ -299,16 +325,29 @@
       "biais": 52,
       "inflation": "3,5% · juillet 2026",
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
-      "chomage": "4,5% · juillet 2026",
-      "chomage_detail": "4,5% (juillet 2026, plus haut niveau post-COVID)",
+      "chomage": "4,6% · août 2026",
+      "chomage_detail": "4,6% (août 2026, FRED)",
       "semaine_nb": 2,
       "semaine_reste": 0,
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "emploi, chômage",
-      "parutions": [],
-      "effet": 0,
-      "effet_mot": "sans effet net",
+      "parutions": [
+        {
+          "famille": "chomage",
+          "libelle": "chômage",
+          "date": "2026-10-15",
+          "date_txt": "15 octobre",
+          "valeur": "4,6% · août 2026",
+          "avant": "4,5% · juillet 2026",
+          "variation": "+0,1 pt",
+          "cran": -0.5,
+          "age": 0,
+          "poids": -0.5
+        }
+      ],
+      "effet": -0.5,
+      "effet_mot": "défavorable",
       "prochain": "Décision RBA + SoMP",
       "prochain_iso": "2026-11-03T12:00:00+00:00",
       "prochain_txt": "3 novembre"
@@ -422,16 +461,29 @@
       "biais": 62,
       "inflation": "1,7% · août 2026",
       "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
-      "chomage": "2,4% · juillet 2026",
-      "chomage_detail": "2,4% (juillet 2026, plus bas depuis juillet 2025)",
+      "chomage": "2,6% · août 2026",
+      "chomage_detail": "2,6% (août 2026, FRED)",
       "semaine_nb": 0,
       "semaine_reste": 0,
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [],
-      "effet": 0,
-      "effet_mot": "sans effet net",
+      "parutions": [
+        {
+          "famille": "chomage",
+          "libelle": "chômage",
+          "date": "2026-10-15",
+          "date_txt": "15 octobre",
+          "valeur": "2,6% · août 2026",
+          "avant": "2,4% · juillet 2026",
+          "variation": "+0,2 pt",
+          "cran": -1.0,
+          "age": 0,
+          "poids": -1.0
+        }
+      ],
+      "effet": -1.0,
+      "effet_mot": "défavorable",
       "prochain": "Décision BoJ + Outlook Report",
       "prochain_iso": "2026-10-30T12:00:00+00:00",
       "prochain_txt": "30 octobre"

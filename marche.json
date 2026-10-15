@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-15T20:31:44+00:00",
+  "calcule_iso": "2026-10-15T23:15:40+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -88,16 +88,6 @@
   },
   "convictions": [
     {
-      "paire": "JPY/NZD",
-      "ecart": 26,
-      "soutien": 0.5,
-      "attendu_5j": 0.14,
-      "sigma_5j": 0.93,
-      "rapport": 0.15,
-      "score": 13.0,
-      "echeance": null
-    },
-    {
       "paire": "USD/NZD",
       "ecart": 26,
       "soutien": 0.78,
@@ -107,18 +97,18 @@
       "score": 12.1,
       "echeance": {
         "code": "USD",
-        "heures": 7,
+        "heures": 4,
         "quoi": "Fed Chairman Warsh — discours"
       }
     },
     {
-      "paire": "JPY/EUR",
-      "ecart": 18,
-      "soutien": 0.5,
-      "attendu_5j": 0.11,
-      "sigma_5j": 0.91,
-      "rapport": 0.12,
-      "score": 9.0,
+      "paire": "JPY/NZD",
+      "ecart": 24,
+      "soutien": 0.44,
+      "attendu_5j": 0.13,
+      "sigma_5j": 0.93,
+      "rapport": 0.14,
+      "score": 10.7,
       "echeance": null
     },
     {
@@ -132,13 +122,23 @@
       "echeance": null
     },
     {
-      "paire": "JPY/CAD",
-      "ecart": 17,
-      "soutien": 0.5,
-      "attendu_5j": 0.1,
-      "sigma_5j": 0.81,
-      "rapport": 0.12,
-      "score": 8.5,
+      "paire": "JPY/EUR",
+      "ecart": 16,
+      "soutien": 0.44,
+      "attendu_5j": 0.09,
+      "sigma_5j": 0.91,
+      "rapport": 0.1,
+      "score": 7.1,
+      "echeance": null
+    },
+    {
+      "paire": "AUD/NZD",
+      "ecart": 16,
+      "soutien": 0.44,
+      "attendu_5j": 0.07,
+      "sigma_5j": 0.56,
+      "rapport": 0.13,
+      "score": 7.1,
       "echeance": null
     }
   ],
@@ -206,7 +206,7 @@
       "biais_7j": 44,
       "momentum": 2,
       "long_adj": 0,
-      "fondamental": -0.04,
+      "fondamental": -0.01,
       "technique": -5.1,
       "flux": 0.0,
       "positionnement": -4.06,
@@ -224,7 +224,7 @@
         "valeur": -0.98,
         "inflation": 0.75,
         "ton": 2.1,
-        "croissance": 0.99,
+        "croissance": 1.1,
         "taux_us": -0.29,
         "commerce": -1.01,
         "risque": -0.09,
@@ -234,7 +234,7 @@
           "valeur": -0.35,
           "inflation": 0.27,
           "ton": 0.76,
-          "croissance": 0.3,
+          "croissance": 0.33,
           "taux_us": -0.07,
           "commerce": -0.18,
           "risque": -0.01
@@ -364,12 +364,12 @@
       }
     },
     "GBP": {
-      "biais": 51,
-      "biais_avant": 52,
+      "biais": 52,
+      "biais_avant": 51,
       "biais_7j": 49,
       "momentum": 1,
       "long_adj": -1,
-      "fondamental": 0.7,
+      "fondamental": 0.73,
       "technique": 1.58,
       "flux": 0.0,
       "positionnement": -0.89,
@@ -387,7 +387,7 @@
         "valeur": -2.58,
         "inflation": 0.31,
         "ton": 0.6,
-        "croissance": -0.61,
+        "croissance": -0.5,
         "taux_us": -0.29,
         "commerce": -0.1,
         "risque": -0.52,
@@ -397,7 +397,7 @@
           "valeur": -0.93,
           "inflation": 0.11,
           "ton": 0.22,
-          "croissance": -0.18,
+          "croissance": -0.15,
           "taux_us": -0.07,
           "commerce": -0.02,
           "risque": -0.06
@@ -520,10 +520,10 @@
         59.0
       ],
       "echeance": {
-        "heures": 5,
+        "heures": 3,
         "quoi": "Gouverneur BoE Bailey — discours"
       },
-      "attendu_5j": 0.002,
+      "attendu_5j": 0.005,
       "sigma_5j": 0.4,
       "jumelle": {
         "code": "JPY",
@@ -534,11 +534,11 @@
       "biais": 52,
       "biais_avant": 52,
       "biais_7j": 50,
-      "momentum": -1,
+      "momentum": -2,
       "long_adj": -1,
-      "fondamental": 2.71,
+      "fondamental": 2.74,
       "technique": 1.57,
-      "flux": 0.0,
+      "flux": -0.8,
       "positionnement": -4.98,
       "pos_detail": {
         "net_pct": -29.99,
@@ -554,7 +554,7 @@
         "valeur": -2.67,
         "inflation": -1.33,
         "ton": 0.6,
-        "croissance": -0.31,
+        "croissance": -0.2,
         "taux_us": -0.29,
         "commerce": 1.27,
         "risque": -1.25,
@@ -564,7 +564,7 @@
           "valeur": -0.96,
           "inflation": -0.48,
           "ton": 0.22,
-          "croissance": -0.09,
+          "croissance": -0.06,
           "taux_us": -0.07,
           "commerce": 0.23,
           "risque": -0.15
@@ -699,7 +699,7 @@
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": -2,
-      "fondamental": -3.27,
+      "fondamental": -3.24,
       "technique": -5.21,
       "flux": 0.0,
       "positionnement": -4.16,
@@ -717,7 +717,7 @@
         "valeur": 0.4,
         "inflation": 4.11,
         "ton": -0.9,
-        "croissance": -2.21,
+        "croissance": -2.1,
         "taux_us": -0.29,
         "commerce": -0.33,
         "risque": -1.39,
@@ -727,7 +727,7 @@
           "valeur": 0.14,
           "inflation": 1.48,
           "ton": -0.32,
-          "croissance": -0.66,
+          "croissance": -0.63,
           "taux_us": -0.07,
           "commerce": -0.06,
           "risque": -0.17
@@ -862,7 +862,7 @@
       "biais_7j": 63,
       "momentum": 0,
       "long_adj": -2,
-      "fondamental": 2.32,
+      "fondamental": 2.35,
       "technique": 7.21,
       "flux": 2.06,
       "positionnement": 2.35,
@@ -880,7 +880,7 @@
         "valeur": -1.93,
         "inflation": 1.45,
         "ton": 2.1,
-        "croissance": -0.81,
+        "croissance": -0.7,
         "taux_us": 2.04,
         "commerce": 0.47,
         "risque": 0.92,
@@ -890,7 +890,7 @@
           "valeur": -0.7,
           "inflation": 0.52,
           "ton": 0.76,
-          "croissance": -0.24,
+          "croissance": -0.21,
           "taux_us": 0.49,
           "commerce": 0.08,
           "risque": 0.11
@@ -1013,7 +1013,7 @@
         95.7
       ],
       "echeance": {
-        "heures": 7,
+        "heures": 4,
         "quoi": "Fed Chairman Warsh — discours"
       },
       "attendu_5j": 0.034,
@@ -1029,7 +1029,7 @@
       "biais_7j": 45,
       "momentum": 3,
       "long_adj": 0,
-      "fondamental": -1.09,
+      "fondamental": -1.06,
       "technique": -2.63,
       "flux": 0.0,
       "positionnement": -1.34,
@@ -1047,7 +1047,7 @@
         "valeur": 1.37,
         "inflation": -0.43,
         "ton": -2.4,
-        "croissance": 1.29,
+        "croissance": 1.4,
         "taux_us": -0.29,
         "commerce": 2.41,
         "risque": -0.52,
@@ -1057,7 +1057,7 @@
           "valeur": 0.49,
           "inflation": -0.15,
           "ton": -0.86,
-          "croissance": 0.39,
+          "croissance": 0.42,
           "taux_us": -0.07,
           "commerce": 0.43,
           "risque": -0.06
@@ -1191,8 +1191,8 @@
       "biais_avant": 47,
       "biais_7j": 47,
       "momentum": 4,
-      "long_adj": 1,
-      "fondamental": -3.6,
+      "long_adj": 2,
+      "fondamental": -3.56,
       "technique": -1.7,
       "flux": 0.0,
       "positionnement": 6.72,
@@ -1210,7 +1210,7 @@
         "valeur": -0.8,
         "inflation": -2.31,
         "ton": -2.4,
-        "croissance": 1.79,
+        "croissance": 1.9,
         "taux_us": -0.29,
         "commerce": -0.78,
         "risque": 1.35,
@@ -1220,7 +1220,7 @@
           "valeur": -0.29,
           "inflation": -0.83,
           "ton": -0.86,
-          "croissance": 0.54,
+          "croissance": 0.57,
           "taux_us": -0.07,
           "commerce": -0.14,
           "risque": 0.16
@@ -1350,14 +1350,14 @@
       }
     },
     "JPY": {
-      "biais": 62,
+      "biais": 60,
       "biais_avant": 62,
       "biais_7j": 63,
-      "momentum": -1,
-      "long_adj": 3,
-      "fondamental": 1.85,
+      "momentum": -3,
+      "long_adj": 4,
+      "fondamental": 1.61,
       "technique": 2.81,
-      "flux": 0.0,
+      "flux": -1.6,
       "positionnement": 6.37,
       "pos_detail": {
         "net_pct": 16.93,
@@ -1373,7 +1373,7 @@
         "valeur": 6,
         "inflation": -2.55,
         "ton": 0.3,
-        "croissance": -0.11,
+        "croissance": -0.9,
         "taux_us": -0.29,
         "commerce": -1.92,
         "risque": 1.5,
@@ -1383,14 +1383,14 @@
           "valeur": 2.16,
           "inflation": -0.92,
           "ton": 0.11,
-          "croissance": -0.03,
+          "croissance": -0.27,
           "taux_us": -0.07,
           "commerce": -0.35,
           "risque": 0.18
         },
         "accord": [
           4,
-          8
+          9
         ]
       },
       "poids": {
@@ -1505,7 +1505,7 @@
         91.4,
         88.4
       ],
-      "attendu_5j": 0.081,
+      "attendu_5j": 0.067,
       "sigma_5j": 0.67,
       "jumelle": {
         "code": "GBP",
