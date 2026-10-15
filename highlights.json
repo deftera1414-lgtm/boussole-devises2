@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-15T06:23:25+00:00",
-  "verifie": "15 octobre 2026, 06h23 UTC",
+  "verifie_iso": "2026-10-15T10:35:38+00:00",
+  "verifie": "15 octobre 2026, 10h35 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -274,7 +274,7 @@
       "banque": "Bank of England (BoE)",
       "taux": "3,75%",
       "ton": "resserrement",
-      "biais": 50,
+      "biais": 52,
       "inflation": "3,1% · août 2026",
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
