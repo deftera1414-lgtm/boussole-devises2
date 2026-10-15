@@ -1,6 +1,6 @@
 {
-  "generated_at": "15 octobre 2026, 17h19 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-15T17:19:07+00:00",
+  "generated_at": "15 octobre 2026, 20h31 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-15T20:31:01+00:00",
   "currencies": {
     "USD": {
       "bias": 62,
@@ -70,7 +70,7 @@
       ]
     },
     "GBP": {
-      "bias": 52,
+      "bias": 51,
       "long_adj": -1,
       "momentum": 1,
       "tilt": "hawkish",
