@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-15T00:49:17+00:00",
-  "verifie": "15 octobre 2026, 00h49 UTC",
+  "verifie_iso": "2026-10-15T06:23:25+00:00",
+  "verifie": "15 octobre 2026, 06h23 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -227,7 +227,7 @@
       }
     ],
     "nb": 13,
-    "reste": 7,
+    "reste": 6,
     "prochaine": false,
     "en_attente": false
   },
@@ -280,23 +280,23 @@
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
       "semaine_nb": 2,
-      "semaine_reste": 2,
-      "semaine_penchant": -2.5,
-      "semaine_mot": "nettement défavorable",
+      "semaine_reste": 1,
+      "semaine_penchant": 0,
+      "semaine_mot": "sans effet net",
       "semaine_resume": "croissance, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "PIB sur un mois",
-      "prochain_iso": "2026-10-15T06:00:00+00:00",
-      "prochain_txt": "15 octobre"
+      "prochain": "Gouverneur BoE Bailey — discours",
+      "prochain_iso": "2026-10-16T02:00:00+00:00",
+      "prochain_txt": "16 octobre"
     },
     {
       "code": "AUD",
       "banque": "Reserve Bank of Australia (RBA)",
       "taux": "4,35%",
       "ton": "resserrement",
-      "biais": 52,
+      "biais": 53,
       "inflation": "3,5% · juillet 2026",
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,5% · juillet 2026",
