@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-15T10:35:38+00:00",
+  "calcule_iso": "2026-10-15T12:03:20+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -107,7 +107,7 @@
       "score": 11.7,
       "echeance": {
         "code": "USD",
-        "heures": 2,
+        "heures": 0,
         "quoi": "Core Prix à la production sur un mois"
       }
     },
@@ -520,7 +520,7 @@
         59.0
       ],
       "echeance": {
-        "heures": 15,
+        "heures": 14,
         "quoi": "Gouverneur BoE Bailey — discours"
       },
       "attendu_5j": 0.005,
@@ -1013,7 +1013,7 @@
         95.7
       ],
       "echeance": {
-        "heures": 2,
+        "heures": 0,
         "quoi": "Core Prix à la production sur un mois"
       },
       "attendu_5j": 0.031,
