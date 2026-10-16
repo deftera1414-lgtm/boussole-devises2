@@ -228,7 +228,7 @@
       ]
     },
     "NZD": {
-      "bias": 36,
+      "bias": 37,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "neutral",
@@ -309,7 +309,7 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -637,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -675,7 +675,7 @@
         "event": false
       },
       "long": {
-        "prob": 39,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "16 octobre 2026, 20h02 UTC (mise à jour automatique)"
+  "generated_at": "16 octobre 2026, 22h59 UTC (mise à jour automatique)"
 }
