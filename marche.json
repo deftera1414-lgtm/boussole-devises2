@@ -1,10 +1,10 @@
 {
-  "calcule_iso": "2026-10-16T16:55:02+00:00",
+  "calcule_iso": "2026-10-16T20:04:02+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
   "source_pos": "CFTC — Commitments of Traders, non-commerciaux, futures seuls",
-  "rapport_cot": "2026-10-06",
+  "rapport_cot": "2026-10-13",
   "macro": {
     "petrole_3m": 27.3,
     "tension": 0.77,
@@ -89,52 +89,52 @@
   "convictions": [
     {
       "paire": "USD/NZD",
-      "ecart": 25,
+      "ecart": 31,
       "soutien": 0.78,
-      "attendu_5j": 0.12,
+      "attendu_5j": 0.14,
       "sigma_5j": 0.81,
-      "rapport": 0.14,
-      "score": 19.4,
-      "echeance": null
-    },
-    {
-      "paire": "JPY/NZD",
-      "ecart": 24,
-      "soutien": 0.56,
-      "attendu_5j": 0.13,
-      "sigma_5j": 0.93,
-      "rapport": 0.14,
-      "score": 13.3,
-      "echeance": null
-    },
-    {
-      "paire": "USD/CAD",
-      "ecart": 16,
-      "soutien": 0.67,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.44,
-      "rapport": 0.16,
-      "score": 10.7,
-      "echeance": null
-    },
-    {
-      "paire": "USD/EUR",
-      "ecart": 17,
-      "soutien": 0.62,
-      "attendu_5j": 0.08,
-      "sigma_5j": 0.64,
-      "rapport": 0.12,
-      "score": 10.6,
+      "rapport": 0.18,
+      "score": 24.1,
       "echeance": null
     },
     {
       "paire": "USD/CHF",
-      "ecart": 13,
+      "ecart": 17,
+      "soutien": 0.78,
+      "attendu_5j": 0.08,
+      "sigma_5j": 0.88,
+      "rapport": 0.09,
+      "score": 13.2,
+      "echeance": null
+    },
+    {
+      "paire": "USD/EUR",
+      "ecart": 21,
+      "soutien": 0.62,
+      "attendu_5j": 0.1,
+      "sigma_5j": 0.64,
+      "rapport": 0.15,
+      "score": 13.1,
+      "echeance": null
+    },
+    {
+      "paire": "USD/CAD",
+      "ecart": 19,
+      "soutien": 0.67,
+      "attendu_5j": 0.09,
+      "sigma_5j": 0.44,
+      "rapport": 0.2,
+      "score": 12.7,
+      "echeance": null
+    },
+    {
+      "paire": "CHF/NZD",
+      "ecart": 14,
       "soutien": 0.78,
       "attendu_5j": 0.06,
-      "sigma_5j": 0.88,
-      "rapport": 0.07,
-      "score": 10.1,
+      "sigma_5j": 0.71,
+      "rapport": 0.09,
+      "score": 10.9,
       "echeance": null
     }
   ],
@@ -178,10 +178,10 @@
         "n_nets": 520
       },
       "4sem": {
-        "ic": -0.125,
+        "ic": -0.152,
         "n": 152,
-        "reussite": 44,
-        "n_nets": 119
+        "reussite": 45,
+        "n_nets": 130
       }
     },
     "biais_publie": {
@@ -197,22 +197,22 @@
   },
   "devises": {
     "EUR": {
-      "biais": 45,
-      "biais_avant": 44,
+      "biais": 46,
+      "biais_avant": 45,
       "biais_7j": 44,
       "momentum": 5,
       "long_adj": -3,
       "fondamental": -0.85,
       "technique": -5.1,
       "flux": 4.8,
-      "positionnement": -4.06,
+      "positionnement": -3.24,
       "pos_detail": {
-        "net_pct": -11.41,
+        "net_pct": -15.73,
         "place": 0,
-        "var_hebdo": -4.01,
-        "rapport": "2026-10-06",
+        "var_hebdo": -4.32,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": -4.06
+        "relatif": -3.24
       },
       "fond_detail": {
         "taux_reel": -3.03,
@@ -352,7 +352,7 @@
         6.9,
         0.0
       ],
-      "attendu_5j": -0.021,
+      "attendu_5j": -0.017,
       "sigma_5j": 0.42,
       "jumelle": {
         "code": "JPY",
@@ -360,22 +360,22 @@
       }
     },
     "GBP": {
-      "biais": 51,
-      "biais_avant": 52,
+      "biais": 49,
+      "biais_avant": 51,
       "biais_7j": 49,
       "momentum": 1,
-      "long_adj": -1,
+      "long_adj": -2,
       "fondamental": 0.68,
       "technique": 1.58,
       "flux": 0.0,
-      "positionnement": -0.89,
+      "positionnement": -3.24,
       "pos_detail": {
-        "net_pct": -36.71,
+        "net_pct": -39.83,
         "place": 0,
-        "var_hebdo": -0.53,
-        "rapport": "2026-10-06",
+        "var_hebdo": -3.12,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": -0.89
+        "relatif": -3.24
       },
       "fond_detail": {
         "taux_reel": 3.61,
@@ -515,7 +515,7 @@
         58.6,
         59.0
       ],
-      "attendu_5j": 0.004,
+      "attendu_5j": -0.004,
       "sigma_5j": 0.4,
       "jumelle": {
         "code": "JPY",
@@ -531,14 +531,14 @@
       "fondamental": 2.64,
       "technique": 1.57,
       "flux": -0.69,
-      "positionnement": -4.98,
+      "positionnement": -4.85,
       "pos_detail": {
-        "net_pct": -29.99,
-        "place": 27,
-        "var_hebdo": -9.58,
-        "rapport": "2026-10-06",
+        "net_pct": -34.55,
+        "place": 22,
+        "var_hebdo": -4.56,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": -4.98
+        "relatif": -4.85
       },
       "fond_detail": {
         "taux_reel": 4.29,
@@ -686,22 +686,22 @@
       }
     },
     "NZD": {
-      "biais": 37,
-      "biais_avant": 36,
+      "biais": 36,
+      "biais_avant": 37,
       "biais_7j": 35,
       "momentum": 1,
-      "long_adj": -1,
+      "long_adj": -2,
       "fondamental": -2.69,
       "technique": -5.21,
       "flux": 0.0,
-      "positionnement": -4.16,
+      "positionnement": -5.02,
       "pos_detail": {
-        "net_pct": -22.59,
-        "place": 34,
-        "var_hebdo": -7.51,
-        "rapport": "2026-10-06",
+        "net_pct": -37.56,
+        "place": 20,
+        "var_hebdo": -14.96,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": -4.16
+        "relatif": -5.02
       },
       "fond_detail": {
         "taux_reel": -3.2,
@@ -841,7 +841,7 @@
         1.7,
         6.3
       ],
-      "attendu_5j": -0.058,
+      "attendu_5j": -0.062,
       "sigma_5j": 0.44,
       "jumelle": {
         "code": "USD",
@@ -849,22 +849,22 @@
       }
     },
     "USD": {
-      "biais": 62,
+      "biais": 67,
       "biais_avant": 62,
       "biais_7j": 63,
       "momentum": 0,
-      "long_adj": -2,
+      "long_adj": 0,
       "fondamental": 2.41,
       "technique": 7.21,
       "flux": 1.71,
-      "positionnement": 2.35,
+      "positionnement": 7.3,
       "pos_detail": {
-        "net_pct": 23.51,
-        "place": 69,
-        "var_hebdo": -1.07,
-        "rapport": "2026-10-06",
+        "net_pct": 24.93,
+        "place": 71,
+        "var_hebdo": 1.43,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": 2.35
+        "relatif": 7.3
       },
       "fond_detail": {
         "taux_reel": 1.99,
@@ -1004,7 +1004,7 @@
         100.0,
         95.7
       ],
-      "attendu_5j": 0.057,
+      "attendu_5j": 0.081,
       "sigma_5j": 0.47,
       "jumelle": {
         "code": "NZD",
@@ -1012,22 +1012,22 @@
       }
     },
     "CAD": {
-      "biais": 46,
-      "biais_avant": 45,
+      "biais": 48,
+      "biais_avant": 46,
       "biais_7j": 45,
       "momentum": 3,
-      "long_adj": 0,
+      "long_adj": 1,
       "fondamental": -0.7,
       "technique": -2.63,
       "flux": 0.0,
-      "positionnement": -1.34,
+      "positionnement": 0.74,
       "pos_detail": {
-        "net_pct": -24.3,
-        "place": 46,
-        "var_hebdo": -1.65,
-        "rapport": "2026-10-06",
+        "net_pct": -25.06,
+        "place": 45,
+        "var_hebdo": -0.76,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": -1.34
+        "relatif": 0.74
       },
       "fond_detail": {
         "taux_reel": -1.16,
@@ -1167,7 +1167,7 @@
         56.7,
         34.9
       ],
-      "attendu_5j": -0.014,
+      "attendu_5j": -0.007,
       "sigma_5j": 0.35,
       "jumelle": {
         "code": "USD",
@@ -1175,22 +1175,22 @@
       }
     },
     "CHF": {
-      "biais": 49,
-      "biais_avant": 47,
+      "biais": 50,
+      "biais_avant": 49,
       "biais_7j": 47,
       "momentum": 4,
-      "long_adj": -1,
+      "long_adj": 0,
       "fondamental": -3.75,
       "technique": -1.7,
       "flux": 3.2,
-      "positionnement": 6.72,
+      "positionnement": 8.05,
       "pos_detail": {
-        "net_pct": -17.31,
-        "place": 77,
-        "var_hebdo": 1.08,
-        "rapport": "2026-10-06",
+        "net_pct": -16.09,
+        "place": 80,
+        "var_hebdo": 1.21,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": 6.72
+        "relatif": 8.05
       },
       "fond_detail": {
         "taux_reel": -2.61,
@@ -1330,7 +1330,7 @@
         16.0,
         21.4
       ],
-      "attendu_5j": -0.006,
+      "attendu_5j": 0.0,
       "sigma_5j": 0.57,
       "jumelle": {
         "code": "USD",
@@ -1338,22 +1338,22 @@
       }
     },
     "JPY": {
-      "biais": 61,
-      "biais_avant": 60,
+      "biais": 55,
+      "biais_avant": 61,
       "biais_7j": 63,
       "momentum": -3,
-      "long_adj": 4,
+      "long_adj": 1,
       "fondamental": 1.83,
       "technique": 2.81,
       "flux": -1.38,
-      "positionnement": 6.37,
+      "positionnement": 0.27,
       "pos_detail": {
-        "net_pct": 16.93,
-        "place": 68,
-        "var_hebdo": 1.56,
-        "rapport": "2026-10-06",
+        "net_pct": 13.44,
+        "place": 64,
+        "var_hebdo": -3.49,
+        "rapport": "2026-10-13",
         "semaines": 157,
-        "relatif": 6.37
+        "relatif": 0.27
       },
       "fond_detail": {
         "taux_reel": 0.11,
@@ -1493,7 +1493,7 @@
         91.4,
         88.4
       ],
-      "attendu_5j": 0.074,
+      "attendu_5j": 0.034,
       "sigma_5j": 0.67,
       "jumelle": {
         "code": "GBP",
