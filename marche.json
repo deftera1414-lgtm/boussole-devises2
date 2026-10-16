@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-15T23:15:40+00:00",
+  "calcule_iso": "2026-10-16T01:38:09+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 12.1,
       "echeance": {
         "code": "USD",
-        "heures": 4,
+        "heures": 2,
         "quoi": "Fed Chairman Warsh — discours"
       }
     },
@@ -365,7 +365,7 @@
     },
     "GBP": {
       "biais": 52,
-      "biais_avant": 51,
+      "biais_avant": 52,
       "biais_7j": 49,
       "momentum": 1,
       "long_adj": -1,
@@ -520,7 +520,7 @@
         59.0
       ],
       "echeance": {
-        "heures": 3,
+        "heures": 0,
         "quoi": "Gouverneur BoE Bailey — discours"
       },
       "attendu_5j": 0.005,
@@ -538,7 +538,7 @@
       "long_adj": -1,
       "fondamental": 2.74,
       "technique": 1.57,
-      "flux": -0.8,
+      "flux": -0.69,
       "positionnement": -4.98,
       "pos_detail": {
         "net_pct": -29.99,
@@ -864,7 +864,7 @@
       "long_adj": -2,
       "fondamental": 2.35,
       "technique": 7.21,
-      "flux": 2.06,
+      "flux": 1.71,
       "positionnement": 2.35,
       "pos_detail": {
         "net_pct": 23.51,
@@ -1013,7 +1013,7 @@
         95.7
       ],
       "echeance": {
-        "heures": 4,
+        "heures": 2,
         "quoi": "Fed Chairman Warsh — discours"
       },
       "attendu_5j": 0.034,
@@ -1351,13 +1351,13 @@
     },
     "JPY": {
       "biais": 60,
-      "biais_avant": 62,
+      "biais_avant": 60,
       "biais_7j": 63,
       "momentum": -3,
-      "long_adj": 4,
+      "long_adj": 3,
       "fondamental": 1.61,
       "technique": 2.81,
-      "flux": -1.6,
+      "flux": -1.38,
       "positionnement": 6.37,
       "pos_detail": {
         "net_pct": 16.93,

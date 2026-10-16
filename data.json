@@ -101,7 +101,7 @@
     },
     "JPY": {
       "bias": 60,
-      "long_adj": 4,
+      "long_adj": 3,
       "momentum": -3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -675,7 +675,7 @@
         "event": false
       },
       "long": {
-        "prob": 35,
+        "prob": 36,
         "label": "Baissier faible"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -789,10 +789,10 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 43,
         "label": "Baissier faible"
       }
     }
   ],
-  "generated_at": "15 octobre 2026, 23h15 UTC (mise à jour automatique)"
+  "generated_at": "16 octobre 2026, 01h37 UTC (mise à jour automatique)"
 }
