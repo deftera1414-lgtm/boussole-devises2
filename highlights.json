@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-16T01:38:08+00:00",
-  "verifie": "16 octobre 2026, 01h38 UTC",
+  "verifie_iso": "2026-10-16T06:22:36+00:00",
+  "verifie": "16 octobre 2026, 06h22 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -227,7 +227,7 @@
       }
     ],
     "nb": 13,
-    "reste": 2,
+    "reste": 0,
     "prochaine": false,
     "en_attente": false
   },
@@ -306,16 +306,16 @@
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
       "semaine_nb": 2,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "croissance, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Gouverneur BoE Bailey — discours",
-      "prochain_iso": "2026-10-16T02:00:00+00:00",
-      "prochain_txt": "16 octobre"
+      "prochain": "Décision BoE (Bank Rate) + rapport",
+      "prochain_iso": "2026-11-05T12:00:00+00:00",
+      "prochain_txt": "5 novembre"
     },
     {
       "code": "AUD",
@@ -385,9 +385,9 @@
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 9,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation, ventes au détail, discours",
       "parutions": [
         {
@@ -405,9 +405,9 @@
       ],
       "effet": 1.07,
       "effet_mot": "favorable",
-      "prochain": "Fed Chairman Warsh — discours",
-      "prochain_iso": "2026-10-16T03:30:00+00:00",
-      "prochain_txt": "16 octobre"
+      "prochain": "Décision FOMC (Fed)",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre"
     },
     {
       "code": "CAD",

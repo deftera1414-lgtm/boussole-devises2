@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-16T01:38:09+00:00",
+  "calcule_iso": "2026-10-16T06:22:36+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -91,15 +91,31 @@
       "paire": "USD/NZD",
       "ecart": 26,
       "soutien": 0.78,
-      "attendu_5j": 0.1,
+      "attendu_5j": 0.12,
       "sigma_5j": 0.81,
-      "rapport": 0.12,
-      "score": 12.1,
-      "echeance": {
-        "code": "USD",
-        "heures": 2,
-        "quoi": "Fed Chairman Warsh — discours"
-      }
+      "rapport": 0.15,
+      "score": 20.2,
+      "echeance": null
+    },
+    {
+      "paire": "USD/CHF",
+      "ecart": 15,
+      "soutien": 0.78,
+      "attendu_5j": 0.07,
+      "sigma_5j": 0.88,
+      "rapport": 0.08,
+      "score": 11.7,
+      "echeance": null
+    },
+    {
+      "paire": "USD/CAD",
+      "ecart": 17,
+      "soutien": 0.67,
+      "attendu_5j": 0.07,
+      "sigma_5j": 0.44,
+      "rapport": 0.17,
+      "score": 11.3,
+      "echeance": null
     },
     {
       "paire": "JPY/NZD",
@@ -112,33 +128,13 @@
       "echeance": null
     },
     {
-      "paire": "CHF/NZD",
-      "ecart": 11,
-      "soutien": 0.78,
-      "attendu_5j": 0.04,
-      "sigma_5j": 0.71,
-      "rapport": 0.06,
-      "score": 8.6,
-      "echeance": null
-    },
-    {
-      "paire": "JPY/EUR",
-      "ecart": 16,
-      "soutien": 0.44,
-      "attendu_5j": 0.09,
-      "sigma_5j": 0.91,
-      "rapport": 0.1,
-      "score": 7.1,
-      "echeance": null
-    },
-    {
-      "paire": "AUD/NZD",
-      "ecart": 16,
-      "soutien": 0.44,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.56,
+      "paire": "USD/EUR",
+      "ecart": 18,
+      "soutien": 0.5,
+      "attendu_5j": 0.08,
+      "sigma_5j": 0.64,
       "rapport": 0.13,
-      "score": 7.1,
+      "score": 9.0,
       "echeance": null
     }
   ],
@@ -519,11 +515,7 @@
         58.6,
         59.0
       ],
-      "echeance": {
-        "heures": 0,
-        "quoi": "Gouverneur BoE Bailey — discours"
-      },
-      "attendu_5j": 0.005,
+      "attendu_5j": 0.008,
       "sigma_5j": 0.4,
       "jumelle": {
         "code": "JPY",
@@ -1012,11 +1004,7 @@
         100.0,
         95.7
       ],
-      "echeance": {
-        "heures": 2,
-        "quoi": "Fed Chairman Warsh — discours"
-      },
-      "attendu_5j": 0.034,
+      "attendu_5j": 0.057,
       "sigma_5j": 0.47,
       "jumelle": {
         "code": "NZD",
