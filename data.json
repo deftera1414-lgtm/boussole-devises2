@@ -1,8 +1,8 @@
 {
   "currencies": {
     "USD": {
-      "bias": 67,
-      "long_adj": 0,
+      "bias": 66,
+      "long_adj": 1,
       "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -35,8 +35,8 @@
       ]
     },
     "EUR": {
-      "bias": 46,
-      "long_adj": -3,
+      "bias": 45,
+      "long_adj": -2,
       "momentum": 5,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -102,7 +102,7 @@
     "JPY": {
       "bias": 55,
       "long_adj": 1,
-      "momentum": -3,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -366,7 +366,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -594,7 +594,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -689,7 +689,7 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -722,12 +722,12 @@
       "base": "USD",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -760,7 +760,7 @@
       "base": "CAD",
       "quote": "JPY",
       "short": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -784,7 +784,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "16 octobre 2026, 22h59 UTC (mise à jour automatique)"
+  "generated_at": "17 octobre 2026, 01h30 UTC (mise à jour automatique)"
 }
