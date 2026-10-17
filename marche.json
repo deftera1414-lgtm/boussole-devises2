@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-17T01:30:47+00:00",
+  "calcule_iso": "2026-10-17T06:07:24+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -198,7 +198,7 @@
   "devises": {
     "EUR": {
       "biais": 45,
-      "biais_avant": 46,
+      "biais_avant": 45,
       "biais_7j": 44,
       "momentum": 5,
       "long_adj": -2,
@@ -850,7 +850,7 @@
     },
     "USD": {
       "biais": 66,
-      "biais_avant": 67,
+      "biais_avant": 66,
       "biais_7j": 63,
       "momentum": 0,
       "long_adj": 1,
