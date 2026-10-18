@@ -68,7 +68,7 @@
       ]
     },
     "GBP": {
-      "bias": 49,
+      "bias": 50,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "hawkish",
@@ -164,8 +164,8 @@
       ]
     },
     "CAD": {
-      "bias": 48,
-      "long_adj": 1,
+      "bias": 49,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -228,8 +228,8 @@
       ]
     },
     "NZD": {
-      "bias": 37,
-      "long_adj": -2,
+      "bias": 35,
+      "long_adj": 0,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -309,7 +309,7 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre",
         "event": false
       },
@@ -423,7 +423,7 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre",
         "event": false
       },
@@ -442,7 +442,7 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -480,7 +480,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -556,7 +556,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -632,7 +632,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
@@ -670,7 +670,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "18 octobre 2026, 00h15 UTC (mise à jour automatique)"
+  "generated_at": "18 octobre 2026, 05h05 UTC (mise à jour automatique)"
 }
