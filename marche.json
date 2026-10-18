@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-18T05:05:24+00:00",
+  "calcule_iso": "2026-10-18T09:51:46+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -361,7 +361,7 @@
     },
     "GBP": {
       "biais": 50,
-      "biais_avant": 49,
+      "biais_avant": 50,
       "biais_7j": 49,
       "momentum": 1,
       "long_adj": -2,
@@ -687,7 +687,7 @@
     },
     "NZD": {
       "biais": 35,
-      "biais_avant": 37,
+      "biais_avant": 35,
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": 0,
@@ -1013,7 +1013,7 @@
     },
     "CAD": {
       "biais": 49,
-      "biais_avant": 48,
+      "biais_avant": 49,
       "biais_7j": 45,
       "momentum": 3,
       "long_adj": 0,
@@ -1168,7 +1168,7 @@
         34.9
       ],
       "echeance": {
-        "heures": 31,
+        "heures": 27,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": -0.002,
