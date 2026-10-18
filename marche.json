@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-17T22:37:40+00:00",
+  "calcule_iso": "2026-10-18T00:15:59+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -204,7 +204,7 @@
       "long_adj": -2,
       "fondamental": -0.82,
       "technique": -5.1,
-      "flux": 4.11,
+      "flux": 3.42,
       "positionnement": -3.24,
       "pos_detail": {
         "net_pct": -15.73,
@@ -530,7 +530,7 @@
       "long_adj": -1,
       "fondamental": 2.67,
       "technique": 1.57,
-      "flux": -0.58,
+      "flux": -0.46,
       "positionnement": -4.85,
       "pos_detail": {
         "net_pct": -34.55,
@@ -856,7 +856,7 @@
       "long_adj": 1,
       "fondamental": 2.21,
       "technique": 7.21,
-      "flux": 1.38,
+      "flux": 1.02,
       "positionnement": 7.3,
       "pos_detail": {
         "net_pct": 24.93,
@@ -1178,11 +1178,11 @@
       "biais": 50,
       "biais_avant": 50,
       "biais_7j": 47,
-      "momentum": 4,
-      "long_adj": 0,
+      "momentum": 3,
+      "long_adj": 1,
       "fondamental": -3.72,
       "technique": -1.7,
-      "flux": 2.74,
+      "flux": 2.29,
       "positionnement": 8.05,
       "pos_detail": {
         "net_pct": -16.09,
@@ -1345,7 +1345,7 @@
       "long_adj": 1,
       "fondamental": 1.86,
       "technique": 2.81,
-      "flux": -1.14,
+      "flux": -0.91,
       "positionnement": 0.27,
       "pos_detail": {
         "net_pct": 13.44,

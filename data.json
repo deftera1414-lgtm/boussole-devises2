@@ -133,8 +133,8 @@
     },
     "CHF": {
       "bias": 50,
-      "long_adj": 0,
-      "momentum": 4,
+      "long_adj": 1,
+      "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -366,7 +366,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -475,7 +475,7 @@
       "base": "GBP",
       "quote": "CHF",
       "short": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -570,7 +570,7 @@
       "base": "AUD",
       "quote": "CHF",
       "short": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -646,7 +646,7 @@
       "base": "NZD",
       "quote": "CHF",
       "short": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -746,12 +746,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -779,7 +779,7 @@
       "base": "CHF",
       "quote": "JPY",
       "short": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -789,10 +789,10 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     }
   ],
-  "generated_at": "17 octobre 2026, 22h37 UTC (mise à jour automatique)"
+  "generated_at": "18 octobre 2026, 00h15 UTC (mise à jour automatique)"
 }
