@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-18T21:51:30+00:00",
+  "calcule_iso": "2026-10-19T00:27:05+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -98,6 +98,26 @@
       "echeance": null
     },
     {
+      "paire": "USD/CHF",
+      "ecart": 17,
+      "soutien": 0.75,
+      "attendu_5j": 0.08,
+      "sigma_5j": 0.88,
+      "rapport": 0.09,
+      "score": 12.8,
+      "echeance": null
+    },
+    {
+      "paire": "USD/EUR",
+      "ecart": 22,
+      "soutien": 0.57,
+      "attendu_5j": 0.1,
+      "sigma_5j": 0.64,
+      "rapport": 0.16,
+      "score": 12.6,
+      "echeance": null
+    },
+    {
       "paire": "JPY/NZD",
       "ecart": 20,
       "soutien": 0.62,
@@ -108,33 +128,13 @@
       "echeance": null
     },
     {
-      "paire": "USD/EUR",
-      "ecart": 21,
-      "soutien": 0.57,
-      "attendu_5j": 0.1,
-      "sigma_5j": 0.64,
-      "rapport": 0.15,
-      "score": 12.0,
-      "echeance": null
-    },
-    {
-      "paire": "USD/CHF",
-      "ecart": 16,
-      "soutien": 0.75,
-      "attendu_5j": 0.08,
-      "sigma_5j": 0.88,
-      "rapport": 0.09,
-      "score": 12.0,
-      "echeance": null
-    },
-    {
       "paire": "CHF/NZD",
-      "ecart": 15,
+      "ecart": 14,
       "soutien": 0.75,
-      "attendu_5j": 0.07,
+      "attendu_5j": 0.06,
       "sigma_5j": 0.71,
       "rapport": 0.09,
-      "score": 11.2,
+      "score": 10.5,
       "echeance": null
     }
   ],
@@ -197,14 +197,14 @@
   },
   "devises": {
     "EUR": {
-      "biais": 45,
+      "biais": 44,
       "biais_avant": 45,
       "biais_7j": 44,
-      "momentum": 5,
-      "long_adj": -2,
+      "momentum": 4,
+      "long_adj": -1,
       "fondamental": -0.82,
       "technique": -5.1,
-      "flux": 3.42,
+      "flux": 2.74,
       "positionnement": -3.24,
       "pos_detail": {
         "net_pct": -15.73,
@@ -352,7 +352,7 @@
         6.9,
         0.0
       ],
-      "attendu_5j": -0.021,
+      "attendu_5j": -0.025,
       "sigma_5j": 0.42,
       "jumelle": {
         "code": "JPY",
@@ -530,7 +530,7 @@
       "long_adj": -1,
       "fondamental": 2.67,
       "technique": 1.57,
-      "flux": -0.46,
+      "flux": -0.34,
       "positionnement": -4.85,
       "pos_detail": {
         "net_pct": -34.55,
@@ -856,7 +856,7 @@
       "long_adj": 1,
       "fondamental": 2.21,
       "technique": 7.21,
-      "flux": 1.02,
+      "flux": 0.69,
       "positionnement": 7.3,
       "pos_detail": {
         "net_pct": 24.93,
@@ -1168,7 +1168,7 @@
         34.9
       ],
       "echeance": {
-        "heures": 15,
+        "heures": 12,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": -0.002,
@@ -1179,14 +1179,14 @@
       }
     },
     "CHF": {
-      "biais": 50,
+      "biais": 49,
       "biais_avant": 50,
       "biais_7j": 47,
       "momentum": 3,
       "long_adj": 1,
       "fondamental": -3.72,
       "technique": -1.7,
-      "flux": 2.29,
+      "flux": 1.82,
       "positionnement": 8.05,
       "pos_detail": {
         "net_pct": -16.09,
@@ -1334,7 +1334,7 @@
         16.0,
         21.4
       ],
-      "attendu_5j": 0.0,
+      "attendu_5j": -0.006,
       "sigma_5j": 0.57,
       "jumelle": {
         "code": "USD",
@@ -1346,10 +1346,10 @@
       "biais_avant": 55,
       "biais_7j": 63,
       "momentum": -2,
-      "long_adj": 1,
+      "long_adj": 0,
       "fondamental": 1.86,
       "technique": 2.81,
-      "flux": -0.91,
+      "flux": -0.69,
       "positionnement": 0.27,
       "pos_detail": {
         "net_pct": 13.44,

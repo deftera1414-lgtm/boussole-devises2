@@ -35,9 +35,9 @@
       ]
     },
     "EUR": {
-      "bias": 45,
-      "long_adj": -2,
-      "momentum": 5,
+      "bias": 44,
+      "long_adj": -1,
+      "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -101,7 +101,7 @@
     },
     "JPY": {
       "bias": 55,
-      "long_adj": 1,
+      "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -132,7 +132,7 @@
       ]
     },
     "CHF": {
-      "bias": 50,
+      "bias": 49,
       "long_adj": 1,
       "momentum": 3,
       "tilt": "neutral",
@@ -309,7 +309,7 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -347,7 +347,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -366,7 +366,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -385,7 +385,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -485,7 +485,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "18 octobre 2026, 21h51 UTC (mise à jour automatique)"
+  "generated_at": "19 octobre 2026, 00h26 UTC (mise à jour automatique)"
 }
