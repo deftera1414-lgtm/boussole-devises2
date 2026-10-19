@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-19T11:12:50+00:00",
+  "calcule_iso": "2026-10-19T11:37:37+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -516,7 +516,7 @@
         59.0
       ],
       "echeance": {
-        "heures": 43,
+        "heures": 42,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.0,
