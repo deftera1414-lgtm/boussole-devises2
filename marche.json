@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-19T00:27:05+00:00",
+  "calcule_iso": "2026-10-19T05:15:35+00:00",
   "seance": "2026-10-09",
   "seances": 385,
   "source": "Reserve federale (H.10) via FRED",
@@ -198,7 +198,7 @@
   "devises": {
     "EUR": {
       "biais": 44,
-      "biais_avant": 45,
+      "biais_avant": 44,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": -1,
@@ -1168,7 +1168,7 @@
         34.9
       ],
       "echeance": {
-        "heures": 12,
+        "heures": 7,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": -0.002,
@@ -1180,7 +1180,7 @@
     },
     "CHF": {
       "biais": 49,
-      "biais_avant": 50,
+      "biais_avant": 49,
       "biais_7j": 47,
       "momentum": 3,
       "long_adj": 1,
