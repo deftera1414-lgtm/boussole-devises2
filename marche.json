@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-20T01:15:09+00:00",
+  "calcule_iso": "2026-10-20T06:33:00+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 17.0,
       "echeance": {
         "code": "NZD",
-        "heures": 44,
+        "heures": 39,
         "quoi": "Inflation trimestrielle"
       }
     },
@@ -202,7 +202,7 @@
   "devises": {
     "EUR": {
       "biais": 45,
-      "biais_avant": 44,
+      "biais_avant": 45,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": -1,
@@ -363,7 +363,7 @@
     },
     "GBP": {
       "biais": 54,
-      "biais_avant": 51,
+      "biais_avant": 54,
       "biais_7j": 50,
       "momentum": 1,
       "long_adj": -2,
@@ -516,7 +516,7 @@
         80.3
       ],
       "echeance": {
-        "heures": 29,
+        "heures": 23,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.011,
@@ -528,7 +528,7 @@
     },
     "AUD": {
       "biais": 54,
-      "biais_avant": 51,
+      "biais_avant": 54,
       "biais_7j": 52,
       "momentum": -1,
       "long_adj": 1,
@@ -689,7 +689,7 @@
     },
     "NZD": {
       "biais": 34,
-      "biais_avant": 36,
+      "biais_avant": 34,
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": -1,
@@ -842,7 +842,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 44,
+        "heures": 39,
         "quoi": "Inflation trimestrielle"
       },
       "attendu_5j": -0.046,
@@ -854,7 +854,7 @@
     },
     "USD": {
       "biais": 67,
-      "biais_avant": 64,
+      "biais_avant": 67,
       "biais_7j": 66,
       "momentum": -1,
       "long_adj": 3,
@@ -1015,7 +1015,7 @@
     },
     "CAD": {
       "biais": 47,
-      "biais_avant": 49,
+      "biais_avant": 47,
       "biais_7j": 48,
       "momentum": 3,
       "long_adj": 0,
@@ -1176,7 +1176,7 @@
     },
     "CHF": {
       "biais": 50,
-      "biais_avant": 51,
+      "biais_avant": 50,
       "biais_7j": 50,
       "momentum": 3,
       "long_adj": 1,
@@ -1337,7 +1337,7 @@
     },
     "JPY": {
       "biais": 50,
-      "biais_avant": 55,
+      "biais_avant": 50,
       "biais_7j": 56,
       "momentum": -2,
       "long_adj": 0,
