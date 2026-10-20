@@ -133,7 +133,7 @@
     },
     "CHF": {
       "bias": 50,
-      "long_adj": 1,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -371,7 +371,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -485,7 +485,7 @@
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -656,7 +656,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "20 octobre 2026, 12h04 UTC (mise à jour automatique)"
+  "generated_at": "20 octobre 2026, 17h29 UTC (mise à jour automatique)"
 }
