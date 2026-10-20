@@ -35,7 +35,7 @@
       ]
     },
     "EUR": {
-      "bias": 45,
+      "bias": 44,
       "long_adj": -1,
       "momentum": 4,
       "tilt": "hawkish",
@@ -290,7 +290,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -314,8 +314,8 @@
         "event": false
       },
       "long": {
-        "prob": 56,
-        "label": "Haussier faible"
+        "prob": 55,
+        "label": "Neutre"
       }
     },
     {
@@ -333,7 +333,7 @@
         "event": false
       },
       "long": {
-        "prob": 37,
+        "prob": 36,
         "label": "Baissier faible"
       }
     },
@@ -371,7 +371,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -390,7 +390,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "20 octobre 2026, 17h29 UTC (mise à jour automatique)"
+  "generated_at": "20 octobre 2026, 20h49 UTC (mise à jour automatique)"
 }

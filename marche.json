@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-20T17:29:48+00:00",
+  "calcule_iso": "2026-10-20T20:50:18+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -8,7 +8,7 @@
   "macro": {
     "petrole_3m": 27.3,
     "tension": 1.21,
-    "taux_us_1m": 0
+    "taux_us_1m": 10
   },
   "moteurs": [
     {
@@ -97,7 +97,7 @@
       "score": 17.0,
       "echeance": {
         "code": "NZD",
-        "heures": 28,
+        "heures": 25,
         "quoi": "Inflation trimestrielle"
       }
     },
@@ -123,12 +123,12 @@
     },
     {
       "paire": "USD/EUR",
-      "ecart": 22,
+      "ecart": 23,
       "soutien": 0.5,
       "attendu_5j": 0.13,
       "sigma_5j": 0.79,
-      "rapport": 0.16,
-      "score": 11.0,
+      "rapport": 0.17,
+      "score": 11.5,
       "echeance": null
     },
     {
@@ -201,12 +201,12 @@
   },
   "devises": {
     "EUR": {
-      "biais": 45,
+      "biais": 44,
       "biais_avant": 45,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": -1,
-      "fondamental": -0.59,
+      "fondamental": -0.64,
       "technique": -4.9,
       "flux": 2.06,
       "positionnement": -3.24,
@@ -224,7 +224,7 @@
         "inflation": 2.24,
         "ton": 2.1,
         "croissance": 1.1,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": -1.01,
         "risque": -0.12,
         "apport": {
@@ -233,7 +233,7 @@
           "inflation": 0.92,
           "ton": 0.86,
           "croissance": 0.37,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": -0.21,
           "risque": -0.02
         },
@@ -354,7 +354,7 @@
         14.7,
         6.5
       ],
-      "attendu_5j": -0.023,
+      "attendu_5j": -0.027,
       "sigma_5j": 0.45,
       "jumelle": {
         "code": "JPY",
@@ -367,7 +367,7 @@
       "biais_7j": 50,
       "momentum": 1,
       "long_adj": -2,
-      "fondamental": 2.06,
+      "fondamental": 2.01,
       "technique": 3.12,
       "flux": 1.2,
       "positionnement": -3.24,
@@ -385,7 +385,7 @@
         "inflation": 0.06,
         "ton": 0.6,
         "croissance": -0.5,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": -0.1,
         "risque": -0.7,
         "apport": {
@@ -394,7 +394,7 @@
           "inflation": 0.02,
           "ton": 0.25,
           "croissance": -0.17,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": -0.02,
           "risque": -0.1
         },
@@ -516,7 +516,7 @@
         80.3
       ],
       "echeance": {
-        "heures": 13,
+        "heures": 9,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.011,
@@ -532,7 +532,7 @@
       "biais_7j": 52,
       "momentum": -1,
       "long_adj": 1,
-      "fondamental": 3.85,
+      "fondamental": 3.8,
       "technique": -0.97,
       "flux": -0.22,
       "positionnement": -4.85,
@@ -550,7 +550,7 @@
         "inflation": -1.58,
         "ton": 0.6,
         "croissance": -0.2,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": 1.27,
         "risque": -1.67,
         "apport": {
@@ -559,7 +559,7 @@
           "inflation": -0.65,
           "ton": 0.25,
           "croissance": -0.07,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": 0.26,
           "risque": -0.23
         },
@@ -693,7 +693,7 @@
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": -1,
-      "fondamental": -3.34,
+      "fondamental": -3.39,
       "technique": -3.2,
       "flux": -2.4,
       "positionnement": -5.02,
@@ -711,7 +711,7 @@
         "inflation": 3.86,
         "ton": -0.9,
         "croissance": -2.1,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": -0.33,
         "risque": -1.86,
         "apport": {
@@ -720,7 +720,7 @@
           "inflation": 1.58,
           "ton": -0.37,
           "croissance": -0.72,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": -0.07,
           "risque": -0.25
         },
@@ -842,7 +842,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 28,
+        "heures": 25,
         "quoi": "Inflation trimestrielle"
       },
       "attendu_5j": -0.046,
@@ -858,7 +858,7 @@
       "biais_7j": 66,
       "momentum": -1,
       "long_adj": 3,
-      "fondamental": 3.11,
+      "fondamental": 3.43,
       "technique": 4.47,
       "flux": 0.34,
       "positionnement": 7.3,
@@ -876,7 +876,7 @@
         "inflation": 1.2,
         "ton": 2.1,
         "croissance": -0.7,
-        "taux_us": 0.0,
+        "taux_us": 1.2,
         "commerce": 0.47,
         "risque": 1.23,
         "apport": {
@@ -885,13 +885,13 @@
           "inflation": 0.49,
           "ton": 0.86,
           "croissance": -0.24,
-          "taux_us": 0.0,
+          "taux_us": 0.33,
           "commerce": 0.1,
           "risque": 0.17
         },
         "accord": [
-          6,
-          7
+          7,
+          8
         ]
       },
       "poids": {
@@ -1019,7 +1019,7 @@
       "biais_7j": 48,
       "momentum": 3,
       "long_adj": 0,
-      "fondamental": -1.33,
+      "fondamental": -1.38,
       "technique": -0.66,
       "flux": 0.0,
       "positionnement": 0.74,
@@ -1037,7 +1037,7 @@
         "inflation": -0.68,
         "ton": -2.4,
         "croissance": 1.4,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": 2.41,
         "risque": -0.7,
         "apport": {
@@ -1046,7 +1046,7 @@
           "inflation": -0.28,
           "ton": -0.98,
           "croissance": 0.48,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": 0.49,
           "risque": -0.1
         },
@@ -1180,7 +1180,7 @@
       "biais_7j": 50,
       "momentum": 3,
       "long_adj": 0,
-      "fondamental": -3.57,
+      "fondamental": -3.61,
       "technique": 0.07,
       "flux": 1.38,
       "positionnement": 8.05,
@@ -1198,7 +1198,7 @@
         "inflation": -2.3,
         "ton": -2.4,
         "croissance": 1.9,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": -0.78,
         "risque": 1.81,
         "apport": {
@@ -1207,7 +1207,7 @@
           "inflation": -0.94,
           "ton": -0.98,
           "croissance": 0.65,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": -0.16,
           "risque": 0.25
         },
@@ -1341,7 +1341,7 @@
       "biais_7j": 56,
       "momentum": -2,
       "long_adj": 0,
-      "fondamental": -0.19,
+      "fondamental": -0.23,
       "technique": 1.54,
       "flux": -0.46,
       "positionnement": 0.27,
@@ -1359,7 +1359,7 @@
         "inflation": -2.8,
         "ton": 0.3,
         "croissance": -0.9,
-        "taux_us": -0.0,
+        "taux_us": -0.17,
         "commerce": -1.92,
         "risque": 2.0,
         "apport": {
@@ -1368,7 +1368,7 @@
           "inflation": -1.15,
           "ton": 0.12,
           "croissance": -0.31,
-          "taux_us": -0.0,
+          "taux_us": -0.05,
           "commerce": -0.39,
           "risque": 0.27
         },
