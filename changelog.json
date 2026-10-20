@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "date": "2026-10-20",
+      "items": [
+        "JPY — biais 55 → 50 (-5), porté par les graphiques"
+      ]
+    },
+    {
       "date": "2026-10-16",
       "items": [
         "EUR — inflation : 3,8% (septembre 2026, FRED) (auparavant 3,2% (août 2026, IPCH global, chiffre final du 17 septembre) ; sous-jacent en repli à 2,4%, énergie +14,3% sur un an)",
@@ -29,14 +35,6 @@
       "items": [
         "USD — biais 69 → 63 (-6), porté par les fondamentaux",
         "JPY — biais 57 → 63 (+6), porté par le positionnement des grands spéculateurs"
-      ]
-    },
-    {
-      "date": "2026-10-02",
-      "items": [
-        "USD — chomage : 4,2% (septembre 2026, FRED) (auparavant 4,1% (août 2026, stable) ; NFP +162K en août, juillet révisé de -23K à +21K)",
-        "USD — biais 63 → 68 (+5), porté par les fondamentaux",
-        "CHF — biais 41 → 46 (+5), porté par les fondamentaux"
       ]
     }
   ]
