@@ -37,7 +37,7 @@
     "EUR": {
       "bias": 44,
       "long_adj": -1,
-      "momentum": 4,
+      "momentum": 5,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -102,7 +102,7 @@
     "JPY": {
       "bias": 50,
       "long_adj": -1,
-      "momentum": -2,
+      "momentum": -3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -134,7 +134,7 @@
     "CHF": {
       "bias": 50,
       "long_adj": 1,
-      "momentum": 3,
+      "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -166,7 +166,7 @@
     "CAD": {
       "bias": 47,
       "long_adj": 0,
-      "momentum": 3,
+      "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -198,7 +198,7 @@
     "AUD": {
       "bias": 54,
       "long_adj": 1,
-      "momentum": -1,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
@@ -230,7 +230,7 @@
     "NZD": {
       "bias": 34,
       "long_adj": -1,
-      "momentum": 1,
+      "momentum": 2,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -285,12 +285,12 @@
       "base": "EUR",
       "quote": "AUD",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -323,7 +323,7 @@
       "base": "EUR",
       "quote": "USD",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -385,7 +385,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -399,7 +399,7 @@
       "base": "GBP",
       "quote": "AUD",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -456,12 +456,12 @@
       "base": "GBP",
       "quote": "CAD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -475,7 +475,7 @@
       "base": "GBP",
       "quote": "CHF",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -513,7 +513,7 @@
       "base": "AUD",
       "quote": "NZD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -551,7 +551,7 @@
       "base": "AUD",
       "quote": "CAD",
       "short": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -570,12 +570,12 @@
       "base": "AUD",
       "quote": "CHF",
       "short": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -608,7 +608,7 @@
       "base": "NZD",
       "quote": "USD",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -689,7 +689,7 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -760,7 +760,7 @@
       "base": "CAD",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -779,7 +779,7 @@
       "base": "CHF",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "21 octobre 2026, 10h51 UTC (mise à jour automatique)"
+  "generated_at": "21 octobre 2026, 15h34 UTC (mise à jour automatique)"
 }
