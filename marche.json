@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-21T10:33:35+00:00",
+  "calcule_iso": "2026-10-21T10:52:06+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -363,7 +363,7 @@
     },
     "GBP": {
       "biais": 53,
-      "biais_avant": 54,
+      "biais_avant": 53,
       "biais_7j": 50,
       "momentum": 1,
       "long_adj": -2,
