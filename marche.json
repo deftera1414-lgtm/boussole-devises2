@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-20T20:50:18+00:00",
+  "calcule_iso": "2026-10-21T00:06:59+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 17.0,
       "echeance": {
         "code": "NZD",
-        "heures": 25,
+        "heures": 22,
         "quoi": "Inflation trimestrielle"
       }
     },
@@ -202,13 +202,13 @@
   "devises": {
     "EUR": {
       "biais": 44,
-      "biais_avant": 45,
+      "biais_avant": 44,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": -1,
       "fondamental": -0.64,
       "technique": -4.9,
-      "flux": 2.06,
+      "flux": 1.38,
       "positionnement": -3.24,
       "pos_detail": {
         "net_pct": -15.73,
@@ -516,7 +516,7 @@
         80.3
       ],
       "echeance": {
-        "heures": 9,
+        "heures": 6,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.011,
@@ -534,7 +534,7 @@
       "long_adj": 1,
       "fondamental": 3.8,
       "technique": -0.97,
-      "flux": -0.22,
+      "flux": -0.11,
       "positionnement": -4.85,
       "pos_detail": {
         "net_pct": -34.55,
@@ -842,7 +842,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 25,
+        "heures": 22,
         "quoi": "Inflation trimestrielle"
       },
       "attendu_5j": -0.046,
@@ -860,7 +860,7 @@
       "long_adj": 3,
       "fondamental": 3.43,
       "technique": 4.47,
-      "flux": 0.34,
+      "flux": 0.0,
       "positionnement": 7.3,
       "pos_detail": {
         "net_pct": 24.93,
@@ -1179,10 +1179,10 @@
       "biais_avant": 50,
       "biais_7j": 50,
       "momentum": 3,
-      "long_adj": 0,
+      "long_adj": 1,
       "fondamental": -3.61,
       "technique": 0.07,
-      "flux": 1.38,
+      "flux": 0.91,
       "positionnement": 8.05,
       "pos_detail": {
         "net_pct": -16.09,
@@ -1340,10 +1340,10 @@
       "biais_avant": 50,
       "biais_7j": 56,
       "momentum": -2,
-      "long_adj": 0,
+      "long_adj": -1,
       "fondamental": -0.23,
       "technique": 1.54,
-      "flux": -0.46,
+      "flux": -0.22,
       "positionnement": 0.27,
       "pos_detail": {
         "net_pct": 13.44,

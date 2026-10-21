@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-20T20:50:18+00:00",
-  "verifie": "20 octobre 2026, 20h50 UTC",
+  "verifie_iso": "2026-10-21T00:06:59+00:00",
+  "verifie": "21 octobre 2026, 00h06 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 19 au 25 octobre 2026",
     "debut": "2026-10-19",
     "fin": "2026-10-25",
-    "aujourdhui": "2026-10-20",
+    "aujourdhui": "2026-10-21",
     "jours": [
       {
         "iso": "2026-10-19",
@@ -58,8 +58,8 @@
         "nom": "mardi",
         "num": "20",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -69,7 +69,7 @@
         "num": "21",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "GBP",
@@ -152,8 +152,8 @@
       "avant": "3,2% · août 2026",
       "variation": "+0,6 pt",
       "cran": 3.0,
-      "age": 4,
-      "poids": 1.29,
+      "age": 5,
+      "poids": 0.86,
       "code": "EUR"
     },
     {
@@ -165,8 +165,8 @@
       "avant": "0,8% · août 2026",
       "variation": "+0,4 pt",
       "cran": 2.0,
-      "age": 4,
-      "poids": 0.86,
+      "age": 5,
+      "poids": 0.57,
       "code": "CHF"
     }
   ],
@@ -176,7 +176,7 @@
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 45,
+      "biais": 44,
       "inflation": "3,8% · septembre 2026",
       "inflation_detail": "3,8% (septembre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
@@ -196,11 +196,11 @@
           "avant": "3,2% · août 2026",
           "variation": "+0,6 pt",
           "cran": 3.0,
-          "age": 4,
-          "poids": 1.29
+          "age": 5,
+          "poids": 0.86
         }
       ],
-      "effet": 1.29,
+      "effet": 0.86,
       "effet_mot": "favorable",
       "prochain": "Décision BCE (taux de dépôt)",
       "prochain_iso": "2026-10-29T12:00:00+00:00",
@@ -253,11 +253,11 @@
           "avant": "4,5% · juillet 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 5,
-          "poids": -0.14
+          "age": 6,
+          "poids": -0.07
         }
       ],
-      "effet": -0.14,
+      "effet": -0.07,
       "effet_mot": "sans effet net",
       "prochain": "Décision RBA + SoMP",
       "prochain_iso": "2026-11-03T12:00:00+00:00",
@@ -310,11 +310,11 @@
           "avant": "3,4% · août 2026",
           "variation": "+0,3 pt",
           "cran": 1.5,
-          "age": 6,
-          "poids": 0.21
+          "age": 7,
+          "poids": 0.0
         }
       ],
-      "effet": 0.21,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision FOMC (Fed)",
       "prochain_iso": "2026-10-28T12:00:00+00:00",
@@ -367,11 +367,11 @@
           "avant": "0,8% · août 2026",
           "variation": "+0,4 pt",
           "cran": 2.0,
-          "age": 4,
-          "poids": 0.86
+          "age": 5,
+          "poids": 0.57
         }
       ],
-      "effet": 0.86,
+      "effet": 0.57,
       "effet_mot": "favorable",
       "prochain": "Décision BNS (examen trimestriel)",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -402,11 +402,11 @@
           "avant": "2,4% · juillet 2026",
           "variation": "+0,2 pt",
           "cran": -1.0,
-          "age": 5,
-          "poids": -0.29
+          "age": 6,
+          "poids": -0.14
         }
       ],
-      "effet": -0.29,
+      "effet": -0.14,
       "effet_mot": "sans effet net",
       "prochain": "Décision BoJ + Outlook Report",
       "prochain_iso": "2026-10-30T12:00:00+00:00",

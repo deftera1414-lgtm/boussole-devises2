@@ -101,7 +101,7 @@
     },
     "JPY": {
       "bias": 50,
-      "long_adj": 0,
+      "long_adj": -1,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -133,7 +133,7 @@
     },
     "CHF": {
       "bias": 50,
-      "long_adj": 0,
+      "long_adj": 1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -390,7 +390,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -485,7 +485,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -599,7 +599,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -656,7 +656,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -789,10 +789,10 @@
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre"
       }
     }
   ],
-  "generated_at": "20 octobre 2026, 20h49 UTC (mise à jour automatique)"
+  "generated_at": "21 octobre 2026, 00h06 UTC (mise à jour automatique)"
 }

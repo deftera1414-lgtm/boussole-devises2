@@ -1,6 +1,6 @@
 {
-  "generated_at": "20 octobre 2026, 20h49 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-20T20:49:51+00:00",
+  "generated_at": "21 octobre 2026, 00h06 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-21T00:06:08+00:00",
   "currencies": {
     "USD": {
       "bias": 67,
@@ -103,7 +103,7 @@
     },
     "JPY": {
       "bias": 50,
-      "long_adj": 0,
+      "long_adj": -1,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -135,7 +135,7 @@
     },
     "CHF": {
       "bias": 50,
-      "long_adj": 0,
+      "long_adj": 1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
