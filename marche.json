@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-21T00:06:59+00:00",
+  "calcule_iso": "2026-10-21T05:15:33+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 17.0,
       "echeance": {
         "code": "NZD",
-        "heures": 22,
+        "heures": 16,
         "quoi": "Inflation trimestrielle"
       }
     },
@@ -516,7 +516,7 @@
         80.3
       ],
       "echeance": {
-        "heures": 6,
+        "heures": 1,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.011,
@@ -842,7 +842,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 22,
+        "heures": 16,
         "quoi": "Inflation trimestrielle"
       },
       "attendu_5j": -0.046,
