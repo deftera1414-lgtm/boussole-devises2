@@ -68,7 +68,7 @@
       ]
     },
     "GBP": {
-      "bias": 54,
+      "bias": 53,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "hawkish",
@@ -428,7 +428,7 @@
         "event": false
       },
       "long": {
-        "prob": 60,
+        "prob": 59,
         "label": "Haussier faible"
       }
     },
@@ -447,7 +447,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "21 octobre 2026, 05h15 UTC (mise à jour automatique)"
+  "generated_at": "21 octobre 2026, 10h32 UTC (mise à jour automatique)"
 }

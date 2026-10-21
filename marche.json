@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-21T05:15:33+00:00",
+  "calcule_iso": "2026-10-21T10:33:35+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 17.0,
       "echeance": {
         "code": "NZD",
-        "heures": 16,
+        "heures": 11,
         "quoi": "Inflation trimestrielle"
       }
     },
@@ -362,14 +362,14 @@
       }
     },
     "GBP": {
-      "biais": 54,
+      "biais": 53,
       "biais_avant": 54,
       "biais_7j": 50,
       "momentum": 1,
       "long_adj": -2,
       "fondamental": 2.01,
       "technique": 3.12,
-      "flux": 1.2,
+      "flux": 0.0,
       "positionnement": -3.24,
       "pos_detail": {
         "net_pct": -39.83,
@@ -515,11 +515,7 @@
         71.3,
         80.3
       ],
-      "echeance": {
-        "heures": 1,
-        "quoi": "Inflation annuelle"
-      },
-      "attendu_5j": 0.011,
+      "attendu_5j": 0.013,
       "sigma_5j": 0.45,
       "jumelle": {
         "code": "JPY",
@@ -842,7 +838,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 16,
+        "heures": 11,
         "quoi": "Inflation trimestrielle"
       },
       "attendu_5j": -0.046,
