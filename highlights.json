@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-21T19:33:33+00:00",
-  "verifie": "21 octobre 2026, 19h33 UTC",
+  "verifie_iso": "2026-10-21T22:42:09+00:00",
+  "verifie": "21 octobre 2026, 22h42 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -138,7 +138,7 @@
       }
     ],
     "nb": 5,
-    "reste": 1,
+    "reste": 0,
     "prochaine": false,
     "en_attente": false
   },
@@ -274,16 +274,16 @@
       "chomage": "5,6% · T2 2026",
       "chomage_detail": "5,6% (T2 2026, plus haut depuis onze ans)",
       "semaine_nb": 1,
-      "semaine_reste": 1,
-      "semaine_penchant": -3.0,
-      "semaine_mot": "nettement défavorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Inflation trimestrielle",
-      "prochain_iso": "2026-10-21T21:45:00+00:00",
-      "prochain_txt": "21 octobre"
+      "prochain": "Décision RBNZ (OCR)",
+      "prochain_iso": "2026-10-28T12:00:00+00:00",
+      "prochain_txt": "28 octobre"
     },
     {
       "code": "USD",
