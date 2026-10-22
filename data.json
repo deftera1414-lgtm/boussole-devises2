@@ -1,7 +1,7 @@
 {
   "currencies": {
     "USD": {
-      "bias": 66,
+      "bias": 67,
       "long_adj": 3,
       "momentum": -1,
       "tilt": "hawkish",
@@ -333,7 +333,7 @@
         "event": false
       },
       "long": {
-        "prob": 38,
+        "prob": 37,
         "label": "Baissier faible"
       }
     },
@@ -447,7 +447,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -542,7 +542,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -689,12 +689,12 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 61,
+        "prob": 62,
         "label": "Haussier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "22 octobre 2026, 18h45 UTC (mise à jour automatique)"
+  "generated_at": "22 octobre 2026, 22h43 UTC (mise à jour automatique)"
 }
