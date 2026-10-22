@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-22T07:55:41+00:00",
+  "calcule_iso": "2026-10-22T10:53:03+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -681,7 +681,7 @@
     },
     "NZD": {
       "biais": 36,
-      "biais_avant": 34,
+      "biais_avant": 36,
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": -3,
@@ -1325,7 +1325,7 @@
     },
     "JPY": {
       "biais": 51,
-      "biais_avant": 50,
+      "biais_avant": 51,
       "biais_7j": 56,
       "momentum": -2,
       "long_adj": -1,

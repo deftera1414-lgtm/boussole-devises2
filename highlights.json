@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-22T07:55:40+00:00",
-  "verifie": "22 octobre 2026, 07h55 UTC",
+  "verifie_iso": "2026-10-22T10:53:03+00:00",
+  "verifie": "22 octobre 2026, 10h53 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -255,7 +255,7 @@
       "banque": "Reserve Bank of New Zealand (RBNZ)",
       "taux": "2,75%",
       "ton": "neutre",
-      "biais": 34,
+      "biais": 36,
       "inflation": "4,1% · T2 2026",
       "inflation_detail": "4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)",
       "chomage": "5,6% · T2 2026",
@@ -356,7 +356,7 @@
       "banque": "Bank of Japan (BoJ)",
       "taux": "1,25%",
       "ton": "resserrement",
-      "biais": 50,
+      "biais": 51,
       "inflation": "1,7% · août 2026",
       "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
       "chomage": "2,6% · août 2026",
