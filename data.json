@@ -100,7 +100,7 @@
       ]
     },
     "JPY": {
-      "bias": 50,
+      "bias": 51,
       "long_adj": -1,
       "momentum": -2,
       "tilt": "hawkish",
@@ -390,7 +390,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -599,7 +599,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -765,12 +765,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "23 octobre 2026, 10h44 UTC (mise à jour automatique)"
+  "generated_at": "23 octobre 2026, 13h46 UTC (mise à jour automatique)"
 }
