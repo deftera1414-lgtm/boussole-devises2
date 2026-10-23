@@ -1,6 +1,6 @@
 {
-  "generated_at": "22 octobre 2026, 22h43 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-22T22:43:11+00:00",
+  "generated_at": "23 octobre 2026, 01h52 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-23T01:52:48+00:00",
   "currencies": {
     "USD": {
       "bias": 67,
@@ -37,7 +37,7 @@
       ]
     },
     "EUR": {
-      "bias": 44,
+      "bias": 43,
       "long_adj": 0,
       "momentum": 4,
       "tilt": "hawkish",

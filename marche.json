@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-22T22:43:32+00:00",
+  "calcule_iso": "2026-10-23T01:53:14+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -119,12 +119,12 @@
     },
     {
       "paire": "USD/EUR",
-      "ecart": 23,
+      "ecart": 24,
       "soutien": 0.5,
-      "attendu_5j": 0.13,
+      "attendu_5j": 0.14,
       "sigma_5j": 0.79,
-      "rapport": 0.17,
-      "score": 11.5,
+      "rapport": 0.18,
+      "score": 12.0,
       "echeance": null
     },
     {
@@ -197,14 +197,14 @@
   },
   "devises": {
     "EUR": {
-      "biais": 44,
+      "biais": 43,
       "biais_avant": 44,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": 0,
       "fondamental": -0.58,
       "technique": -4.9,
-      "flux": 0.69,
+      "flux": 0.0,
       "positionnement": -3.24,
       "pos_detail": {
         "net_pct": -15.73,
@@ -350,7 +350,7 @@
         14.7,
         6.5
       ],
-      "attendu_5j": -0.027,
+      "attendu_5j": -0.032,
       "sigma_5j": 0.45,
       "jumelle": {
         "code": "JPY",
@@ -842,7 +842,7 @@
     },
     "USD": {
       "biais": 67,
-      "biais_avant": 66,
+      "biais_avant": 67,
       "biais_7j": 66,
       "momentum": -1,
       "long_adj": 3,
@@ -1170,7 +1170,7 @@
       "long_adj": 1,
       "fondamental": -3.64,
       "technique": 0.07,
-      "flux": 0.46,
+      "flux": 0.0,
       "positionnement": 8.05,
       "pos_detail": {
         "net_pct": -16.09,
