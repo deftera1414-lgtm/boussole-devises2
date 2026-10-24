@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "date": "2026-10-24",
+      "items": [
+        "NZD — reunion inscrite au calendrier : Décision RBNZ (OCR)",
+        "USD — reunion inscrite au calendrier : Décision FOMC (Fed)",
+        "CAD — reunion inscrite au calendrier : Décision BdC + rapport"
+      ]
+    },
+    {
       "date": "2026-10-23",
       "items": [
         "AUD — biais 54 → 50 (-4), porté par les fondamentaux",
@@ -36,13 +44,6 @@
         "JPY — biais 61 → 56 (-5), porté par le positionnement des grands spéculateurs",
         "JPY — biais 56 → 61 (+5), porté par le positionnement des grands spéculateurs",
         "USD — inflation : 3,7% (septembre 2026, FRED) (auparavant 3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an)"
-      ]
-    },
-    {
-      "date": "2026-10-09",
-      "items": [
-        "USD — biais 69 → 63 (-6), porté par les fondamentaux",
-        "JPY — biais 57 → 63 (+6), porté par le positionnement des grands spéculateurs"
       ]
     }
   ]

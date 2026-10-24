@@ -1,6 +1,6 @@
 {
-  "generated_at": "23 octobre 2026, 22h35 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-23T22:35:45+00:00",
+  "generated_at": "24 octobre 2026, 01h01 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-24T01:01:05+00:00",
   "currencies": {
     "USD": {
       "bias": 65,
@@ -25,7 +25,16 @@
       "speech": "En annonçant la hausse du 16 septembre, Kevin Warsh a tenu un discours nettement ferme : « l'inflation est trop élevée, et l'est depuis trop longtemps », jugeant que la tendance sous-jacente ne s'est pas améliorée de façon significative. Il a présenté le geste comme le retrait d'« une dose d'accommodation » — la politique restant donc, à ses yeux, encore accommodante. Il refuse tout guidage explicite (« je ne fais pas dans le forward guidance »). Le dot plot montre 16 des 19 membres anticipant au moins une hausse supplémentaire en 2026, dont 4 qui en voient deux.",
       "cycle": "Bascule en cycle de resserrement le 16 septembre 2026 après neuf mois de pause : la Fed sort de la séquence de baisses 2024-2025 et relève son taux pour la première fois depuis 2023, sur un vote unanime. L'inflation bloquée à 3,4% et un choc énergétique persistant l'emportent sur un marché de l'emploi qui ralentit sans se retourner. Le dot plot pointe vers au moins une hausse de plus d'ici la fin de l'année.",
       "move": "hike",
-      "events": [],
+      "events": [
+        {
+          "date": "28 octobre 2026",
+          "date_iso": "2026-10-28",
+          "time": "18:00 UTC",
+          "name": "Décision FOMC (Fed)",
+          "forecast": "voir consensus de marché",
+          "previous": "3,75%–4,00%"
+        }
+      ],
       "watch": "Troisième estimation du PIB du T2 le 30 septembre, puis l'IPC de septembre mi-octobre — deux jalons avant le FOMC du 28 octobre, où le dot plot laisse entrevoir une hausse supplémentaire.",
       "sources": [
         "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
@@ -188,7 +197,16 @@
       "speech": "En maintenant le taux le 2 septembre, Tiff Macklem a livré un message neutre assorti d'une inquiétude sur l'inflation. Il constate que l'économie a redémarré après avoir calé, PIB du T2 à 3,3% à l'appui, mais avertit que plus les prix du pétrole et les marges de raffinage resteront élevés, plus le risque de contagion aux prix énergétiques augmentera. Il conserve toute latitude, se disant prêt à ajuster la politique monétaire selon les besoins, dans un contexte compliqué par les nouvelles mesures commerciales américaines.",
       "cycle": "Pause prolongée à 2,25% depuis octobre 2025, sept réunions d'affilée. La Banque se trouve devant une configuration inconfortable : croissance vigoureuse au T2 et inflation au plafond de la fourchette cible plaideraient pour un resserrement, mais le choc tarifaire américain et un marché de l'emploi qui se retourne en août justifient l'attentisme.",
       "move": "hold",
-      "events": [],
+      "events": [
+        {
+          "date": "28 octobre 2026",
+          "date_iso": "2026-10-28",
+          "time": "13:45 UTC",
+          "name": "Décision BdC + rapport",
+          "forecast": "voir consensus de marché",
+          "previous": "2,25%"
+        }
+      ],
       "watch": "IPC de septembre mi-octobre et rapport sur l'emploi du 9 octobre, avant une décision du 28 octobre où le marché reste partagé entre nouveau statu quo et début de resserrement.",
       "sources": [
         "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
@@ -252,7 +270,16 @@
       "speech": "Anna Breman a accompagné la hausse du 2 septembre d'un message ferme mais prudent : l'OCR remonte vers un taux neutre, la politique restant encore accommodante, et le comité n'est engagé sur aucune trajectoire prédéfinie. La projection officielle situe l'OCR à 2,81% en décembre 2026 puis 3,12% en septembre 2027. Dès le lendemain, devant la commission des finances, elle a nettement adouci le propos en estimant que la banque peut probablement prendre le temps d'évaluer les effets déjà produits — un signal de pause pour octobre qui a fait reculer le NZD.",
       "cycle": "Resserrement relancé en juillet 2026, avec une deuxième hausse le 2 septembre portant l'OCR à 2,75%, en route vers un neutre estimé autour de 3%. L'inflation à 4,1% justifie le mouvement, mais un chômage au plus haut depuis onze ans et une croissance quasi nulle au T2 poussent la gouverneure à préparer les esprits à une pause dès octobre.",
       "move": "hike",
-      "events": [],
+      "events": [
+        {
+          "date": "28 octobre 2026",
+          "date_iso": "2026-10-28",
+          "time": "01:00 UTC",
+          "name": "Décision RBNZ (OCR)",
+          "forecast": "voir consensus de marché",
+          "previous": "2,75%"
+        }
+      ],
       "watch": "Semaine calme côté publications. Prochain jalon majeur : l'IPC du T3 en octobre, juste avant la Monetary Policy Review du 28 octobre, où la gouverneure a déjà laissé entendre qu'une pause était probable.",
       "sources": [
         "https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions",
