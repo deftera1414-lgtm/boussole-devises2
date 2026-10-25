@@ -1,6 +1,6 @@
 {
-  "generated_at": "24 octobre 2026, 23h39 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-24T23:39:51+00:00",
+  "generated_at": "25 octobre 2026, 01h38 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-25T01:38:21+00:00",
   "currencies": {
     "USD": {
       "bias": 65,
@@ -68,7 +68,16 @@
       "speech": "Christine Lagarde a qualifié la hausse du 10 septembre d'évidence (« no brainer ») tout en refusant tout pré-engagement : le Conseil n'a pas débattu de la trajectoire future et reste en approche réunion par réunion. Elle décrit l'inflation actuelle comme « principalement un choc d'offre » lié à l'énergie et au Moyen-Orient, et ne voit un retour à la cible que vers fin 2027. Isabel Schnabel, l'aile la plus ferme du Conseil, plaide pour aller plus loin. Les marchés ont malgré la prudence de Lagarde relevé leurs paris sur de nouvelles hausses.",
       "cycle": "Resserrement relancé en juin 2026 après le choc énergétique, avec une deuxième hausse le 10 septembre portant le taux de dépôt à 2,50%. La BCE assume un cycle actif tout en refusant de s'engager sur la suite : l'inflation remontée à 3,2% est attribuée à l'offre plutôt qu'à la demande, ce qui justifie la fermeté sans promettre d'automatisme.",
       "move": "hike",
-      "events": [],
+      "events": [
+        {
+          "date": "29 octobre 2026",
+          "date_iso": "2026-10-29",
+          "time": "12:15 UTC",
+          "name": "Décision BCE (taux de dépôt)",
+          "forecast": "voir consensus de marché",
+          "previous": "Taux de dépôt 2,50%"
+        }
+      ],
       "watch": "Intervention de Philip Lane le 23 septembre à Genève, puis l'IPCH flash de septembre le 1er octobre — dernier grand jalon avant la réunion du 29 octobre.",
       "sources": [
         "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910.en.html",
