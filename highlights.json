@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-25T06:50:00+00:00",
-  "verifie": "25 octobre 2026, 06h50 UTC",
+  "verifie_iso": "2026-10-25T10:25:52+00:00",
+  "verifie": "25 octobre 2026, 10h25 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -392,7 +392,7 @@
       "banque": "Reserve Bank of Australia (RBA)",
       "taux": "4,35%",
       "ton": "resserrement",
-      "biais": 50,
+      "biais": 51,
       "inflation": "3,5% · juillet 2026",
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,6% · août 2026",
@@ -436,7 +436,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 65,
+      "biais": 66,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,2% · septembre 2026",
