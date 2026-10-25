@@ -1,9 +1,9 @@
 {
   "currencies": {
     "USD": {
-      "bias": 65,
-      "long_adj": 2,
-      "momentum": -1,
+      "bias": 66,
+      "long_adj": 1,
+      "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -183,7 +183,7 @@
     },
     "CAD": {
       "bias": 50,
-      "long_adj": 1,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -223,8 +223,8 @@
       ]
     },
     "AUD": {
-      "bias": 50,
-      "long_adj": -1,
+      "bias": 51,
+      "long_adj": -3,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
@@ -257,7 +257,7 @@
     "NZD": {
       "bias": 32,
       "long_adj": -5,
-      "momentum": 1,
+      "momentum": 2,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -340,12 +340,12 @@
       "base": "EUR",
       "quote": "NZD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -388,7 +388,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -502,7 +502,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -549,7 +549,7 @@
       "base": "AUD",
       "quote": "NZD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -559,7 +559,7 @@
         "event": false
       },
       "long": {
-        "prob": 61,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -578,7 +578,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -635,7 +635,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 45,
         "label": "Neutre"
       }
     },
@@ -787,7 +787,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -830,5 +830,5 @@
       }
     }
   ],
-  "generated_at": "25 octobre 2026, 01h38 UTC (mise à jour automatique)"
+  "generated_at": "25 octobre 2026, 06h49 UTC (mise à jour automatique)"
 }
