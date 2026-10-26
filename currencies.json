@@ -1,6 +1,6 @@
 {
-  "generated_at": "26 octobre 2026, 14h32 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-26T14:32:02+00:00",
+  "generated_at": "26 octobre 2026, 20h07 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-26T20:07:25+00:00",
   "currencies": {
     "USD": {
       "bias": 66,
@@ -9,7 +9,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Federal Reserve",
       "chief": "Kevin Warsh",
       "rate_previous": "3,50%–3,75%",

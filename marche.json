@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-26T14:32:30+00:00",
+  "calcule_iso": "2026-10-26T20:07:52+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -91,35 +91,15 @@
       "paire": "USD/NZD",
       "ecart": 34,
       "soutien": 0.75,
-      "attendu_5j": 0.15,
+      "attendu_5j": 0.11,
       "sigma_5j": 0.97,
-      "rapport": 0.16,
+      "rapport": 0.12,
       "score": 15.3,
       "echeance": {
         "code": "NZD",
-        "heures": 34,
+        "heures": 29,
         "quoi": "Taux directeur (OCR)"
       }
-    },
-    {
-      "paire": "USD/CHF",
-      "ecart": 18,
-      "soutien": 0.71,
-      "attendu_5j": 0.11,
-      "sigma_5j": 1.07,
-      "rapport": 0.11,
-      "score": 12.9,
-      "echeance": null
-    },
-    {
-      "paire": "USD/EUR",
-      "ecart": 22,
-      "soutien": 0.5,
-      "attendu_5j": 0.13,
-      "sigma_5j": 0.79,
-      "rapport": 0.16,
-      "score": 11.0,
-      "echeance": null
     },
     {
       "paire": "CAD/NZD",
@@ -131,8 +111,22 @@
       "score": 7.7,
       "echeance": {
         "code": "NZD",
-        "heures": 34,
+        "heures": 29,
         "quoi": "Taux directeur (OCR)"
+      }
+    },
+    {
+      "paire": "USD/CHF",
+      "ecart": 18,
+      "soutien": 0.71,
+      "attendu_5j": 0.07,
+      "sigma_5j": 1.07,
+      "rapport": 0.07,
+      "score": 7.7,
+      "echeance": {
+        "code": "USD",
+        "heures": 46,
+        "quoi": "Taux des fonds fédéraux"
       }
     },
     {
@@ -145,8 +139,22 @@
       "score": 6.9,
       "echeance": {
         "code": "NZD",
-        "heures": 34,
+        "heures": 29,
         "quoi": "Taux directeur (OCR)"
+      }
+    },
+    {
+      "paire": "USD/CAD",
+      "ecart": 16,
+      "soutien": 0.71,
+      "attendu_5j": 0.06,
+      "sigma_5j": 0.57,
+      "rapport": 0.1,
+      "score": 6.9,
+      "echeance": {
+        "code": "USD",
+        "heures": 46,
+        "quoi": "Taux des fonds fédéraux"
       }
     }
   ],
@@ -524,7 +532,7 @@
         80.3
       ],
       "echeance": {
-        "heures": 46,
+        "heures": 40,
         "quoi": "Annual Budget Release"
       },
       "attendu_5j": 0.016,
@@ -689,7 +697,7 @@
         35.9
       ],
       "echeance": {
-        "heures": 34,
+        "heures": 28,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": 0.004,
@@ -854,7 +862,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 34,
+        "heures": 29,
         "quoi": "Taux directeur (OCR)"
       },
       "attendu_5j": -0.052,
@@ -1018,7 +1026,11 @@
         86.8,
         74.8
       ],
-      "attendu_5j": 0.1,
+      "echeance": {
+        "heures": 46,
+        "quoi": "Taux des fonds fédéraux"
+      },
+      "attendu_5j": 0.06,
       "sigma_5j": 0.62,
       "jumelle": {
         "code": "NZD",
@@ -1180,7 +1192,7 @@
         63.7
       ],
       "echeance": {
-        "heures": 47,
+        "heures": 42,
         "quoi": "Monetary Policy Report BdC"
       },
       "attendu_5j": 0.0,
