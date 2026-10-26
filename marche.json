@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-26T11:54:58+00:00",
+  "calcule_iso": "2026-10-26T14:32:30+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -7,7 +7,7 @@
   "rapport_cot": "2026-10-20",
   "macro": {
     "petrole_3m": 23.1,
-    "tension": 1.41,
+    "tension": 1.47,
     "taux_us_1m": -6
   },
   "moteurs": [
@@ -97,7 +97,7 @@
       "score": 15.3,
       "echeance": {
         "code": "NZD",
-        "heures": 37,
+        "heures": 34,
         "quoi": "Taux directeur (OCR)"
       }
     },
@@ -109,16 +109,6 @@
       "sigma_5j": 1.07,
       "rapport": 0.11,
       "score": 12.9,
-      "echeance": null
-    },
-    {
-      "paire": "USD/CAD",
-      "ecart": 16,
-      "soutien": 0.71,
-      "attendu_5j": 0.1,
-      "sigma_5j": 0.57,
-      "rapport": 0.17,
-      "score": 11.4,
       "echeance": null
     },
     {
@@ -141,7 +131,21 @@
       "score": 7.7,
       "echeance": {
         "code": "NZD",
-        "heures": 37,
+        "heures": 34,
+        "quoi": "Taux directeur (OCR)"
+      }
+    },
+    {
+      "paire": "CHF/NZD",
+      "ecart": 16,
+      "soutien": 0.71,
+      "attendu_5j": 0.04,
+      "sigma_5j": 0.77,
+      "rapport": 0.05,
+      "score": 6.9,
+      "echeance": {
+        "code": "NZD",
+        "heures": 34,
         "quoi": "Taux directeur (OCR)"
       }
     }
@@ -230,7 +234,7 @@
         "croissance": 1.1,
         "taux_us": 0.1,
         "commerce": -0.85,
-        "risque": -0.14,
+        "risque": -0.15,
         "apport": {
           "taux_reel": -2.16,
           "impulsion": -0.35,
@@ -391,7 +395,7 @@
         "croissance": -0.5,
         "taux_us": 0.1,
         "commerce": -0.08,
-        "risque": -0.82,
+        "risque": -0.85,
         "apport": {
           "taux_reel": 2.64,
           "impulsion": -0.57,
@@ -400,7 +404,7 @@
           "croissance": -0.17,
           "taux_us": 0.03,
           "commerce": -0.02,
-          "risque": -0.11
+          "risque": -0.12
         },
         "accord": [
           2,
@@ -519,7 +523,11 @@
         71.3,
         80.3
       ],
-      "attendu_5j": 0.027,
+      "echeance": {
+        "heures": 46,
+        "quoi": "Annual Budget Release"
+      },
+      "attendu_5j": 0.016,
       "sigma_5j": 0.45,
       "jumelle": {
         "code": "JPY",
@@ -532,7 +540,7 @@
       "biais_7j": 52,
       "momentum": -1,
       "long_adj": -3,
-      "fondamental": 3.8,
+      "fondamental": 3.79,
       "technique": -0.97,
       "flux": 2.4,
       "positionnement": -9.09,
@@ -552,7 +560,7 @@
         "croissance": -0.2,
         "taux_us": 0.1,
         "commerce": 1.07,
-        "risque": -1.94,
+        "risque": -2.03,
         "apport": {
           "taux_reel": 2.68,
           "impulsion": 1.61,
@@ -561,7 +569,7 @@
           "croissance": -0.07,
           "taux_us": 0.03,
           "commerce": 0.22,
-          "risque": -0.26
+          "risque": -0.28
         },
         "accord": [
           4,
@@ -681,7 +689,7 @@
         35.9
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 34,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": 0.004,
@@ -697,7 +705,7 @@
       "biais_7j": 35,
       "momentum": 2,
       "long_adj": -5,
-      "fondamental": -3.34,
+      "fondamental": -3.36,
       "technique": -3.2,
       "flux": 0.8,
       "positionnement": -9.19,
@@ -717,7 +725,7 @@
         "croissance": -2.1,
         "taux_us": 0.1,
         "commerce": -0.28,
-        "risque": -2.17,
+        "risque": -2.26,
         "apport": {
           "taux_reel": -2.29,
           "impulsion": -1.23,
@@ -726,7 +734,7 @@
           "croissance": -0.72,
           "taux_us": 0.03,
           "commerce": -0.06,
-          "risque": -0.3
+          "risque": -0.31
         },
         "accord": [
           6,
@@ -846,7 +854,7 @@
         16.4
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 34,
         "quoi": "Taux directeur (OCR)"
       },
       "attendu_5j": -0.052,
@@ -862,7 +870,7 @@
       "biais_7j": 66,
       "momentum": 0,
       "long_adj": 1,
-      "fondamental": 2.92,
+      "fondamental": 2.93,
       "technique": 4.47,
       "flux": 2.8,
       "positionnement": 5.97,
@@ -882,7 +890,7 @@
         "croissance": -0.7,
         "taux_us": -0.72,
         "commerce": 0.4,
-        "risque": 1.43,
+        "risque": 1.5,
         "apport": {
           "taux_reel": 1.43,
           "impulsion": 0.3,
@@ -1023,7 +1031,7 @@
       "biais_7j": 48,
       "momentum": 3,
       "long_adj": 0,
-      "fondamental": -1.39,
+      "fondamental": -1.4,
       "technique": -0.66,
       "flux": 0.8,
       "positionnement": 3.22,
@@ -1043,7 +1051,7 @@
         "croissance": 1.4,
         "taux_us": 0.1,
         "commerce": 2.03,
-        "risque": -0.82,
+        "risque": -0.85,
         "apport": {
           "taux_reel": -0.81,
           "impulsion": -0.14,
@@ -1052,7 +1060,7 @@
           "croissance": 0.48,
           "taux_us": 0.03,
           "commerce": 0.42,
-          "risque": -0.11
+          "risque": -0.12
         },
         "accord": [
           5,
@@ -1171,6 +1179,10 @@
         72.4,
         63.7
       ],
+      "echeance": {
+        "heures": 47,
+        "quoi": "Monetary Policy Report BdC"
+      },
       "attendu_5j": 0.0,
       "sigma_5j": 0.36,
       "jumelle": {
@@ -1184,7 +1196,7 @@
       "biais_7j": 50,
       "momentum": 3,
       "long_adj": 1,
-      "fondamental": -3.47,
+      "fondamental": -3.46,
       "technique": 0.07,
       "flux": 0.0,
       "positionnement": 6.87,
@@ -1204,7 +1216,7 @@
         "croissance": 1.9,
         "taux_us": 0.1,
         "commerce": -0.66,
-        "risque": 2.11,
+        "risque": 2.2,
         "apport": {
           "taux_reel": -1.59,
           "impulsion": -0.79,
@@ -1213,7 +1225,7 @@
           "croissance": 0.65,
           "taux_us": 0.03,
           "commerce": -0.14,
-          "risque": 0.29
+          "risque": 0.3
         },
         "accord": [
           5,
@@ -1345,7 +1357,7 @@
       "biais_7j": 56,
       "momentum": -2,
       "long_adj": 2,
-      "fondamental": -0.05,
+      "fondamental": -0.04,
       "technique": 1.54,
       "flux": 0.0,
       "positionnement": 5.13,
@@ -1365,7 +1377,7 @@
         "croissance": -0.9,
         "taux_us": 0.1,
         "commerce": -1.62,
-        "risque": 2.33,
+        "risque": 2.44,
         "apport": {
           "taux_reel": 0.09,
           "impulsion": 1.17,
@@ -1374,7 +1386,7 @@
           "croissance": -0.31,
           "taux_us": 0.03,
           "commerce": -0.33,
-          "risque": 0.32
+          "risque": 0.33
         },
         "accord": [
           3,
