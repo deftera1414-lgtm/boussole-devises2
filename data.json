@@ -140,7 +140,16 @@
       "speech": "Le communiqué du 18 septembre reste ferme : la BoJ dit vouloir continuer à relever son taux directeur et insiste sur le risque que l'inflation dépasse durablement la cible de 2%. Mais Kazuo Ueda a déçu en conférence de presse, refusant de s'engager (« cela dépend de l'évolution des prix, plusieurs scénarios sont possibles ») et précisant que la politique monétaire n'est pas pilotée pour contrôler le change. Combiné à un vote divisé 7-2, ce ton en retrait a fait reculer le yen malgré la hausse.",
       "cycle": "Normalisation graduelle engagée depuis la sortie des taux négatifs en 2024, portée le 18 septembre à 1,25%, au plus haut depuis trente ans. La tension du moment est que cette hausse intervient alors que l'IPC core reste sous 2% pour le huitième mois consécutif : la BoJ agit sur l'inflation anticipée plutôt que constatée, ce qui explique un comité divisé et un gouverneur réticent à promettre la suite.",
       "move": "hike",
-      "events": [],
+      "events": [
+        {
+          "date": "30 octobre 2026",
+          "date_iso": "2026-10-30",
+          "time": "03:00 UTC",
+          "name": "Décision BoJ + Outlook Report",
+          "forecast": "voir consensus de marché",
+          "previous": "1,25%"
+        }
+      ],
       "watch": "Semaine calme : la Bourse de Tokyo est fermée les 21, 22 et 23 septembre (Silver Week). Le PMI flash Jibun Bank du 23 septembre est classé impact moyen. Prochain vrai jalon : l'IPC de Tokyo de septembre fin septembre, puis la réunion du 30 octobre avec Outlook Report.",
       "sources": [
         "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
@@ -261,7 +270,7 @@
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Reserve Bank of New Zealand (RBNZ)",
       "chief": "Anna Breman",
       "rate_previous": "2,50%",
@@ -347,7 +356,7 @@
       "medium": {
         "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 59,
@@ -459,9 +468,9 @@
         "event": false
       },
       "medium": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 64,
@@ -554,9 +563,9 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 60,
@@ -649,9 +658,9 @@
         "event": false
       },
       "medium": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 30,
@@ -668,9 +677,9 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 38,
@@ -687,9 +696,9 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 39,
@@ -706,9 +715,9 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 34,
@@ -830,5 +839,5 @@
       }
     }
   ],
-  "generated_at": "25 octobre 2026, 22h46 UTC (mise à jour automatique)"
+  "generated_at": "26 octobre 2026, 01h38 UTC (mise à jour automatique)"
 }

@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-25T22:47:21+00:00",
-  "verifie": "25 octobre 2026, 22h47 UTC",
+  "verifie_iso": "2026-10-26T01:38:39+00:00",
+  "verifie": "26 octobre 2026, 01h38 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
-    "titre": "Semaine prochaine, du 26 octobre au 1er novembre 2026",
+    "titre": "Semaine du 26 octobre au 1er novembre 2026",
     "debut": "2026-10-26",
     "fin": "2026-11-01",
-    "aujourdhui": "2026-10-25",
+    "aujourdhui": "2026-10-26",
     "jours": [
       {
         "iso": "2026-10-26",
@@ -15,7 +15,7 @@
         "num": "26",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -338,7 +338,7 @@
     ],
     "nb": 23,
     "reste": 23,
-    "prochaine": true,
+    "prochaine": false,
     "en_attente": false
   },
   "faits": [],

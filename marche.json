@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-25T22:47:21+00:00",
+  "calcule_iso": "2026-10-26T01:38:39+00:00",
   "seance": "2026-10-16",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -91,21 +91,15 @@
       "paire": "USD/NZD",
       "ecart": 34,
       "soutien": 0.75,
-      "attendu_5j": 0.19,
+      "attendu_5j": 0.15,
       "sigma_5j": 0.97,
-      "rapport": 0.19,
-      "score": 25.5,
-      "echeance": null
-    },
-    {
-      "paire": "CAD/NZD",
-      "ecart": 18,
-      "soutien": 0.71,
-      "attendu_5j": 0.09,
-      "sigma_5j": 0.72,
-      "rapport": 0.12,
-      "score": 12.9,
-      "echeance": null
+      "rapport": 0.16,
+      "score": 15.3,
+      "echeance": {
+        "code": "NZD",
+        "heures": 47,
+        "quoi": "Taux directeur (OCR)"
+      }
     },
     {
       "paire": "USD/CHF",
@@ -118,16 +112,6 @@
       "echeance": null
     },
     {
-      "paire": "CHF/NZD",
-      "ecart": 16,
-      "soutien": 0.71,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.77,
-      "rapport": 0.1,
-      "score": 11.4,
-      "echeance": null
-    },
-    {
       "paire": "USD/CAD",
       "ecart": 16,
       "soutien": 0.71,
@@ -136,6 +120,30 @@
       "rapport": 0.17,
       "score": 11.4,
       "echeance": null
+    },
+    {
+      "paire": "USD/EUR",
+      "ecart": 22,
+      "soutien": 0.5,
+      "attendu_5j": 0.13,
+      "sigma_5j": 0.79,
+      "rapport": 0.16,
+      "score": 11.0,
+      "echeance": null
+    },
+    {
+      "paire": "CAD/NZD",
+      "ecart": 18,
+      "soutien": 0.71,
+      "attendu_5j": 0.05,
+      "sigma_5j": 0.72,
+      "rapport": 0.07,
+      "score": 7.7,
+      "echeance": {
+        "code": "NZD",
+        "heures": 47,
+        "quoi": "Taux directeur (OCR)"
+      }
     }
   ],
   "grappes": [
@@ -672,7 +680,11 @@
         30.8,
         35.9
       ],
-      "attendu_5j": 0.007,
+      "echeance": {
+        "heures": 47,
+        "quoi": "Inflation mensuelle"
+      },
+      "attendu_5j": 0.004,
       "sigma_5j": 0.72,
       "jumelle": {
         "code": "CHF",
@@ -833,7 +845,11 @@
         4.9,
         16.4
       ],
-      "attendu_5j": -0.087,
+      "echeance": {
+        "heures": 47,
+        "quoi": "Taux directeur (OCR)"
+      },
+      "attendu_5j": -0.052,
       "sigma_5j": 0.48,
       "jumelle": {
         "code": "USD",
