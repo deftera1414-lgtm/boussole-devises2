@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-27T00:03:32+00:00",
+  "calcule_iso": "2026-10-27T05:32:16+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 13.9,
       "echeance": {
         "code": "NZD",
-        "heures": 25,
+        "heures": 19,
         "quoi": "Taux directeur (OCR)"
       }
     },
@@ -111,7 +111,7 @@
       "score": 7.1,
       "echeance": {
         "code": "AUD",
-        "heures": 24,
+        "heures": 19,
         "quoi": "Inflation mensuelle"
       }
     },
@@ -125,7 +125,7 @@
       "score": 6.9,
       "echeance": {
         "code": "GBP",
-        "heures": 36,
+        "heures": 31,
         "quoi": "Annual Budget Release"
       }
     },
@@ -139,7 +139,7 @@
       "score": 6.8,
       "echeance": {
         "code": "NZD",
-        "heures": 25,
+        "heures": 19,
         "quoi": "Taux directeur (OCR)"
       }
     },
@@ -153,7 +153,7 @@
       "score": 6.0,
       "echeance": {
         "code": "USD",
-        "heures": 42,
+        "heures": 36,
         "quoi": "Taux des fonds fédéraux"
       }
     }
@@ -218,7 +218,7 @@
   "devises": {
     "EUR": {
       "biais": 43,
-      "biais_avant": 44,
+      "biais_avant": 43,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": 2,
@@ -532,7 +532,7 @@
         70.4
       ],
       "echeance": {
-        "heures": 36,
+        "heures": 31,
         "quoi": "Annual Budget Release"
       },
       "attendu_5j": 0.015,
@@ -544,7 +544,7 @@
     },
     "AUD": {
       "biais": 52,
-      "biais_avant": 51,
+      "biais_avant": 52,
       "biais_7j": 51,
       "momentum": -1,
       "long_adj": -4,
@@ -697,7 +697,7 @@
         67.5
       ],
       "echeance": {
-        "heures": 24,
+        "heures": 19,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": 0.009,
@@ -709,7 +709,7 @@
     },
     "NZD": {
       "biais": 33,
-      "biais_avant": 32,
+      "biais_avant": 33,
       "biais_7j": 32,
       "momentum": 2,
       "long_adj": -6,
@@ -862,7 +862,7 @@
         26.8
       ],
       "echeance": {
-        "heures": 25,
+        "heures": 19,
         "quoi": "Taux directeur (OCR)"
       },
       "attendu_5j": -0.05,
@@ -874,7 +874,7 @@
     },
     "USD": {
       "biais": 64,
-      "biais_avant": 66,
+      "biais_avant": 64,
       "biais_7j": 66,
       "momentum": 0,
       "long_adj": 2,
@@ -1027,7 +1027,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 42,
+        "heures": 36,
         "quoi": "Taux des fonds fédéraux"
       },
       "attendu_5j": 0.048,
@@ -1039,7 +1039,7 @@
     },
     "CAD": {
       "biais": 51,
-      "biais_avant": 50,
+      "biais_avant": 51,
       "biais_7j": 50,
       "momentum": 3,
       "long_adj": -1,
@@ -1192,7 +1192,7 @@
         100.0
       ],
       "echeance": {
-        "heures": 38,
+        "heures": 32,
         "quoi": "Monetary Policy Report BdC"
       },
       "attendu_5j": 0.002,
