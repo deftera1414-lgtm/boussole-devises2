@@ -1,6 +1,6 @@
 {
-  "generated_at": "27 octobre 2026, 16h49 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-27T16:49:59+00:00",
+  "generated_at": "27 octobre 2026, 21h27 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-27T21:27:46+00:00",
   "currencies": {
     "USD": {
       "bias": 64,
@@ -271,7 +271,7 @@
       "momentum": 2,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Reserve Bank of New Zealand (RBNZ)",
       "chief": "Anna Breman",
