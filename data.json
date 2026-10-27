@@ -1,8 +1,8 @@
 {
   "currencies": {
     "USD": {
-      "bias": 66,
-      "long_adj": 1,
+      "bias": 64,
+      "long_adj": 2,
       "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -44,8 +44,8 @@
       ]
     },
     "EUR": {
-      "bias": 44,
-      "long_adj": 1,
+      "bias": 43,
+      "long_adj": 2,
       "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -119,7 +119,7 @@
     },
     "JPY": {
       "bias": 56,
-      "long_adj": 2,
+      "long_adj": 1,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -160,7 +160,7 @@
     },
     "CHF": {
       "bias": 48,
-      "long_adj": 1,
+      "long_adj": 2,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -191,8 +191,8 @@
       ]
     },
     "CAD": {
-      "bias": 50,
-      "long_adj": 0,
+      "bias": 51,
+      "long_adj": -1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -232,8 +232,8 @@
       ]
     },
     "AUD": {
-      "bias": 51,
-      "long_adj": -3,
+      "bias": 52,
+      "long_adj": -4,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
@@ -264,8 +264,8 @@
       ]
     },
     "NZD": {
-      "bias": 32,
-      "long_adj": -5,
+      "bias": 33,
+      "long_adj": -6,
       "momentum": 2,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -316,7 +316,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -354,7 +354,7 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": true
       },
@@ -378,7 +378,7 @@
         "event": true
       },
       "long": {
-        "prob": 39,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -411,7 +411,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -492,8 +492,8 @@
         "event": true
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -530,7 +530,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -549,7 +549,7 @@
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -587,7 +587,7 @@
         "event": true
       },
       "long": {
-        "prob": 40,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -625,7 +625,7 @@
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -639,12 +639,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -658,7 +658,7 @@
         "event": false
       },
       "medium": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre",
         "event": true
       },
@@ -701,7 +701,7 @@
         "event": true
       },
       "long": {
-        "prob": 39,
+        "prob": 38,
         "label": "Baissier faible"
       }
     },
@@ -720,8 +720,8 @@
         "event": true
       },
       "long": {
-        "prob": 34,
-        "label": "Baissier modéré"
+        "prob": 35,
+        "label": "Baissier faible"
       }
     },
     {
@@ -753,12 +753,12 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": true
       },
       "long": {
-        "prob": 59,
+        "prob": 58,
         "label": "Haussier faible"
       }
     },
@@ -839,5 +839,5 @@
       }
     }
   ],
-  "generated_at": "26 octobre 2026, 20h07 UTC (mise à jour automatique)"
+  "generated_at": "27 octobre 2026, 00h03 UTC (mise à jour automatique)"
 }
