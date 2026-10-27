@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-27T05:32:16+00:00",
+  "calcule_iso": "2026-10-27T10:55:31+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 13.9,
       "echeance": {
         "code": "NZD",
-        "heures": 19,
+        "heures": 14,
         "quoi": "Taux directeur (OCR)"
       }
     },
@@ -111,7 +111,7 @@
       "score": 7.1,
       "echeance": {
         "code": "AUD",
-        "heures": 19,
+        "heures": 14,
         "quoi": "Inflation mensuelle"
       }
     },
@@ -125,7 +125,7 @@
       "score": 6.9,
       "echeance": {
         "code": "GBP",
-        "heures": 31,
+        "heures": 26,
         "quoi": "Annual Budget Release"
       }
     },
@@ -139,7 +139,7 @@
       "score": 6.8,
       "echeance": {
         "code": "NZD",
-        "heures": 19,
+        "heures": 14,
         "quoi": "Taux directeur (OCR)"
       }
     },
@@ -153,7 +153,7 @@
       "score": 6.0,
       "echeance": {
         "code": "USD",
-        "heures": 36,
+        "heures": 31,
         "quoi": "Taux des fonds fédéraux"
       }
     }
@@ -532,7 +532,7 @@
         70.4
       ],
       "echeance": {
-        "heures": 31,
+        "heures": 26,
         "quoi": "Annual Budget Release"
       },
       "attendu_5j": 0.015,
@@ -697,7 +697,7 @@
         67.5
       ],
       "echeance": {
-        "heures": 19,
+        "heures": 14,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": 0.009,
@@ -862,7 +862,7 @@
         26.8
       ],
       "echeance": {
-        "heures": 19,
+        "heures": 14,
         "quoi": "Taux directeur (OCR)"
       },
       "attendu_5j": -0.05,
@@ -1027,7 +1027,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 36,
+        "heures": 31,
         "quoi": "Taux des fonds fédéraux"
       },
       "attendu_5j": 0.048,
@@ -1192,7 +1192,7 @@
         100.0
       ],
       "echeance": {
-        "heures": 32,
+        "heures": 27,
         "quoi": "Monetary Policy Report BdC"
       },
       "attendu_5j": 0.002,
