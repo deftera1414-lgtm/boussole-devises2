@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-28T11:51:52+00:00",
-  "verifie": "28 octobre 2026, 11h51 UTC",
+  "verifie_iso": "2026-10-28T14:27:40+00:00",
+  "verifie": "28 octobre 2026, 14h27 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 17,
+    "reste": 13,
     "prochaine": false,
     "en_attente": false
   },
@@ -376,16 +376,16 @@
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
       "semaine_nb": 1,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Annual Budget Release",
-      "prochain_iso": "2026-10-28T12:30:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Décision BoE (Bank Rate) + rapport",
+      "prochain_iso": "2026-11-05T12:00:00+00:00",
+      "prochain_txt": "5 novembre"
     },
     {
       "code": "AUD",
@@ -464,15 +464,15 @@
       "chomage": "6,4% · août 2026",
       "chomage_detail": "6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet",
       "semaine_nb": 4,
-      "semaine_reste": 4,
-      "semaine_penchant": 1.0,
-      "semaine_mot": "favorable",
+      "semaine_reste": 1,
+      "semaine_penchant": 0,
+      "semaine_mot": "sans effet net",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Monetary Policy Report BdC",
-      "prochain_iso": "2026-10-28T13:45:00+00:00",
+      "prochain": "Conférence de presse BdC",
+      "prochain_iso": "2026-10-28T14:30:00+00:00",
       "prochain_txt": "28 octobre"
     },
     {

@@ -6,7 +6,7 @@
       "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Federal Reserve",
       "chief": "Kevin Warsh",
@@ -192,12 +192,12 @@
     },
     "CAD": {
       "bias": 51,
-      "long_adj": -1,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Bank of Canada (BoC)",
       "chief": "Tiff Macklem",
       "rate_previous": "2,50%",
@@ -361,7 +361,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 48,
@@ -380,7 +380,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 49,
@@ -388,7 +388,7 @@
         "event": true
       },
       "long": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -475,7 +475,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -494,15 +494,15 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -570,7 +570,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 48,
@@ -589,15 +589,15 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -646,7 +646,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 46,
@@ -665,12 +665,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 38,
@@ -741,7 +741,7 @@
       "short": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 52,
@@ -760,7 +760,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -779,15 +779,15 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -798,7 +798,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
@@ -806,7 +806,7 @@
         "event": true
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -830,5 +830,5 @@
       }
     }
   ],
-  "generated_at": "28 octobre 2026, 11h51 UTC (mise à jour automatique)"
+  "generated_at": "28 octobre 2026, 14h27 UTC (mise à jour automatique)"
 }
