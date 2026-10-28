@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-28T14:27:40+00:00",
-  "verifie": "28 octobre 2026, 14h27 UTC",
+  "verifie_iso": "2026-10-28T19:50:23+00:00",
+  "verifie": "28 octobre 2026, 19h50 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 13,
+    "reste": 9,
     "prochaine": false,
     "en_attente": false
   },
@@ -442,16 +442,16 @@
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 5,
-      "semaine_reste": 5,
+      "semaine_reste": 2,
       "semaine_penchant": 3.5,
       "semaine_mot": "nettement favorable",
       "semaine_resume": "taux directeur, discours, croissance",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Taux des fonds fédéraux",
-      "prochain_iso": "2026-10-28T18:00:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Advance PIB sur un trimestre",
+      "prochain_iso": "2026-10-29T12:30:00+00:00",
+      "prochain_txt": "29 octobre"
     },
     {
       "code": "CAD",
@@ -464,16 +464,16 @@
       "chomage": "6,4% · août 2026",
       "chomage_detail": "6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet",
       "semaine_nb": 4,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Conférence de presse BdC",
-      "prochain_iso": "2026-10-28T14:30:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Décision BdC (taux directeur)",
+      "prochain_iso": "2026-12-09T12:00:00+00:00",
+      "prochain_txt": "9 décembre"
     },
     {
       "code": "CHF",
