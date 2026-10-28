@@ -1,6 +1,6 @@
 {
-  "generated_at": "27 octobre 2026, 21h27 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-27T21:27:46+00:00",
+  "generated_at": "28 octobre 2026, 00h42 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-28T00:42:36+00:00",
   "currencies": {
     "USD": {
       "bias": 64,
@@ -234,8 +234,8 @@
       ]
     },
     "AUD": {
-      "bias": 53,
-      "long_adj": -4,
+      "bias": 51,
+      "long_adj": -2,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,

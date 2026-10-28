@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-27T21:28:09+00:00",
-  "verifie": "27 octobre 2026, 21h28 UTC",
+  "verifie_iso": "2026-10-28T00:42:56+00:00",
+  "verifie": "28 octobre 2026, 00h42 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 26 octobre au 1er novembre 2026",
     "debut": "2026-10-26",
     "fin": "2026-11-01",
-    "aujourdhui": "2026-10-27",
+    "aujourdhui": "2026-10-28",
     "jours": [
       {
         "iso": "2026-10-26",
@@ -24,8 +24,8 @@
         "nom": "mardi",
         "num": "27",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -35,7 +35,7 @@
         "num": "28",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "AUD",
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 23,
+    "reste": 20,
     "prochaine": false,
     "en_attente": false
   },
@@ -398,16 +398,16 @@
       "chomage": "4,6% · août 2026",
       "chomage_detail": "4,6% (août 2026, FRED)",
       "semaine_nb": 3,
-      "semaine_reste": 3,
-      "semaine_penchant": 3.0,
-      "semaine_mot": "nettement favorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Inflation mensuelle",
-      "prochain_iso": "2026-10-28T00:30:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Décision RBA + SoMP",
+      "prochain_iso": "2026-11-03T12:00:00+00:00",
+      "prochain_txt": "3 novembre"
     },
     {
       "code": "NZD",

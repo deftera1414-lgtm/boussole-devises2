@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-27T21:28:10+00:00",
+  "calcule_iso": "2026-10-28T00:42:56+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,22 +97,8 @@
       "score": 13.9,
       "echeance": {
         "code": "NZD",
-        "heures": 4,
+        "heures": 0,
         "quoi": "Taux directeur (OCR)"
-      }
-    },
-    {
-      "paire": "AUD/NZD",
-      "ecart": 20,
-      "soutien": 0.62,
-      "attendu_5j": 0.06,
-      "sigma_5j": 0.77,
-      "rapport": 0.08,
-      "score": 7.5,
-      "echeance": {
-        "code": "AUD",
-        "heures": 3,
-        "quoi": "Inflation mensuelle"
       }
     },
     {
@@ -125,8 +111,22 @@
       "score": 6.9,
       "echeance": {
         "code": "GBP",
-        "heures": 15,
+        "heures": 12,
         "quoi": "Annual Budget Release"
+      }
+    },
+    {
+      "paire": "AUD/NZD",
+      "ecart": 18,
+      "soutien": 0.62,
+      "attendu_5j": 0.06,
+      "sigma_5j": 0.77,
+      "rapport": 0.07,
+      "score": 6.8,
+      "echeance": {
+        "code": "NZD",
+        "heures": 0,
+        "quoi": "Taux directeur (OCR)"
       }
     },
     {
@@ -139,7 +139,7 @@
       "score": 6.8,
       "echeance": {
         "code": "NZD",
-        "heures": 4,
+        "heures": 0,
         "quoi": "Taux directeur (OCR)"
       }
     },
@@ -153,7 +153,7 @@
       "score": 6.4,
       "echeance": {
         "code": "USD",
-        "heures": 21,
+        "heures": 17,
         "quoi": "Taux des fonds fédéraux"
       }
     }
@@ -371,7 +371,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 40,
+        "heures": 37,
         "quoi": "Taux de refinancement BCE"
       },
       "attendu_5j": -0.019,
@@ -536,7 +536,7 @@
         70.4
       ],
       "echeance": {
-        "heures": 15,
+        "heures": 12,
         "quoi": "Annual Budget Release"
       },
       "attendu_5j": 0.015,
@@ -547,14 +547,14 @@
       }
     },
     "AUD": {
-      "biais": 53,
+      "biais": 51,
       "biais_avant": 53,
       "biais_7j": 51,
       "momentum": -1,
-      "long_adj": -4,
+      "long_adj": -2,
       "fondamental": 3.88,
       "technique": 1.68,
-      "flux": 2.4,
+      "flux": 0.0,
       "positionnement": -9.09,
       "pos_detail": {
         "net_pct": -38.22,
@@ -700,11 +700,7 @@
         60.3,
         67.5
       ],
-      "echeance": {
-        "heures": 3,
-        "quoi": "Inflation mensuelle"
-      },
-      "attendu_5j": 0.013,
+      "attendu_5j": 0.007,
       "sigma_5j": 0.73,
       "jumelle": {
         "code": "CHF",
@@ -866,7 +862,7 @@
         26.8
       ],
       "echeance": {
-        "heures": 4,
+        "heures": 0,
         "quoi": "Taux directeur (OCR)"
       },
       "attendu_5j": -0.05,
@@ -1031,7 +1027,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 21,
+        "heures": 17,
         "quoi": "Taux des fonds fédéraux"
       },
       "attendu_5j": 0.048,
@@ -1196,7 +1192,7 @@
         100.0
       ],
       "echeance": {
-        "heures": 16,
+        "heures": 13,
         "quoi": "Monetary Policy Report BdC"
       },
       "attendu_5j": 0.002,

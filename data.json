@@ -232,8 +232,8 @@
       ]
     },
     "AUD": {
-      "bias": 53,
-      "long_adj": -4,
+      "bias": 51,
+      "long_adj": -2,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
@@ -582,7 +582,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": true
       },
@@ -601,7 +601,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": true
       },
@@ -639,7 +639,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -839,5 +839,5 @@
       }
     }
   ],
-  "generated_at": "27 octobre 2026, 21h27 UTC (mise à jour automatique)"
+  "generated_at": "28 octobre 2026, 00h42 UTC (mise à jour automatique)"
 }
