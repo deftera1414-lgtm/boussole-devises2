@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-28T00:42:56+00:00",
+  "calcule_iso": "2026-10-28T07:20:49+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -91,70 +91,62 @@
       "paire": "USD/NZD",
       "ecart": 31,
       "soutien": 0.75,
-      "attendu_5j": 0.1,
+      "attendu_5j": 0.13,
       "sigma_5j": 0.92,
-      "rapport": 0.11,
+      "rapport": 0.14,
       "score": 13.9,
       "echeance": {
-        "code": "NZD",
-        "heures": 0,
-        "quoi": "Taux directeur (OCR)"
-      }
-    },
-    {
-      "paire": "GBP/NZD",
-      "ecart": 23,
-      "soutien": 0.5,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.61,
-      "rapport": 0.11,
-      "score": 6.9,
-      "echeance": {
-        "code": "GBP",
-        "heures": 12,
-        "quoi": "Annual Budget Release"
+        "code": "USD",
+        "heures": 11,
+        "quoi": "Taux des fonds fédéraux"
       }
     },
     {
       "paire": "AUD/NZD",
       "ecart": 18,
       "soutien": 0.62,
-      "attendu_5j": 0.06,
+      "attendu_5j": 0.09,
       "sigma_5j": 0.77,
-      "rapport": 0.07,
-      "score": 6.8,
+      "rapport": 0.12,
+      "score": 11.2,
+      "echeance": null
+    },
+    {
+      "paire": "CHF/NZD",
+      "ecart": 14,
+      "soutien": 0.62,
+      "attendu_5j": 0.06,
+      "sigma_5j": 0.8,
+      "rapport": 0.08,
+      "score": 8.8,
+      "echeance": null
+    },
+    {
+      "paire": "GBP/NZD",
+      "ecart": 23,
+      "soutien": 0.5,
+      "attendu_5j": 0.1,
+      "sigma_5j": 0.61,
+      "rapport": 0.16,
+      "score": 6.9,
       "echeance": {
-        "code": "NZD",
-        "heures": 0,
-        "quoi": "Taux directeur (OCR)"
+        "code": "GBP",
+        "heures": 5,
+        "quoi": "Annual Budget Release"
       }
     },
     {
       "paire": "CAD/NZD",
       "ecart": 18,
       "soutien": 0.62,
-      "attendu_5j": 0.05,
+      "attendu_5j": 0.09,
       "sigma_5j": 0.76,
-      "rapport": 0.07,
+      "rapport": 0.11,
       "score": 6.8,
       "echeance": {
-        "code": "NZD",
-        "heures": 0,
-        "quoi": "Taux directeur (OCR)"
-      }
-    },
-    {
-      "paire": "USD/CHF",
-      "ecart": 17,
-      "soutien": 0.62,
-      "attendu_5j": 0.07,
-      "sigma_5j": 1.03,
-      "rapport": 0.07,
-      "score": 6.4,
-      "echeance": {
-        "code": "USD",
-        "heures": 17,
-        "quoi": "Taux des fonds fédéraux"
+        "code": "CAD",
+        "heures": 6,
+        "quoi": "Monetary Policy Report BdC"
       }
     }
   ],
@@ -371,7 +363,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 30,
         "quoi": "Taux de refinancement BCE"
       },
       "attendu_5j": -0.019,
@@ -536,7 +528,7 @@
         70.4
       ],
       "echeance": {
-        "heures": 12,
+        "heures": 5,
         "quoi": "Annual Budget Release"
       },
       "attendu_5j": 0.015,
@@ -548,7 +540,7 @@
     },
     "AUD": {
       "biais": 51,
-      "biais_avant": 53,
+      "biais_avant": 51,
       "biais_7j": 51,
       "momentum": -1,
       "long_adj": -2,
@@ -711,11 +703,11 @@
       "biais": 33,
       "biais_avant": 33,
       "biais_7j": 32,
-      "momentum": 2,
+      "momentum": 1,
       "long_adj": -6,
       "fondamental": -3.25,
       "technique": -0.96,
-      "flux": 0.8,
+      "flux": 0.0,
       "positionnement": -9.19,
       "pos_detail": {
         "net_pct": -44.25,
@@ -861,11 +853,7 @@
         18.1,
         26.8
       ],
-      "echeance": {
-        "heures": 0,
-        "quoi": "Taux directeur (OCR)"
-      },
-      "attendu_5j": -0.05,
+      "attendu_5j": -0.083,
       "sigma_5j": 0.49,
       "jumelle": {
         "code": "USD",
@@ -1027,7 +1015,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 17,
+        "heures": 11,
         "quoi": "Taux des fonds fédéraux"
       },
       "attendu_5j": 0.048,
@@ -1192,7 +1180,7 @@
         100.0
       ],
       "echeance": {
-        "heures": 13,
+        "heures": 6,
         "quoi": "Monetary Policy Report BdC"
       },
       "attendu_5j": 0.002,
@@ -1517,7 +1505,11 @@
         87.2,
         89.0
       ],
-      "attendu_5j": 0.039,
+      "echeance": {
+        "heures": 43,
+        "quoi": "Taux directeur BoJ"
+      },
+      "attendu_5j": 0.023,
       "sigma_5j": 0.65,
       "jumelle": {
         "code": "GBP",

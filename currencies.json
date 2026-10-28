@@ -1,6 +1,6 @@
 {
-  "generated_at": "28 octobre 2026, 00h42 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-28T00:42:36+00:00",
+  "generated_at": "28 octobre 2026, 07h20 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-28T07:20:30+00:00",
   "currencies": {
     "USD": {
       "bias": 64,
@@ -126,7 +126,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Bank of Japan (BoJ)",
       "chief": "Kazuo Ueda",
       "rate_previous": "1,00%",
@@ -268,17 +268,17 @@
     "NZD": {
       "bias": 33,
       "long_adj": -6,
-      "momentum": 2,
+      "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Reserve Bank of New Zealand (RBNZ)",
       "chief": "Anna Breman",
       "rate_previous": "2,50%",
       "rate_current": "2,75%",
       "rate_change_date": "Hausse de 25 pb le 2 septembre 2026, deuxième du cycle après celle du 8 juillet (2,25% → 2,50% → 2,75%)",
-      "next": "28 octobre 2026 — Décision RBNZ (OCR)",
+      "next": "9 décembre 2026 — Décision RBNZ (OCR) + MPS",
       "gdp_previous": "+0,9% QoQ (T1 2026, révisé en hausse)",
       "gdp_current": "+0,2% QoQ (T2 2026, publié le 17 septembre, au-dessus du consensus de +0,1% ; PIB par habitant +0,1%)",
       "cpi_previous": "3,1% (T1 2026)",
@@ -288,16 +288,7 @@
       "speech": "Anna Breman a accompagné la hausse du 2 septembre d'un message ferme mais prudent : l'OCR remonte vers un taux neutre, la politique restant encore accommodante, et le comité n'est engagé sur aucune trajectoire prédéfinie. La projection officielle situe l'OCR à 2,81% en décembre 2026 puis 3,12% en septembre 2027. Dès le lendemain, devant la commission des finances, elle a nettement adouci le propos en estimant que la banque peut probablement prendre le temps d'évaluer les effets déjà produits — un signal de pause pour octobre qui a fait reculer le NZD.",
       "cycle": "Resserrement relancé en juillet 2026, avec une deuxième hausse le 2 septembre portant l'OCR à 2,75%, en route vers un neutre estimé autour de 3%. L'inflation à 4,1% justifie le mouvement, mais un chômage au plus haut depuis onze ans et une croissance quasi nulle au T2 poussent la gouverneure à préparer les esprits à une pause dès octobre.",
       "move": "hike",
-      "events": [
-        {
-          "date": "28 octobre 2026",
-          "date_iso": "2026-10-28",
-          "time": "01:00 UTC",
-          "name": "Décision RBNZ (OCR)",
-          "forecast": "voir consensus de marché",
-          "previous": "2,75%"
-        }
-      ],
+      "events": [],
       "watch": "Semaine calme côté publications. Prochain jalon majeur : l'IPC du T3 en octobre, juste avant la Monetary Policy Review du 28 octobre, où la gouverneure a déjà laissé entendre qu'une pause était probable.",
       "sources": [
         "https://www.rbnz.govt.nz/monetary-policy/monetary-policy-decisions",

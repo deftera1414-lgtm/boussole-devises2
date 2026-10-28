@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-28T00:42:56+00:00",
-  "verifie": "28 octobre 2026, 00h42 UTC",
+  "verifie_iso": "2026-10-28T07:20:49+00:00",
+  "verifie": "28 octobre 2026, 07h20 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 20,
+    "reste": 17,
     "prochaine": false,
     "en_attente": false
   },
@@ -392,7 +392,7 @@
       "banque": "Reserve Bank of Australia (RBA)",
       "taux": "4,35%",
       "ton": "resserrement",
-      "biais": 53,
+      "biais": 51,
       "inflation": "3,5% · juillet 2026",
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,6% · août 2026",
@@ -420,16 +420,16 @@
       "chomage": "5,6% · T2 2026",
       "chomage_detail": "5,6% (T2 2026, plus haut depuis onze ans)",
       "semaine_nb": 3,
-      "semaine_reste": 3,
-      "semaine_penchant": 1.0,
-      "semaine_mot": "favorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Taux directeur (OCR)",
-      "prochain_iso": "2026-10-28T01:00:00+00:00",
-      "prochain_txt": "28 octobre"
+      "prochain": "Décision RBNZ (OCR) + MPS",
+      "prochain_iso": "2026-12-09T12:00:00+00:00",
+      "prochain_txt": "9 décembre"
     },
     {
       "code": "USD",
