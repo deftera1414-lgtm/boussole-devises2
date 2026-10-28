@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-28T07:20:49+00:00",
+  "calcule_iso": "2026-10-28T11:51:52+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 13.9,
       "echeance": {
         "code": "USD",
-        "heures": 11,
+        "heures": 6,
         "quoi": "Taux des fonds fédéraux"
       }
     },
@@ -131,7 +131,7 @@
       "score": 6.9,
       "echeance": {
         "code": "GBP",
-        "heures": 5,
+        "heures": 1,
         "quoi": "Annual Budget Release"
       }
     },
@@ -145,7 +145,7 @@
       "score": 6.8,
       "echeance": {
         "code": "CAD",
-        "heures": 6,
+        "heures": 2,
         "quoi": "Monetary Policy Report BdC"
       }
     }
@@ -363,7 +363,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 30,
+        "heures": 25,
         "quoi": "Taux de refinancement BCE"
       },
       "attendu_5j": -0.019,
@@ -528,7 +528,7 @@
         70.4
       ],
       "echeance": {
-        "heures": 5,
+        "heures": 1,
         "quoi": "Annual Budget Release"
       },
       "attendu_5j": 0.015,
@@ -1015,7 +1015,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 11,
+        "heures": 6,
         "quoi": "Taux des fonds fédéraux"
       },
       "attendu_5j": 0.048,
@@ -1180,7 +1180,7 @@
         100.0
       ],
       "echeance": {
-        "heures": 6,
+        "heures": 2,
         "quoi": "Monetary Policy Report BdC"
       },
       "attendu_5j": 0.002,
@@ -1506,7 +1506,7 @@
         89.0
       ],
       "echeance": {
-        "heures": 43,
+        "heures": 39,
         "quoi": "Taux directeur BoJ"
       },
       "attendu_5j": 0.023,
