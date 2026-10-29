@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-29T00:21:48+00:00",
-  "verifie": "29 octobre 2026, 00h21 UTC",
+  "verifie_iso": "2026-10-29T06:24:41+00:00",
+  "verifie": "29 octobre 2026, 06h24 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -348,7 +348,7 @@
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 44,
+      "biais": 43,
       "inflation": "3,8% · septembre 2026",
       "inflation_detail": "3,8% (septembre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
