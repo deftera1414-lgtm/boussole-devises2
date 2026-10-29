@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-28T19:50:23+00:00",
-  "verifie": "28 octobre 2026, 19h50 UTC",
+  "verifie_iso": "2026-10-29T00:21:48+00:00",
+  "verifie": "29 octobre 2026, 00h21 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 26 octobre au 1er novembre 2026",
     "debut": "2026-10-26",
     "fin": "2026-11-01",
-    "aujourdhui": "2026-10-28",
+    "aujourdhui": "2026-10-29",
     "jours": [
       {
         "iso": "2026-10-26",
@@ -34,8 +34,8 @@
         "nom": "mercredi",
         "num": "28",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "AUD",
@@ -200,7 +200,7 @@
         "num": "29",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "USD",
@@ -348,7 +348,7 @@
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 43,
+      "biais": 44,
       "inflation": "3,8% · septembre 2026",
       "inflation_detail": "3,8% (septembre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",

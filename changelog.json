@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "date": "2026-10-29",
+      "items": [
+        "USD — 1 evenement(s) passe(s) retire(s)",
+        "USD — prochaine reunion : 9 décembre 2026 — Décision FOMC (Fed) + projections"
+      ]
+    },
+    {
       "date": "2026-10-28",
       "items": [
         "NZD — 1 evenement(s) passe(s) retire(s)",
@@ -57,14 +64,6 @@
       "items": [
         "AUD — chomage : 4,6% (août 2026, FRED) (auparavant 4,5% (juillet 2026, plus haut niveau post-COVID))",
         "JPY — chomage : 2,6% (août 2026, FRED) (auparavant 2,4% (juillet 2026, plus bas depuis juillet 2025))"
-      ]
-    },
-    {
-      "date": "2026-10-14",
-      "items": [
-        "JPY — biais 61 → 56 (-5), porté par le positionnement des grands spéculateurs",
-        "JPY — biais 56 → 61 (+5), porté par le positionnement des grands spéculateurs",
-        "USD — inflation : 3,7% (septembre 2026, FRED) (auparavant 3,4% (août 2026, stable) ; cœur en repli à 2,4%, plus bas depuis mars 2021, mais énergie +16,3% sur un an)"
       ]
     }
   ]
