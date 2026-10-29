@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-29T13:40:40+00:00",
-  "verifie": "29 octobre 2026, 13h40 UTC",
+  "verifie_iso": "2026-10-29T19:49:51+00:00",
+  "verifie": "29 octobre 2026, 19h49 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 5,
+    "reste": 4,
     "prochaine": false,
     "en_attente": false
   },
@@ -354,16 +354,16 @@
       "chomage": "6,4% · juillet 2026",
       "chomage_detail": "6,4% (juillet 2026, stable)",
       "semaine_nb": 3,
-      "semaine_reste": 1,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Conférence de presse BCE",
-      "prochain_iso": "2026-10-29T13:45:00+00:00",
-      "prochain_txt": "29 octobre"
+      "prochain": "Décision BCE + projections",
+      "prochain_iso": "2026-12-17T12:00:00+00:00",
+      "prochain_txt": "17 décembre"
     },
     {
       "code": "GBP",
@@ -436,7 +436,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 64,
+      "biais": 63,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,2% · septembre 2026",
