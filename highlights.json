@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-29T11:59:25+00:00",
-  "verifie": "29 octobre 2026, 11h59 UTC",
+  "verifie_iso": "2026-10-29T13:40:40+00:00",
+  "verifie": "29 octobre 2026, 13h40 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 9,
+    "reste": 5,
     "prochaine": false,
     "en_attente": false
   },
@@ -354,15 +354,15 @@
       "chomage": "6,4% · juillet 2026",
       "chomage_detail": "6,4% (juillet 2026, stable)",
       "semaine_nb": 3,
-      "semaine_reste": 3,
-      "semaine_penchant": 0.0,
+      "semaine_reste": 1,
+      "semaine_penchant": 0,
       "semaine_mot": "sans effet net",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Taux de refinancement BCE",
-      "prochain_iso": "2026-10-29T13:15:00+00:00",
+      "prochain": "Conférence de presse BCE",
+      "prochain_iso": "2026-10-29T13:45:00+00:00",
       "prochain_txt": "29 octobre"
     },
     {
@@ -442,16 +442,16 @@
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
       "semaine_nb": 5,
-      "semaine_reste": 2,
-      "semaine_penchant": 3.5,
-      "semaine_mot": "nettement favorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, discours, croissance",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Advance PIB sur un trimestre",
-      "prochain_iso": "2026-10-29T12:30:00+00:00",
-      "prochain_txt": "29 octobre"
+      "prochain": "Décision FOMC (Fed) + projections",
+      "prochain_iso": "2026-12-09T12:00:00+00:00",
+      "prochain_txt": "9 décembre"
     },
     {
       "code": "CAD",

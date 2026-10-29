@@ -1,11 +1,11 @@
 {
-  "generated_at": "29 octobre 2026, 11h59 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-10-29T11:59:02+00:00",
+  "generated_at": "29 octobre 2026, 13h40 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-10-29T13:40:06+00:00",
   "currencies": {
     "USD": {
-      "bias": 64,
-      "long_adj": 2,
-      "momentum": 0,
+      "bias": 63,
+      "long_adj": 4,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -42,8 +42,8 @@
       "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
       "rate_previous": "Taux de dépôt 2,25%",

@@ -1,9 +1,9 @@
 {
   "currencies": {
     "USD": {
-      "bias": 64,
-      "long_adj": 2,
-      "momentum": 0,
+      "bias": 63,
+      "long_adj": 4,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -40,8 +40,8 @@
       "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Banque centrale européenne (BCE)",
       "chief": "Christine Lagarde",
       "rate_previous": "Taux de dépôt 2,25%",
@@ -286,12 +286,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 44,
@@ -305,12 +305,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 48,
@@ -324,12 +324,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 52,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 59,
@@ -343,15 +343,15 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 48,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 39,
         "label": "Baissier faible"
       }
     },
@@ -362,12 +362,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 47,
@@ -381,12 +381,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 48,
@@ -398,9 +398,9 @@
       "base": "EUR",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 49,
@@ -465,8 +465,8 @@
         "event": false
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -560,7 +560,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -707,7 +707,7 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -731,7 +731,7 @@
         "event": false
       },
       "long": {
-        "prob": 58,
+        "prob": 59,
         "label": "Haussier faible"
       }
     },
@@ -750,7 +750,7 @@
         "event": true
       },
       "long": {
-        "prob": 54,
+        "prob": 55,
         "label": "Neutre"
       }
     },
@@ -812,5 +812,5 @@
       }
     }
   ],
-  "generated_at": "29 octobre 2026, 11h59 UTC (mise à jour automatique)"
+  "generated_at": "29 octobre 2026, 13h40 UTC (mise à jour automatique)"
 }
