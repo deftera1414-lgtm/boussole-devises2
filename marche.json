@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-29T06:24:41+00:00",
+  "calcule_iso": "2026-10-29T11:59:25+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 13.3,
       "echeance": {
         "code": "USD",
-        "heures": 6,
+        "heures": 1,
         "quoi": "Advance PIB sur un trimestre"
       }
     },
@@ -355,7 +355,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 7,
+        "heures": 1,
         "quoi": "Taux de refinancement BCE"
       },
       "attendu_5j": -0.019,
@@ -1003,7 +1003,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 6,
+        "heures": 1,
         "quoi": "Advance PIB sur un trimestre"
       },
       "attendu_5j": 0.048,
@@ -1490,7 +1490,7 @@
         89.0
       ],
       "echeance": {
-        "heures": 20,
+        "heures": 15,
         "quoi": "Taux directeur BoJ"
       },
       "attendu_5j": 0.023,
