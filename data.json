@@ -1,8 +1,8 @@
 {
   "currencies": {
     "USD": {
-      "bias": 62,
-      "long_adj": 4,
+      "bias": 57,
+      "long_adj": 2,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -35,8 +35,8 @@
       ]
     },
     "EUR": {
-      "bias": 44,
-      "long_adj": 2,
+      "bias": 43,
+      "long_adj": 1,
       "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -68,8 +68,8 @@
       ]
     },
     "GBP": {
-      "bias": 56,
-      "long_adj": 0,
+      "bias": 54,
+      "long_adj": -1,
       "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -100,8 +100,8 @@
       ]
     },
     "JPY": {
-      "bias": 56,
-      "long_adj": 1,
+      "bias": 59,
+      "long_adj": 2,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -132,8 +132,8 @@
       ]
     },
     "CHF": {
-      "bias": 47,
-      "long_adj": 2,
+      "bias": 43,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -196,8 +196,8 @@
       ]
     },
     "AUD": {
-      "bias": 51,
-      "long_adj": -2,
+      "bias": 55,
+      "long_adj": -1,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
@@ -237,8 +237,8 @@
       ]
     },
     "NZD": {
-      "bias": 33,
-      "long_adj": -6,
+      "bias": 38,
+      "long_adj": -3,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -285,7 +285,7 @@
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -299,12 +299,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 45,
         "label": "Neutre"
       }
     },
@@ -318,13 +318,13 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 60,
-        "label": "Haussier faible"
+        "prob": 54,
+        "label": "Neutre"
       }
     },
     {
@@ -337,12 +337,12 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -361,7 +361,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -380,7 +380,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -399,7 +399,7 @@
         "event": false
       },
       "long": {
-        "prob": 44,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -413,12 +413,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -432,12 +432,12 @@
         "event": false
       },
       "medium": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 64,
+        "prob": 59,
         "label": "Haussier faible"
       }
     },
@@ -451,12 +451,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -475,7 +475,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -494,7 +494,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 55,
         "label": "Neutre"
       }
     },
@@ -508,12 +508,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -527,12 +527,12 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 61,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -546,13 +546,13 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 42,
-        "label": "Baissier faible"
+        "prob": 48,
+        "label": "Neutre"
       }
     },
     {
@@ -565,12 +565,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -584,13 +584,13 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 50,
-        "label": "Neutre"
+        "prob": 56,
+        "label": "Haussier faible"
       }
     },
     {
@@ -603,7 +603,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -622,13 +622,13 @@
         "event": false
       },
       "medium": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 30,
-        "label": "Baissier modéré"
+        "prob": 38,
+        "label": "Baissier faible"
       }
     },
     {
@@ -646,7 +646,7 @@
         "event": false
       },
       "long": {
-        "prob": 38,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -660,13 +660,13 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 39,
-        "label": "Baissier faible"
+        "prob": 46,
+        "label": "Neutre"
       }
     },
     {
@@ -684,7 +684,7 @@
         "event": false
       },
       "long": {
-        "prob": 35,
+        "prob": 37,
         "label": "Baissier faible"
       }
     },
@@ -698,13 +698,13 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 58,
-        "label": "Haussier faible"
+        "prob": 54,
+        "label": "Neutre"
       }
     },
     {
@@ -736,12 +736,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -760,7 +760,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -779,7 +779,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 45,
         "label": "Neutre"
       }
     },
@@ -793,15 +793,15 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
-        "label": "Neutre"
+        "prob": 41,
+        "label": "Baissier faible"
       }
     }
   ],
-  "generated_at": "30 octobre 2026, 18h48 UTC (mise à jour automatique)"
+  "generated_at": "30 octobre 2026, 23h10 UTC (mise à jour automatique)"
 }
