@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-30T00:16:56+00:00",
-  "verifie": "30 octobre 2026, 00h16 UTC",
+  "verifie_iso": "2026-10-30T06:23:38+00:00",
+  "verifie": "30 octobre 2026, 06h23 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -270,10 +270,21 @@
         "evenements": [
           {
             "code": "JPY",
+            "titre": "Outlook Report BoJ",
+            "famille": null,
+            "iso": "2026-10-30T03:02:00+00:00",
+            "heure": "03h02",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "JPY",
             "titre": "Taux directeur BoJ",
             "famille": "taux",
-            "iso": "2026-10-30T02:30:00+00:00",
-            "heure": "02h30",
+            "iso": "2026-10-30T03:02:00+00:00",
+            "heure": "03h02",
             "consensus": "<1.25%",
             "precedent": "<1.25%",
             "attendu": null,
@@ -283,19 +294,8 @@
             "code": "JPY",
             "titre": "Rapport de politique monétaire",
             "famille": "taux",
-            "iso": "2026-10-30T02:30:00+00:00",
-            "heure": "02h30",
-            "consensus": "",
-            "precedent": "",
-            "attendu": null,
-            "source": "calendrier"
-          },
-          {
-            "code": "JPY",
-            "titre": "Outlook Report BoJ",
-            "famille": null,
-            "iso": "2026-10-30T02:31:00+00:00",
-            "heure": "02h31",
+            "iso": "2026-10-30T03:02:00+00:00",
+            "heure": "03h02",
             "consensus": "",
             "precedent": "",
             "attendu": null,
@@ -337,7 +337,7 @@
       }
     ],
     "nb": 23,
-    "reste": 4,
+    "reste": 0,
     "prochaine": false,
     "en_attente": false
   },
@@ -348,7 +348,7 @@
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 43,
+      "biais": 44,
       "inflation": "3,8% · septembre 2026",
       "inflation_detail": "3,8% (septembre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
@@ -436,7 +436,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 63,
+      "biais": 62,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,2% · septembre 2026",
@@ -508,16 +508,16 @@
       "chomage": "2,6% · août 2026",
       "chomage_detail": "2,6% (août 2026, FRED)",
       "semaine_nb": 4,
-      "semaine_reste": 4,
+      "semaine_reste": 0,
       "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Taux directeur BoJ",
-      "prochain_iso": "2026-10-30T02:30:00+00:00",
-      "prochain_txt": "30 octobre"
+      "prochain": "Décision BoJ (call rate)",
+      "prochain_iso": "2026-12-18T12:00:00+00:00",
+      "prochain_txt": "18 décembre"
     }
   ]
 }

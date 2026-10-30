@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-10-30T00:16:56+00:00",
+  "calcule_iso": "2026-10-30T06:23:38+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -198,7 +198,7 @@
   "devises": {
     "EUR": {
       "biais": 44,
-      "biais_avant": 43,
+      "biais_avant": 44,
       "biais_7j": 44,
       "momentum": 4,
       "long_adj": 2,
@@ -842,7 +842,7 @@
     },
     "USD": {
       "biais": 62,
-      "biais_avant": 63,
+      "biais_avant": 62,
       "biais_7j": 66,
       "momentum": -1,
       "long_adj": 3,
@@ -1477,11 +1477,7 @@
         87.2,
         89.0
       ],
-      "echeance": {
-        "heures": 2,
-        "quoi": "Taux directeur BoJ"
-      },
-      "attendu_5j": 0.023,
+      "attendu_5j": 0.039,
       "sigma_5j": 0.65,
       "jumelle": {
         "code": "GBP",

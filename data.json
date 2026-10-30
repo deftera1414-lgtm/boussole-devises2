@@ -105,14 +105,14 @@
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Bank of Japan (BoJ)",
       "chief": "Kazuo Ueda",
       "rate_previous": "1,00%",
       "rate_current": "1,25%",
       "rate_change_date": "Hausse de 25 pb le 18 septembre 2026, votée 7-2 (dissidents Asada et Sato), effective le 24 septembre — plus haut niveau depuis 1995",
-      "next": "30 octobre 2026 — Décision BoJ + Outlook Report",
+      "next": "18 décembre 2026 — Décision BoJ (call rate)",
       "gdp_previous": "+1,8% (T1 2026, annualisé)",
       "gdp_current": "+1,4% (T2 2026, annualisé, 2e estimation du 7 septembre, révisée en hausse depuis +1,1%)",
       "cpi_previous": "1,8% (juillet 2026, IPC core national)",
@@ -122,16 +122,7 @@
       "speech": "Le communiqué du 18 septembre reste ferme : la BoJ dit vouloir continuer à relever son taux directeur et insiste sur le risque que l'inflation dépasse durablement la cible de 2%. Mais Kazuo Ueda a déçu en conférence de presse, refusant de s'engager (« cela dépend de l'évolution des prix, plusieurs scénarios sont possibles ») et précisant que la politique monétaire n'est pas pilotée pour contrôler le change. Combiné à un vote divisé 7-2, ce ton en retrait a fait reculer le yen malgré la hausse.",
       "cycle": "Normalisation graduelle engagée depuis la sortie des taux négatifs en 2024, portée le 18 septembre à 1,25%, au plus haut depuis trente ans. La tension du moment est que cette hausse intervient alors que l'IPC core reste sous 2% pour le huitième mois consécutif : la BoJ agit sur l'inflation anticipée plutôt que constatée, ce qui explique un comité divisé et un gouverneur réticent à promettre la suite.",
       "move": "hike",
-      "events": [
-        {
-          "date": "30 octobre 2026",
-          "date_iso": "2026-10-30",
-          "time": "03:00 UTC",
-          "name": "Décision BoJ + Outlook Report",
-          "forecast": "voir consensus de marché",
-          "previous": "1,25%"
-        }
-      ],
+      "events": [],
       "watch": "Semaine calme : la Bourse de Tokyo est fermée les 21, 22 et 23 septembre (Silver Week). Le PMI flash Jibun Bank du 23 septembre est classé impact moyen. Prochain vrai jalon : l'IPC de Tokyo de septembre fin septembre, puis la réunion du 30 octobre avec Outlook Report.",
       "sources": [
         "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
@@ -398,14 +389,14 @@
       "base": "EUR",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 44,
@@ -514,12 +505,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 50,
@@ -609,12 +600,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 46,
@@ -685,12 +676,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 35,
@@ -742,12 +733,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 54,
@@ -780,12 +771,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 47,
@@ -799,12 +790,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 46,
@@ -812,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "30 octobre 2026, 00h16 UTC (mise à jour automatique)"
+  "generated_at": "30 octobre 2026, 06h23 UTC (mise à jour automatique)"
 }
