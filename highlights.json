@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-10-30T06:23:38+00:00",
-  "verifie": "30 octobre 2026, 06h23 UTC",
+  "verifie_iso": "2026-10-30T11:53:13+00:00",
+  "verifie": "30 octobre 2026, 11h53 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -305,8 +305,8 @@
             "code": "JPY",
             "titre": "Conférence de presse BoJ",
             "famille": "discours",
-            "iso": "2026-10-30T05:30:00+00:00",
-            "heure": "05h30",
+            "iso": "2026-10-30T06:30:00+00:00",
+            "heure": "06h30",
             "consensus": "",
             "precedent": "",
             "attendu": null,
