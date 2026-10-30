@@ -2,7 +2,7 @@
   "currencies": {
     "USD": {
       "bias": 62,
-      "long_adj": 3,
+      "long_adj": 4,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -456,7 +456,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 45,
         "label": "Neutre"
       }
     },
@@ -627,7 +627,7 @@
         "event": false
       },
       "long": {
-        "prob": 31,
+        "prob": 30,
         "label": "Baissier modéré"
       }
     },
@@ -703,7 +703,7 @@
         "event": false
       },
       "long": {
-        "prob": 57,
+        "prob": 58,
         "label": "Haussier faible"
       }
     },
@@ -803,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "30 octobre 2026, 13h28 UTC (mise à jour automatique)"
+  "generated_at": "30 octobre 2026, 18h48 UTC (mise à jour automatique)"
 }
