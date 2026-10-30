@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "date": "2026-10-30",
+      "items": [
+        "AUD — reunion inscrite au calendrier : Décision RBA + SoMP"
+      ]
+    },
+    {
       "date": "2026-10-29",
       "items": [
         "USD — 1 evenement(s) passe(s) retire(s)",
@@ -59,13 +65,6 @@
         "CHF — inflation : 1,2% (septembre 2026, FRED) (auparavant 0,8% (août 2026, plus forte hausse depuis août 2024) ; sous-jacent à 0,4%, première accélération de l'année)",
         "USD — biais 62 → 67 (+5), porté par le positionnement des grands spéculateurs",
         "JPY — biais 61 → 55 (-6), porté par les fondamentaux"
-      ]
-    },
-    {
-      "date": "2026-10-15",
-      "items": [
-        "AUD — chomage : 4,6% (août 2026, FRED) (auparavant 4,5% (juillet 2026, plus haut niveau post-COVID))",
-        "JPY — chomage : 2,6% (août 2026, FRED) (auparavant 2,4% (juillet 2026, plus bas depuis juillet 2025))"
       ]
     }
   ]

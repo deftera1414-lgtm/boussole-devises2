@@ -1,8 +1,8 @@
 {
   "currencies": {
     "USD": {
-      "bias": 63,
-      "long_adj": 4,
+      "bias": 62,
+      "long_adj": 3,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -35,7 +35,7 @@
       ]
     },
     "EUR": {
-      "bias": 43,
+      "bias": 44,
       "long_adj": 2,
       "momentum": 4,
       "tilt": "hawkish",
@@ -105,7 +105,7 @@
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Bank of Japan (BoJ)",
       "chief": "Kazuo Ueda",
@@ -227,7 +227,16 @@
       "speech": "Devant le Parlement le 18 septembre, Michele Bullock a durci le ton : les risques haussiers signalés en août se matérialisent désormais, entre le conflit au Moyen-Orient, le boom de l'intelligence artificielle et des conditions météorologiques extrêmes qui poussent l'énergie, l'agricole et la technologie. Avec une inflation autour de 3,5%, au-dessus de la cible, elle indique que le Board évaluera fin septembre si le resserrement déjà délivré suffira. Elle nuance en citant le ralentissement de la demande intérieure et la détente progressive du marché du travail.",
       "cycle": "Trois hausses en 2026 ont porté le taux à 4,35% en mai, suivi de quatre mois de statu quo à ton ferme. La réunion du 29 septembre est le vrai rendez-vous : le marché y attribue 76 à 80% de probabilité à une hausse vers 4,60%, ce qui serait le plus haut niveau depuis quinze ans, l'inflation au-dessus de la bande cible 2-3% l'emportant sur un chômage qui remonte.",
       "move": "hold",
-      "events": [],
+      "events": [
+        {
+          "date": "3 novembre 2026",
+          "date_iso": "2026-11-03",
+          "time": "03:30 UTC",
+          "name": "Décision RBA + SoMP",
+          "forecast": "voir consensus de marché",
+          "previous": "4,35%"
+        }
+      ],
       "watch": "Rapport Labour Force d'août le 24 septembre à 01h30 UTC (impact élevé, chômage attendu stable à 4,5%), puis IPC d'août le 30 septembre — deux publications encadrant la décision du 29 septembre, où une hausse à 4,60% est majoritairement anticipée.",
       "sources": [
         "https://www.rba.gov.au/media-releases/2025/mr-25-02.html",
@@ -280,13 +289,13 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -323,7 +332,7 @@
         "event": false
       },
       "long": {
-        "prob": 59,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -342,7 +351,7 @@
         "event": false
       },
       "long": {
-        "prob": 39,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -361,7 +370,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -389,9 +398,9 @@
       "base": "EUR",
       "quote": "JPY",
       "short": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -456,8 +465,8 @@
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 46,
+        "label": "Neutre"
       }
     },
     {
@@ -505,7 +514,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -551,7 +560,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -600,7 +609,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -622,12 +631,12 @@
         "event": false
       },
       "medium": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 30,
+        "prob": 31,
         "label": "Baissier modéré"
       }
     },
@@ -676,7 +685,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 48,
@@ -703,7 +712,7 @@
         "event": false
       },
       "long": {
-        "prob": 58,
+        "prob": 57,
         "label": "Haussier faible"
       }
     },
@@ -722,7 +731,7 @@
         "event": false
       },
       "long": {
-        "prob": 59,
+        "prob": 58,
         "label": "Haussier faible"
       }
     },
@@ -733,7 +742,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -741,7 +750,7 @@
         "event": true
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -771,7 +780,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -790,7 +799,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -803,5 +812,5 @@
       }
     }
   ],
-  "generated_at": "29 octobre 2026, 19h49 UTC (mise à jour automatique)"
+  "generated_at": "30 octobre 2026, 00h16 UTC (mise à jour automatique)"
 }

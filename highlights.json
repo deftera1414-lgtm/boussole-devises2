@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-29T19:49:51+00:00",
-  "verifie": "29 octobre 2026, 19h49 UTC",
+  "verifie_iso": "2026-10-30T00:16:56+00:00",
+  "verifie": "30 octobre 2026, 00h16 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 26 octobre au 1er novembre 2026",
     "debut": "2026-10-26",
     "fin": "2026-11-01",
-    "aujourdhui": "2026-10-29",
+    "aujourdhui": "2026-10-30",
     "jours": [
       {
         "iso": "2026-10-26",
@@ -199,8 +199,8 @@
         "nom": "jeudi",
         "num": "29",
         "mois": "octo.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "USD",
@@ -266,7 +266,7 @@
         "num": "30",
         "mois": "octo.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "JPY",
