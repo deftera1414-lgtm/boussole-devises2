@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-01T14:29:04+00:00",
+  "calcule_iso": "2026-11-01T19:10:08+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -91,21 +91,15 @@
       "paire": "USD/NZD",
       "ecart": 22,
       "soutien": 0.71,
-      "attendu_5j": 0.12,
+      "attendu_5j": 0.09,
       "sigma_5j": 0.92,
-      "rapport": 0.13,
-      "score": 15.7,
-      "echeance": null
-    },
-    {
-      "paire": "USD/CHF",
-      "ecart": 17,
-      "soutien": 0.62,
-      "attendu_5j": 0.1,
-      "sigma_5j": 1.03,
       "rapport": 0.1,
-      "score": 10.6,
-      "echeance": null
+      "score": 9.4,
+      "echeance": {
+        "code": "USD",
+        "heures": 44,
+        "quoi": "Congressional Elections"
+      }
     },
     {
       "paire": "GBP/NZD",
@@ -135,6 +129,16 @@
       "sigma_5j": 0.93,
       "rapport": 0.12,
       "score": 7.9,
+      "echeance": null
+    },
+    {
+      "paire": "GBP/CHF",
+      "ecart": 13,
+      "soutien": 0.5,
+      "attendu_5j": 0.07,
+      "sigma_5j": 0.78,
+      "rapport": 0.09,
+      "score": 6.5,
       "echeance": null
     }
   ],
@@ -673,7 +677,7 @@
         67.5
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 32,
         "quoi": "Taux directeur"
       },
       "attendu_5j": 0.022,
@@ -998,7 +1002,11 @@
         62.0,
         59.9
       ],
-      "attendu_5j": 0.057,
+      "echeance": {
+        "heures": 44,
+        "quoi": "Congressional Elections"
+      },
+      "attendu_5j": 0.034,
       "sigma_5j": 0.57,
       "jumelle": {
         "code": "NZD",
