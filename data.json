@@ -1,9 +1,9 @@
 {
   "currencies": {
     "USD": {
-      "bias": 57,
-      "long_adj": 2,
-      "momentum": -1,
+      "bias": 60,
+      "long_adj": -1,
+      "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -35,7 +35,7 @@
       ]
     },
     "EUR": {
-      "bias": 43,
+      "bias": 42,
       "long_adj": 1,
       "momentum": 4,
       "tilt": "hawkish",
@@ -68,9 +68,9 @@
       ]
     },
     "GBP": {
-      "bias": 54,
-      "long_adj": -1,
-      "momentum": 1,
+      "bias": 57,
+      "long_adj": -3,
+      "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -90,7 +90,16 @@
       "speech": "Andrew Bailey a maintenu le 17 septembre une ligne prudente, à contre-courant du camp ferme au sein de son propre comité. Il se dit très attentif à l'impact des prix de l'énergie, mais juge la transmission aux prix restée jusqu'ici « assez contenue ». Il a explicitement repoussé les anticipations de marché les plus agressives, déclarant que le comité n'avait pas discuté de relever les taux à quatre reprises. Il conditionne toute baisse future à une désescalade au Moyen-Orient et à un reflux des prix énergétiques.",
       "cycle": "Statu quo prolongé à 3,75% depuis décembre 2025, mais la tension interne s'accentue : trois membres sur neuf votaient déjà pour une hausse le 17 septembre. L'inflation remontée à 3,1%, que le MPC voit dépasser 4% début 2027, pousse le comité vers le resserrement pendant que le gouverneur freine. Aucune baisse n'est envisagée avant une détente énergétique durable.",
       "move": "hold",
-      "events": [],
+      "events": [
+        {
+          "date": "5 novembre 2026",
+          "date_iso": "2026-11-05",
+          "time": "12:00 UTC",
+          "name": "Décision BoE (Bank Rate) + rapport",
+          "forecast": "voir consensus de marché",
+          "previous": "3,75%"
+        }
+      ],
       "watch": "Rapport ONS sur le marché du travail le 20 octobre, puis IPC de septembre le 21 octobre — les deux publications qui décideront du vote du 5 novembre, où la dissidence actuelle 6-3 laisse une hausse ouverte.",
       "sources": [
         "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
@@ -102,7 +111,7 @@
     "JPY": {
       "bias": 59,
       "long_adj": 2,
-      "momentum": -2,
+      "momentum": -3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -132,7 +141,7 @@
       ]
     },
     "CHF": {
-      "bias": 43,
+      "bias": 42,
       "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
@@ -164,9 +173,9 @@
       ]
     },
     "CAD": {
-      "bias": 51,
-      "long_adj": 0,
-      "momentum": 3,
+      "bias": 50,
+      "long_adj": -3,
+      "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -202,7 +211,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Reserve Bank of Australia (RBA)",
       "chief": "Michele Bullock",
       "rate_previous": "4,10%",
@@ -239,7 +248,7 @@
     "NZD": {
       "bias": 38,
       "long_adj": -3,
-      "momentum": 1,
+      "momentum": 2,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -275,18 +284,18 @@
       "base": "EUR",
       "quote": "GBP",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -301,11 +310,11 @@
       "medium": {
         "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -313,7 +322,7 @@
       "base": "EUR",
       "quote": "NZD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -337,7 +346,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -361,7 +370,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -399,7 +408,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -408,14 +417,14 @@
       "base": "GBP",
       "quote": "AUD",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 50,
@@ -437,7 +446,7 @@
         "event": false
       },
       "long": {
-        "prob": 59,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -456,7 +465,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -470,12 +479,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -489,13 +498,13 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 55,
-        "label": "Neutre"
+        "prob": 56,
+        "label": "Haussier faible"
       }
     },
     {
@@ -508,7 +517,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -522,14 +531,14 @@
       "base": "AUD",
       "quote": "NZD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "medium": {
         "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 60,
@@ -546,9 +555,9 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 48,
@@ -567,10 +576,10 @@
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
-        "prob": 52,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -586,7 +595,7 @@
       "medium": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 56,
@@ -605,7 +614,7 @@
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 46,
@@ -641,12 +650,12 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -698,13 +707,13 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 54,
-        "label": "Neutre"
+        "prob": 56,
+        "label": "Haussier faible"
       }
     },
     {
@@ -731,12 +740,12 @@
       "base": "USD",
       "quote": "JPY",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -755,12 +764,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -769,7 +778,7 @@
       "base": "CAD",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -779,8 +788,8 @@
         "event": false
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 43,
+        "label": "Baissier faible"
       }
     },
     {
@@ -788,7 +797,7 @@
       "base": "CHF",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -798,10 +807,10 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     }
   ],
-  "generated_at": "31 octobre 2026, 23h40 UTC (mise à jour automatique)"
+  "generated_at": "1er novembre 2026, 06h46 UTC (mise à jour automatique)"
 }

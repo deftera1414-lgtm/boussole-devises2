@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-10-31T23:40:36+00:00",
-  "verifie": "31 octobre 2026, 23h40 UTC",
+  "verifie_iso": "2026-11-01T06:47:25+00:00",
+  "verifie": "1er novembre 2026, 06h47 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine prochaine, du 2 au 8 novembre 2026",
     "debut": "2026-11-02",
     "fin": "2026-11-08",
-    "aujourdhui": "2026-10-31",
+    "aujourdhui": "2026-11-01",
     "jours": [
       {
         "iso": "2026-11-02",
@@ -29,17 +29,83 @@
         "evenements": [
           {
             "code": "AUD",
-            "titre": "Décision RBA + SoMP",
+            "titre": "Taux directeur",
             "famille": "taux",
-            "iso": "2026-11-03T12:00:00+00:00",
-            "heure": "",
+            "iso": "2026-11-03T03:30:00+00:00",
+            "heure": "03h30",
+            "consensus": "4.85%",
+            "precedent": "4.60%",
+            "attendu": 1.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Rapport de politique monétaire RBA",
+            "famille": "taux",
+            "iso": "2026-11-03T03:30:00+00:00",
+            "heure": "03h30",
             "consensus": "",
-            "precedent": "4,35%",
+            "precedent": "",
             "attendu": null,
-            "source": "banque centrale"
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Communiqué de taux RBA",
+            "famille": "taux",
+            "iso": "2026-11-03T03:30:00+00:00",
+            "heure": "03h30",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "AUD",
+            "titre": "Conférence de presse RBA",
+            "famille": "discours",
+            "iso": "2026-11-03T04:30:00+00:00",
+            "heure": "04h30",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Congressional Elections",
+            "famille": null,
+            "iso": "2026-11-03T15:16:00+00:00",
+            "heure": "15h16",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "NZD",
+            "titre": "Variation de l'emploi sur un trimestre",
+            "famille": "emploi",
+            "iso": "2026-11-03T21:45:00+00:00",
+            "heure": "21h45",
+            "consensus": "0.4%",
+            "precedent": "0.5%",
+            "attendu": -0.8,
+            "source": "calendrier"
+          },
+          {
+            "code": "NZD",
+            "titre": "Taux de chômage",
+            "famille": "chomage",
+            "iso": "2026-11-03T21:45:00+00:00",
+            "heure": "21h45",
+            "consensus": "5.5%",
+            "precedent": "5.6%",
+            "attendu": 0.5,
+            "source": "calendrier"
           }
         ],
-        "nb": 1
+        "nb": 7
       },
       {
         "iso": "2026-11-04",
@@ -61,17 +127,61 @@
         "evenements": [
           {
             "code": "GBP",
-            "titre": "Décision BoE (Bank Rate) + rapport",
+            "titre": "Monetary Policy Report BoE",
+            "famille": null,
+            "iso": "2026-11-05T12:00:00+00:00",
+            "heure": "12h00",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "GBP",
+            "titre": "Monetary Policy Summary",
+            "famille": null,
+            "iso": "2026-11-05T12:00:00+00:00",
+            "heure": "12h00",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "GBP",
+            "titre": "MPC Taux directeur (Bank Rate) Votes",
             "famille": "taux",
             "iso": "2026-11-05T12:00:00+00:00",
-            "heure": "",
+            "heure": "12h00",
+            "consensus": "7-0-2",
+            "precedent": "3-0-6",
+            "attendu": 3.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "GBP",
+            "titre": "Taux directeur (Bank Rate)",
+            "famille": "taux",
+            "iso": "2026-11-05T12:00:00+00:00",
+            "heure": "12h00",
+            "consensus": "4.00%",
+            "precedent": "3.75%",
+            "attendu": 1.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "GBP",
+            "titre": "Gouverneur BoE Bailey — discours",
+            "famille": "discours",
+            "iso": "2026-11-05T12:30:00+00:00",
+            "heure": "12h30",
             "consensus": "",
-            "precedent": "3,75%",
+            "precedent": "",
             "attendu": null,
-            "source": "banque centrale"
+            "source": "calendrier"
           }
         ],
-        "nb": 1
+        "nb": 5
       },
       {
         "iso": "2026-11-06",
@@ -80,8 +190,86 @@
         "mois": "nove.",
         "passe": false,
         "aujourdhui": false,
-        "evenements": [],
-        "nb": 0
+        "evenements": [
+          {
+            "code": "CAD",
+            "titre": "Variation de l'emploi",
+            "famille": "emploi",
+            "iso": "2026-11-06T13:30:00+00:00",
+            "heure": "13h30",
+            "consensus": "14.5K",
+            "precedent": "-68.3K",
+            "attendu": 3.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "CAD",
+            "titre": "Taux de chômage",
+            "famille": "chomage",
+            "iso": "2026-11-06T13:30:00+00:00",
+            "heure": "13h30",
+            "consensus": "6.5%",
+            "precedent": "6.5%",
+            "attendu": -0.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Salaire horaire moyen sur un mois",
+            "famille": "emploi",
+            "iso": "2026-11-06T13:30:00+00:00",
+            "heure": "13h30",
+            "consensus": "0.3%",
+            "precedent": "0.1%",
+            "attendu": 2.67,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Emplois non agricoles (NFP)",
+            "famille": "emploi",
+            "iso": "2026-11-06T13:30:00+00:00",
+            "heure": "13h30",
+            "consensus": "63K",
+            "precedent": "29K",
+            "attendu": 2.16,
+            "source": "calendrier"
+          },
+          {
+            "code": "USD",
+            "titre": "Taux de chômage",
+            "famille": "chomage",
+            "iso": "2026-11-06T13:30:00+00:00",
+            "heure": "13h30",
+            "consensus": "4.2%",
+            "precedent": "4.2%",
+            "attendu": -0.0,
+            "source": "calendrier"
+          },
+          {
+            "code": "JPY",
+            "titre": "Gouverneur BoJ Ueda — discours",
+            "famille": "discours",
+            "iso": "2026-11-06T16:00:00+00:00",
+            "heure": "16h00",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          },
+          {
+            "code": "NZD",
+            "titre": "Parliamentary Elections",
+            "famille": null,
+            "iso": "2026-11-06T21:45:00+00:00",
+            "heure": "21h45",
+            "consensus": "",
+            "precedent": "",
+            "attendu": null,
+            "source": "calendrier"
+          }
+        ],
+        "nb": 7
       },
       {
         "iso": "2026-11-07",
@@ -104,10 +292,10 @@
         "nb": 0
       }
     ],
-    "nb": 2,
-    "reste": 2,
+    "nb": 19,
+    "reste": 19,
     "prochaine": true,
-    "en_attente": true
+    "en_attente": false
   },
   "faits": [],
   "devises": [
@@ -143,15 +331,15 @@
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
-      "semaine_nb": 1,
-      "semaine_reste": 1,
-      "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
-      "semaine_resume": "taux directeur",
+      "semaine_nb": 5,
+      "semaine_reste": 5,
+      "semaine_penchant": 4.0,
+      "semaine_mot": "nettement favorable",
+      "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision BoE (Bank Rate) + rapport",
+      "prochain": "Monetary Policy Report BoE",
       "prochain_iso": "2026-11-05T12:00:00+00:00",
       "prochain_txt": "5 novembre"
     },
@@ -165,16 +353,16 @@
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,6% · août 2026",
       "chomage_detail": "4,6% (août 2026, FRED)",
-      "semaine_nb": 1,
-      "semaine_reste": 1,
-      "semaine_penchant": 0,
-      "semaine_mot": "sans effet net",
-      "semaine_resume": "taux directeur",
+      "semaine_nb": 4,
+      "semaine_reste": 4,
+      "semaine_penchant": 1.0,
+      "semaine_mot": "favorable",
+      "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision RBA + SoMP",
-      "prochain_iso": "2026-11-03T12:00:00+00:00",
+      "prochain": "Taux directeur",
+      "prochain_iso": "2026-11-03T03:30:00+00:00",
       "prochain_txt": "3 novembre"
     },
     {
@@ -187,17 +375,17 @@
       "inflation_detail": "4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)",
       "chomage": "5,6% · T2 2026",
       "chomage_detail": "5,6% (T2 2026, plus haut depuis onze ans)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 3,
+      "semaine_reste": 3,
+      "semaine_penchant": -0.3,
+      "semaine_mot": "défavorable",
+      "semaine_resume": "emploi, chômage",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision RBNZ (OCR) + MPS",
-      "prochain_iso": "2026-12-09T12:00:00+00:00",
-      "prochain_txt": "9 décembre"
+      "prochain": "Variation de l'emploi sur un trimestre",
+      "prochain_iso": "2026-11-03T21:45:00+00:00",
+      "prochain_txt": "3 novembre"
     },
     {
       "code": "USD",
@@ -209,17 +397,17 @@
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,2% · septembre 2026",
       "chomage_detail": "4,2% (septembre 2026, FRED)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 4,
+      "semaine_reste": 4,
+      "semaine_penchant": 4.83,
+      "semaine_mot": "nettement favorable",
+      "semaine_resume": "emploi, chômage",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision FOMC (Fed) + projections",
-      "prochain_iso": "2026-12-09T12:00:00+00:00",
-      "prochain_txt": "9 décembre"
+      "prochain": "Congressional Elections",
+      "prochain_iso": "2026-11-03T15:16:00+00:00",
+      "prochain_txt": "3 novembre"
     },
     {
       "code": "CAD",
@@ -231,17 +419,17 @@
       "inflation_detail": "3,0% (août 2026, stable, tirée par l'essence) — sommet de la fourchette cible 1-3%",
       "chomage": "6,4% · août 2026",
       "chomage_detail": "6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
-      "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_nb": 2,
+      "semaine_reste": 2,
+      "semaine_penchant": 3.0,
+      "semaine_mot": "nettement favorable",
+      "semaine_resume": "emploi, chômage",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision BdC (taux directeur)",
-      "prochain_iso": "2026-12-09T12:00:00+00:00",
-      "prochain_txt": "9 décembre"
+      "prochain": "Variation de l'emploi",
+      "prochain_iso": "2026-11-06T13:30:00+00:00",
+      "prochain_txt": "6 novembre"
     },
     {
       "code": "CHF",
@@ -275,17 +463,17 @@
       "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
       "chomage": "2,6% · août 2026",
       "chomage_detail": "2,6% (août 2026, FRED)",
-      "semaine_nb": 0,
-      "semaine_reste": 0,
+      "semaine_nb": 1,
+      "semaine_reste": 1,
       "semaine_penchant": 0,
-      "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "",
+      "semaine_mot": "sans effet net",
+      "semaine_resume": "discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Décision BoJ (call rate)",
-      "prochain_iso": "2026-12-18T12:00:00+00:00",
-      "prochain_txt": "18 décembre"
+      "prochain": "Gouverneur BoJ Ueda — discours",
+      "prochain_iso": "2026-11-06T16:00:00+00:00",
+      "prochain_txt": "6 novembre"
     }
   ]
 }
