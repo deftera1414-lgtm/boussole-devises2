@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-01T19:10:08+00:00",
+  "calcule_iso": "2026-11-01T23:01:46+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -91,45 +91,15 @@
       "paire": "USD/NZD",
       "ecart": 22,
       "soutien": 0.71,
-      "attendu_5j": 0.09,
+      "attendu_5j": 0.07,
       "sigma_5j": 0.92,
-      "rapport": 0.1,
+      "rapport": 0.08,
       "score": 9.4,
       "echeance": {
-        "code": "USD",
-        "heures": 44,
-        "quoi": "Congressional Elections"
+        "code": "NZD",
+        "heures": 47,
+        "quoi": "Variation de l'emploi sur un trimestre"
       }
-    },
-    {
-      "paire": "GBP/NZD",
-      "ecart": 18,
-      "soutien": 0.5,
-      "attendu_5j": 0.08,
-      "sigma_5j": 0.61,
-      "rapport": 0.14,
-      "score": 9.0,
-      "echeance": null
-    },
-    {
-      "paire": "CAD/NZD",
-      "ecart": 14,
-      "soutien": 0.62,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.76,
-      "rapport": 0.09,
-      "score": 8.8,
-      "echeance": null
-    },
-    {
-      "paire": "JPY/NZD",
-      "ecart": 21,
-      "soutien": 0.38,
-      "attendu_5j": 0.12,
-      "sigma_5j": 0.93,
-      "rapport": 0.12,
-      "score": 7.9,
-      "echeance": null
     },
     {
       "paire": "GBP/CHF",
@@ -139,6 +109,44 @@
       "sigma_5j": 0.78,
       "rapport": 0.09,
       "score": 6.5,
+      "echeance": null
+    },
+    {
+      "paire": "AUD/NZD",
+      "ecart": 17,
+      "soutien": 0.62,
+      "attendu_5j": 0.06,
+      "sigma_5j": 0.77,
+      "rapport": 0.07,
+      "score": 6.4,
+      "echeance": {
+        "code": "AUD",
+        "heures": 28,
+        "quoi": "Taux directeur"
+      }
+    },
+    {
+      "paire": "USD/CHF",
+      "ecart": 17,
+      "soutien": 0.62,
+      "attendu_5j": 0.08,
+      "sigma_5j": 1.03,
+      "rapport": 0.08,
+      "score": 6.4,
+      "echeance": {
+        "code": "USD",
+        "heures": 40,
+        "quoi": "Congressional Elections"
+      }
+    },
+    {
+      "paire": "JPY/EUR",
+      "ecart": 16,
+      "soutien": 0.38,
+      "attendu_5j": 0.09,
+      "sigma_5j": 0.9,
+      "rapport": 0.1,
+      "score": 6.0,
       "echeance": null
     }
   ],
@@ -677,7 +685,7 @@
         67.5
       ],
       "echeance": {
-        "heures": 32,
+        "heures": 28,
         "quoi": "Taux directeur"
       },
       "attendu_5j": 0.022,
@@ -841,7 +849,11 @@
         18.1,
         26.8
       ],
-      "attendu_5j": -0.058,
+      "echeance": {
+        "heures": 47,
+        "quoi": "Variation de l'emploi sur un trimestre"
+      },
+      "attendu_5j": -0.035,
       "sigma_5j": 0.49,
       "jumelle": {
         "code": "USD",
@@ -1003,7 +1015,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 44,
+        "heures": 40,
         "quoi": "Congressional Elections"
       },
       "attendu_5j": 0.034,
