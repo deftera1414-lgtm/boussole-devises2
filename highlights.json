@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-01T23:01:46+00:00",
-  "verifie": "1er novembre 2026, 23h01 UTC",
+  "verifie_iso": "2026-11-02T02:43:18+00:00",
+  "verifie": "2 novembre 2026, 02h43 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
-    "titre": "Semaine prochaine, du 2 au 8 novembre 2026",
+    "titre": "Semaine du 2 au 8 novembre 2026",
     "debut": "2026-11-02",
     "fin": "2026-11-08",
-    "aujourdhui": "2026-11-01",
+    "aujourdhui": "2026-11-02",
     "jours": [
       {
         "iso": "2026-11-02",
@@ -15,7 +15,7 @@
         "num": "2",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -294,7 +294,7 @@
     ],
     "nb": 19,
     "reste": 19,
-    "prochaine": true,
+    "prochaine": false,
     "en_attente": false
   },
   "faits": [],
