@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-02T02:43:19+00:00",
+  "calcule_iso": "2026-11-02T11:39:40+00:00",
   "seance": "2026-10-23",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 9.4,
       "echeance": {
         "code": "NZD",
-        "heures": 43,
+        "heures": 34,
         "quoi": "Variation de l'emploi sur un trimestre"
       }
     },
@@ -121,7 +121,7 @@
       "score": 6.4,
       "echeance": {
         "code": "AUD",
-        "heures": 25,
+        "heures": 16,
         "quoi": "Taux directeur"
       }
     },
@@ -135,7 +135,7 @@
       "score": 6.4,
       "echeance": {
         "code": "USD",
-        "heures": 37,
+        "heures": 28,
         "quoi": "Congressional Elections"
       }
     },
@@ -685,7 +685,7 @@
         67.5
       ],
       "echeance": {
-        "heures": 25,
+        "heures": 16,
         "quoi": "Taux directeur"
       },
       "attendu_5j": 0.022,
@@ -850,7 +850,7 @@
         26.8
       ],
       "echeance": {
-        "heures": 43,
+        "heures": 34,
         "quoi": "Variation de l'emploi sur un trimestre"
       },
       "attendu_5j": -0.035,
@@ -1015,7 +1015,7 @@
         59.9
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 28,
         "quoi": "Congressional Elections"
       },
       "attendu_5j": 0.034,
