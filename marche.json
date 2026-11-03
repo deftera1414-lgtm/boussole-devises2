@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-03T11:17:42+00:00",
+  "calcule_iso": "2026-11-03T13:18:36+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 9.4,
       "echeance": {
         "code": "NZD",
-        "heures": 10,
+        "heures": 8,
         "quoi": "Variation de l'emploi sur un trimestre"
       }
     },
@@ -122,16 +122,6 @@
       "echeance": null
     },
     {
-      "paire": "GBP/CHF",
-      "ecart": 13,
-      "soutien": 0.5,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.75,
-      "rapport": 0.09,
-      "score": 6.5,
-      "echeance": null
-    },
-    {
       "paire": "JPY/EUR",
       "ecart": 15,
       "soutien": 0.43,
@@ -140,6 +130,20 @@
       "rapport": 0.09,
       "score": 6.4,
       "echeance": null
+    },
+    {
+      "paire": "AUD/NZD",
+      "ecart": 17,
+      "soutien": 0.62,
+      "attendu_5j": 0.09,
+      "sigma_5j": 0.92,
+      "rapport": 0.09,
+      "score": 6.4,
+      "echeance": {
+        "code": "NZD",
+        "heures": 8,
+        "quoi": "Variation de l'emploi sur un trimestre"
+      }
     }
   ],
   "grappes": [
@@ -515,7 +519,11 @@
         83.7,
         86.9
       ],
-      "attendu_5j": 0.028,
+      "echeance": {
+        "heures": 47,
+        "quoi": "Monetary Policy Report BoE"
+      },
+      "attendu_5j": 0.017,
       "sigma_5j": 0.4,
       "jumelle": {
         "code": "JPY",
@@ -524,7 +532,7 @@
     },
     "AUD": {
       "biais": 55,
-      "biais_avant": 56,
+      "biais_avant": 55,
       "biais_7j": 55,
       "momentum": -1,
       "long_adj": -1,
@@ -838,7 +846,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 10,
+        "heures": 8,
         "quoi": "Variation de l'emploi sur un trimestre"
       },
       "attendu_5j": -0.051,
@@ -1003,7 +1011,7 @@
         64.5
       ],
       "echeance": {
-        "heures": 4,
+        "heures": 2,
         "quoi": "Congressional Elections"
       },
       "attendu_5j": 0.034,

@@ -74,7 +74,7 @@
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
-      "event_1_2d": false,
+      "event_1_2d": true,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
       "rate_previous": "4,00%",
@@ -280,9 +280,9 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 45,
@@ -415,7 +415,7 @@
       "medium": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 50,
@@ -432,9 +432,9 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 58,
@@ -453,7 +453,7 @@
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 48,
@@ -472,7 +472,7 @@
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 52,
@@ -489,9 +489,9 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 56,
@@ -508,9 +508,9 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "long": {
         "prob": 46,
@@ -803,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "3 novembre 2026, 11h17 UTC (mise à jour automatique)"
+  "generated_at": "3 novembre 2026, 13h18 UTC (mise à jour automatique)"
 }
