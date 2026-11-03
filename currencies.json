@@ -1,6 +1,6 @@
 {
-  "generated_at": "2 novembre 2026, 20h52 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-02T20:52:32+00:00",
+  "generated_at": "3 novembre 2026, 03h02 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-03T03:02:11+00:00",
   "currencies": {
     "USD": {
       "bias": 60,
@@ -70,7 +70,7 @@
       ]
     },
     "GBP": {
-      "bias": 56,
+      "bias": 57,
       "long_adj": -3,
       "momentum": 2,
       "tilt": "hawkish",
@@ -111,8 +111,8 @@
       ]
     },
     "JPY": {
-      "bias": 59,
-      "long_adj": 2,
+      "bias": 58,
+      "long_adj": 3,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -143,8 +143,8 @@
       ]
     },
     "CHF": {
-      "bias": 43,
-      "long_adj": 0,
+      "bias": 44,
+      "long_adj": -1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -175,8 +175,8 @@
       ]
     },
     "CAD": {
-      "bias": 52,
-      "long_adj": -2,
+      "bias": 53,
+      "long_adj": -3,
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -207,12 +207,12 @@
       ]
     },
     "AUD": {
-      "bias": 55,
-      "long_adj": -1,
+      "bias": 56,
+      "long_adj": -2,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Reserve Bank of Australia (RBA)",
       "chief": "Michele Bullock",
@@ -249,7 +249,7 @@
     },
     "NZD": {
       "bias": 38,
-      "long_adj": -3,
+      "long_adj": -1,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
