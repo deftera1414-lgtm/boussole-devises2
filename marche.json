@@ -1,13 +1,13 @@
 {
-  "calcule_iso": "2026-11-04T13:30:06+00:00",
+  "calcule_iso": "2026-11-04T18:51:20+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
   "source_pos": "CFTC — Commitments of Traders, non-commerciaux, futures seuls",
   "rapport_cot": "2026-10-27",
   "macro": {
-    "petrole_3m": 20.1,
-    "tension": 0.95,
+    "petrole_3m": 29.8,
+    "tension": 1.67,
     "taux_us_1m": -19
   },
   "moteurs": [
@@ -89,57 +89,65 @@
   "convictions": [
     {
       "paire": "AUD/NZD",
-      "ecart": 17,
+      "ecart": 18,
       "soutien": 0.62,
-      "attendu_5j": 0.12,
+      "attendu_5j": 0.13,
       "sigma_5j": 0.92,
-      "rapport": 0.13,
-      "score": 10.6,
-      "echeance": null
-    },
-    {
-      "paire": "JPY/NZD",
-      "ecart": 19,
-      "soutien": 0.5,
-      "attendu_5j": 0.12,
-      "sigma_5j": 0.97,
-      "rapport": 0.12,
-      "score": 9.5,
+      "rapport": 0.14,
+      "score": 11.2,
       "echeance": null
     },
     {
       "paire": "USD/NZD",
-      "ecart": 22,
-      "soutien": 0.71,
-      "attendu_5j": 0.12,
+      "ecart": 24,
+      "soutien": 0.75,
+      "attendu_5j": 0.13,
       "sigma_5j": 1.09,
-      "rapport": 0.11,
-      "score": 9.4,
+      "rapport": 0.12,
+      "score": 10.8,
       "echeance": {
         "code": "USD",
-        "heures": 48,
+        "heures": 43,
         "quoi": "Salaire horaire moyen sur un mois"
       }
     },
     {
       "paire": "AUD/CHF",
-      "ecart": 12,
+      "ecart": 11,
       "soutien": 0.62,
-      "attendu_5j": 0.08,
+      "attendu_5j": 0.07,
       "sigma_5j": 1.12,
       "rapport": 0.07,
-      "score": 7.5,
+      "score": 6.9,
       "echeance": null
     },
     {
-      "paire": "JPY/CHF",
-      "ecart": 14,
-      "soutien": 0.5,
-      "attendu_5j": 0.08,
-      "sigma_5j": 0.78,
-      "rapport": 0.1,
-      "score": 7.0,
-      "echeance": null
+      "paire": "USD/CHF",
+      "ecart": 17,
+      "soutien": 0.62,
+      "attendu_5j": 0.07,
+      "sigma_5j": 1.0,
+      "rapport": 0.07,
+      "score": 6.4,
+      "echeance": {
+        "code": "USD",
+        "heures": 43,
+        "quoi": "Salaire horaire moyen sur un mois"
+      }
+    },
+    {
+      "paire": "CAD/NZD",
+      "ecart": 16,
+      "soutien": 0.62,
+      "attendu_5j": 0.1,
+      "sigma_5j": 0.94,
+      "rapport": 0.11,
+      "score": 6.0,
+      "echeance": {
+        "code": "CAD",
+        "heures": 43,
+        "quoi": "Variation de l'emploi"
+      }
     }
   ],
   "grappes": [
@@ -206,7 +214,7 @@
       "biais_7j": 43,
       "momentum": 4,
       "long_adj": 1,
-      "fondamental": -0.62,
+      "fondamental": -0.7,
       "technique": -6.78,
       "flux": 0.0,
       "positionnement": -3.15,
@@ -225,8 +233,8 @@
         "ton": 2.1,
         "croissance": 1.1,
         "taux_us": 0.33,
-        "commerce": -0.74,
-        "risque": -0.1,
+        "commerce": -1.1,
+        "risque": -0.17,
         "apport": {
           "taux_reel": -2.34,
           "impulsion": -0.35,
@@ -234,8 +242,8 @@
           "ton": 0.86,
           "croissance": 0.37,
           "taux_us": 0.09,
-          "commerce": -0.15,
-          "risque": -0.01
+          "commerce": -0.23,
+          "risque": -0.02
         },
         "accord": [
           3,
@@ -362,12 +370,12 @@
       }
     },
     "GBP": {
-      "biais": 57,
-      "biais_avant": 56,
+      "biais": 56,
+      "biais_avant": 57,
       "biais_7j": 56,
       "momentum": 2,
       "long_adj": -3,
-      "fondamental": 2.22,
+      "fondamental": 2.16,
       "technique": 3.19,
       "flux": 3.2,
       "positionnement": -2.08,
@@ -386,8 +394,8 @@
         "ton": 0.6,
         "croissance": -0.5,
         "taux_us": 0.33,
-        "commerce": -0.07,
-        "risque": -0.55,
+        "commerce": -0.11,
+        "risque": -0.97,
         "apport": {
           "taux_reel": 2.7,
           "impulsion": -0.57,
@@ -395,8 +403,8 @@
           "ton": 0.25,
           "croissance": -0.17,
           "taux_us": 0.09,
-          "commerce": -0.01,
-          "risque": -0.08
+          "commerce": -0.02,
+          "risque": -0.13
         },
         "accord": [
           3,
@@ -516,10 +524,10 @@
         86.9
       ],
       "echeance": {
-        "heures": 22,
+        "heures": 17,
         "quoi": "Monetary Policy Report BoE"
       },
-      "attendu_5j": 0.017,
+      "attendu_5j": 0.014,
       "sigma_5j": 0.4,
       "jumelle": {
         "code": "JPY",
@@ -532,7 +540,7 @@
       "biais_7j": 55,
       "momentum": -1,
       "long_adj": -1,
-      "fondamental": 3.97,
+      "fondamental": 3.92,
       "technique": 2.5,
       "flux": 0.0,
       "positionnement": -5.47,
@@ -551,8 +559,8 @@
         "ton": 0.6,
         "croissance": -0.2,
         "taux_us": 0.33,
-        "commerce": 0.93,
-        "risque": -1.31,
+        "commerce": 1.38,
+        "risque": -2.31,
         "apport": {
           "taux_reel": 2.73,
           "impulsion": 1.61,
@@ -560,8 +568,8 @@
           "ton": 0.25,
           "croissance": -0.07,
           "taux_us": 0.09,
-          "commerce": 0.19,
-          "risque": -0.18
+          "commerce": 0.28,
+          "risque": -0.32
         },
         "accord": [
           5,
@@ -688,12 +696,12 @@
       }
     },
     "NZD": {
-      "biais": 38,
-      "biais_avant": 37,
+      "biais": 37,
+      "biais_avant": 38,
       "biais_7j": 38,
       "momentum": 1,
-      "long_adj": -1,
-      "fondamental": -2.64,
+      "long_adj": -2,
+      "fondamental": -2.82,
       "technique": -4.44,
       "flux": 0.0,
       "positionnement": -4.05,
@@ -712,8 +720,8 @@
         "ton": -0.9,
         "croissance": -2.1,
         "taux_us": 0.33,
-        "commerce": -0.24,
-        "risque": -1.47,
+        "commerce": -0.36,
+        "risque": -2.58,
         "apport": {
           "taux_reel": -1.75,
           "impulsion": -1.23,
@@ -721,12 +729,12 @@
           "ton": -0.37,
           "croissance": -0.72,
           "taux_us": 0.09,
-          "commerce": -0.05,
-          "risque": -0.2
+          "commerce": -0.07,
+          "risque": -0.35
         },
         "accord": [
-          5,
-          7
+          6,
+          8
         ]
       },
       "poids": {
@@ -841,7 +849,7 @@
         0.7,
         0.0
       ],
-      "attendu_5j": -0.085,
+      "attendu_5j": -0.092,
       "sigma_5j": 0.71,
       "jumelle": {
         "code": "USD",
@@ -849,12 +857,12 @@
       }
     },
     "USD": {
-      "biais": 60,
-      "biais_avant": 61,
+      "biais": 61,
+      "biais_avant": 60,
       "biais_7j": 60,
       "momentum": 0,
       "long_adj": -1,
-      "fondamental": 2.46,
+      "fondamental": 2.6,
       "technique": 1.11,
       "flux": 3.91,
       "positionnement": 1.7,
@@ -873,8 +881,8 @@
         "ton": 2.1,
         "croissance": -0.7,
         "taux_us": -2.28,
-        "commerce": 0.35,
-        "risque": 0.97,
+        "commerce": 0.51,
+        "risque": 1.71,
         "apport": {
           "taux_reel": 1.47,
           "impulsion": 0.3,
@@ -882,8 +890,8 @@
           "ton": 0.86,
           "croissance": -0.24,
           "taux_us": -0.62,
-          "commerce": 0.07,
-          "risque": 0.13
+          "commerce": 0.1,
+          "risque": 0.23
         },
         "accord": [
           6,
@@ -1003,10 +1011,10 @@
         64.5
       ],
       "echeance": {
-        "heures": 48,
+        "heures": 43,
         "quoi": "Salaire horaire moyen sur un mois"
       },
-      "attendu_5j": 0.034,
+      "attendu_5j": 0.037,
       "sigma_5j": 0.56,
       "jumelle": {
         "code": "NZD",
@@ -1019,7 +1027,7 @@
       "biais_7j": 52,
       "momentum": 4,
       "long_adj": -3,
-      "fondamental": -1.46,
+      "fondamental": -1.35,
       "technique": 4.28,
       "flux": 2.4,
       "positionnement": 2.93,
@@ -1038,8 +1046,8 @@
         "ton": -2.4,
         "croissance": 1.4,
         "taux_us": 0.33,
-        "commerce": 1.77,
-        "risque": -0.55,
+        "commerce": 2.62,
+        "risque": -0.97,
         "apport": {
           "taux_reel": -0.92,
           "impulsion": -0.14,
@@ -1047,8 +1055,8 @@
           "ton": -0.98,
           "croissance": 0.48,
           "taux_us": 0.09,
-          "commerce": 0.36,
-          "risque": -0.08
+          "commerce": 0.54,
+          "risque": -0.13
         },
         "accord": [
           5,
@@ -1168,7 +1176,7 @@
         99.9
       ],
       "echeance": {
-        "heures": 48,
+        "heures": 43,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": 0.007,
@@ -1179,12 +1187,12 @@
       }
     },
     "CHF": {
-      "biais": 43,
-      "biais_avant": 44,
+      "biais": 44,
+      "biais_avant": 43,
       "biais_7j": 43,
       "momentum": 3,
       "long_adj": -1,
-      "fondamental": -3.64,
+      "fondamental": -3.54,
       "technique": -0.35,
       "flux": 0.0,
       "positionnement": 2.17,
@@ -1203,8 +1211,8 @@
         "ton": -2.4,
         "croissance": 1.9,
         "taux_us": 0.33,
-        "commerce": -0.58,
-        "risque": 1.43,
+        "commerce": -0.85,
+        "risque": 2.51,
         "apport": {
           "taux_reel": -1.74,
           "impulsion": -0.79,
@@ -1212,8 +1220,8 @@
           "ton": -0.98,
           "croissance": 0.65,
           "taux_us": 0.09,
-          "commerce": -0.12,
-          "risque": 0.19
+          "commerce": -0.17,
+          "risque": 0.34
         },
         "accord": [
           5,
@@ -1332,7 +1340,7 @@
         18.8,
         27.9
       ],
-      "attendu_5j": -0.044,
+      "attendu_5j": -0.038,
       "sigma_5j": 0.63,
       "jumelle": {
         "code": "USD",
@@ -1341,11 +1349,11 @@
     },
     "JPY": {
       "biais": 57,
-      "biais_avant": 58,
+      "biais_avant": 57,
       "biais_7j": 59,
       "momentum": -2,
       "long_adj": 3,
-      "fondamental": -0.29,
+      "fondamental": -0.26,
       "technique": 0.87,
       "flux": 0.0,
       "positionnement": 7.94,
@@ -1364,8 +1372,8 @@
         "ton": 0.3,
         "croissance": -0.9,
         "taux_us": 0.33,
-        "commerce": -1.41,
-        "risque": 1.58,
+        "commerce": -2.09,
+        "risque": 2.78,
         "apport": {
           "taux_reel": -0.15,
           "impulsion": 1.17,
@@ -1373,8 +1381,8 @@
           "ton": 0.12,
           "croissance": -0.31,
           "taux_us": 0.09,
-          "commerce": -0.29,
-          "risque": 0.22
+          "commerce": -0.43,
+          "risque": 0.38
         },
         "accord": [
           4,
@@ -1493,7 +1501,11 @@
         81.8,
         83.9
       ],
-      "attendu_5j": 0.034,
+      "echeance": {
+        "heures": 45,
+        "quoi": "Gouverneur BoJ Ueda — discours"
+      },
+      "attendu_5j": 0.02,
       "sigma_5j": 0.48,
       "jumelle": {
         "code": "GBP",
