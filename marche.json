@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-04T03:15:13+00:00",
+  "calcule_iso": "2026-11-04T11:30:54+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -512,7 +512,7 @@
         86.9
       ],
       "echeance": {
-        "heures": 33,
+        "heures": 24,
         "quoi": "Monetary Policy Report BoE"
       },
       "attendu_5j": 0.014,
