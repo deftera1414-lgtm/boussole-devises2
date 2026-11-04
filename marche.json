@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-03T23:39:59+00:00",
+  "calcule_iso": "2026-11-04T03:15:13+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -198,7 +198,7 @@
   "devises": {
     "EUR": {
       "biais": 42,
-      "biais_avant": 43,
+      "biais_avant": 42,
       "biais_7j": 43,
       "momentum": 4,
       "long_adj": 1,
@@ -359,7 +359,7 @@
     },
     "GBP": {
       "biais": 56,
-      "biais_avant": 57,
+      "biais_avant": 56,
       "biais_7j": 56,
       "momentum": 2,
       "long_adj": -3,
@@ -512,7 +512,7 @@
         86.9
       ],
       "echeance": {
-        "heures": 36,
+        "heures": 33,
         "quoi": "Monetary Policy Report BoE"
       },
       "attendu_5j": 0.014,
@@ -846,7 +846,7 @@
     },
     "USD": {
       "biais": 61,
-      "biais_avant": 60,
+      "biais_avant": 61,
       "biais_7j": 60,
       "momentum": 0,
       "long_adj": -1,

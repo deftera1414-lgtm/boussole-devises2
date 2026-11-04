@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-03T23:39:59+00:00",
-  "verifie": "3 novembre 2026, 23h39 UTC",
+  "verifie_iso": "2026-11-04T03:15:13+00:00",
+  "verifie": "4 novembre 2026, 03h15 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 2 au 8 novembre 2026",
     "debut": "2026-11-02",
     "fin": "2026-11-08",
-    "aujourdhui": "2026-11-03",
+    "aujourdhui": "2026-11-04",
     "jours": [
       {
         "iso": "2026-11-02",
@@ -24,8 +24,8 @@
         "nom": "mardi",
         "num": "3",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "AUD",
@@ -113,7 +113,7 @@
         "num": "4",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -304,7 +304,7 @@
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 43,
+      "biais": 42,
       "inflation": "3,8% · septembre 2026",
       "inflation_detail": "3,8% (septembre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
@@ -326,7 +326,7 @@
       "banque": "Bank of England (BoE)",
       "taux": "3,75%",
       "ton": "resserrement",
-      "biais": 57,
+      "biais": 56,
       "inflation": "3,1% · août 2026",
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
@@ -392,7 +392,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 60,
+      "biais": 61,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,2% · septembre 2026",
