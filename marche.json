@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-05T00:31:12+00:00",
+  "calcule_iso": "2026-11-05T07:20:29+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 10.3,
       "echeance": {
         "code": "NZD",
-        "heures": 45,
+        "heures": 38,
         "quoi": "Parliamentary Elections"
       }
     },
@@ -121,7 +121,7 @@
       "score": 6.8,
       "echeance": {
         "code": "NZD",
-        "heures": 45,
+        "heures": 38,
         "quoi": "Parliamentary Elections"
       }
     },
@@ -135,7 +135,7 @@
       "score": 6.0,
       "echeance": {
         "code": "GBP",
-        "heures": 11,
+        "heures": 5,
         "quoi": "Monetary Policy Report BoE"
       }
     },
@@ -149,7 +149,7 @@
       "score": 6.0,
       "echeance": {
         "code": "NZD",
-        "heures": 45,
+        "heures": 38,
         "quoi": "Parliamentary Elections"
       }
     }
@@ -375,7 +375,7 @@
     },
     "GBP": {
       "biais": 57,
-      "biais_avant": 56,
+      "biais_avant": 57,
       "biais_7j": 56,
       "momentum": 2,
       "long_adj": -3,
@@ -528,7 +528,7 @@
         86.9
       ],
       "echeance": {
-        "heures": 11,
+        "heures": 5,
         "quoi": "Monetary Policy Report BoE"
       },
       "attendu_5j": 0.017,
@@ -854,7 +854,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 45,
+        "heures": 38,
         "quoi": "Parliamentary Elections"
       },
       "attendu_5j": -0.055,
@@ -866,7 +866,7 @@
     },
     "USD": {
       "biais": 60,
-      "biais_avant": 61,
+      "biais_avant": 60,
       "biais_7j": 60,
       "momentum": 0,
       "long_adj": -1,
@@ -1019,7 +1019,7 @@
         64.5
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 30,
         "quoi": "Salaire horaire moyen sur un mois"
       },
       "attendu_5j": 0.034,
@@ -1184,7 +1184,7 @@
         99.9
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 30,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": 0.007,
@@ -1510,7 +1510,7 @@
         83.9
       ],
       "echeance": {
-        "heures": 39,
+        "heures": 33,
         "quoi": "Gouverneur BoJ Ueda — discours"
       },
       "attendu_5j": 0.02,

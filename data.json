@@ -73,7 +73,7 @@
       "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": false,
+      "event_6h": true,
       "event_1_2d": true,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
@@ -277,7 +277,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 49,
@@ -410,7 +410,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -429,7 +429,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 53,
@@ -448,7 +448,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -467,7 +467,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 50,
@@ -486,7 +486,7 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -505,7 +505,7 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": false
+        "event": true
       },
       "medium": {
         "prob": 51,
@@ -803,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "5 novembre 2026, 00h30 UTC (mise à jour automatique)"
+  "generated_at": "5 novembre 2026, 07h20 UTC (mise à jour automatique)"
 }
