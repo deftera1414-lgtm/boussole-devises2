@@ -68,13 +68,13 @@
       ]
     },
     "GBP": {
-      "bias": 57,
-      "long_adj": -3,
-      "momentum": 2,
+      "bias": 55,
+      "long_adj": -1,
+      "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
       "rate_previous": "4,00%",
@@ -275,14 +275,14 @@
       "base": "EUR",
       "quote": "GBP",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 44,
@@ -408,14 +408,14 @@
       "base": "GBP",
       "quote": "AUD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 50,
@@ -429,12 +429,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 53,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 60,
@@ -448,12 +448,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 48,
@@ -465,14 +465,14 @@
       "base": "GBP",
       "quote": "CAD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 52,
@@ -486,12 +486,12 @@
       "short": {
         "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 56,
@@ -505,12 +505,12 @@
       "short": {
         "prob": 51,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
-        "event": true
+        "event": false
       },
       "long": {
         "prob": 47,
@@ -803,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "5 novembre 2026, 07h20 UTC (mise à jour automatique)"
+  "generated_at": "5 novembre 2026, 13h43 UTC (mise à jour automatique)"
 }

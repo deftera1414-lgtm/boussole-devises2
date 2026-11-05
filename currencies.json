@@ -1,6 +1,6 @@
 {
-  "generated_at": "5 novembre 2026, 07h20 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-05T07:20:00+00:00",
+  "generated_at": "5 novembre 2026, 13h43 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-05T13:43:56+00:00",
   "currencies": {
     "USD": {
       "bias": 60,
@@ -70,13 +70,13 @@
       ]
     },
     "GBP": {
-      "bias": 57,
-      "long_adj": -3,
-      "momentum": 2,
+      "bias": 55,
+      "long_adj": -1,
+      "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
-      "event_6h": true,
-      "event_1_2d": true,
+      "event_6h": false,
+      "event_1_2d": false,
       "bank": "Bank of England (BoE)",
       "chief": "Andrew Bailey",
       "rate_previous": "4,00%",

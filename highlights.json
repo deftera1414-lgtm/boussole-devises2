@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-05T07:20:29+00:00",
-  "verifie": "5 novembre 2026, 07h20 UTC",
+  "verifie_iso": "2026-11-05T13:44:21+00:00",
+  "verifie": "5 novembre 2026, 13h44 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -293,7 +293,7 @@
       }
     ],
     "nb": 19,
-    "reste": 12,
+    "reste": 7,
     "prochaine": false,
     "en_attente": false
   },
@@ -332,16 +332,16 @@
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
       "semaine_nb": 5,
-      "semaine_reste": 5,
-      "semaine_penchant": 4.0,
-      "semaine_mot": "nettement favorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "taux directeur, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Monetary Policy Report BoE",
-      "prochain_iso": "2026-11-05T12:00:00+00:00",
-      "prochain_txt": "5 novembre"
+      "prochain": "5 novembre 2026 — Décision BoE (Bank Rate) + rapport",
+      "prochain_iso": "",
+      "prochain_txt": ""
     },
     {
       "code": "AUD",
