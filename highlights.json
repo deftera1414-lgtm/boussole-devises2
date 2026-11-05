@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-05T13:44:21+00:00",
-  "verifie": "5 novembre 2026, 13h44 UTC",
+  "verifie_iso": "2026-11-05T15:46:52+00:00",
+  "verifie": "5 novembre 2026, 15h46 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -326,7 +326,7 @@
       "banque": "Bank of England (BoE)",
       "taux": "3,75%",
       "ton": "resserrement",
-      "biais": 57,
+      "biais": 55,
       "inflation": "3,1% · août 2026",
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
@@ -339,9 +339,9 @@
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "5 novembre 2026 — Décision BoE (Bank Rate) + rapport",
-      "prochain_iso": "",
-      "prochain_txt": ""
+      "prochain": "Décision BoE (Bank Rate)",
+      "prochain_iso": "2026-12-17T12:00:00+00:00",
+      "prochain_txt": "17 décembre"
     },
     {
       "code": "AUD",

@@ -80,7 +80,7 @@
       "rate_previous": "4,00%",
       "rate_current": "3,75%",
       "rate_change_date": "Baisse de 25 pb le 11 décembre 2025 — statu quo depuis, dont le maintien du 17 septembre 2026 voté 6-3, les trois dissidents réclamant une hausse à 4,00%",
-      "next": "5 novembre 2026 — Décision BoE (Bank Rate) + rapport",
+      "next": "17 décembre 2026 — Décision BoE (Bank Rate)",
       "gdp_previous": "+0,6% QoQ (T1 2026)",
       "gdp_current": "+0,4% QoQ (T2 2026)",
       "cpi_previous": "2,9% (juillet 2026)",
@@ -90,16 +90,7 @@
       "speech": "Andrew Bailey a maintenu le 17 septembre une ligne prudente, à contre-courant du camp ferme au sein de son propre comité. Il se dit très attentif à l'impact des prix de l'énergie, mais juge la transmission aux prix restée jusqu'ici « assez contenue ». Il a explicitement repoussé les anticipations de marché les plus agressives, déclarant que le comité n'avait pas discuté de relever les taux à quatre reprises. Il conditionne toute baisse future à une désescalade au Moyen-Orient et à un reflux des prix énergétiques.",
       "cycle": "Statu quo prolongé à 3,75% depuis décembre 2025, mais la tension interne s'accentue : trois membres sur neuf votaient déjà pour une hausse le 17 septembre. L'inflation remontée à 3,1%, que le MPC voit dépasser 4% début 2027, pousse le comité vers le resserrement pendant que le gouverneur freine. Aucune baisse n'est envisagée avant une détente énergétique durable.",
       "move": "hold",
-      "events": [
-        {
-          "date": "5 novembre 2026",
-          "date_iso": "2026-11-05",
-          "time": "12:00 UTC",
-          "name": "Décision BoE (Bank Rate) + rapport",
-          "forecast": "voir consensus de marché",
-          "previous": "3,75%"
-        }
-      ],
+      "events": [],
       "watch": "Rapport ONS sur le marché du travail le 20 octobre, puis IPC de septembre le 21 octobre — les deux publications qui décideront du vote du 5 novembre, où la dissidence actuelle 6-3 laisse une hausse ouverte.",
       "sources": [
         "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
@@ -141,7 +132,7 @@
       ]
     },
     "CHF": {
-      "bias": 44,
+      "bias": 43,
       "long_adj": -1,
       "momentum": 3,
       "tilt": "neutral",
@@ -205,7 +196,7 @@
       ]
     },
     "AUD": {
-      "bias": 55,
+      "bias": 56,
       "long_adj": -1,
       "momentum": -1,
       "tilt": "hawkish",
@@ -237,8 +228,8 @@
       ]
     },
     "NZD": {
-      "bias": 37,
-      "long_adj": -2,
+      "bias": 38,
+      "long_adj": -1,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -323,7 +314,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -437,7 +428,7 @@
         "event": false
       },
       "long": {
-        "prob": 60,
+        "prob": 58,
         "label": "Haussier faible"
       }
     },
@@ -489,7 +480,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -532,7 +523,7 @@
         "event": false
       },
       "long": {
-        "prob": 60,
+        "prob": 59,
         "label": "Haussier faible"
       }
     },
@@ -608,7 +599,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -627,7 +618,7 @@
         "event": false
       },
       "long": {
-        "prob": 38,
+        "prob": 39,
         "label": "Baissier faible"
       }
     },
@@ -646,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -660,12 +651,12 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -798,10 +789,10 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     }
   ],
-  "generated_at": "5 novembre 2026, 13h43 UTC (mise à jour automatique)"
+  "generated_at": "5 novembre 2026, 15h46 UTC (mise à jour automatique)"
 }

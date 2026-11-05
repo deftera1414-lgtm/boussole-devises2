@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "date": "2026-11-05",
+      "items": [
+        "GBP — 1 evenement(s) passe(s) retire(s)",
+        "GBP — prochaine reunion : 17 décembre 2026 — Décision BoE (Bank Rate)"
+      ]
+    },
+    {
       "date": "2026-11-03",
       "items": [
         "AUD — 1 evenement(s) passe(s) retire(s)",
@@ -69,12 +76,6 @@
         "AUD — biais 54 → 50 (-4), porté par les fondamentaux",
         "NZD — biais 36 → 32 (-4), porté par le positionnement des grands spéculateurs",
         "JPY — biais 51 → 56 (+5), porté par le positionnement des grands spéculateurs"
-      ]
-    },
-    {
-      "date": "2026-10-20",
-      "items": [
-        "JPY — biais 55 → 50 (-5), porté par les graphiques"
       ]
     }
   ]
