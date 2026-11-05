@@ -1,7 +1,7 @@
 {
   "currencies": {
     "USD": {
-      "bias": 61,
+      "bias": 60,
       "long_adj": -1,
       "momentum": 0,
       "tilt": "hawkish",
@@ -68,7 +68,7 @@
       ]
     },
     "GBP": {
-      "bias": 56,
+      "bias": 57,
       "long_adj": -3,
       "momentum": 2,
       "tilt": "hawkish",
@@ -285,8 +285,8 @@
         "event": true
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -432,12 +432,12 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 53,
         "label": "Neutre",
         "event": true
       },
       "long": {
-        "prob": 59,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -456,7 +456,7 @@
         "event": true
       },
       "long": {
-        "prob": 46,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -494,8 +494,8 @@
         "event": true
       },
       "long": {
-        "prob": 55,
-        "label": "Neutre"
+        "prob": 56,
+        "label": "Haussier faible"
       }
     },
     {
@@ -508,12 +508,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": true
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -551,7 +551,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -698,12 +698,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -803,5 +803,5 @@
       }
     }
   ],
-  "generated_at": "4 novembre 2026, 18h50 UTC (mise à jour automatique)"
+  "generated_at": "5 novembre 2026, 00h30 UTC (mise à jour automatique)"
 }

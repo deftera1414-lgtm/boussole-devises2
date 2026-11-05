@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-04T18:51:20+00:00",
-  "verifie": "4 novembre 2026, 18h51 UTC",
+  "verifie_iso": "2026-11-05T00:31:12+00:00",
+  "verifie": "5 novembre 2026, 00h31 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 2 au 8 novembre 2026",
     "debut": "2026-11-02",
     "fin": "2026-11-08",
-    "aujourdhui": "2026-11-04",
+    "aujourdhui": "2026-11-05",
     "jours": [
       {
         "iso": "2026-11-02",
@@ -112,8 +112,8 @@
         "nom": "mercredi",
         "num": "4",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -123,7 +123,7 @@
         "num": "5",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "GBP",
@@ -326,7 +326,7 @@
       "banque": "Bank of England (BoE)",
       "taux": "3,75%",
       "ton": "resserrement",
-      "biais": 57,
+      "biais": 56,
       "inflation": "3,1% · août 2026",
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
@@ -370,7 +370,7 @@
       "banque": "Reserve Bank of New Zealand (RBNZ)",
       "taux": "2,75%",
       "ton": "neutre",
-      "biais": 38,
+      "biais": 37,
       "inflation": "4,1% · T2 2026",
       "inflation_detail": "4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)",
       "chomage": "5,6% · T2 2026",
@@ -392,7 +392,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 60,
+      "biais": 61,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,2% · septembre 2026",
@@ -436,7 +436,7 @@
       "banque": "Banque nationale suisse (BNS)",
       "taux": "0,00%",
       "ton": "neutre",
-      "biais": 43,
+      "biais": 44,
       "inflation": "1,2% · septembre 2026",
       "inflation_detail": "1,2% (septembre 2026, FRED)",
       "chomage": "3,0% · août 2026",
