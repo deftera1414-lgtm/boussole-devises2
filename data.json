@@ -1,7 +1,7 @@
 {
   "currencies": {
     "USD": {
-      "bias": 59,
+      "bias": 58,
       "long_adj": 1,
       "momentum": 1,
       "tilt": "hawkish",
@@ -35,8 +35,8 @@
       ]
     },
     "EUR": {
-      "bias": 42,
-      "long_adj": 1,
+      "bias": 41,
+      "long_adj": 0,
       "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -68,8 +68,8 @@
       ]
     },
     "GBP": {
-      "bias": 54,
-      "long_adj": -1,
+      "bias": 56,
+      "long_adj": 0,
       "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -100,8 +100,8 @@
       ]
     },
     "JPY": {
-      "bias": 58,
-      "long_adj": 3,
+      "bias": 52,
+      "long_adj": 1,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -132,8 +132,8 @@
       ]
     },
     "CHF": {
-      "bias": 44,
-      "long_adj": -1,
+      "bias": 48,
+      "long_adj": 1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -164,7 +164,7 @@
       ]
     },
     "CAD": {
-      "bias": 51,
+      "bias": 53,
       "long_adj": -1,
       "momentum": 3,
       "tilt": "neutral",
@@ -196,7 +196,7 @@
       ]
     },
     "AUD": {
-      "bias": 55,
+      "bias": 56,
       "long_adj": -1,
       "momentum": -1,
       "tilt": "hawkish",
@@ -228,7 +228,7 @@
       ]
     },
     "NZD": {
-      "bias": 37,
+      "bias": 36,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "neutral",
@@ -271,13 +271,13 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 42,
+        "label": "Baissier faible"
       }
     },
     {
@@ -290,12 +290,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 44,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -333,7 +333,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -347,13 +347,13 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -366,12 +366,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -390,7 +390,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -428,7 +428,7 @@
         "event": false
       },
       "long": {
-        "prob": 59,
+        "prob": 61,
         "label": "Haussier faible"
       }
     },
@@ -442,12 +442,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -485,7 +485,7 @@
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -499,12 +499,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -542,7 +542,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -580,8 +580,8 @@
         "event": false
       },
       "long": {
-        "prob": 56,
-        "label": "Haussier faible"
+        "prob": 53,
+        "label": "Neutre"
       }
     },
     {
@@ -594,12 +594,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -637,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -656,8 +656,8 @@
         "event": false
       },
       "long": {
-        "prob": 46,
-        "label": "Neutre"
+        "prob": 42,
+        "label": "Baissier faible"
       }
     },
     {
@@ -670,12 +670,12 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 37,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -683,6 +683,25 @@
       "pair": "USD/CAD",
       "base": "USD",
       "quote": "CAD",
+      "short": {
+        "prob": 50,
+        "label": "Neutre",
+        "event": false
+      },
+      "medium": {
+        "prob": 50,
+        "label": "Neutre",
+        "event": false
+      },
+      "long": {
+        "prob": 54,
+        "label": "Neutre"
+      }
+    },
+    {
+      "pair": "USD/CHF",
+      "base": "USD",
+      "quote": "CHF",
       "short": {
         "prob": 50,
         "label": "Neutre",
@@ -699,25 +718,6 @@
       }
     },
     {
-      "pair": "USD/CHF",
-      "base": "USD",
-      "quote": "CHF",
-      "short": {
-        "prob": 50,
-        "label": "Neutre",
-        "event": false
-      },
-      "medium": {
-        "prob": 52,
-        "label": "Neutre",
-        "event": false
-      },
-      "long": {
-        "prob": 58,
-        "label": "Haussier faible"
-      }
-    },
-    {
       "pair": "USD/JPY",
       "base": "USD",
       "quote": "JPY",
@@ -727,12 +727,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -765,13 +765,13 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 50,
+        "label": "Neutre"
       }
     },
     {
@@ -784,15 +784,15 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 41,
-        "label": "Baissier faible"
+        "prob": 48,
+        "label": "Neutre"
       }
     }
   ],
-  "generated_at": "6 novembre 2026, 18h23 UTC (mise à jour automatique)"
+  "generated_at": "6 novembre 2026, 23h29 UTC (mise à jour automatique)"
 }
