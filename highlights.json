@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-05T22:14:59+00:00",
-  "verifie": "5 novembre 2026, 22h14 UTC",
+  "verifie_iso": "2026-11-06T02:47:39+00:00",
+  "verifie": "6 novembre 2026, 02h47 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 2 au 8 novembre 2026",
     "debut": "2026-11-02",
     "fin": "2026-11-08",
-    "aujourdhui": "2026-11-05",
+    "aujourdhui": "2026-11-06",
     "jours": [
       {
         "iso": "2026-11-02",
@@ -122,8 +122,8 @@
         "nom": "jeudi",
         "num": "5",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "GBP",
@@ -189,7 +189,7 @@
         "num": "6",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "CAD",
