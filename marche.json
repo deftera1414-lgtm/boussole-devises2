@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-06T02:47:39+00:00",
+  "calcule_iso": "2026-11-06T11:26:30+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 9.9,
       "echeance": {
         "code": "NZD",
-        "heures": 19,
+        "heures": 10,
         "quoi": "Parliamentary Elections"
       }
     },
@@ -121,7 +121,7 @@
       "score": 6.8,
       "echeance": {
         "code": "NZD",
-        "heures": 19,
+        "heures": 10,
         "quoi": "Parliamentary Elections"
       }
     },
@@ -135,7 +135,7 @@
       "score": 6.4,
       "echeance": {
         "code": "USD",
-        "heures": 11,
+        "heures": 2,
         "quoi": "Salaire horaire moyen sur un mois"
       }
     },
@@ -846,7 +846,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 19,
+        "heures": 10,
         "quoi": "Parliamentary Elections"
       },
       "attendu_5j": -0.051,
@@ -1011,7 +1011,7 @@
         64.5
       ],
       "echeance": {
-        "heures": 11,
+        "heures": 2,
         "quoi": "Salaire horaire moyen sur un mois"
       },
       "attendu_5j": 0.034,
@@ -1176,7 +1176,7 @@
         99.9
       ],
       "echeance": {
-        "heures": 11,
+        "heures": 2,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": 0.007,
@@ -1502,7 +1502,7 @@
         83.9
       ],
       "echeance": {
-        "heures": 13,
+        "heures": 5,
         "quoi": "Gouverneur BoJ Ueda — discours"
       },
       "attendu_5j": 0.02,
