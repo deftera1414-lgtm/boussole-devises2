@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-06T23:29:33+00:00",
+  "calcule_iso": "2026-11-07T03:10:34+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -198,7 +198,7 @@
   "devises": {
     "EUR": {
       "biais": 41,
-      "biais_avant": 42,
+      "biais_avant": 41,
       "biais_7j": 43,
       "momentum": 4,
       "long_adj": 0,
@@ -359,7 +359,7 @@
     },
     "GBP": {
       "biais": 56,
-      "biais_avant": 54,
+      "biais_avant": 56,
       "biais_7j": 56,
       "momentum": 1,
       "long_adj": 0,
@@ -520,7 +520,7 @@
     },
     "AUD": {
       "biais": 56,
-      "biais_avant": 55,
+      "biais_avant": 56,
       "biais_7j": 55,
       "momentum": -1,
       "long_adj": -1,
@@ -681,7 +681,7 @@
     },
     "NZD": {
       "biais": 36,
-      "biais_avant": 37,
+      "biais_avant": 36,
       "biais_7j": 38,
       "momentum": 1,
       "long_adj": -2,
@@ -842,13 +842,13 @@
     },
     "USD": {
       "biais": 58,
-      "biais_avant": 59,
+      "biais_avant": 58,
       "biais_7j": 60,
       "momentum": 1,
       "long_adj": 1,
       "fondamental": 2.43,
       "technique": 1.11,
-      "flux": 0.8,
+      "flux": 0.69,
       "positionnement": 1.68,
       "pos_detail": {
         "net_pct": 28.91,
@@ -1003,7 +1003,7 @@
     },
     "CAD": {
       "biais": 53,
-      "biais_avant": 51,
+      "biais_avant": 53,
       "biais_7j": 52,
       "momentum": 3,
       "long_adj": -1,
@@ -1164,7 +1164,7 @@
     },
     "CHF": {
       "biais": 48,
-      "biais_avant": 44,
+      "biais_avant": 48,
       "biais_7j": 43,
       "momentum": 3,
       "long_adj": 1,
@@ -1325,7 +1325,7 @@
     },
     "JPY": {
       "biais": 52,
-      "biais_avant": 58,
+      "biais_avant": 52,
       "biais_7j": 59,
       "momentum": -2,
       "long_adj": 1,
