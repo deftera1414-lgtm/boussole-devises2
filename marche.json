@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-08T12:29:45+00:00",
+  "calcule_iso": "2026-11-08T13:51:37+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -88,16 +88,6 @@
   },
   "convictions": [
     {
-      "paire": "USD/NZD",
-      "ecart": 19,
-      "soutien": 0.75,
-      "attendu_5j": 0.13,
-      "sigma_5j": 1.09,
-      "rapport": 0.12,
-      "score": 14.2,
-      "echeance": null
-    },
-    {
       "paire": "AUD/NZD",
       "ecart": 20,
       "soutien": 0.62,
@@ -126,6 +116,20 @@
       "rapport": 0.15,
       "score": 10.0,
       "echeance": null
+    },
+    {
+      "paire": "USD/NZD",
+      "ecart": 19,
+      "soutien": 0.75,
+      "attendu_5j": 0.12,
+      "sigma_5j": 1.09,
+      "rapport": 0.11,
+      "score": 8.5,
+      "echeance": {
+        "code": "USD",
+        "heures": 48,
+        "quoi": "Inflation sous-jacente sur un mois"
+      }
     },
     {
       "paire": "JPY/NZD",
@@ -994,7 +998,11 @@
         68.4,
         64.5
       ],
-      "attendu_5j": 0.028,
+      "echeance": {
+        "heures": 48,
+        "quoi": "Inflation sous-jacente sur un mois"
+      },
+      "attendu_5j": 0.017,
       "sigma_5j": 0.56,
       "jumelle": {
         "code": "NZD",
