@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-07T23:55:25+00:00",
+  "calcule_iso": "2026-11-08T06:39:23+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -89,12 +89,12 @@
   "convictions": [
     {
       "paire": "USD/NZD",
-      "ecart": 22,
+      "ecart": 19,
       "soutien": 0.75,
-      "attendu_5j": 0.14,
+      "attendu_5j": 0.13,
       "sigma_5j": 1.09,
-      "rapport": 0.13,
-      "score": 16.5,
+      "rapport": 0.12,
+      "score": 14.2,
       "echeance": null
     },
     {
@@ -365,7 +365,7 @@
       "long_adj": 0,
       "fondamental": 2.13,
       "technique": 3.19,
-      "flux": 0.0,
+      "flux": -0.4,
       "positionnement": -0.61,
       "pos_detail": {
         "net_pct": -24.36,
@@ -841,14 +841,14 @@
       }
     },
     "USD": {
-      "biais": 58,
+      "biais": 55,
       "biais_avant": 58,
       "biais_7j": 60,
-      "momentum": 1,
-      "long_adj": 1,
+      "momentum": -1,
+      "long_adj": 4,
       "fondamental": 2.43,
       "technique": 1.11,
-      "flux": 0.69,
+      "flux": -4.22,
       "positionnement": 1.68,
       "pos_detail": {
         "net_pct": 28.91,
@@ -994,7 +994,7 @@
         68.4,
         64.5
       ],
-      "attendu_5j": 0.045,
+      "attendu_5j": 0.028,
       "sigma_5j": 0.56,
       "jumelle": {
         "code": "NZD",

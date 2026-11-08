@@ -1,11 +1,11 @@
 {
-  "generated_at": "7 novembre 2026, 23h55 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-07T23:55:02+00:00",
+  "generated_at": "8 novembre 2026, 06h39 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-08T06:39:00+00:00",
   "currencies": {
     "USD": {
-      "bias": 58,
-      "long_adj": 1,
-      "momentum": 1,
+      "bias": 55,
+      "long_adj": 4,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
