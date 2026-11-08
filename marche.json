@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-08T19:05:22+00:00",
+  "calcule_iso": "2026-11-08T23:06:37+00:00",
   "seance": "2026-10-30",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -127,7 +127,7 @@
       "score": 8.5,
       "echeance": {
         "code": "USD",
-        "heures": 42,
+        "heures": 38,
         "quoi": "Inflation sous-jacente sur un mois"
       }
     },
@@ -999,7 +999,7 @@
         64.5
       ],
       "echeance": {
-        "heures": 42,
+        "heures": 38,
         "quoi": "Inflation sous-jacente sur un mois"
       },
       "attendu_5j": 0.017,
