@@ -1,7 +1,7 @@
 {
   "currencies": {
     "USD": {
-      "bias": 55,
+      "bias": 57,
       "long_adj": 4,
       "momentum": -1,
       "tilt": "hawkish",
@@ -35,8 +35,8 @@
       ]
     },
     "EUR": {
-      "bias": 41,
-      "long_adj": 0,
+      "bias": 42,
+      "long_adj": -1,
       "momentum": 4,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -69,7 +69,7 @@
     },
     "GBP": {
       "bias": 56,
-      "long_adj": 0,
+      "long_adj": -1,
       "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -100,8 +100,8 @@
       ]
     },
     "JPY": {
-      "bias": 52,
-      "long_adj": 1,
+      "bias": 53,
+      "long_adj": 0,
       "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -132,8 +132,8 @@
       ]
     },
     "CHF": {
-      "bias": 48,
-      "long_adj": 1,
+      "bias": 49,
+      "long_adj": -1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -164,8 +164,8 @@
       ]
     },
     "CAD": {
-      "bias": 53,
-      "long_adj": -1,
+      "bias": 52,
+      "long_adj": 1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -196,8 +196,8 @@
       ]
     },
     "AUD": {
-      "bias": 56,
-      "long_adj": -1,
+      "bias": 53,
+      "long_adj": 2,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
@@ -228,8 +228,8 @@
       ]
     },
     "NZD": {
-      "bias": 36,
-      "long_adj": -2,
+      "bias": 35,
+      "long_adj": -1,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -276,7 +276,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -290,7 +290,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -309,7 +309,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -328,12 +328,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -347,7 +347,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -404,7 +404,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -423,12 +423,12 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 61,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -442,12 +442,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -537,12 +537,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -556,12 +556,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -575,12 +575,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -594,7 +594,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -618,7 +618,7 @@
         "event": false
       },
       "long": {
-        "prob": 38,
+        "prob": 36,
         "label": "Baissier faible"
       }
     },
@@ -637,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     },
@@ -651,12 +651,12 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -708,13 +708,13 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 55,
-        "label": "Neutre"
+        "prob": 56,
+        "label": "Haussier faible"
       }
     },
     {
@@ -732,7 +732,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "9 novembre 2026, 14h43 UTC (mise à jour automatique)"
+  "generated_at": "9 novembre 2026, 22h40 UTC (mise à jour automatique)"
 }
