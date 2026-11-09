@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-08T23:06:37+00:00",
-  "verifie": "8 novembre 2026, 23h06 UTC",
+  "verifie_iso": "2026-11-09T02:56:42+00:00",
+  "verifie": "9 novembre 2026, 02h56 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
-    "titre": "Semaine prochaine, du 9 au 15 novembre 2026",
+    "titre": "Semaine du 9 au 15 novembre 2026",
     "debut": "2026-11-09",
     "fin": "2026-11-15",
-    "aujourdhui": "2026-11-08",
+    "aujourdhui": "2026-11-09",
     "jours": [
       {
         "iso": "2026-11-09",
@@ -15,7 +15,7 @@
         "num": "9",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -140,24 +140,10 @@
     ],
     "nb": 5,
     "reste": 5,
-    "prochaine": true,
+    "prochaine": false,
     "en_attente": false
   },
-  "faits": [
-    {
-      "famille": "chomage",
-      "libelle": "chômage",
-      "date": "2026-11-06",
-      "date_txt": "6 novembre",
-      "valeur": "4,1% · octobre 2026",
-      "avant": "4,2% · septembre 2026",
-      "variation": "-0,1 pt",
-      "cran": 0.5,
-      "age": 2,
-      "poids": 0.36,
-      "code": "USD"
-    }
-  ],
+  "faits": [],
   "devises": [
     {
       "code": "EUR",
@@ -272,12 +258,12 @@
           "avant": "4,2% · septembre 2026",
           "variation": "-0,1 pt",
           "cran": 0.5,
-          "age": 2,
-          "poids": 0.36
+          "age": 3,
+          "poids": 0.29
         }
       ],
-      "effet": 0.36,
-      "effet_mot": "favorable",
+      "effet": 0.29,
+      "effet_mot": "sans effet net",
       "prochain": "Inflation sous-jacente sur un mois",
       "prochain_iso": "2026-11-10T13:30:00+00:00",
       "prochain_txt": "10 novembre"
