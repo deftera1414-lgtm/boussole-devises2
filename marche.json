@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-10T04:46:22+00:00",
+  "calcule_iso": "2026-11-10T13:44:54+00:00",
   "seance": "2026-11-06",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -88,6 +88,16 @@
   },
   "convictions": [
     {
+      "paire": "USD/NZD",
+      "ecart": 22,
+      "soutien": 0.75,
+      "attendu_5j": 0.15,
+      "sigma_5j": 1.16,
+      "rapport": 0.13,
+      "score": 16.5,
+      "echeance": null
+    },
+    {
       "paire": "AUD/NZD",
       "ecart": 18,
       "soutien": 0.62,
@@ -108,30 +118,6 @@
       "echeance": null
     },
     {
-      "paire": "GBP/NZD",
-      "ecart": 21,
-      "soutien": 0.5,
-      "attendu_5j": 0.13,
-      "sigma_5j": 0.78,
-      "rapport": 0.17,
-      "score": 10.5,
-      "echeance": null
-    },
-    {
-      "paire": "USD/NZD",
-      "ecart": 22,
-      "soutien": 0.75,
-      "attendu_5j": 0.13,
-      "sigma_5j": 1.16,
-      "rapport": 0.12,
-      "score": 9.9,
-      "echeance": {
-        "code": "USD",
-        "heures": 9,
-        "quoi": "Inflation sous-jacente sur un mois"
-      }
-    },
-    {
       "paire": "JPY/NZD",
       "ecart": 18,
       "soutien": 0.5,
@@ -139,6 +125,16 @@
       "sigma_5j": 1.0,
       "rapport": 0.12,
       "score": 9.0,
+      "echeance": null
+    },
+    {
+      "paire": "CHF/NZD",
+      "ecart": 14,
+      "soutien": 0.62,
+      "attendu_5j": 0.1,
+      "sigma_5j": 0.92,
+      "rapport": 0.11,
+      "score": 8.8,
       "echeance": null
     }
   ],
@@ -521,7 +517,11 @@
         100.0,
         93.5
       ],
-      "attendu_5j": 0.023,
+      "echeance": {
+        "heures": 41,
+        "quoi": "PIB sur un mois"
+      },
+      "attendu_5j": 0.014,
       "sigma_5j": 0.38,
       "jumelle": {
         "code": "JPY",
@@ -854,11 +854,11 @@
       "biais": 57,
       "biais_avant": 57,
       "biais_7j": 55,
-      "momentum": -1,
-      "long_adj": 4,
+      "momentum": 0,
+      "long_adj": 3,
       "fondamental": 2.69,
       "technique": 3.14,
-      "flux": -4.46,
+      "flux": -3.66,
       "positionnement": 1.68,
       "pos_detail": {
         "net_pct": 28.91,
@@ -1004,11 +1004,7 @@
         62.5,
         84.2
       ],
-      "echeance": {
-        "heures": 9,
-        "quoi": "Inflation sous-jacente sur un mois"
-      },
-      "attendu_5j": 0.026,
+      "attendu_5j": 0.044,
       "sigma_5j": 0.62,
       "jumelle": {
         "code": "NZD",

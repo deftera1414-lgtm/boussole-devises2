@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-10T04:46:22+00:00",
-  "verifie": "10 novembre 2026, 04h46 UTC",
+  "verifie_iso": "2026-11-10T13:44:54+00:00",
+  "verifie": "10 novembre 2026, 13h44 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -139,7 +139,7 @@
       }
     ],
     "nb": 5,
-    "reste": 5,
+    "reste": 3,
     "prochaine": false,
     "en_attente": false
   },
@@ -244,8 +244,8 @@
       "chomage": "4,1% · octobre 2026",
       "chomage_detail": "4,1% (octobre 2026, FRED)",
       "semaine_nb": 4,
-      "semaine_reste": 4,
-      "semaine_penchant": -6,
+      "semaine_reste": 2,
+      "semaine_penchant": -5.0,
       "semaine_mot": "nettement défavorable",
       "semaine_resume": "inflation",
       "parutions": [
@@ -264,9 +264,9 @@
       ],
       "effet": 0.21,
       "effet_mot": "sans effet net",
-      "prochain": "Inflation sous-jacente sur un mois",
-      "prochain_iso": "2026-11-10T13:30:00+00:00",
-      "prochain_txt": "10 novembre"
+      "prochain": "Core Prix à la production sur un mois",
+      "prochain_iso": "2026-11-13T13:30:00+00:00",
+      "prochain_txt": "13 novembre"
     },
     {
       "code": "CAD",
