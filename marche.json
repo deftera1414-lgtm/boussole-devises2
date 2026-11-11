@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-11T01:27:53+00:00",
+  "calcule_iso": "2026-11-11T08:20:41+00:00",
   "seance": "2026-11-06",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -518,7 +518,7 @@
         93.5
       ],
       "echeance": {
-        "heures": 30,
+        "heures": 23,
         "quoi": "PIB sur un mois"
       },
       "attendu_5j": 0.016,
