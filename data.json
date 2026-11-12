@@ -228,7 +228,7 @@
       ]
     },
     "NZD": {
-      "bias": 35,
+      "bias": 36,
       "long_adj": -1,
       "momentum": 1,
       "tilt": "neutral",
@@ -314,7 +314,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -428,7 +428,7 @@
         "event": false
       },
       "long": {
-        "prob": 61,
+        "prob": 60,
         "label": "Haussier faible"
       }
     },
@@ -518,7 +518,7 @@
         "event": false
       },
       "medium": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -613,12 +613,12 @@
         "event": false
       },
       "medium": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 37,
+        "prob": 38,
         "label": "Baissier faible"
       }
     },
@@ -656,7 +656,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -675,7 +675,7 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "12 novembre 2026, 14h19 UTC (mise à jour automatique)"
+  "generated_at": "12 novembre 2026, 21h03 UTC (mise à jour automatique)"
 }

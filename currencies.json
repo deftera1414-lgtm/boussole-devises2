@@ -1,6 +1,6 @@
 {
-  "generated_at": "12 novembre 2026, 14h19 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-12T14:19:03+00:00",
+  "generated_at": "12 novembre 2026, 21h03 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-12T21:03:36+00:00",
   "currencies": {
     "USD": {
       "bias": 57,
@@ -230,7 +230,7 @@
       ]
     },
     "NZD": {
-      "bias": 35,
+      "bias": 36,
       "long_adj": -1,
       "momentum": 1,
       "tilt": "neutral",
