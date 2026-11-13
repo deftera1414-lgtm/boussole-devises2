@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-13T02:06:06+00:00",
+  "calcule_iso": "2026-11-13T09:56:11+00:00",
   "seance": "2026-11-06",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -117,7 +117,7 @@
       "score": 9.4,
       "echeance": {
         "code": "USD",
-        "heures": 11,
+        "heures": 4,
         "quoi": "Core Prix à la production sur un mois"
       }
     },
@@ -208,7 +208,7 @@
   "devises": {
     "EUR": {
       "biais": 43,
-      "biais_avant": 42,
+      "biais_avant": 43,
       "biais_7j": 41,
       "momentum": 4,
       "long_adj": -1,
@@ -852,7 +852,7 @@
     },
     "USD": {
       "biais": 58,
-      "biais_avant": 57,
+      "biais_avant": 58,
       "biais_7j": 55,
       "momentum": 0,
       "long_adj": 4,
@@ -1005,7 +1005,7 @@
         84.2
       ],
       "echeance": {
-        "heures": 11,
+        "heures": 4,
         "quoi": "Core Prix à la production sur un mois"
       },
       "attendu_5j": 0.03,
@@ -1017,7 +1017,7 @@
     },
     "CAD": {
       "biais": 52,
-      "biais_avant": 53,
+      "biais_avant": 52,
       "biais_7j": 53,
       "momentum": 3,
       "long_adj": 0,
