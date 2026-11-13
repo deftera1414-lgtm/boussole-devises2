@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-13T09:56:11+00:00",
+  "calcule_iso": "2026-11-13T13:40:24+00:00",
   "seance": "2026-11-06",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -88,6 +88,16 @@
   },
   "convictions": [
     {
+      "paire": "USD/NZD",
+      "ecart": 24,
+      "soutien": 0.71,
+      "attendu_5j": 0.16,
+      "sigma_5j": 1.16,
+      "rapport": 0.14,
+      "score": 17.1,
+      "echeance": null
+    },
+    {
       "paire": "CAD/NZD",
       "ecart": 16,
       "soutien": 0.71,
@@ -106,20 +116,6 @@
       "rapport": 0.12,
       "score": 9.7,
       "echeance": null
-    },
-    {
-      "paire": "USD/NZD",
-      "ecart": 22,
-      "soutien": 0.71,
-      "attendu_5j": 0.13,
-      "sigma_5j": 1.16,
-      "rapport": 0.11,
-      "score": 9.4,
-      "echeance": {
-        "code": "USD",
-        "heures": 4,
-        "quoi": "Core Prix à la production sur un mois"
-      }
     },
     {
       "paire": "JPY/NZD",
@@ -851,14 +847,14 @@
       }
     },
     "USD": {
-      "biais": 58,
+      "biais": 60,
       "biais_avant": 58,
       "biais_7j": 55,
-      "momentum": 0,
-      "long_adj": 4,
+      "momentum": 1,
+      "long_adj": 1,
       "fondamental": 3.03,
       "technique": 3.14,
-      "flux": -4.0,
+      "flux": 0.0,
       "positionnement": 1.68,
       "pos_detail": {
         "net_pct": 28.91,
@@ -1004,11 +1000,7 @@
         62.5,
         84.2
       ],
-      "echeance": {
-        "heures": 4,
-        "quoi": "Core Prix à la production sur un mois"
-      },
-      "attendu_5j": 0.03,
+      "attendu_5j": 0.062,
       "sigma_5j": 0.62,
       "jumelle": {
         "code": "NZD",

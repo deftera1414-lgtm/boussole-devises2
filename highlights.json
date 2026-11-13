@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-13T09:56:11+00:00",
-  "verifie": "13 novembre 2026, 09h56 UTC",
+  "verifie_iso": "2026-11-13T13:40:24+00:00",
+  "verifie": "13 novembre 2026, 13h40 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -139,7 +139,7 @@
       }
     ],
     "nb": 5,
-    "reste": 2,
+    "reste": 0,
     "prochaine": false,
     "en_attente": false
   },
@@ -244,9 +244,9 @@
       "chomage": "4,1% · octobre 2026",
       "chomage_detail": "4,1% (octobre 2026, FRED)",
       "semaine_nb": 4,
-      "semaine_reste": 2,
-      "semaine_penchant": -5.0,
-      "semaine_mot": "nettement défavorable",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation",
       "parutions": [
         {
@@ -264,9 +264,9 @@
       ],
       "effet": 0.0,
       "effet_mot": "sans effet net",
-      "prochain": "Core Prix à la production sur un mois",
-      "prochain_iso": "2026-11-13T13:30:00+00:00",
-      "prochain_txt": "13 novembre"
+      "prochain": "Décision FOMC (Fed) + projections",
+      "prochain_iso": "2026-12-09T12:00:00+00:00",
+      "prochain_txt": "9 décembre"
     },
     {
       "code": "CAD",

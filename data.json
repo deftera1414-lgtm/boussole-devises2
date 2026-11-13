@@ -1,9 +1,9 @@
 {
   "currencies": {
     "USD": {
-      "bias": 58,
-      "long_adj": 4,
-      "momentum": 0,
+      "bias": 60,
+      "long_adj": 1,
+      "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -442,12 +442,12 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -537,12 +537,12 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -618,7 +618,7 @@
         "event": false
       },
       "long": {
-        "prob": 36,
+        "prob": 37,
         "label": "Baissier faible"
       }
     },
@@ -684,17 +684,17 @@
       "base": "USD",
       "quote": "CAD",
       "short": {
-        "prob": 49,
-        "label": "Neutre",
-        "event": false
-      },
-      "medium": {
         "prob": 50,
         "label": "Neutre",
         "event": false
       },
+      "medium": {
+        "prob": 51,
+        "label": "Neutre",
+        "event": false
+      },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -703,25 +703,6 @@
       "base": "USD",
       "quote": "CHF",
       "short": {
-        "prob": 49,
-        "label": "Neutre",
-        "event": false
-      },
-      "medium": {
-        "prob": 51,
-        "label": "Neutre",
-        "event": false
-      },
-      "long": {
-        "prob": 57,
-        "label": "Haussier faible"
-      }
-    },
-    {
-      "pair": "USD/JPY",
-      "base": "USD",
-      "quote": "JPY",
-      "short": {
         "prob": 50,
         "label": "Neutre",
         "event": false
@@ -732,7 +713,26 @@
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 56,
+        "label": "Haussier faible"
+      }
+    },
+    {
+      "pair": "USD/JPY",
+      "base": "USD",
+      "quote": "JPY",
+      "short": {
+        "prob": 51,
+        "label": "Neutre",
+        "event": false
+      },
+      "medium": {
+        "prob": 52,
+        "label": "Neutre",
+        "event": false
+      },
+      "long": {
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "13 novembre 2026, 09h55 UTC (mise à jour automatique)"
+  "generated_at": "13 novembre 2026, 13h39 UTC (mise à jour automatique)"
 }
