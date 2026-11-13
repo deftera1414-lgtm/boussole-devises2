@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-13T13:40:24+00:00",
-  "verifie": "13 novembre 2026, 13h40 UTC",
+  "verifie_iso": "2026-11-13T18:01:52+00:00",
+  "verifie": "13 novembre 2026, 18h01 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -238,7 +238,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 58,
+      "biais": 60,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,1% · octobre 2026",
