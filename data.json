@@ -1,8 +1,8 @@
 {
   "currencies": {
     "USD": {
-      "bias": 57,
-      "long_adj": 3,
+      "bias": 58,
+      "long_adj": 4,
       "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -35,7 +35,7 @@
       ]
     },
     "EUR": {
-      "bias": 42,
+      "bias": 43,
       "long_adj": -1,
       "momentum": 4,
       "tilt": "hawkish",
@@ -164,8 +164,8 @@
       ]
     },
     "CAD": {
-      "bias": 53,
-      "long_adj": 1,
+      "bias": 52,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -276,7 +276,7 @@
         "event": false
       },
       "long": {
-        "prob": 42,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -295,7 +295,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -314,7 +314,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -347,13 +347,13 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -371,7 +371,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -390,8 +390,8 @@
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -447,7 +447,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -542,7 +542,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -561,7 +561,7 @@
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -613,12 +613,12 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 38,
+        "prob": 36,
         "label": "Baissier faible"
       }
     },
@@ -637,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -694,7 +694,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 55,
         "label": "Neutre"
       }
     },
@@ -713,7 +713,7 @@
         "event": false
       },
       "long": {
-        "prob": 56,
+        "prob": 57,
         "label": "Haussier faible"
       }
     },
@@ -732,7 +732,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 55,
         "label": "Neutre"
       }
     },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "12 novembre 2026, 21h03 UTC (mise à jour automatique)"
+  "generated_at": "13 novembre 2026, 02h05 UTC (mise à jour automatique)"
 }
