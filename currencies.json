@@ -1,9 +1,9 @@
 {
-  "generated_at": "13 novembre 2026, 18h01 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-13T18:01:21+00:00",
+  "generated_at": "13 novembre 2026, 23h50 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-13T23:50:01+00:00",
   "currencies": {
     "USD": {
-      "bias": 60,
+      "bias": 61,
       "long_adj": 1,
       "momentum": 1,
       "tilt": "hawkish",
@@ -37,7 +37,7 @@
       ]
     },
     "EUR": {
-      "bias": 43,
+      "bias": 42,
       "long_adj": -1,
       "momentum": 4,
       "tilt": "hawkish",
@@ -166,7 +166,7 @@
       ]
     },
     "CAD": {
-      "bias": 52,
+      "bias": 51,
       "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
@@ -230,7 +230,7 @@
       ]
     },
     "NZD": {
-      "bias": 36,
+      "bias": 35,
       "long_adj": -1,
       "momentum": 1,
       "tilt": "neutral",
