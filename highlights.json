@@ -1,126 +1,48 @@
 {
-  "verifie_iso": "2026-11-13T23:50:20+00:00",
-  "verifie": "13 novembre 2026, 23h50 UTC",
+  "verifie_iso": "2026-11-14T06:58:37+00:00",
+  "verifie": "14 novembre 2026, 06h58 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
-    "titre": "Semaine du 9 au 15 novembre 2026",
-    "debut": "2026-11-09",
-    "fin": "2026-11-15",
-    "aujourdhui": "2026-11-13",
+    "titre": "Semaine prochaine, du 16 au 22 novembre 2026",
+    "debut": "2026-11-16",
+    "fin": "2026-11-22",
+    "aujourdhui": "2026-11-14",
     "jours": [
       {
-        "iso": "2026-11-09",
+        "iso": "2026-11-16",
         "nom": "lundi",
-        "num": "9",
+        "num": "16",
         "mois": "nove.",
-        "passe": true,
+        "passe": false,
         "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
       {
-        "iso": "2026-11-10",
+        "iso": "2026-11-17",
         "nom": "mardi",
-        "num": "10",
+        "num": "17",
         "mois": "nove.",
-        "passe": true,
+        "passe": false,
         "aujourdhui": false,
-        "evenements": [
-          {
-            "code": "USD",
-            "titre": "Inflation sous-jacente sur un mois",
-            "famille": "inflation",
-            "iso": "2026-11-10T13:30:00+00:00",
-            "heure": "13h30",
-            "consensus": "0.2%",
-            "precedent": "0.3%",
-            "attendu": -0.5,
-            "source": "calendrier"
-          },
-          {
-            "code": "USD",
-            "titre": "Inflation mensuelle",
-            "famille": "inflation",
-            "iso": "2026-11-10T13:30:00+00:00",
-            "heure": "13h30",
-            "consensus": "0.3%",
-            "precedent": "0.6%",
-            "attendu": -1.5,
-            "source": "calendrier"
-          }
-        ],
-        "nb": 2
+        "evenements": [],
+        "nb": 0
       },
       {
-        "iso": "2026-11-11",
+        "iso": "2026-11-18",
         "nom": "mercredi",
-        "num": "11",
+        "num": "18",
         "mois": "nove.",
-        "passe": true,
+        "passe": false,
         "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
       {
-        "iso": "2026-11-12",
+        "iso": "2026-11-19",
         "nom": "jeudi",
-        "num": "12",
-        "mois": "nove.",
-        "passe": true,
-        "aujourdhui": false,
-        "evenements": [
-          {
-            "code": "GBP",
-            "titre": "PIB sur un mois",
-            "famille": "croissance",
-            "iso": "2026-11-12T07:00:00+00:00",
-            "heure": "07h00",
-            "consensus": "0.0%",
-            "precedent": "0.1%",
-            "attendu": -0.5,
-            "source": "calendrier"
-          }
-        ],
-        "nb": 1
-      },
-      {
-        "iso": "2026-11-13",
-        "nom": "vendredi",
-        "num": "13",
-        "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
-        "evenements": [
-          {
-            "code": "USD",
-            "titre": "Core Prix à la production sur un mois",
-            "famille": "inflation",
-            "iso": "2026-11-13T13:30:00+00:00",
-            "heure": "13h30",
-            "consensus": "0.3%",
-            "precedent": "0.7%",
-            "attendu": -2.0,
-            "source": "calendrier"
-          },
-          {
-            "code": "USD",
-            "titre": "Prix à la production sur un mois",
-            "famille": "inflation",
-            "iso": "2026-11-13T13:30:00+00:00",
-            "heure": "13h30",
-            "consensus": "0.4%",
-            "precedent": "1.3%",
-            "attendu": -3.0,
-            "source": "calendrier"
-          }
-        ],
-        "nb": 2
-      },
-      {
-        "iso": "2026-11-14",
-        "nom": "samedi",
-        "num": "14",
+        "num": "19",
         "mois": "nove.",
         "passe": false,
         "aujourdhui": false,
@@ -128,9 +50,29 @@
         "nb": 0
       },
       {
-        "iso": "2026-11-15",
+        "iso": "2026-11-20",
+        "nom": "vendredi",
+        "num": "20",
+        "mois": "nove.",
+        "passe": false,
+        "aujourdhui": false,
+        "evenements": [],
+        "nb": 0
+      },
+      {
+        "iso": "2026-11-21",
+        "nom": "samedi",
+        "num": "21",
+        "mois": "nove.",
+        "passe": false,
+        "aujourdhui": false,
+        "evenements": [],
+        "nb": 0
+      },
+      {
+        "iso": "2026-11-22",
         "nom": "dimanche",
-        "num": "15",
+        "num": "22",
         "mois": "nove.",
         "passe": false,
         "aujourdhui": false,
@@ -138,10 +80,10 @@
         "nb": 0
       }
     ],
-    "nb": 5,
+    "nb": 0,
     "reste": 0,
-    "prochaine": false,
-    "en_attente": false
+    "prochaine": true,
+    "en_attente": true
   },
   "faits": [],
   "devises": [
@@ -150,7 +92,7 @@
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 43,
+      "biais": 42,
       "inflation": "3,8% · septembre 2026",
       "inflation_detail": "3,8% (septembre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
@@ -177,11 +119,11 @@
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
-      "semaine_nb": 1,
+      "semaine_nb": 0,
       "semaine_reste": 0,
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "croissance",
+      "semaine_resume": "",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
@@ -216,7 +158,7 @@
       "banque": "Reserve Bank of New Zealand (RBNZ)",
       "taux": "2,75%",
       "ton": "neutre",
-      "biais": 36,
+      "biais": 35,
       "inflation": "4,1% · T2 2026",
       "inflation_detail": "4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)",
       "chomage": "5,6% · T2 2026",
@@ -238,31 +180,18 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 60,
+      "biais": 61,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,1% · octobre 2026",
       "chomage_detail": "4,1% (octobre 2026, FRED)",
-      "semaine_nb": 4,
+      "semaine_nb": 0,
       "semaine_reste": 0,
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
-      "semaine_resume": "inflation",
-      "parutions": [
-        {
-          "famille": "chomage",
-          "libelle": "chômage",
-          "date": "2026-11-06",
-          "date_txt": "6 novembre",
-          "valeur": "4,1% · octobre 2026",
-          "avant": "4,2% · septembre 2026",
-          "variation": "-0,1 pt",
-          "cran": 0.5,
-          "age": 7,
-          "poids": 0.0
-        }
-      ],
-      "effet": 0.0,
+      "semaine_resume": "",
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
       "prochain": "Décision FOMC (Fed) + projections",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -273,7 +202,7 @@
       "banque": "Bank of Canada (BoC)",
       "taux": "2,25%",
       "ton": "neutre",
-      "biais": 52,
+      "biais": 51,
       "inflation": "3,0% · août 2026",
       "inflation_detail": "3,0% (août 2026, stable, tirée par l'essence) — sommet de la fourchette cible 1-3%",
       "chomage": "6,4% · août 2026",
