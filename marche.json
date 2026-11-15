@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-15T11:27:37+00:00",
+  "calcule_iso": "2026-11-15T13:11:34+00:00",
   "seance": "2026-11-06",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,7 +97,7 @@
       "score": 12.5,
       "echeance": {
         "code": "NZD",
-        "heures": 39,
+        "heures": 37,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     },
@@ -111,7 +111,7 @@
       "score": 7.3,
       "echeance": {
         "code": "NZD",
-        "heures": 39,
+        "heures": 37,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     },
@@ -125,7 +125,7 @@
       "score": 6.5,
       "echeance": {
         "code": "AUD",
-        "heures": 35,
+        "heures": 34,
         "quoi": "Gouverneure RBA Bullock — discours"
       }
     },
@@ -149,7 +149,7 @@
       "score": 5.8,
       "echeance": {
         "code": "NZD",
-        "heures": 39,
+        "heures": 37,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     }
@@ -542,7 +542,7 @@
     },
     "AUD": {
       "biais": 54,
-      "biais_avant": 53,
+      "biais_avant": 54,
       "biais_7j": 56,
       "momentum": -1,
       "long_adj": 0,
@@ -695,7 +695,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 35,
+        "heures": 34,
         "quoi": "Gouverneure RBA Bullock — discours"
       },
       "attendu_5j": 0.021,
@@ -860,7 +860,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 39,
+        "heures": 37,
         "quoi": "Inflation Expectations sur un trimestre"
       },
       "attendu_5j": -0.064,
@@ -872,7 +872,7 @@
     },
     "USD": {
       "biais": 60,
-      "biais_avant": 61,
+      "biais_avant": 60,
       "biais_7j": 55,
       "momentum": 0,
       "long_adj": 3,
@@ -1025,7 +1025,7 @@
         84.2
       ],
       "echeance": {
-        "heures": 30,
+        "heures": 28,
         "quoi": "Fed Chairman Warsh — discours"
       },
       "attendu_5j": 0.037,
@@ -1037,7 +1037,7 @@
     },
     "CAD": {
       "biais": 52,
-      "biais_avant": 51,
+      "biais_avant": 52,
       "biais_7j": 53,
       "momentum": 3,
       "long_adj": -1,
@@ -1190,7 +1190,7 @@
         78.9
       ],
       "echeance": {
-        "heures": 26,
+        "heures": 24,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": 0.005,
