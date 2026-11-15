@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-14T23:20:29+00:00",
-  "verifie": "14 novembre 2026, 23h20 UTC",
+  "verifie_iso": "2026-11-15T03:02:01+00:00",
+  "verifie": "15 novembre 2026, 03h02 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine prochaine, du 16 au 22 novembre 2026",
     "debut": "2026-11-16",
     "fin": "2026-11-22",
-    "aujourdhui": "2026-11-14",
+    "aujourdhui": "2026-11-15",
     "jours": [
       {
         "iso": "2026-11-16",
@@ -83,7 +83,7 @@
     "nb": 0,
     "reste": 0,
     "prochaine": true,
-    "en_attente": true
+    "en_attente": false
   },
   "faits": [],
   "devises": [
