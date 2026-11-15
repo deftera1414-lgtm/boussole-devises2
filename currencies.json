@@ -1,11 +1,11 @@
 {
-  "generated_at": "15 novembre 2026, 03h01 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-15T03:01:37+00:00",
+  "generated_at": "15 novembre 2026, 11h26 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-15T11:26:54+00:00",
   "currencies": {
     "USD": {
-      "bias": 61,
-      "long_adj": 1,
-      "momentum": 1,
+      "bias": 60,
+      "long_adj": 3,
+      "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -166,8 +166,8 @@
       ]
     },
     "CAD": {
-      "bias": 51,
-      "long_adj": 0,
+      "bias": 52,
+      "long_adj": -1,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -198,8 +198,8 @@
       ]
     },
     "AUD": {
-      "bias": 53,
-      "long_adj": 2,
+      "bias": 54,
+      "long_adj": 0,
       "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.5,
