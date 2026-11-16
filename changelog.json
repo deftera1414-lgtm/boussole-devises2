@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "date": "2026-11-16",
+      "items": [
+        "AUD — biais 54 → 45 (-9), porté par le positionnement des grands spéculateurs",
+        "NZD — biais 35 → 42 (+7), porté par les fondamentaux",
+        "USD — biais 60 → 55 (-5), porté par les fondamentaux",
+        "JPY — biais 52 → 61 (+9), porté par le positionnement des grands spéculateurs"
+      ]
+    },
+    {
       "date": "2026-11-06",
       "items": [
         "USD — chomage : 4,1% (octobre 2026, FRED) (auparavant 4,2% (septembre 2026, FRED))",
@@ -20,70 +29,6 @@
       "items": [
         "AUD — 1 evenement(s) passe(s) retire(s)",
         "AUD — prochaine reunion : 8 décembre 2026 — Décision RBA (cash rate)"
-      ]
-    },
-    {
-      "date": "2026-11-01",
-      "items": [
-        "GBP — reunion inscrite au calendrier : Décision BoE (Bank Rate) + rapport"
-      ]
-    },
-    {
-      "date": "2026-10-30",
-      "items": [
-        "AUD — reunion inscrite au calendrier : Décision RBA + SoMP",
-        "JPY — 1 evenement(s) passe(s) retire(s)",
-        "JPY — prochaine reunion : 18 décembre 2026 — Décision BoJ (call rate)",
-        "AUD — biais 51 → 55 (+4), porté par les fondamentaux",
-        "NZD — biais 33 → 38 (+5), porté par les fondamentaux",
-        "USD — biais 62 → 57 (-5), porté par les fondamentaux",
-        "CHF — biais 47 → 43 (-4), porté par les fondamentaux"
-      ]
-    },
-    {
-      "date": "2026-10-29",
-      "items": [
-        "USD — 1 evenement(s) passe(s) retire(s)",
-        "USD — prochaine reunion : 9 décembre 2026 — Décision FOMC (Fed) + projections",
-        "EUR — 1 evenement(s) passe(s) retire(s)",
-        "EUR — prochaine reunion : 17 décembre 2026 — Décision BCE + projections"
-      ]
-    },
-    {
-      "date": "2026-10-28",
-      "items": [
-        "NZD — 1 evenement(s) passe(s) retire(s)",
-        "NZD — prochaine reunion : 9 décembre 2026 — Décision RBNZ (OCR) + MPS",
-        "CAD — 1 evenement(s) passe(s) retire(s)",
-        "CAD — prochaine reunion : 9 décembre 2026 — Décision BdC (taux directeur)"
-      ]
-    },
-    {
-      "date": "2026-10-26",
-      "items": [
-        "JPY — reunion inscrite au calendrier : Décision BoJ + Outlook Report"
-      ]
-    },
-    {
-      "date": "2026-10-25",
-      "items": [
-        "EUR — reunion inscrite au calendrier : Décision BCE (taux de dépôt)"
-      ]
-    },
-    {
-      "date": "2026-10-24",
-      "items": [
-        "NZD — reunion inscrite au calendrier : Décision RBNZ (OCR)",
-        "USD — reunion inscrite au calendrier : Décision FOMC (Fed)",
-        "CAD — reunion inscrite au calendrier : Décision BdC + rapport"
-      ]
-    },
-    {
-      "date": "2026-10-23",
-      "items": [
-        "AUD — biais 54 → 50 (-4), porté par les fondamentaux",
-        "NZD — biais 36 → 32 (-4), porté par le positionnement des grands spéculateurs",
-        "JPY — biais 51 → 56 (+5), porté par le positionnement des grands spéculateurs"
       ]
     }
   ]
