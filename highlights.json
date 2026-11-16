@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-15T23:08:46+00:00",
-  "verifie": "15 novembre 2026, 23h08 UTC",
+  "verifie_iso": "2026-11-16T03:02:26+00:00",
+  "verifie": "16 novembre 2026, 03h02 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
-    "titre": "Semaine prochaine, du 16 au 22 novembre 2026",
+    "titre": "Semaine du 16 au 22 novembre 2026",
     "debut": "2026-11-16",
     "fin": "2026-11-22",
-    "aujourdhui": "2026-11-15",
+    "aujourdhui": "2026-11-16",
     "jours": [
       {
         "iso": "2026-11-16",
@@ -15,7 +15,7 @@
         "num": "16",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "CAD",
@@ -142,17 +142,6 @@
             "code": "GBP",
             "titre": "Gouverneur BoE Bailey — discours",
             "famille": "discours",
-            "iso": "2026-11-18T07:30:00+00:00",
-            "heure": "07h30",
-            "consensus": "",
-            "precedent": "",
-            "attendu": null,
-            "source": "calendrier"
-          },
-          {
-            "code": "GBP",
-            "titre": "Gouverneur BoE Bailey — discours",
-            "famille": "discours",
             "iso": "2026-11-18T15:00:00+00:00",
             "heure": "15h00",
             "consensus": "",
@@ -172,7 +161,7 @@
             "source": "calendrier"
           }
         ],
-        "nb": 4
+        "nb": 3
       },
       {
         "iso": "2026-11-19",
@@ -238,9 +227,9 @@
         "nb": 0
       }
     ],
-    "nb": 14,
-    "reste": 14,
-    "prochaine": true,
+    "nb": 13,
+    "reste": 13,
+    "prochaine": false,
     "en_attente": false
   },
   "faits": [],
@@ -277,8 +266,8 @@
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
-      "semaine_nb": 3,
-      "semaine_reste": 3,
+      "semaine_nb": 2,
+      "semaine_reste": 2,
       "semaine_penchant": 0.5,
       "semaine_mot": "favorable",
       "semaine_resume": "inflation, discours",
