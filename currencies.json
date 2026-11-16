@@ -1,6 +1,6 @@
 {
-  "generated_at": "16 novembre 2026, 11h59 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-16T11:59:17+00:00",
+  "generated_at": "16 novembre 2026, 14h20 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-16T14:20:04+00:00",
   "currencies": {
     "USD": {
       "bias": 60,
@@ -166,8 +166,8 @@
       ]
     },
     "CAD": {
-      "bias": 52,
-      "long_adj": -1,
+      "bias": 51,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,

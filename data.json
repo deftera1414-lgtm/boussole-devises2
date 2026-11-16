@@ -164,8 +164,8 @@
       ]
     },
     "CAD": {
-      "bias": 52,
-      "long_adj": -1,
+      "bias": 51,
+      "long_adj": 0,
       "momentum": 3,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -461,7 +461,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -746,7 +746,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "16 novembre 2026, 11h59 UTC (mise à jour automatique)"
+  "generated_at": "16 novembre 2026, 14h20 UTC (mise à jour automatique)"
 }

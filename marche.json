@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-16T11:59:39+00:00",
+  "calcule_iso": "2026-11-16T14:20:23+00:00",
   "seance": "2026-11-06",
   "seances": 384,
   "source": "Reserve federale (H.10) via FRED",
@@ -97,21 +97,21 @@
       "score": 12.5,
       "echeance": {
         "code": "NZD",
-        "heures": 14,
+        "heures": 12,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     },
     {
       "paire": "CAD/NZD",
-      "ecart": 17,
+      "ecart": 16,
       "soutien": 0.71,
       "attendu_5j": 0.07,
       "sigma_5j": 0.94,
       "rapport": 0.07,
-      "score": 7.3,
+      "score": 6.9,
       "echeance": {
         "code": "NZD",
-        "heures": 14,
+        "heures": 12,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     },
@@ -125,7 +125,7 @@
       "score": 6.5,
       "echeance": {
         "code": "AUD",
-        "heures": 11,
+        "heures": 8,
         "quoi": "Gouverneure RBA Bullock — discours"
       }
     },
@@ -139,7 +139,7 @@
       "score": 5.8,
       "echeance": {
         "code": "NZD",
-        "heures": 14,
+        "heures": 12,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     },
@@ -153,7 +153,7 @@
       "score": 5.6,
       "echeance": {
         "code": "NZD",
-        "heures": 14,
+        "heures": 12,
         "quoi": "Inflation Expectations sur un trimestre"
       }
     }
@@ -538,7 +538,7 @@
         93.5
       ],
       "echeance": {
-        "heures": 43,
+        "heures": 41,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.016,
@@ -703,7 +703,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 11,
+        "heures": 8,
         "quoi": "Gouverneure RBA Bullock — discours"
       },
       "attendu_5j": 0.021,
@@ -868,7 +868,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 14,
+        "heures": 12,
         "quoi": "Inflation Expectations sur un trimestre"
       },
       "attendu_5j": -0.064,
@@ -1033,7 +1033,7 @@
         84.2
       ],
       "echeance": {
-        "heures": 5,
+        "heures": 3,
         "quoi": "Fed Chairman Warsh — discours"
       },
       "attendu_5j": 0.037,
@@ -1044,14 +1044,14 @@
       }
     },
     "CAD": {
-      "biais": 52,
+      "biais": 51,
       "biais_avant": 52,
       "biais_7j": 53,
       "momentum": 3,
-      "long_adj": -1,
+      "long_adj": 0,
       "fondamental": -1.75,
       "technique": 1.82,
-      "flux": 1.6,
+      "flux": 0.0,
       "positionnement": 5.0,
       "pos_detail": {
         "net_pct": -11.98,
@@ -1197,11 +1197,7 @@
         87.9,
         78.9
       ],
-      "echeance": {
-        "heures": 2,
-        "quoi": "Inflation mensuelle"
-      },
-      "attendu_5j": 0.005,
+      "attendu_5j": 0.004,
       "sigma_5j": 0.4,
       "jumelle": {
         "code": "NZD",
