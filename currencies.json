@@ -1,11 +1,11 @@
 {
-  "generated_at": "17 novembre 2026, 04h44 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-17T04:44:48+00:00",
+  "generated_at": "17 novembre 2026, 14h50 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-17T14:50:56+00:00",
   "currencies": {
     "USD": {
-      "bias": 55,
-      "long_adj": -1,
-      "momentum": 0,
+      "bias": 56,
+      "long_adj": -2,
+      "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -102,7 +102,7 @@
       ]
     },
     "JPY": {
-      "bias": 62,
+      "bias": 63,
       "long_adj": 3,
       "momentum": 0,
       "tilt": "hawkish",
