@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "date": "2026-11-17",
+      "items": [
+        "AUD — chomage : 4,7% (septembre 2026, FRED) (auparavant 4,6% (août 2026, FRED))",
+        "NZD — chomage : 5,7% (juillet 2026, FRED) (auparavant 5,6% (T2 2026, plus haut depuis onze ans))",
+        "CAD — chomage : 6,7% (octobre 2026, FRED) (auparavant 6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet)",
+        "JPY — chomage : 2,5% (septembre 2026, FRED) (auparavant 2,6% (août 2026, FRED))"
+      ]
+    },
+    {
       "date": "2026-11-16",
       "items": [
         "AUD — biais 54 → 45 (-9), porté par le positionnement des grands spéculateurs",

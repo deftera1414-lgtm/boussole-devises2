@@ -100,9 +100,9 @@
       ]
     },
     "JPY": {
-      "bias": 61,
+      "bias": 62,
       "long_adj": 3,
-      "momentum": -2,
+      "momentum": 0,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -117,8 +117,8 @@
       "gdp_current": "+1,4% (T2 2026, annualisé, 2e estimation du 7 septembre, révisée en hausse depuis +1,1%)",
       "cpi_previous": "1,8% (juillet 2026, IPC core national)",
       "cpi_current": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
-      "unemp_previous": "2,4% (juillet 2026, FRED)",
-      "unemp_current": "2,6% (août 2026, FRED)",
+      "unemp_previous": "2,6% (août 2026, FRED)",
+      "unemp_current": "2,5% (septembre 2026, FRED)",
       "speech": "Le communiqué du 18 septembre reste ferme : la BoJ dit vouloir continuer à relever son taux directeur et insiste sur le risque que l'inflation dépasse durablement la cible de 2%. Mais Kazuo Ueda a déçu en conférence de presse, refusant de s'engager (« cela dépend de l'évolution des prix, plusieurs scénarios sont possibles ») et précisant que la politique monétaire n'est pas pilotée pour contrôler le change. Combiné à un vote divisé 7-2, ce ton en retrait a fait reculer le yen malgré la hausse.",
       "cycle": "Normalisation graduelle engagée depuis la sortie des taux négatifs en 2024, portée le 18 septembre à 1,25%, au plus haut depuis trente ans. La tension du moment est que cette hausse intervient alors que l'IPC core reste sous 2% pour le huitième mois consécutif : la BoJ agit sur l'inflation anticipée plutôt que constatée, ce qui explique un comité divisé et un gouverneur réticent à promettre la suite.",
       "move": "hike",
@@ -164,9 +164,9 @@
       ]
     },
     "CAD": {
-      "bias": 52,
-      "long_adj": 1,
-      "momentum": 3,
+      "bias": 50,
+      "long_adj": 2,
+      "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -181,8 +181,8 @@
       "gdp_current": "+3,3% (T2 2026, QoQ annualisé, publié le 28 août, légèrement sous le consensus de 3,4%)",
       "cpi_previous": "3,0% (juillet 2026)",
       "cpi_current": "3,0% (août 2026, stable, tirée par l'essence) — sommet de la fourchette cible 1-3%",
-      "unemp_previous": "6,4% (juillet 2026)",
-      "unemp_current": "6,4% (août 2026, stable) ; l'emploi recule toutefois de 42K après +181K cumulés d'avril à juillet",
+      "unemp_previous": "6,5% (septembre 2026, FRED)",
+      "unemp_current": "6,7% (octobre 2026, FRED)",
       "speech": "En maintenant le taux le 2 septembre, Tiff Macklem a livré un message neutre assorti d'une inquiétude sur l'inflation. Il constate que l'économie a redémarré après avoir calé, PIB du T2 à 3,3% à l'appui, mais avertit que plus les prix du pétrole et les marges de raffinage resteront élevés, plus le risque de contagion aux prix énergétiques augmentera. Il conserve toute latitude, se disant prêt à ajuster la politique monétaire selon les besoins, dans un contexte compliqué par les nouvelles mesures commerciales américaines.",
       "cycle": "Pause prolongée à 2,25% depuis octobre 2025, sept réunions d'affilée. La Banque se trouve devant une configuration inconfortable : croissance vigoureuse au T2 et inflation au plafond de la fourchette cible plaideraient pour un resserrement, mais le choc tarifaire américain et un marché de l'emploi qui se retourne en août justifient l'attentisme.",
       "move": "hold",
@@ -213,8 +213,8 @@
       "gdp_current": "+0,4% QoQ / +2,1% YoY (T2 2026, publié le 2 septembre, au-dessus des attentes mais croissance qualifiée de modérée)",
       "cpi_previous": "3,8% (juin 2026, IPC mensuel)",
       "cpi_current": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
-      "unemp_previous": "4,5% (juillet 2026, FRED)",
-      "unemp_current": "4,6% (août 2026, FRED)",
+      "unemp_previous": "4,7% (août 2026, FRED)",
+      "unemp_current": "4,7% (septembre 2026, FRED)",
       "speech": "Devant le Parlement le 18 septembre, Michele Bullock a durci le ton : les risques haussiers signalés en août se matérialisent désormais, entre le conflit au Moyen-Orient, le boom de l'intelligence artificielle et des conditions météorologiques extrêmes qui poussent l'énergie, l'agricole et la technologie. Avec une inflation autour de 3,5%, au-dessus de la cible, elle indique que le Board évaluera fin septembre si le resserrement déjà délivré suffira. Elle nuance en citant le ralentissement de la demande intérieure et la détente progressive du marché du travail.",
       "cycle": "Trois hausses en 2026 ont porté le taux à 4,35% en mai, suivi de quatre mois de statu quo à ton ferme. La réunion du 29 septembre est le vrai rendez-vous : le marché y attribue 76 à 80% de probabilité à une hausse vers 4,60%, ce qui serait le plus haut niveau depuis quinze ans, l'inflation au-dessus de la bande cible 2-3% l'emportant sur un chômage qui remonte.",
       "move": "hold",
@@ -245,8 +245,8 @@
       "gdp_current": "+0,2% QoQ (T2 2026, publié le 17 septembre, au-dessus du consensus de +0,1% ; PIB par habitant +0,1%)",
       "cpi_previous": "3,1% (T1 2026)",
       "cpi_current": "4,1% (T2 2026, au-dessus de la bande cible 1-3%, plus haut depuis fin 2023)",
-      "unemp_previous": "5,4% (T1 2026)",
-      "unemp_current": "5,6% (T2 2026, plus haut depuis onze ans)",
+      "unemp_previous": "5,6% (avril 2026, FRED)",
+      "unemp_current": "5,7% (juillet 2026, FRED)",
       "speech": "Anna Breman a accompagné la hausse du 2 septembre d'un message ferme mais prudent : l'OCR remonte vers un taux neutre, la politique restant encore accommodante, et le comité n'est engagé sur aucune trajectoire prédéfinie. La projection officielle situe l'OCR à 2,81% en décembre 2026 puis 3,12% en septembre 2027. Dès le lendemain, devant la commission des finances, elle a nettement adouci le propos en estimant que la banque peut probablement prendre le temps d'évaluer les effets déjà produits — un signal de pause pour octobre qui a fait reculer le NZD.",
       "cycle": "Resserrement relancé en juillet 2026, avec une deuxième hausse le 2 septembre portant l'OCR à 2,75%, en route vers un neutre estimé autour de 3%. L'inflation à 4,1% justifie le mouvement, mais un chômage au plus haut depuis onze ans et une croissance quasi nulle au T2 poussent la gouverneure à préparer les esprits à une pause dès octobre.",
       "move": "hike",
@@ -342,12 +342,12 @@
       "base": "EUR",
       "quote": "CAD",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -380,12 +380,12 @@
       "base": "EUR",
       "quote": "JPY",
       "short": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -461,7 +461,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -494,7 +494,7 @@
       "base": "GBP",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -551,17 +551,17 @@
       "base": "AUD",
       "quote": "CAD",
       "short": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -594,12 +594,12 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 39,
         "label": "Baissier faible"
       }
     },
@@ -632,13 +632,13 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -665,7 +665,7 @@
       "base": "NZD",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -675,7 +675,7 @@
         "event": false
       },
       "long": {
-        "prob": 39,
+        "prob": 38,
         "label": "Baissier faible"
       }
     },
@@ -684,17 +684,17 @@
       "base": "USD",
       "quote": "CAD",
       "short": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -732,8 +732,8 @@
         "event": false
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -746,12 +746,12 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -760,12 +760,12 @@
       "base": "CAD",
       "quote": "JPY",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -789,10 +789,10 @@
         "event": false
       },
       "long": {
-        "prob": 41,
+        "prob": 40,
         "label": "Baissier faible"
       }
     }
   ],
-  "generated_at": "16 novembre 2026, 22h28 UTC (mise à jour automatique)"
+  "generated_at": "17 novembre 2026, 04h44 UTC (mise à jour automatique)"
 }
