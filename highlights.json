@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-17T23:07:42+00:00",
-  "verifie": "17 novembre 2026, 23h07 UTC",
+  "verifie_iso": "2026-11-18T04:41:26+00:00",
+  "verifie": "18 novembre 2026, 04h41 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 16 au 22 novembre 2026",
     "debut": "2026-11-16",
     "fin": "2026-11-22",
-    "aujourdhui": "2026-11-17",
+    "aujourdhui": "2026-11-18",
     "jours": [
       {
         "iso": "2026-11-16",
@@ -80,8 +80,8 @@
         "nom": "mardi",
         "num": "17",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "NZD",
@@ -125,7 +125,7 @@
         "num": "18",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "GBP",
@@ -242,8 +242,8 @@
       "avant": "6,4% · août 2026",
       "variation": "+0,3 pt",
       "cran": -1.5,
-      "age": 0,
-      "poids": -1.5,
+      "age": 1,
+      "poids": -1.29,
       "code": "CAD"
     },
     {
@@ -255,8 +255,8 @@
       "avant": "4,6% · août 2026",
       "variation": "+0,1 pt",
       "cran": -0.5,
-      "age": 0,
-      "poids": -0.5,
+      "age": 1,
+      "poids": -0.43,
       "code": "AUD"
     },
     {
@@ -268,8 +268,8 @@
       "avant": "5,6% · T2 2026",
       "variation": "+0,1 pt",
       "cran": -0.5,
-      "age": 0,
-      "poids": -0.5,
+      "age": 1,
+      "poids": -0.43,
       "code": "NZD"
     }
   ],
@@ -343,11 +343,11 @@
           "avant": "4,6% · août 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 0,
-          "poids": -0.5
+          "age": 1,
+          "poids": -0.43
         }
       ],
-      "effet": -0.5,
+      "effet": -0.43,
       "effet_mot": "défavorable",
       "prochain": "Variation de l'emploi",
       "prochain_iso": "2026-11-19T00:30:00+00:00",
@@ -378,11 +378,11 @@
           "avant": "5,6% · T2 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 0,
-          "poids": -0.5
+          "age": 1,
+          "poids": -0.43
         }
       ],
-      "effet": -0.5,
+      "effet": -0.43,
       "effet_mot": "défavorable",
       "prochain": "Décision RBNZ (OCR) + MPS",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -435,12 +435,12 @@
           "avant": "6,4% · août 2026",
           "variation": "+0,3 pt",
           "cran": -1.5,
-          "age": 0,
-          "poids": -1.5
+          "age": 1,
+          "poids": -1.29
         }
       ],
-      "effet": -1.5,
-      "effet_mot": "nettement défavorable",
+      "effet": -1.29,
+      "effet_mot": "défavorable",
       "prochain": "Décision BdC (taux directeur)",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
       "prochain_txt": "9 décembre"
@@ -492,11 +492,11 @@
           "avant": "2,6% · août 2026",
           "variation": "-0,1 pt",
           "cran": 0.5,
-          "age": 0,
-          "poids": 0.5
+          "age": 1,
+          "poids": 0.43
         }
       ],
-      "effet": 0.5,
+      "effet": 0.43,
       "effet_mot": "favorable",
       "prochain": "Décision BoJ (call rate)",
       "prochain_iso": "2026-12-18T12:00:00+00:00",

@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-17T23:07:42+00:00",
+  "calcule_iso": "2026-11-18T04:41:26+00:00",
   "seance": "2026-11-13",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -137,7 +137,7 @@
       "score": 6.0,
       "echeance": {
         "code": "USD",
-        "heures": 20,
+        "heures": 14,
         "quoi": "FOMC Meeting Minutes"
       }
     }
@@ -526,7 +526,7 @@
         86.6
       ],
       "echeance": {
-        "heures": 8,
+        "heures": 2,
         "quoi": "Inflation annuelle"
       },
       "attendu_5j": 0.009,
@@ -544,7 +544,7 @@
       "long_adj": -2,
       "fondamental": 1.97,
       "technique": -4.5,
-      "flux": 1.6,
+      "flux": 1.71,
       "positionnement": -9.23,
       "pos_detail": {
         "net_pct": -43.01,
@@ -693,7 +693,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 25,
+        "heures": 20,
         "quoi": "Variation de l'emploi"
       },
       "attendu_5j": -0.026,
@@ -711,7 +711,7 @@
       "long_adj": 0,
       "fondamental": -1.94,
       "technique": -3.79,
-      "flux": -0.8,
+      "flux": -0.69,
       "positionnement": -1.66,
       "pos_detail": {
         "net_pct": -41.97,
@@ -1023,7 +1023,7 @@
         100.0
       ],
       "echeance": {
-        "heures": 20,
+        "heures": 14,
         "quoi": "FOMC Meeting Minutes"
       },
       "attendu_5j": 0.026,
@@ -1041,7 +1041,7 @@
       "long_adj": 2,
       "fondamental": -1.47,
       "technique": 1.5,
-      "flux": -2.4,
+      "flux": -2.06,
       "positionnement": 4.49,
       "pos_detail": {
         "net_pct": -9.51,
@@ -1367,7 +1367,7 @@
       "long_adj": 3,
       "fondamental": 2.3,
       "technique": 1.56,
-      "flux": 0.8,
+      "flux": 0.69,
       "positionnement": 6.21,
       "pos_detail": {
         "net_pct": 31.66,
