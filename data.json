@@ -35,9 +35,9 @@
       ]
     },
     "EUR": {
-      "bias": 45,
-      "long_adj": 0,
-      "momentum": 4,
+      "bias": 47,
+      "long_adj": -1,
+      "momentum": 3,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -50,8 +50,8 @@
       "next": "17 décembre 2026 — Décision BCE + projections",
       "gdp_previous": "0,0% QoQ (T1 2026, zone euro)",
       "gdp_current": "+0,6% QoQ (T2 2026, 3e estimation du 7 septembre, révisée en hausse depuis +0,4%)",
-      "cpi_previous": "3,2% (août 2026, FRED)",
-      "cpi_current": "3,8% (septembre 2026, FRED)",
+      "cpi_previous": "3,8% (septembre 2026, FRED)",
+      "cpi_current": "4,0% (octobre 2026, FRED)",
       "unemp_previous": "6,4% (juin 2026)",
       "unemp_current": "6,4% (juillet 2026, stable)",
       "speech": "Christine Lagarde a qualifié la hausse du 10 septembre d'évidence (« no brainer ») tout en refusant tout pré-engagement : le Conseil n'a pas débattu de la trajectoire future et reste en approche réunion par réunion. Elle décrit l'inflation actuelle comme « principalement un choc d'offre » lié à l'énergie et au Moyen-Orient, et ne voit un retour à la cible que vers fin 2027. Isabel Schnabel, l'aile la plus ferme du Conseil, plaide pour aller plus loin. Les marchés ont malgré la prudence de Lagarde relevé leurs paris sur de nouvelles hausses.",
@@ -68,7 +68,7 @@
       ]
     },
     "GBP": {
-      "bias": 54,
+      "bias": 53,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "hawkish",
@@ -132,9 +132,9 @@
       ]
     },
     "CHF": {
-      "bias": 46,
-      "long_adj": 0,
-      "momentum": 3,
+      "bias": 47,
+      "long_adj": -2,
+      "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -147,8 +147,8 @@
       "next": "17 décembre 2026 — Décision BNS (examen trimestriel)",
       "gdp_previous": "+0,5% QoQ (T1 2026)",
       "gdp_current": "+1,5% QoQ (T2 2026, publié le 3 septembre, plus forte croissance depuis le T3 2021, tirée par la chimie-pharma)",
-      "cpi_previous": "0,9% (août 2026, FRED)",
-      "cpi_current": "1,2% (septembre 2026, FRED)",
+      "cpi_previous": "1,2% (septembre 2026, FRED)",
+      "cpi_current": "1,6% (octobre 2026, FRED)",
       "unemp_previous": "3,0% (juillet 2026, brut)",
       "unemp_current": "3,0% (août 2026, brut ; 3,1% corrigé des variations saisonnières, stable pour le 4e mois)",
       "speech": "Martin Schlegel a maintenu le 11 septembre un ton neutre, sans le moindre signal de resserrement : l'inflation a augmenté ces derniers mois mais reste, selon lui, dans la zone de stabilité des prix. Il reconnaît que le taux de change du franc constitue un défi pour l'économie suisse, tout en rappelant que le franc réel est stable depuis 2020. La BNS réaffirme sa disponibilité à intervenir sur le marché des changes plutôt qu'à manier le taux directeur.",
@@ -164,7 +164,7 @@
       ]
     },
     "CAD": {
-      "bias": 50,
+      "bias": 51,
       "long_adj": 2,
       "momentum": 1,
       "tilt": "neutral",
@@ -196,7 +196,7 @@
       ]
     },
     "AUD": {
-      "bias": 45,
+      "bias": 44,
       "long_adj": -2,
       "momentum": -1,
       "tilt": "hawkish",
@@ -266,7 +266,7 @@
       "base": "EUR",
       "quote": "GBP",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -276,7 +276,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -295,7 +295,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -304,7 +304,7 @@
       "base": "EUR",
       "quote": "NZD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -323,7 +323,7 @@
       "base": "EUR",
       "quote": "USD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -342,7 +342,7 @@
       "base": "EUR",
       "quote": "CAD",
       "short": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -428,7 +428,7 @@
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -436,6 +436,25 @@
       "pair": "GBP/USD",
       "base": "GBP",
       "quote": "USD",
+      "short": {
+        "prob": 50,
+        "label": "Neutre",
+        "event": false
+      },
+      "medium": {
+        "prob": 49,
+        "label": "Neutre",
+        "event": false
+      },
+      "long": {
+        "prob": 48,
+        "label": "Neutre"
+      }
+    },
+    {
+      "pair": "GBP/CAD",
+      "base": "GBP",
+      "quote": "CAD",
       "short": {
         "prob": 50,
         "label": "Neutre",
@@ -452,35 +471,16 @@
       }
     },
     {
-      "pair": "GBP/CAD",
-      "base": "GBP",
-      "quote": "CAD",
-      "short": {
-        "prob": 50,
-        "label": "Neutre",
-        "event": false
-      },
-      "medium": {
-        "prob": 51,
-        "label": "Neutre",
-        "event": false
-      },
-      "long": {
-        "prob": 50,
-        "label": "Neutre"
-      }
-    },
-    {
       "pair": "GBP/CHF",
       "base": "GBP",
       "quote": "CHF",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -504,7 +504,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 42,
         "label": "Baissier faible"
       }
     },
@@ -556,13 +556,13 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 46,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -575,7 +575,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -632,13 +632,13 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -646,7 +646,7 @@
       "base": "NZD",
       "quote": "CHF",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -694,7 +694,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -703,7 +703,7 @@
       "base": "USD",
       "quote": "CHF",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -741,7 +741,7 @@
       "base": "CAD",
       "quote": "CHF",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "18 novembre 2026, 04h41 UTC (mise à jour automatique)"
+  "generated_at": "18 novembre 2026, 14h30 UTC (mise à jour automatique)"
 }

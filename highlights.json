@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-18T04:41:26+00:00",
-  "verifie": "18 novembre 2026, 04h41 UTC",
+  "verifie_iso": "2026-11-18T14:30:54+00:00",
+  "verifie": "18 novembre 2026, 14h30 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -228,11 +228,24 @@
       }
     ],
     "nb": 13,
-    "reste": 5,
+    "reste": 4,
     "prochaine": false,
     "en_attente": false
   },
   "faits": [
+    {
+      "famille": "inflation",
+      "libelle": "inflation",
+      "date": "2026-11-18",
+      "date_txt": "18 novembre",
+      "valeur": "1,6% · octobre 2026",
+      "avant": "1,2% · septembre 2026",
+      "variation": "+0,4 pt",
+      "cran": 2.0,
+      "age": 0,
+      "poids": 2.0,
+      "code": "CHF"
+    },
     {
       "famille": "chomage",
       "libelle": "chômage",
@@ -247,30 +260,17 @@
       "code": "CAD"
     },
     {
-      "famille": "chomage",
-      "libelle": "chômage",
-      "date": "2026-11-17",
-      "date_txt": "17 novembre",
-      "valeur": "4,7% · septembre 2026",
-      "avant": "4,6% · août 2026",
-      "variation": "+0,1 pt",
-      "cran": -0.5,
-      "age": 1,
-      "poids": -0.43,
-      "code": "AUD"
-    },
-    {
-      "famille": "chomage",
-      "libelle": "chômage",
-      "date": "2026-11-17",
-      "date_txt": "17 novembre",
-      "valeur": "5,7% · juillet 2026",
-      "avant": "5,6% · T2 2026",
-      "variation": "+0,1 pt",
-      "cran": -0.5,
-      "age": 1,
-      "poids": -0.43,
-      "code": "NZD"
+      "famille": "inflation",
+      "libelle": "inflation",
+      "date": "2026-11-18",
+      "date_txt": "18 novembre",
+      "valeur": "4,0% · octobre 2026",
+      "avant": "3,8% · septembre 2026",
+      "variation": "+0,2 pt",
+      "cran": 1.0,
+      "age": 0,
+      "poids": 1.0,
+      "code": "EUR"
     }
   ],
   "devises": [
@@ -280,8 +280,8 @@
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
       "biais": 45,
-      "inflation": "3,8% · septembre 2026",
-      "inflation_detail": "3,8% (septembre 2026, FRED)",
+      "inflation": "4,0% · octobre 2026",
+      "inflation_detail": "4,0% (octobre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
       "chomage_detail": "6,4% (juillet 2026, stable)",
       "semaine_nb": 0,
@@ -289,9 +289,22 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [],
-      "effet": 0,
-      "effet_mot": "sans effet net",
+      "parutions": [
+        {
+          "famille": "inflation",
+          "libelle": "inflation",
+          "date": "2026-11-18",
+          "date_txt": "18 novembre",
+          "valeur": "4,0% · octobre 2026",
+          "avant": "3,8% · septembre 2026",
+          "variation": "+0,2 pt",
+          "cran": 1.0,
+          "age": 0,
+          "poids": 1.0
+        }
+      ],
+      "effet": 1.0,
+      "effet_mot": "favorable",
       "prochain": "Décision BCE + projections",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
       "prochain_txt": "17 décembre"
@@ -307,15 +320,15 @@
       "chomage": "4,9% · juillet 2026",
       "chomage_detail": "4,9% (3 mois à juillet 2026, stable pour la 4e période consécutive ; le consensus attendait 5,0%)",
       "semaine_nb": 2,
-      "semaine_reste": 2,
-      "semaine_penchant": 0.5,
-      "semaine_mot": "favorable",
+      "semaine_reste": 1,
+      "semaine_penchant": 0,
+      "semaine_mot": "sans effet net",
       "semaine_resume": "inflation, discours",
       "parutions": [],
       "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Inflation annuelle",
-      "prochain_iso": "2026-11-18T07:00:00+00:00",
+      "prochain": "Gouverneur BoE Bailey — discours",
+      "prochain_iso": "2026-11-18T15:00:00+00:00",
       "prochain_txt": "18 novembre"
     },
     {
@@ -451,8 +464,8 @@
       "taux": "0,00%",
       "ton": "neutre",
       "biais": 46,
-      "inflation": "1,2% · septembre 2026",
-      "inflation_detail": "1,2% (septembre 2026, FRED)",
+      "inflation": "1,6% · octobre 2026",
+      "inflation_detail": "1,6% (octobre 2026, FRED)",
       "chomage": "3,0% · août 2026",
       "chomage_detail": "3,0% (août 2026, brut ; 3,1% corrigé des variations saisonnières, stable pour le 4e mois)",
       "semaine_nb": 0,
@@ -460,9 +473,22 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [],
-      "effet": 0,
-      "effet_mot": "sans effet net",
+      "parutions": [
+        {
+          "famille": "inflation",
+          "libelle": "inflation",
+          "date": "2026-11-18",
+          "date_txt": "18 novembre",
+          "valeur": "1,6% · octobre 2026",
+          "avant": "1,2% · septembre 2026",
+          "variation": "+0,4 pt",
+          "cran": 2.0,
+          "age": 0,
+          "poids": 2.0
+        }
+      ],
+      "effet": 2.0,
+      "effet_mot": "nettement favorable",
       "prochain": "Décision BNS (examen trimestriel)",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
       "prochain_txt": "17 décembre"
