@@ -165,7 +165,7 @@
     },
     "CAD": {
       "bias": 51,
-      "long_adj": 1,
+      "long_adj": 2,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -228,7 +228,7 @@
       ]
     },
     "NZD": {
-      "bias": 42,
+      "bias": 43,
       "long_adj": 0,
       "momentum": 1,
       "tilt": "neutral",
@@ -352,7 +352,7 @@
         "event": false
       },
       "long": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -518,7 +518,7 @@
         "event": false
       },
       "medium": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -561,8 +561,8 @@
         "event": false
       },
       "long": {
-        "prob": 45,
-        "label": "Neutre"
+        "prob": 44,
+        "label": "Baissier faible"
       }
     },
     {
@@ -632,7 +632,7 @@
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -656,7 +656,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 49,
         "label": "Neutre"
       }
     },
@@ -694,7 +694,7 @@
         "event": false
       },
       "long": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 43,
+        "prob": 44,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "19 novembre 2026, 14h56 UTC (mise à jour automatique)"
+  "generated_at": "19 novembre 2026, 22h24 UTC (mise à jour automatique)"
 }
