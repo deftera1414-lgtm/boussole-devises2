@@ -102,7 +102,7 @@
     "JPY": {
       "bias": 63,
       "long_adj": 3,
-      "momentum": 0,
+      "momentum": -1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -133,7 +133,7 @@
     },
     "CHF": {
       "bias": 47,
-      "long_adj": -2,
+      "long_adj": -1,
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -164,8 +164,8 @@
       ]
     },
     "CAD": {
-      "bias": 50,
-      "long_adj": 2,
+      "bias": 51,
+      "long_adj": 1,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -196,9 +196,9 @@
       ]
     },
     "AUD": {
-      "bias": 44,
-      "long_adj": -2,
-      "momentum": -1,
+      "bias": 43,
+      "long_adj": -1,
+      "momentum": -2,
       "tilt": "hawkish",
       "cpi_target": 2.5,
       "event_6h": false,
@@ -290,7 +290,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 52,
         "label": "Neutre",
         "event": false
       },
@@ -399,7 +399,7 @@
       "base": "GBP",
       "quote": "AUD",
       "short": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
@@ -461,7 +461,7 @@
         "event": false
       },
       "medium": {
-        "prob": 51,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -485,7 +485,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -513,7 +513,7 @@
       "base": "AUD",
       "quote": "NZD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
@@ -532,12 +532,12 @@
       "base": "AUD",
       "quote": "USD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre",
         "event": false
       },
@@ -551,12 +551,12 @@
       "base": "AUD",
       "quote": "CAD",
       "short": {
-        "prob": 50,
+        "prob": 49,
         "label": "Neutre",
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -570,7 +570,7 @@
       "base": "AUD",
       "quote": "CHF",
       "short": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -594,7 +594,7 @@
         "event": false
       },
       "medium": {
-        "prob": 47,
+        "prob": 46,
         "label": "Neutre",
         "event": false
       },
@@ -632,7 +632,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre",
         "event": false
       },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "18 novembre 2026, 22h18 UTC (mise à jour automatique)"
+  "generated_at": "19 novembre 2026, 03h49 UTC (mise à jour automatique)"
 }
