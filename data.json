@@ -37,7 +37,7 @@
     "EUR": {
       "bias": 47,
       "long_adj": -1,
-      "momentum": 3,
+      "momentum": 2,
       "tilt": "hawkish",
       "cpi_target": 2.0,
       "event_6h": false,
@@ -133,7 +133,7 @@
     },
     "CHF": {
       "bias": 47,
-      "long_adj": -2,
+      "long_adj": -1,
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -165,7 +165,7 @@
     },
     "CAD": {
       "bias": 51,
-      "long_adj": 2,
+      "long_adj": 1,
       "momentum": 1,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -352,7 +352,7 @@
         "event": false
       },
       "long": {
-        "prob": 46,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -466,7 +466,7 @@
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre"
       }
     },
@@ -485,7 +485,7 @@
         "event": false
       },
       "long": {
-        "prob": 53,
+        "prob": 52,
         "label": "Neutre"
       }
     },
@@ -561,8 +561,8 @@
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -637,7 +637,7 @@
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -656,7 +656,7 @@
         "event": false
       },
       "long": {
-        "prob": 49,
+        "prob": 48,
         "label": "Neutre"
       }
     },
@@ -694,7 +694,7 @@
         "event": false
       },
       "long": {
-        "prob": 50,
+        "prob": 51,
         "label": "Neutre"
       }
     },
@@ -751,7 +751,7 @@
         "event": false
       },
       "long": {
-        "prob": 54,
+        "prob": 53,
         "label": "Neutre"
       }
     },
@@ -770,7 +770,7 @@
         "event": false
       },
       "long": {
-        "prob": 44,
+        "prob": 43,
         "label": "Baissier faible"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "19 novembre 2026, 22h24 UTC (mise à jour automatique)"
+  "generated_at": "20 novembre 2026, 03h41 UTC (mise à jour automatique)"
 }
