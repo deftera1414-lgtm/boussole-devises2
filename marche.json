@@ -1,14 +1,14 @@
 {
-  "calcule_iso": "2026-11-20T14:38:22+00:00",
+  "calcule_iso": "2026-11-20T21:31:10+00:00",
   "seance": "2026-11-13",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
   "source_pos": "CFTC — Commitments of Traders, non-commerciaux, futures seuls",
-  "rapport_cot": "2026-11-10",
+  "rapport_cot": "2026-11-17",
   "macro": {
     "petrole_3m": 2.6,
     "tension": 2.5,
-    "taux_us_1m": 3
+    "taux_us_1m": -3
   },
   "moteurs": [
     {
@@ -89,52 +89,52 @@
   "convictions": [
     {
       "paire": "JPY/NZD",
-      "ecart": 20,
+      "ecart": 21,
       "soutien": 0.67,
-      "attendu_5j": 0.13,
+      "attendu_5j": 0.14,
       "sigma_5j": 1.12,
-      "rapport": 0.11,
-      "score": 13.3,
-      "echeance": null
-    },
-    {
-      "paire": "JPY/CHF",
-      "ecart": 16,
-      "soutien": 0.67,
-      "attendu_5j": 0.09,
-      "sigma_5j": 0.83,
-      "rapport": 0.1,
-      "score": 10.7,
-      "echeance": null
-    },
-    {
-      "paire": "JPY/AUD",
-      "ecart": 20,
-      "soutien": 0.5,
-      "attendu_5j": 0.13,
-      "sigma_5j": 1.12,
-      "rapport": 0.11,
-      "score": 10.0,
+      "rapport": 0.13,
+      "score": 14.0,
       "echeance": null
     },
     {
       "paire": "USD/NZD",
-      "ecart": 13,
-      "soutien": 0.71,
-      "attendu_5j": 0.1,
+      "ecart": 19,
+      "soutien": 0.62,
+      "attendu_5j": 0.15,
       "sigma_5j": 1.36,
-      "rapport": 0.08,
-      "score": 9.3,
+      "rapport": 0.11,
+      "score": 11.9,
       "echeance": null
     },
     {
       "paire": "JPY/CAD",
-      "ecart": 12,
+      "ecart": 14,
       "soutien": 0.67,
-      "attendu_5j": 0.06,
+      "attendu_5j": 0.07,
       "sigma_5j": 0.74,
       "rapport": 0.09,
-      "score": 8.0,
+      "score": 9.3,
+      "echeance": null
+    },
+    {
+      "paire": "JPY/CHF",
+      "ecart": 13,
+      "soutien": 0.67,
+      "attendu_5j": 0.07,
+      "sigma_5j": 0.83,
+      "rapport": 0.09,
+      "score": 8.7,
+      "echeance": null
+    },
+    {
+      "paire": "USD/CAD",
+      "ecart": 12,
+      "soutien": 0.62,
+      "attendu_5j": 0.07,
+      "sigma_5j": 0.68,
+      "rapport": 0.11,
+      "score": 7.5,
       "echeance": null
     }
   ],
@@ -172,16 +172,16 @@
     },
     "positionnement": {
       "1sem": {
-        "ic": -0.028,
+        "ic": -0.027,
         "n": 640,
         "reussite": 47,
         "n_nets": 521
       },
       "4sem": {
-        "ic": -0.12,
+        "ic": -0.121,
         "n": 152,
-        "reussite": 46,
-        "n_nets": 131
+        "reussite": 44,
+        "n_nets": 126
       }
     },
     "biais_publie": {
@@ -208,17 +208,17 @@
       "biais_7j": 42,
       "momentum": 2,
       "long_adj": -1,
-      "fondamental": -0.76,
+      "fondamental": -0.74,
       "technique": -2.41,
       "flux": 1.14,
-      "positionnement": -0.97,
+      "positionnement": -1.19,
       "pos_detail": {
-        "net_pct": -15.96,
-        "place": 5,
-        "var_hebdo": 2.05,
-        "rapport": "2026-11-10",
+        "net_pct": -16.48,
+        "place": 4,
+        "var_hebdo": -0.52,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": -0.97
+        "relatif": -1.19
       },
       "fond_detail": {
         "taux_reel": -3.81,
@@ -227,7 +227,7 @@
         "inflation": 1.33,
         "ton": 2.1,
         "croissance": 0.91,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": -0.1,
         "risque": -0.25,
         "apport": {
@@ -237,7 +237,7 @@
           "inflation": 0.48,
           "ton": 0.76,
           "croissance": 0.27,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": -0.02,
           "risque": -0.03
         },
@@ -366,22 +366,22 @@
       }
     },
     "GBP": {
-      "biais": 53,
+      "biais": 57,
       "biais_avant": 53,
       "biais_7j": 57,
       "momentum": 1,
-      "long_adj": -2,
-      "fondamental": 0.68,
+      "long_adj": 0,
+      "fondamental": 0.7,
       "technique": 4.19,
       "flux": 0.0,
-      "positionnement": -0.87,
+      "positionnement": 3.59,
       "pos_detail": {
-        "net_pct": -19.66,
-        "place": 23,
-        "var_hebdo": 4.7,
-        "rapport": "2026-11-10",
+        "net_pct": -13.83,
+        "place": 29,
+        "var_hebdo": 5.82,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": -0.87
+        "relatif": 3.59
       },
       "fond_detail": {
         "taux_reel": 4.0,
@@ -390,7 +390,7 @@
         "inflation": 0.07,
         "ton": 0.6,
         "croissance": -0.69,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": -0.01,
         "risque": -1.45,
         "apport": {
@@ -400,7 +400,7 @@
           "inflation": 0.02,
           "ton": 0.22,
           "croissance": -0.21,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": -0.0,
           "risque": -0.17
         },
@@ -521,7 +521,7 @@
         84.0,
         86.6
       ],
-      "attendu_5j": 0.011,
+      "attendu_5j": 0.026,
       "sigma_5j": 0.37,
       "jumelle": {
         "code": "JPY",
@@ -529,22 +529,22 @@
       }
     },
     "AUD": {
-      "biais": 43,
+      "biais": 48,
       "biais_avant": 43,
       "biais_7j": 54,
       "momentum": -2,
-      "long_adj": -1,
-      "fondamental": 1.73,
+      "long_adj": 1,
+      "fondamental": 1.76,
       "technique": -4.5,
       "flux": -0.46,
-      "positionnement": -9.23,
+      "positionnement": -4.48,
       "pos_detail": {
-        "net_pct": -43.01,
-        "place": 12,
-        "var_hebdo": -3.61,
-        "rapport": "2026-11-10",
+        "net_pct": -48.64,
+        "place": 5,
+        "var_hebdo": -5.64,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": -9.23
+        "relatif": -4.48
       },
       "fond_detail": {
         "taux_reel": 3.65,
@@ -553,7 +553,7 @@
         "inflation": -1.57,
         "ton": 0.6,
         "croissance": -0.09,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": 0.12,
         "risque": -3.45,
         "apport": {
@@ -563,7 +563,7 @@
           "inflation": -0.57,
           "ton": 0.22,
           "croissance": -0.03,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": 0.02,
           "risque": -0.41
         },
@@ -684,7 +684,7 @@
         9.7,
         0.0
       ],
-      "attendu_5j": -0.061,
+      "attendu_5j": -0.017,
       "sigma_5j": 0.87,
       "jumelle": {
         "code": "CHF",
@@ -692,22 +692,22 @@
       }
     },
     "NZD": {
-      "biais": 43,
+      "biais": 39,
       "biais_avant": 43,
       "biais_7j": 35,
       "momentum": 1,
-      "long_adj": 0,
-      "fondamental": -1.63,
+      "long_adj": -2,
+      "fondamental": -1.6,
       "technique": -3.79,
       "flux": -0.46,
-      "positionnement": -1.66,
+      "positionnement": -5.69,
       "pos_detail": {
-        "net_pct": -41.97,
-        "place": 16,
-        "var_hebdo": 3.31,
-        "rapport": "2026-11-10",
+        "net_pct": -46.11,
+        "place": 12,
+        "var_hebdo": -4.15,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": -1.66
+        "relatif": -5.69
       },
       "fond_detail": {
         "taux_reel": -1.61,
@@ -716,7 +716,7 @@
         "inflation": 3.87,
         "ton": -0.9,
         "croissance": -1.99,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": -0.03,
         "risque": -3.85,
         "apport": {
@@ -726,7 +726,7 @@
           "inflation": 1.39,
           "ton": -0.32,
           "croissance": -0.6,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": -0.01,
           "risque": -0.46
         },
@@ -847,7 +847,7 @@
         17.0,
         14.0
       ],
-      "attendu_5j": -0.06,
+      "attendu_5j": -0.094,
       "sigma_5j": 0.85,
       "jumelle": {
         "code": "USD",
@@ -855,22 +855,22 @@
       }
     },
     "USD": {
-      "biais": 56,
+      "biais": 58,
       "biais_avant": 56,
       "biais_7j": 60,
       "momentum": 1,
-      "long_adj": -2,
-      "fondamental": 2.2,
+      "long_adj": -1,
+      "fondamental": 2.03,
       "technique": 6.15,
       "flux": 0.0,
-      "positionnement": -2.18,
+      "positionnement": 0.42,
       "pos_detail": {
-        "net_pct": 26.85,
-        "place": 72,
-        "var_hebdo": -2.05,
-        "rapport": "2026-11-10",
+        "net_pct": 23.93,
+        "place": 70,
+        "var_hebdo": -2.93,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": -2.18
+        "relatif": 0.42
       },
       "fond_detail": {
         "taux_reel": 2.14,
@@ -879,7 +879,7 @@
         "inflation": 1.21,
         "ton": 2.1,
         "croissance": -0.29,
-        "taux_us": 0.36,
+        "taux_us": -0.36,
         "commerce": 0.04,
         "risque": 2.55,
         "apport": {
@@ -889,12 +889,12 @@
           "inflation": 0.43,
           "ton": 0.76,
           "croissance": -0.09,
-          "taux_us": 0.09,
+          "taux_us": -0.09,
           "commerce": 0.01,
           "risque": 0.31
         },
         "accord": [
-          6,
+          5,
           8
         ]
       },
@@ -1010,7 +1010,7 @@
         93.4,
         100.0
       ],
-      "attendu_5j": 0.043,
+      "attendu_5j": 0.057,
       "sigma_5j": 0.72,
       "jumelle": {
         "code": "NZD",
@@ -1018,22 +1018,22 @@
       }
     },
     "CAD": {
-      "biais": 51,
+      "biais": 46,
       "biais_avant": 51,
       "biais_7j": 51,
       "momentum": 1,
-      "long_adj": 1,
-      "fondamental": -1.4,
+      "long_adj": -1,
+      "fondamental": -1.37,
       "technique": 1.5,
       "flux": -1.38,
-      "positionnement": 4.49,
+      "positionnement": -0.33,
       "pos_detail": {
-        "net_pct": -9.51,
-        "place": 68,
-        "var_hebdo": 2.47,
-        "rapport": "2026-11-10",
+        "net_pct": -12.58,
+        "place": 63,
+        "var_hebdo": -3.07,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": 4.49
+        "relatif": -0.33
       },
       "fond_detail": {
         "taux_reel": -1.09,
@@ -1042,7 +1042,7 @@
         "inflation": -0.67,
         "ton": -2.4,
         "croissance": 0.61,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": 0.23,
         "risque": -1.45,
         "apport": {
@@ -1052,7 +1052,7 @@
           "inflation": -0.24,
           "ton": -0.86,
           "croissance": 0.18,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": 0.04,
           "risque": -0.17
         },
@@ -1173,7 +1173,7 @@
         68.0,
         80.2
       ],
-      "attendu_5j": 0.004,
+      "attendu_5j": -0.017,
       "sigma_5j": 0.44,
       "jumelle": {
         "code": "NZD",
@@ -1186,17 +1186,17 @@
       "biais_7j": 49,
       "momentum": 4,
       "long_adj": -1,
-      "fondamental": -3.51,
+      "fondamental": -3.49,
       "technique": -1.11,
       "flux": 2.29,
-      "positionnement": 4.21,
+      "positionnement": 4.99,
       "pos_detail": {
-        "net_pct": -7.24,
+        "net_pct": -6.55,
         "place": 100,
-        "var_hebdo": 5.22,
-        "rapport": "2026-11-10",
+        "var_hebdo": 0.69,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": 4.21
+        "relatif": 4.99
       },
       "fond_detail": {
         "taux_reel": -3.29,
@@ -1205,7 +1205,7 @@
         "inflation": -1.43,
         "ton": -2.4,
         "croissance": 1.71,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": -0.07,
         "risque": 3.75,
         "apport": {
@@ -1215,7 +1215,7 @@
           "inflation": -0.52,
           "ton": -0.86,
           "croissance": 0.51,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": -0.01,
           "risque": 0.45
         },
@@ -1344,22 +1344,22 @@
       }
     },
     "JPY": {
-      "biais": 63,
+      "biais": 60,
       "biais_avant": 63,
       "biais_7j": 52,
       "momentum": -1,
-      "long_adj": 3,
-      "fondamental": 2.6,
+      "long_adj": 2,
+      "fondamental": 2.63,
       "technique": 1.56,
       "flux": 0.46,
-      "positionnement": 6.21,
+      "positionnement": 2.69,
       "pos_detail": {
-        "net_pct": 31.66,
-        "place": 82,
-        "var_hebdo": 4.78,
-        "rapport": "2026-11-10",
+        "net_pct": 29.8,
+        "place": 80,
+        "var_hebdo": -1.86,
+        "rapport": "2026-11-17",
         "semaines": 157,
-        "relatif": 6.21
+        "relatif": 2.69
       },
       "fond_detail": {
         "taux_reel": 0.0,
@@ -1368,7 +1368,7 @@
         "inflation": -2.79,
         "ton": 0.3,
         "croissance": -0.19,
-        "taux_us": -0.05,
+        "taux_us": 0.05,
         "commerce": -0.18,
         "risque": 4,
         "apport": {
@@ -1378,7 +1378,7 @@
           "inflation": -1.01,
           "ton": 0.11,
           "croissance": -0.06,
-          "taux_us": -0.01,
+          "taux_us": 0.01,
           "commerce": -0.03,
           "risque": 0.48
         },
@@ -1499,7 +1499,7 @@
         87.1,
         88.2
       ],
-      "attendu_5j": 0.067,
+      "attendu_5j": 0.051,
       "sigma_5j": 0.51,
       "jumelle": {
         "code": "GBP",

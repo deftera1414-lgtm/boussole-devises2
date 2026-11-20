@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "date": "2026-11-20",
+      "items": [
+        "GBP — biais 53 → 57 (+4), porté par le positionnement des grands spéculateurs",
+        "AUD — biais 43 → 48 (+5), porté par le positionnement des grands spéculateurs",
+        "NZD — biais 43 → 39 (-4), porté par le positionnement des grands spéculateurs",
+        "CAD — biais 51 → 46 (-5), porté par les fondamentaux"
+      ]
+    },
+    {
       "date": "2026-11-18",
       "items": [
         "EUR — inflation : 4,0% (octobre 2026, FRED) (auparavant 3,8% (septembre 2026, FRED))",
@@ -31,13 +40,6 @@
         "USD — chomage : 4,1% (octobre 2026, FRED) (auparavant 4,2% (septembre 2026, FRED))",
         "CHF — biais 44 → 48 (+4), porté par les fondamentaux",
         "JPY — biais 58 → 52 (-6), porté par le positionnement des grands spéculateurs"
-      ]
-    },
-    {
-      "date": "2026-11-05",
-      "items": [
-        "GBP — 1 evenement(s) passe(s) retire(s)",
-        "GBP — prochaine reunion : 17 décembre 2026 — Décision BoE (Bank Rate)"
       ]
     }
   ]
