@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-20T21:31:10+00:00",
+  "calcule_iso": "2026-11-21T02:48:02+00:00",
   "seance": "2026-11-13",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -207,10 +207,10 @@
       "biais_avant": 47,
       "biais_7j": 42,
       "momentum": 2,
-      "long_adj": -1,
+      "long_adj": 0,
       "fondamental": -0.74,
       "technique": -2.41,
-      "flux": 1.14,
+      "flux": 0.91,
       "positionnement": -1.19,
       "pos_detail": {
         "net_pct": -16.48,
@@ -367,7 +367,7 @@
     },
     "GBP": {
       "biais": 57,
-      "biais_avant": 53,
+      "biais_avant": 57,
       "biais_7j": 57,
       "momentum": 1,
       "long_adj": 0,
@@ -530,13 +530,13 @@
     },
     "AUD": {
       "biais": 48,
-      "biais_avant": 43,
+      "biais_avant": 48,
       "biais_7j": 54,
       "momentum": -2,
       "long_adj": 1,
       "fondamental": 1.76,
       "technique": -4.5,
-      "flux": -0.46,
+      "flux": -0.34,
       "positionnement": -4.48,
       "pos_detail": {
         "net_pct": -48.64,
@@ -693,13 +693,13 @@
     },
     "NZD": {
       "biais": 39,
-      "biais_avant": 43,
+      "biais_avant": 39,
       "biais_7j": 35,
       "momentum": 1,
       "long_adj": -2,
       "fondamental": -1.6,
       "technique": -3.79,
-      "flux": -0.46,
+      "flux": -0.34,
       "positionnement": -5.69,
       "pos_detail": {
         "net_pct": -46.11,
@@ -856,7 +856,7 @@
     },
     "USD": {
       "biais": 58,
-      "biais_avant": 56,
+      "biais_avant": 58,
       "biais_7j": 60,
       "momentum": 1,
       "long_adj": -1,
@@ -1019,13 +1019,13 @@
     },
     "CAD": {
       "biais": 46,
-      "biais_avant": 51,
+      "biais_avant": 46,
       "biais_7j": 51,
       "momentum": 1,
       "long_adj": -1,
       "fondamental": -1.37,
       "technique": 1.5,
-      "flux": -1.38,
+      "flux": -1.02,
       "positionnement": -0.33,
       "pos_detail": {
         "net_pct": -12.58,
@@ -1188,7 +1188,7 @@
       "long_adj": -1,
       "fondamental": -3.49,
       "technique": -1.11,
-      "flux": 2.29,
+      "flux": 1.82,
       "positionnement": 4.99,
       "pos_detail": {
         "net_pct": -6.55,
@@ -1345,13 +1345,13 @@
     },
     "JPY": {
       "biais": 60,
-      "biais_avant": 63,
+      "biais_avant": 60,
       "biais_7j": 52,
       "momentum": -1,
       "long_adj": 2,
       "fondamental": 2.63,
       "technique": 1.56,
-      "flux": 0.46,
+      "flux": 0.34,
       "positionnement": 2.69,
       "pos_detail": {
         "net_pct": 29.8,
