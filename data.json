@@ -2,7 +2,7 @@
   "currencies": {
     "USD": {
       "bias": 58,
-      "long_adj": -1,
+      "long_adj": -2,
       "momentum": 1,
       "tilt": "hawkish",
       "cpi_target": 2.0,
@@ -333,8 +333,8 @@
         "event": false
       },
       "long": {
-        "prob": 44,
-        "label": "Baissier faible"
+        "prob": 45,
+        "label": "Neutre"
       }
     },
     {
@@ -694,8 +694,8 @@
         "event": false
       },
       "long": {
-        "prob": 56,
-        "label": "Haussier faible"
+        "prob": 55,
+        "label": "Neutre"
       }
     },
     {
@@ -713,7 +713,7 @@
         "event": false
       },
       "long": {
-        "prob": 55,
+        "prob": 54,
         "label": "Neutre"
       }
     },
@@ -732,7 +732,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "22 novembre 2026, 00h38 UTC (mise à jour automatique)"
+  "generated_at": "22 novembre 2026, 07h25 UTC (mise à jour automatique)"
 }

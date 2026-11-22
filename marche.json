@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-22T00:38:55+00:00",
+  "calcule_iso": "2026-11-22T07:26:16+00:00",
   "seance": "2026-11-13",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -204,7 +204,7 @@
   "devises": {
     "EUR": {
       "biais": 46,
-      "biais_avant": 47,
+      "biais_avant": 46,
       "biais_7j": 42,
       "momentum": 2,
       "long_adj": 0,
@@ -536,7 +536,7 @@
       "long_adj": 1,
       "fondamental": 1.76,
       "technique": -4.5,
-      "flux": -0.22,
+      "flux": 0.18,
       "positionnement": -4.48,
       "pos_detail": {
         "net_pct": -48.64,
@@ -859,10 +859,10 @@
       "biais_avant": 58,
       "biais_7j": 60,
       "momentum": 1,
-      "long_adj": -1,
+      "long_adj": -2,
       "fondamental": 2.03,
       "technique": 6.15,
-      "flux": 0.0,
+      "flux": 0.4,
       "positionnement": 0.42,
       "pos_detail": {
         "net_pct": 23.93,
@@ -1019,7 +1019,7 @@
     },
     "CAD": {
       "biais": 47,
-      "biais_avant": 46,
+      "biais_avant": 47,
       "biais_7j": 51,
       "momentum": 1,
       "long_adj": -1,
