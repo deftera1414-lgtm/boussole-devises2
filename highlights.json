@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-21T19:44:36+00:00",
-  "verifie": "21 novembre 2026, 19h44 UTC",
+  "verifie_iso": "2026-11-22T00:38:55+00:00",
+  "verifie": "22 novembre 2026, 00h38 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine prochaine, du 23 au 29 novembre 2026",
     "debut": "2026-11-23",
     "fin": "2026-11-29",
-    "aujourdhui": "2026-11-21",
+    "aujourdhui": "2026-11-22",
     "jours": [
       {
         "iso": "2026-11-23",
@@ -83,7 +83,7 @@
     "nb": 0,
     "reste": 0,
     "prochaine": true,
-    "en_attente": true
+    "en_attente": false
   },
   "faits": [
     {
@@ -95,8 +95,8 @@
       "avant": "1,2% · septembre 2026",
       "variation": "+0,4 pt",
       "cran": 2.0,
-      "age": 3,
-      "poids": 1.14,
+      "age": 4,
+      "poids": 0.86,
       "code": "CHF"
     },
     {
@@ -108,8 +108,8 @@
       "avant": "6,4% · août 2026",
       "variation": "+0,3 pt",
       "cran": -1.5,
-      "age": 4,
-      "poids": -0.64,
+      "age": 5,
+      "poids": -0.43,
       "code": "CAD"
     },
     {
@@ -121,8 +121,8 @@
       "avant": "3,8% · septembre 2026",
       "variation": "+0,2 pt",
       "cran": 1.0,
-      "age": 3,
-      "poids": 0.57,
+      "age": 4,
+      "poids": 0.43,
       "code": "EUR"
     }
   ],
@@ -152,11 +152,11 @@
           "avant": "3,8% · septembre 2026",
           "variation": "+0,2 pt",
           "cran": 1.0,
-          "age": 3,
-          "poids": 0.57
+          "age": 4,
+          "poids": 0.43
         }
       ],
-      "effet": 0.57,
+      "effet": 0.43,
       "effet_mot": "favorable",
       "prochain": "Décision BCE + projections",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -209,11 +209,11 @@
           "avant": "4,6% · août 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 4,
-          "poids": -0.21
+          "age": 5,
+          "poids": -0.14
         }
       ],
-      "effet": -0.21,
+      "effet": -0.14,
       "effet_mot": "sans effet net",
       "prochain": "Décision RBA (cash rate)",
       "prochain_iso": "2026-12-08T12:00:00+00:00",
@@ -244,11 +244,11 @@
           "avant": "5,6% · T2 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 4,
-          "poids": -0.21
+          "age": 5,
+          "poids": -0.14
         }
       ],
-      "effet": -0.21,
+      "effet": -0.14,
       "effet_mot": "sans effet net",
       "prochain": "Décision RBNZ (OCR) + MPS",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -301,11 +301,11 @@
           "avant": "6,4% · août 2026",
           "variation": "+0,3 pt",
           "cran": -1.5,
-          "age": 4,
-          "poids": -0.64
+          "age": 5,
+          "poids": -0.43
         }
       ],
-      "effet": -0.64,
+      "effet": -0.43,
       "effet_mot": "défavorable",
       "prochain": "Décision BdC (taux directeur)",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -336,11 +336,11 @@
           "avant": "1,2% · septembre 2026",
           "variation": "+0,4 pt",
           "cran": 2.0,
-          "age": 3,
-          "poids": 1.14
+          "age": 4,
+          "poids": 0.86
         }
       ],
-      "effet": 1.14,
+      "effet": 0.86,
       "effet_mot": "favorable",
       "prochain": "Décision BNS (examen trimestriel)",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -371,11 +371,11 @@
           "avant": "2,6% · août 2026",
           "variation": "-0,1 pt",
           "cran": 0.5,
-          "age": 4,
-          "poids": 0.21
+          "age": 5,
+          "poids": 0.14
         }
       ],
-      "effet": 0.21,
+      "effet": 0.14,
       "effet_mot": "sans effet net",
       "prochain": "Décision BoJ (call rate)",
       "prochain_iso": "2026-12-18T12:00:00+00:00",
