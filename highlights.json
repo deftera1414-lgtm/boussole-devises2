@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-23T16:54:07+00:00",
-  "verifie": "23 novembre 2026, 16h54 UTC",
+  "verifie_iso": "2026-11-23T22:54:06+00:00",
+  "verifie": "23 novembre 2026, 22h54 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -54,9 +54,9 @@
             "famille": "inflation",
             "iso": "2026-11-25T00:30:00+00:00",
             "heure": "00h30",
-            "consensus": "4.8%",
+            "consensus": "4.7%",
             "precedent": "4.3%",
-            "attendu": 2.5,
+            "attendu": 2.0,
             "source": "calendrier"
           },
           {
@@ -226,8 +226,8 @@
       "chomage_detail": "4,7% (septembre 2026, FRED)",
       "semaine_nb": 3,
       "semaine_reste": 3,
-      "semaine_penchant": 0.5,
-      "semaine_mot": "favorable",
+      "semaine_penchant": 0.0,
+      "semaine_mot": "sans effet net",
       "semaine_resume": "inflation",
       "parutions": [
         {
