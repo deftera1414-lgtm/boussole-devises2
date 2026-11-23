@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-22T21:15:30+00:00",
+  "calcule_iso": "2026-11-23T01:57:01+00:00",
   "seance": "2026-11-13",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -210,7 +210,7 @@
       "long_adj": 0,
       "fondamental": -0.74,
       "technique": -2.41,
-      "flux": 0.69,
+      "flux": 0.46,
       "positionnement": -1.19,
       "pos_detail": {
         "net_pct": -16.48,
@@ -536,7 +536,7 @@
       "long_adj": 1,
       "fondamental": 1.76,
       "technique": -4.5,
-      "flux": 0.18,
+      "flux": 0.29,
       "positionnement": -4.48,
       "pos_detail": {
         "net_pct": -48.64,
@@ -684,7 +684,11 @@
         9.7,
         0.0
       ],
-      "attendu_5j": -0.017,
+      "echeance": {
+        "heures": 47,
+        "quoi": "Inflation mensuelle"
+      },
+      "attendu_5j": -0.01,
       "sigma_5j": 0.87,
       "jumelle": {
         "code": "CHF",
@@ -699,7 +703,7 @@
       "long_adj": -2,
       "fondamental": -1.6,
       "technique": -3.79,
-      "flux": -0.22,
+      "flux": -0.11,
       "positionnement": -5.69,
       "pos_detail": {
         "net_pct": -46.11,
@@ -1025,7 +1029,7 @@
       "long_adj": -1,
       "fondamental": -1.37,
       "technique": 1.5,
-      "flux": -0.69,
+      "flux": -0.34,
       "positionnement": -0.33,
       "pos_detail": {
         "net_pct": -12.58,
@@ -1188,7 +1192,7 @@
       "long_adj": 0,
       "fondamental": -3.49,
       "technique": -1.11,
-      "flux": 1.38,
+      "flux": 0.91,
       "positionnement": 4.99,
       "pos_detail": {
         "net_pct": -6.55,
@@ -1351,7 +1355,7 @@
       "long_adj": 2,
       "fondamental": 2.63,
       "technique": 1.56,
-      "flux": 0.22,
+      "flux": 0.11,
       "positionnement": 2.69,
       "pos_detail": {
         "net_pct": 29.8,
