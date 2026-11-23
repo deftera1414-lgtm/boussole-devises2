@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-23T11:12:04+00:00",
+  "calcule_iso": "2026-11-23T16:54:07+00:00",
   "seance": "2026-11-13",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -98,16 +98,6 @@
       "echeance": null
     },
     {
-      "paire": "USD/NZD",
-      "ecart": 19,
-      "soutien": 0.62,
-      "attendu_5j": 0.15,
-      "sigma_5j": 1.36,
-      "rapport": 0.11,
-      "score": 11.9,
-      "echeance": null
-    },
-    {
       "paire": "JPY/CAD",
       "ecart": 13,
       "soutien": 0.67,
@@ -128,13 +118,27 @@
       "echeance": null
     },
     {
-      "paire": "USD/CAD",
-      "ecart": 11,
+      "paire": "USD/NZD",
+      "ecart": 19,
       "soutien": 0.62,
-      "attendu_5j": 0.07,
-      "sigma_5j": 0.68,
-      "rapport": 0.1,
-      "score": 6.9,
+      "attendu_5j": 0.13,
+      "sigma_5j": 1.36,
+      "rapport": 0.09,
+      "score": 7.1,
+      "echeance": {
+        "code": "USD",
+        "heures": 45,
+        "quoi": "Indice PCE sous-jacent sur un mois"
+      }
+    },
+    {
+      "paire": "GBP/NZD",
+      "ecart": 18,
+      "soutien": 0.33,
+      "attendu_5j": 0.12,
+      "sigma_5j": 0.9,
+      "rapport": 0.13,
+      "score": 6.0,
       "echeance": null
     }
   ],
@@ -685,7 +689,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 37,
+        "heures": 32,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": -0.01,
@@ -1014,7 +1018,11 @@
         93.4,
         100.0
       ],
-      "attendu_5j": 0.057,
+      "echeance": {
+        "heures": 45,
+        "quoi": "Indice PCE sous-jacent sur un mois"
+      },
+      "attendu_5j": 0.034,
       "sigma_5j": 0.72,
       "jumelle": {
         "code": "NZD",
