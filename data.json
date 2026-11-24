@@ -132,8 +132,8 @@
       ]
     },
     "CHF": {
-      "bias": 47,
-      "long_adj": -1,
+      "bias": 46,
+      "long_adj": 0,
       "momentum": 4,
       "tilt": "neutral",
       "cpi_target": 2.0,
@@ -746,7 +746,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "23 novembre 2026, 22h53 UTC (mise à jour automatique)"
+  "generated_at": "24 novembre 2026, 07h04 UTC (mise à jour automatique)"
 }

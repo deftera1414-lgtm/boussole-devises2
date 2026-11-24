@@ -1,21 +1,21 @@
 {
-  "verifie_iso": "2026-11-23T22:54:06+00:00",
-  "verifie": "23 novembre 2026, 22h54 UTC",
+  "verifie_iso": "2026-11-24T07:04:22+00:00",
+  "verifie": "24 novembre 2026, 07h04 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 23 au 29 novembre 2026",
     "debut": "2026-11-23",
     "fin": "2026-11-29",
-    "aujourdhui": "2026-11-23",
+    "aujourdhui": "2026-11-24",
     "jours": [
       {
         "iso": "2026-11-23",
         "nom": "lundi",
         "num": "23",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -25,7 +25,7 @@
         "num": "24",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -141,28 +141,14 @@
     "prochaine": false,
     "en_attente": false
   },
-  "faits": [
-    {
-      "famille": "inflation",
-      "libelle": "inflation",
-      "date": "2026-11-18",
-      "date_txt": "18 novembre",
-      "valeur": "1,6% · octobre 2026",
-      "avant": "1,2% · septembre 2026",
-      "variation": "+0,4 pt",
-      "cran": 2.0,
-      "age": 5,
-      "poids": 0.57,
-      "code": "CHF"
-    }
-  ],
+  "faits": [],
   "devises": [
     {
       "code": "EUR",
       "banque": "Banque centrale européenne (BCE)",
       "taux": "Taux de dépôt 2,50%",
       "ton": "resserrement",
-      "biais": 46,
+      "biais": 47,
       "inflation": "4,0% · octobre 2026",
       "inflation_detail": "4,0% (octobre 2026, FRED)",
       "chomage": "6,4% · juillet 2026",
@@ -182,11 +168,11 @@
           "avant": "3,8% · septembre 2026",
           "variation": "+0,2 pt",
           "cran": 1.0,
-          "age": 5,
-          "poids": 0.29
+          "age": 6,
+          "poids": 0.14
         }
       ],
-      "effet": 0.29,
+      "effet": 0.14,
       "effet_mot": "sans effet net",
       "prochain": "Décision BCE + projections",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -197,7 +183,7 @@
       "banque": "Bank of England (BoE)",
       "taux": "3,75%",
       "ton": "resserrement",
-      "biais": 57,
+      "biais": 56,
       "inflation": "3,1% · août 2026",
       "inflation_detail": "3,1% (août 2026) ; cœur stable à 2,6%, services à 3,4% — le MPC projette environ 3,75% au T4 2026 et légèrement au-dessus de 4% au T1 2027",
       "chomage": "4,9% · juillet 2026",
@@ -219,7 +205,7 @@
       "banque": "Reserve Bank of Australia (RBA)",
       "taux": "4,35%",
       "ton": "resserrement",
-      "biais": 48,
+      "biais": 47,
       "inflation": "3,5% · juillet 2026",
       "inflation_detail": "3,5% (juillet 2026, IPC mensuel) ; moyenne tronquée inchangée à 3,6%",
       "chomage": "4,7% · septembre 2026",
@@ -239,11 +225,11 @@
           "avant": "4,6% · août 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 6,
-          "poids": -0.07
+          "age": 7,
+          "poids": -0.0
         }
       ],
-      "effet": -0.07,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Inflation mensuelle",
       "prochain_iso": "2026-11-25T00:30:00+00:00",
@@ -274,11 +260,11 @@
           "avant": "5,6% · T2 2026",
           "variation": "+0,1 pt",
           "cran": -0.5,
-          "age": 6,
-          "poids": -0.07
+          "age": 7,
+          "poids": -0.0
         }
       ],
-      "effet": -0.07,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision RBNZ (OCR) + MPS",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -331,11 +317,11 @@
           "avant": "6,4% · août 2026",
           "variation": "+0,3 pt",
           "cran": -1.5,
-          "age": 6,
-          "poids": -0.21
+          "age": 7,
+          "poids": -0.0
         }
       ],
-      "effet": -0.21,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BdC (taux directeur)",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -366,12 +352,12 @@
           "avant": "1,2% · septembre 2026",
           "variation": "+0,4 pt",
           "cran": 2.0,
-          "age": 5,
-          "poids": 0.57
+          "age": 6,
+          "poids": 0.29
         }
       ],
-      "effet": 0.57,
-      "effet_mot": "favorable",
+      "effet": 0.29,
+      "effet_mot": "sans effet net",
       "prochain": "Décision BNS (examen trimestriel)",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
       "prochain_txt": "17 décembre"
@@ -381,7 +367,7 @@
       "banque": "Bank of Japan (BoJ)",
       "taux": "1,25%",
       "ton": "resserrement",
-      "biais": 60,
+      "biais": 62,
       "inflation": "1,7% · août 2026",
       "inflation_detail": "1,7% (août 2026, IPC core national, sous le consensus de 1,8% — premier ralentissement en quatre mois) ; core-core à 1,9%, au plus haut en trois mois",
       "chomage": "2,5% · septembre 2026",
@@ -401,11 +387,11 @@
           "avant": "2,6% · août 2026",
           "variation": "-0,1 pt",
           "cran": 0.5,
-          "age": 6,
-          "poids": 0.07
+          "age": 7,
+          "poids": 0.0
         }
       ],
-      "effet": 0.07,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BoJ (call rate)",
       "prochain_iso": "2026-12-18T12:00:00+00:00",
