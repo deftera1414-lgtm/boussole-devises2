@@ -1,6 +1,6 @@
 {
-  "verifie_iso": "2026-11-24T07:04:22+00:00",
-  "verifie": "24 novembre 2026, 07h04 UTC",
+  "verifie_iso": "2026-11-24T16:44:46+00:00",
+  "verifie": "24 novembre 2026, 16h44 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
@@ -332,7 +332,7 @@
       "banque": "Banque nationale suisse (BNS)",
       "taux": "0,00%",
       "ton": "neutre",
-      "biais": 47,
+      "biais": 46,
       "inflation": "1,6% · octobre 2026",
       "inflation_detail": "1,6% (octobre 2026, FRED)",
       "chomage": "3,0% · août 2026",

@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-24T07:04:22+00:00",
+  "calcule_iso": "2026-11-24T16:44:46+00:00",
   "seance": "2026-11-20",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -7,7 +7,7 @@
   "rapport_cot": "2026-11-17",
   "macro": {
     "petrole_3m": 2.6,
-    "tension": 2.5,
+    "tension": 2.41,
     "taux_us_1m": -18
   },
   "moteurs": [
@@ -137,7 +137,7 @@
       "score": 7.1,
       "echeance": {
         "code": "USD",
-        "heures": 30,
+        "heures": 21,
         "quoi": "Indice PCE sous-jacent sur un mois"
       }
     }
@@ -233,7 +233,7 @@
         "croissance": 0.91,
         "taux_us": 0.31,
         "commerce": -0.1,
-        "risque": -0.25,
+        "risque": -0.24,
         "apport": {
           "taux_reel": -2.15,
           "impulsion": 0.38,
@@ -396,7 +396,7 @@
         "croissance": -0.69,
         "taux_us": 0.31,
         "commerce": -0.01,
-        "risque": -1.45,
+        "risque": -1.4,
         "apport": {
           "taux_reel": 2.25,
           "impulsion": -0.58,
@@ -538,7 +538,7 @@
       "biais_7j": 48,
       "momentum": -1,
       "long_adj": 2,
-      "fondamental": 1.97,
+      "fondamental": 1.98,
       "technique": -7.18,
       "flux": 0.0,
       "positionnement": -4.48,
@@ -559,7 +559,7 @@
         "croissance": -0.09,
         "taux_us": 0.31,
         "commerce": 0.12,
-        "risque": -3.45,
+        "risque": -3.33,
         "apport": {
           "taux_reel": 2.34,
           "impulsion": 1.34,
@@ -569,7 +569,7 @@
           "croissance": -0.03,
           "taux_us": 0.07,
           "commerce": 0.02,
-          "risque": -0.41
+          "risque": -0.4
         },
         "accord": [
           4,
@@ -689,7 +689,7 @@
         0.0
       ],
       "echeance": {
-        "heures": 17,
+        "heures": 8,
         "quoi": "Inflation mensuelle"
       },
       "attendu_5j": -0.012,
@@ -705,7 +705,7 @@
       "biais_7j": 39,
       "momentum": 1,
       "long_adj": -1,
-      "fondamental": -1.52,
+      "fondamental": -1.51,
       "technique": -4.71,
       "flux": 0.0,
       "positionnement": -5.69,
@@ -726,7 +726,7 @@
         "croissance": -1.99,
         "taux_us": 0.31,
         "commerce": -0.03,
-        "risque": -3.85,
+        "risque": -3.71,
         "apport": {
           "taux_reel": -0.95,
           "impulsion": -1.15,
@@ -736,7 +736,7 @@
           "croissance": -0.6,
           "taux_us": 0.07,
           "commerce": -0.01,
-          "risque": -0.46
+          "risque": -0.45
         },
         "accord": [
           5,
@@ -868,7 +868,7 @@
       "biais_7j": 58,
       "momentum": 1,
       "long_adj": -3,
-      "fondamental": 1.56,
+      "fondamental": 1.55,
       "technique": 7.98,
       "flux": 0.4,
       "positionnement": 0.42,
@@ -889,7 +889,7 @@
         "croissance": -0.29,
         "taux_us": -2.16,
         "commerce": 0.04,
-        "risque": 2.55,
+        "risque": 2.46,
         "apport": {
           "taux_reel": 1.24,
           "impulsion": 0.19,
@@ -899,7 +899,7 @@
           "croissance": -0.09,
           "taux_us": -0.52,
           "commerce": 0.01,
-          "risque": 0.31
+          "risque": 0.29
         },
         "accord": [
           5,
@@ -1019,7 +1019,7 @@
         99.8
       ],
       "echeance": {
-        "heures": 30,
+        "heures": 21,
         "quoi": "Indice PCE sous-jacent sur un mois"
       },
       "attendu_5j": 0.03,
@@ -1056,7 +1056,7 @@
         "croissance": 0.61,
         "taux_us": 0.31,
         "commerce": 0.23,
-        "risque": -1.45,
+        "risque": -1.4,
         "apport": {
           "taux_reel": -0.61,
           "impulsion": -0.19,
@@ -1194,11 +1194,11 @@
     },
     "CHF": {
       "biais": 46,
-      "biais_avant": 47,
+      "biais_avant": 46,
       "biais_7j": 47,
       "momentum": 4,
       "long_adj": 0,
-      "fondamental": -3.62,
+      "fondamental": -3.64,
       "technique": -0.14,
       "flux": 0.46,
       "positionnement": 4.99,
@@ -1219,7 +1219,7 @@
         "croissance": 1.71,
         "taux_us": 0.31,
         "commerce": -0.07,
-        "risque": 3.75,
+        "risque": 3.61,
         "apport": {
           "taux_reel": -2.17,
           "impulsion": -0.96,
@@ -1229,7 +1229,7 @@
           "croissance": 0.51,
           "taux_us": 0.07,
           "commerce": -0.01,
-          "risque": 0.45
+          "risque": 0.43
         },
         "accord": [
           5,
@@ -1382,7 +1382,7 @@
         "croissance": -0.19,
         "taux_us": 0.31,
         "commerce": -0.18,
-        "risque": 4,
+        "risque": 4.0,
         "apport": {
           "taux_reel": 0.04,
           "impulsion": 0.96,
