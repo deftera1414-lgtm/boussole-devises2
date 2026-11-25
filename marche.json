@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-25T13:26:46+00:00",
+  "calcule_iso": "2026-11-25T16:30:48+00:00",
   "seance": "2026-11-20",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -7,7 +7,7 @@
   "rapport_cot": "2026-11-17",
   "macro": {
     "petrole_3m": 2.6,
-    "tension": 2.41,
+    "tension": 2.36,
     "taux_us_1m": -2
   },
   "moteurs": [
@@ -98,6 +98,16 @@
       "echeance": null
     },
     {
+      "paire": "USD/NZD",
+      "ecart": 20,
+      "soutien": 0.62,
+      "attendu_5j": 0.15,
+      "sigma_5j": 1.26,
+      "rapport": 0.12,
+      "score": 12.5,
+      "echeance": null
+    },
+    {
       "paire": "JPY/CHF",
       "ecart": 16,
       "soutien": 0.67,
@@ -118,28 +128,14 @@
       "echeance": null
     },
     {
-      "paire": "JPY/AUD",
-      "ecart": 15,
-      "soutien": 0.5,
-      "attendu_5j": 0.09,
-      "sigma_5j": 1.03,
-      "rapport": 0.09,
-      "score": 7.5,
-      "echeance": null
-    },
-    {
-      "paire": "USD/NZD",
-      "ecart": 20,
+      "paire": "USD/CHF",
+      "ecart": 13,
       "soutien": 0.62,
-      "attendu_5j": 0.13,
-      "sigma_5j": 1.26,
-      "rapport": 0.1,
-      "score": 7.5,
-      "echeance": {
-        "code": "USD",
-        "heures": 0,
-        "quoi": "Indice PCE sous-jacent sur un mois"
-      }
+      "attendu_5j": 0.08,
+      "sigma_5j": 1.0,
+      "rapport": 0.08,
+      "score": 8.1,
+      "echeance": null
     }
   ],
   "grappes": [
@@ -396,7 +392,7 @@
         "croissance": -0.69,
         "taux_us": 0.03,
         "commerce": -0.01,
-        "risque": -1.4,
+        "risque": -1.37,
         "apport": {
           "taux_reel": 2.25,
           "impulsion": -0.58,
@@ -406,7 +402,7 @@
           "croissance": -0.21,
           "taux_us": 0.01,
           "commerce": -0.0,
-          "risque": -0.17
+          "risque": -0.16
         },
         "accord": [
           2,
@@ -538,7 +534,7 @@
       "biais_7j": 48,
       "momentum": -1,
       "long_adj": 2,
-      "fondamental": 1.92,
+      "fondamental": 1.93,
       "technique": -7.18,
       "flux": 0.0,
       "positionnement": -4.48,
@@ -559,7 +555,7 @@
         "croissance": -0.09,
         "taux_us": 0.03,
         "commerce": 0.12,
-        "risque": -3.33,
+        "risque": -3.25,
         "apport": {
           "taux_reel": 2.34,
           "impulsion": 1.34,
@@ -569,7 +565,7 @@
           "croissance": -0.03,
           "taux_us": 0.01,
           "commerce": 0.02,
-          "risque": -0.4
+          "risque": -0.39
         },
         "accord": [
           3,
@@ -701,7 +697,7 @@
       "biais_7j": 39,
       "momentum": 1,
       "long_adj": -1,
-      "fondamental": -1.57,
+      "fondamental": -1.56,
       "technique": -4.71,
       "flux": 0.0,
       "positionnement": -5.69,
@@ -722,7 +718,7 @@
         "croissance": -1.99,
         "taux_us": 0.03,
         "commerce": -0.03,
-        "risque": -3.71,
+        "risque": -3.63,
         "apport": {
           "taux_reel": -0.95,
           "impulsion": -1.15,
@@ -732,7 +728,7 @@
           "croissance": -0.6,
           "taux_us": 0.01,
           "commerce": -0.01,
-          "risque": -0.45
+          "risque": -0.44
         },
         "accord": [
           5,
@@ -864,9 +860,9 @@
       "biais_7j": 58,
       "momentum": 1,
       "long_adj": -2,
-      "fondamental": 2.01,
+      "fondamental": 2.0,
       "technique": 7.98,
-      "flux": 0.4,
+      "flux": 0.0,
       "positionnement": 0.42,
       "pos_detail": {
         "net_pct": 23.93,
@@ -885,7 +881,7 @@
         "croissance": -0.29,
         "taux_us": -0.24,
         "commerce": 0.04,
-        "risque": 2.46,
+        "risque": 2.41,
         "apport": {
           "taux_reel": 1.24,
           "impulsion": 0.19,
@@ -1014,11 +1010,7 @@
         100.0,
         99.8
       ],
-      "echeance": {
-        "heures": 0,
-        "quoi": "Indice PCE sous-jacent sur un mois"
-      },
-      "attendu_5j": 0.034,
+      "attendu_5j": 0.056,
       "sigma_5j": 0.62,
       "jumelle": {
         "code": "NZD",
@@ -1052,7 +1044,7 @@
         "croissance": 0.61,
         "taux_us": 0.03,
         "commerce": 0.23,
-        "risque": -1.4,
+        "risque": -1.37,
         "apport": {
           "taux_reel": -0.61,
           "impulsion": -0.19,
@@ -1062,7 +1054,7 @@
           "croissance": 0.18,
           "taux_us": 0.01,
           "commerce": 0.04,
-          "risque": -0.17
+          "risque": -0.16
         },
         "accord": [
           5,
@@ -1194,7 +1186,7 @@
       "biais_7j": 47,
       "momentum": 4,
       "long_adj": 0,
-      "fondamental": -3.7,
+      "fondamental": -3.71,
       "technique": -0.14,
       "flux": 0.0,
       "positionnement": 4.99,
@@ -1215,7 +1207,7 @@
         "croissance": 1.71,
         "taux_us": 0.03,
         "commerce": -0.07,
-        "risque": 3.61,
+        "risque": 3.54,
         "apport": {
           "taux_reel": -2.17,
           "impulsion": -0.96,
@@ -1225,7 +1217,7 @@
           "croissance": 0.51,
           "taux_us": 0.01,
           "commerce": -0.01,
-          "risque": 0.43
+          "risque": 0.42
         },
         "accord": [
           5,
@@ -1357,7 +1349,7 @@
       "biais_7j": 60,
       "momentum": -1,
       "long_adj": 0,
-      "fondamental": 2.67,
+      "fondamental": 2.66,
       "technique": 6.46,
       "flux": 0.0,
       "positionnement": 2.69,
@@ -1378,7 +1370,7 @@
         "croissance": -0.19,
         "taux_us": 0.03,
         "commerce": -0.18,
-        "risque": 4.0,
+        "risque": 3.91,
         "apport": {
           "taux_reel": 0.04,
           "impulsion": 0.96,
@@ -1388,7 +1380,7 @@
           "croissance": -0.06,
           "taux_us": 0.01,
           "commerce": -0.03,
-          "risque": 0.48
+          "risque": 0.47
         },
         "accord": [
           4,
