@@ -1,7 +1,7 @@
 {
   "currencies": {
     "USD": {
-      "bias": 59,
+      "bias": 58,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "hawkish",
@@ -333,7 +333,7 @@
         "event": false
       },
       "long": {
-        "prob": 45,
+        "prob": 46,
         "label": "Neutre"
       }
     },
@@ -442,7 +442,7 @@
         "event": false
       },
       "medium": {
-        "prob": 49,
+        "prob": 50,
         "label": "Neutre",
         "event": false
       },
@@ -618,7 +618,7 @@
         "event": false
       },
       "long": {
-        "prob": 40,
+        "prob": 41,
         "label": "Baissier faible"
       }
     },
@@ -694,8 +694,8 @@
         "event": false
       },
       "long": {
-        "prob": 56,
-        "label": "Haussier faible"
+        "prob": 55,
+        "label": "Neutre"
       }
     },
     {
@@ -708,13 +708,13 @@
         "event": false
       },
       "medium": {
-        "prob": 52,
+        "prob": 51,
         "label": "Neutre",
         "event": false
       },
       "long": {
-        "prob": 56,
-        "label": "Haussier faible"
+        "prob": 55,
+        "label": "Neutre"
       }
     },
     {
@@ -732,7 +732,7 @@
         "event": false
       },
       "long": {
-        "prob": 48,
+        "prob": 47,
         "label": "Neutre"
       }
     },
@@ -794,5 +794,5 @@
       }
     }
   ],
-  "generated_at": "25 novembre 2026, 16h29 UTC (mise à jour automatique)"
+  "generated_at": "25 novembre 2026, 22h42 UTC (mise à jour automatique)"
 }

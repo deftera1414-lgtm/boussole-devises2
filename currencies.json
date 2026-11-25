@@ -1,9 +1,9 @@
 {
-  "generated_at": "25 novembre 2026, 16h29 UTC (mise à jour automatique)",
-  "generated_at_iso": "2026-11-25T16:29:51+00:00",
+  "generated_at": "25 novembre 2026, 22h42 UTC (mise à jour automatique)",
+  "generated_at_iso": "2026-11-25T22:42:47+00:00",
   "currencies": {
     "USD": {
-      "bias": 59,
+      "bias": 58,
       "long_adj": -2,
       "momentum": 1,
       "tilt": "hawkish",
