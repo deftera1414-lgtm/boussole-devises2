@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-24T19:04:07+00:00",
-  "verifie": "24 novembre 2026, 19h04 UTC",
+  "verifie_iso": "2026-11-25T03:09:04+00:00",
+  "verifie": "25 novembre 2026, 03h09 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 23 au 29 novembre 2026",
     "debut": "2026-11-23",
     "fin": "2026-11-29",
-    "aujourdhui": "2026-11-24",
+    "aujourdhui": "2026-11-25",
     "jours": [
       {
         "iso": "2026-11-23",
@@ -24,8 +24,8 @@
         "nom": "mardi",
         "num": "24",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -35,7 +35,7 @@
         "num": "25",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [
           {
             "code": "AUD",
@@ -137,7 +137,7 @@
       }
     ],
     "nb": 5,
-    "reste": 5,
+    "reste": 2,
     "prochaine": false,
     "en_attente": false
   },
@@ -168,11 +168,11 @@
           "avant": "3,8% · septembre 2026",
           "variation": "+0,2 pt",
           "cran": 1.0,
-          "age": 6,
-          "poids": 0.14
+          "age": 7,
+          "poids": 0.0
         }
       ],
-      "effet": 0.14,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BCE + projections",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -211,29 +211,16 @@
       "chomage": "4,7% · septembre 2026",
       "chomage_detail": "4,7% (septembre 2026, FRED)",
       "semaine_nb": 3,
-      "semaine_reste": 3,
-      "semaine_penchant": 0.0,
-      "semaine_mot": "sans effet net",
+      "semaine_reste": 0,
+      "semaine_penchant": 0,
+      "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "inflation",
-      "parutions": [
-        {
-          "famille": "chomage",
-          "libelle": "chômage",
-          "date": "2026-11-17",
-          "date_txt": "17 novembre",
-          "valeur": "4,7% · septembre 2026",
-          "avant": "4,6% · août 2026",
-          "variation": "+0,1 pt",
-          "cran": -0.5,
-          "age": 7,
-          "poids": -0.0
-        }
-      ],
-      "effet": 0.0,
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
-      "prochain": "Inflation mensuelle",
-      "prochain_iso": "2026-11-25T00:30:00+00:00",
-      "prochain_txt": "25 novembre"
+      "prochain": "Décision RBA (cash rate)",
+      "prochain_iso": "2026-12-08T12:00:00+00:00",
+      "prochain_txt": "8 décembre"
     },
     {
       "code": "NZD",
@@ -250,21 +237,8 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [
-        {
-          "famille": "chomage",
-          "libelle": "chômage",
-          "date": "2026-11-17",
-          "date_txt": "17 novembre",
-          "valeur": "5,7% · juillet 2026",
-          "avant": "5,6% · T2 2026",
-          "variation": "+0,1 pt",
-          "cran": -0.5,
-          "age": 7,
-          "poids": -0.0
-        }
-      ],
-      "effet": 0.0,
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
       "prochain": "Décision RBNZ (OCR) + MPS",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -307,21 +281,8 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [
-        {
-          "famille": "chomage",
-          "libelle": "chômage",
-          "date": "2026-11-17",
-          "date_txt": "17 novembre",
-          "valeur": "6,7% · octobre 2026",
-          "avant": "6,4% · août 2026",
-          "variation": "+0,3 pt",
-          "cran": -1.5,
-          "age": 7,
-          "poids": -0.0
-        }
-      ],
-      "effet": 0.0,
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BdC (taux directeur)",
       "prochain_iso": "2026-12-09T12:00:00+00:00",
@@ -352,11 +313,11 @@
           "avant": "1,2% · septembre 2026",
           "variation": "+0,4 pt",
           "cran": 2.0,
-          "age": 6,
-          "poids": 0.29
+          "age": 7,
+          "poids": 0.0
         }
       ],
-      "effet": 0.29,
+      "effet": 0.0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BNS (examen trimestriel)",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -377,21 +338,8 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [
-        {
-          "famille": "chomage",
-          "libelle": "chômage",
-          "date": "2026-11-17",
-          "date_txt": "17 novembre",
-          "valeur": "2,5% · septembre 2026",
-          "avant": "2,6% · août 2026",
-          "variation": "-0,1 pt",
-          "cran": 0.5,
-          "age": 7,
-          "poids": 0.0
-        }
-      ],
-      "effet": 0.0,
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BoJ (call rate)",
       "prochain_iso": "2026-12-18T12:00:00+00:00",
