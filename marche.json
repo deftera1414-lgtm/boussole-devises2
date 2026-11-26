@@ -1,5 +1,5 @@
 {
-  "calcule_iso": "2026-11-25T22:43:18+00:00",
+  "calcule_iso": "2026-11-26T05:25:07+00:00",
   "seance": "2026-11-20",
   "seances": 383,
   "source": "Reserve federale (H.10) via FRED",
@@ -856,7 +856,7 @@
     },
     "USD": {
       "biais": 58,
-      "biais_avant": 59,
+      "biais_avant": 58,
       "biais_7j": 58,
       "momentum": 1,
       "long_adj": -2,

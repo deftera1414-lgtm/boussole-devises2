@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-25T22:43:18+00:00",
-  "verifie": "25 novembre 2026, 22h43 UTC",
+  "verifie_iso": "2026-11-26T05:25:07+00:00",
+  "verifie": "26 novembre 2026, 05h25 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 23 au 29 novembre 2026",
     "debut": "2026-11-23",
     "fin": "2026-11-29",
-    "aujourdhui": "2026-11-25",
+    "aujourdhui": "2026-11-26",
     "jours": [
       {
         "iso": "2026-11-23",
@@ -34,8 +34,8 @@
         "nom": "mercredi",
         "num": "25",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [
           {
             "code": "AUD",
@@ -101,7 +101,7 @@
         "num": "26",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
@@ -158,21 +158,8 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [
-        {
-          "famille": "inflation",
-          "libelle": "inflation",
-          "date": "2026-11-18",
-          "date_txt": "18 novembre",
-          "valeur": "4,0% · octobre 2026",
-          "avant": "3,8% · septembre 2026",
-          "variation": "+0,2 pt",
-          "cran": 1.0,
-          "age": 7,
-          "poids": 0.0
-        }
-      ],
-      "effet": 0.0,
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BCE + projections",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
@@ -249,7 +236,7 @@
       "banque": "Federal Reserve",
       "taux": "3,75%–4,00%",
       "ton": "resserrement",
-      "biais": 59,
+      "biais": 58,
       "inflation": "3,7% · septembre 2026",
       "inflation_detail": "3,7% (septembre 2026, FRED)",
       "chomage": "4,1% · octobre 2026",
@@ -303,21 +290,8 @@
       "semaine_penchant": 0,
       "semaine_mot": "rien d’ici dimanche",
       "semaine_resume": "",
-      "parutions": [
-        {
-          "famille": "inflation",
-          "libelle": "inflation",
-          "date": "2026-11-18",
-          "date_txt": "18 novembre",
-          "valeur": "1,6% · octobre 2026",
-          "avant": "1,2% · septembre 2026",
-          "variation": "+0,4 pt",
-          "cran": 2.0,
-          "age": 7,
-          "poids": 0.0
-        }
-      ],
-      "effet": 0.0,
+      "parutions": [],
+      "effet": 0,
       "effet_mot": "sans effet net",
       "prochain": "Décision BNS (examen trimestriel)",
       "prochain_iso": "2026-12-17T12:00:00+00:00",
