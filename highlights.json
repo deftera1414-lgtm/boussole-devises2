@@ -1,13 +1,13 @@
 {
-  "verifie_iso": "2026-11-26T16:03:33+00:00",
-  "verifie": "26 novembre 2026, 16h03 UTC",
+  "verifie_iso": "2026-11-27T00:47:01+00:00",
+  "verifie": "27 novembre 2026, 00h47 UTC",
   "flux_ok": true,
   "memoire_jours": 7,
   "semaine": {
     "titre": "Semaine du 23 au 29 novembre 2026",
     "debut": "2026-11-23",
     "fin": "2026-11-29",
-    "aujourdhui": "2026-11-26",
+    "aujourdhui": "2026-11-27",
     "jours": [
       {
         "iso": "2026-11-23",
@@ -100,8 +100,8 @@
         "nom": "jeudi",
         "num": "26",
         "mois": "nove.",
-        "passe": false,
-        "aujourdhui": true,
+        "passe": true,
+        "aujourdhui": false,
         "evenements": [],
         "nb": 0
       },
@@ -111,7 +111,7 @@
         "num": "27",
         "mois": "nove.",
         "passe": false,
-        "aujourdhui": false,
+        "aujourdhui": true,
         "evenements": [],
         "nb": 0
       },
